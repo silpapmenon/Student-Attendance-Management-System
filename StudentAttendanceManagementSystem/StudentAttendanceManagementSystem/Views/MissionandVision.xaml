@@ -6,7 +6,7 @@
              xmlns:local="clr-namespace:StudentAttendanceManagementSystem.Views"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <Grid RenderTransformOrigin="0.496,0.378">
+    <Grid RenderTransformOrigin="0.496,0.377">
         <Grid.Background>
             <ImageBrush ImageSource="/Images/pic4.png" />
         </Grid.Background>
