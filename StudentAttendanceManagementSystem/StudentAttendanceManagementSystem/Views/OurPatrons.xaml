@@ -1,0 +1,37 @@
+﻿<UserControl x:Class="StudentAttendanceManagementSystem.Views.OurPatrons"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:StudentAttendanceManagementSystem.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid RenderTransformOrigin="0.496,0.378">
+        <Grid.Background>
+            <ImageBrush ImageSource="/Images/pic3.png" />
+        </Grid.Background>
+        <StackPanel>
+            <TextBlock Margin="10" Foreground="Black" Height="404" Width="629">
+                <LineBreak></LineBreak>
+                <LineBreak></LineBreak>
+                <LineBreak></LineBreak>
+                <LineBreak></LineBreak>
+                <LineBreak></LineBreak>
+                
+                 <TextBlock Text="OUR PATRONS" FontWeight="Bold" Height="21"></TextBlock><LineBreak></LineBreak><LineBreak></LineBreak>
+			    Mr.Purushothaman N.V, our chairman provides the vision and strategic direction to the School. He has the long-term <LineBreak></LineBreak>perspective planning and designing of learning processes of the entire institution.
+With a stern will power and <LineBreak></LineBreak> persistent efforts he scaled new heights and turned out to be an Engineer.With his repute and caliber, he had <LineBreak></LineBreak>adorned  envious posts in the Persian Gulf for decades. He is secular in his outlook, democratic in his attitude and <LineBreak></LineBreak>firm in his convictions. His clear perspective and composite vision of an engineer converts the visionary dreams into <LineBreak></LineBreak>reality with a missionary zeal. He, with the pleasing presence of his wife Mrs. Sarala Purushothaman, the Chairperson,  <LineBreak></LineBreak>of Kailasanadha,is a perpetual source of inspiration for the entire institution.
+
+                    
+                    Their strong academic thrust, embedded  <LineBreak></LineBreak>in universal and traditional values,empowers the students to become winners from the very outset.
+                    
+                    Present day hi-<LineBreak></LineBreak>tech and state of the art techniques have been able to mould mentally and physically strong individuals but fail in<LineBreak></LineBreak> the social and emotional aspects.
+                    
+                    Education is the manifestation of perfection already in man. So this noble task that <LineBreak></LineBreak>runs from cradle to grave has to be undertakenseriously and guided and directed properly and purposefully. In our<LineBreak></LineBreak>  country, this purposefulness seems to have been lost, right from the basic home environment. Gross indiscipline has<LineBreak></LineBreak> crept in as an outcome of the diminishing joint family system and degradation of culturalvalues. Apparently,there are<LineBreak></LineBreak> undesirable forces trying like parasites to eliminate the Indian cultural glory and the indelible mark it had made in the <LineBreak></LineBreak>spiritual scenario of the world as the oldest of all civilization and cultures.
+                    <LineBreak></LineBreak>
+                  
+            </TextBlock>
+        </StackPanel>
+
+    </Grid>
+</UserControl>

@@ -1,0 +1,28 @@
+﻿<Window x:Class="StudentAttendanceManagementSystem.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:StudentAttendanceManagementSystem"
+        mc:Ignorable="d"
+        Title="ATTENDANCE PORTAL" Height="450" Width="800">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/Images/Design.jpg" />
+        </Grid.Background>
+        <ContentControl Content="{Binding SelectedView}"></ContentControl>
+        <Menu Name="MenuSample"  VerticalAlignment="Top" Height="475" Background="{x:Null}" Margin="50,10,50,0">
+            <MenuItem Header="HOME" FontWeight="Bold" Height="30" Width="80"  Command="{Binding RedirectViewCommand}" CommandParameter="HOME"/>
+            <MenuItem Header="PROFILE" FontWeight="Bold" Height="30" Width="80"  Command="{Binding RedirectViewCommand}" CommandParameter="HOME" >
+                <MenuItem Header="ABOUT US" FontWeight="Bold" Height="30" Foreground="Black" Command="{Binding RedirectViewCommand}" CommandParameter="ABOUT US"></MenuItem>
+                <MenuItem Header="VISION AND MISSION" FontWeight="Bold" Height="30" Foreground="Black" Command="{Binding RedirectViewCommand}" CommandParameter="MISSION AND VISION"></MenuItem>
+                <MenuItem Header="OUR PATRONS" FontWeight="Bold" Height="30" Foreground="Black" Command="{Binding RedirectViewCommand}" CommandParameter="OUR PATRONS"></MenuItem>
+            </MenuItem>
+            <MenuItem Header="STANDARDS" FontWeight="Bold" Height="30" Width="80" Background="{x:Null}" Command="{Binding RedirectViewCommand}" CommandParameter="STANDARDS"/>
+            <MenuItem Header="STAFF" FontWeight="Bold" Height="30" Width="80" Command="{Binding RedirectViewCommand}" CommandParameter="STAFF"></MenuItem>
+            <MenuItem Header="ADMIN PANEL" FontWeight="Bold" Height="30" Width="100" Command="{Binding RedirectViewCommand}" CommandParameter="ADMIN PANEL"></MenuItem>
+            <MenuItem Header="LOGIN" FontWeight="Bold" Height="30" Width="80" Command="{Binding RedirectViewCommand}" CommandParameter="LOGIN"></MenuItem>
+            <MenuItem Header="CONTACT US" FontWeight="Bold" Height="30" Width="80" Command="{Binding RedirectViewCommand}" CommandParameter="CONTACT US"></MenuItem>
+        </Menu>
+    </Grid>
+</Window>

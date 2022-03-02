@@ -1,0 +1,28 @@
+﻿<UserControl x:Class="StudentAttendanceManagementSystem.Views.AboutUs"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:StudentAttendanceManagementSystem.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid RenderTransformOrigin="0.496,0.378">
+        <Grid.Background>
+            <ImageBrush ImageSource="/Images/pic1.png" />
+        </Grid.Background>
+        <StackPanel>
+            <TextBlock Margin="10" Foreground="Black" Height="352" Width="689">
+                
+                <LineBreak></LineBreak>
+                <LineBreak></LineBreak>
+                <LineBreak></LineBreak>
+                <LineBreak></LineBreak>
+                <LineBreak></LineBreak>
+			        <TextBlock Text="ABOUT US" FontWeight="Bold" Height="21"></TextBlock>
+                <LineBreak></LineBreak>
+                    The Hari Sri Vidya Nidhi Trust was registered as a Society under the Travancore — Cochin Literary, Scientific and <LineBreak></LineBreak>Charitable Societies Registration Act on 27th July, 1983. The nucleus of this institution was the Hari Sri Nursery<LineBreak></LineBreak> and Primary School founded and run by Mrs.Nalini Chandran since 1st September, 1978, when the auspicious ritual ,<LineBreak></LineBreak> of lighting the sacred lamp was performed by Smt. Kannambra Ammukutty Nethiar, the maternal grandmother <LineBreak></LineBreak>of the institution FOUNDER, Mrs. Nalini Chandran.
+                  The school grew as an extension to the tharavad Ashtami.<LineBreak></LineBreak>Eventually, Mrs.Nalini Chandran  volunteered to empower the parents by including them in the Trust of the Hari <LineBreak></LineBreak>Sri Primary School. Thus she chose members of the First Executive committee.Balakrishnan Iyer insisted on Mrs. <LineBreak></LineBreak>Nalini Chandran being the only life member of the Hari Sri Vidya Nidhi Trust. With time the middle school had<LineBreak></LineBreak> to function out of rented places in Palliyil Lane, old Surakshita School and the place next to Printwell.Thus was the<LineBreak></LineBreak> journey of Hari Sri Nursery to Hari Sri Vidya Nidhi.
+            </TextBlock>
+        </StackPanel>
+    </Grid>
+</UserControl>

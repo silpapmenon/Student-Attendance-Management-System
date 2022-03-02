@@ -1,0 +1,46 @@
+﻿<UserControl x:Class="StudentAttendanceManagementSystem.Views.Leave"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:StudentAttendanceManagementSystem.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="600" d:DesignWidth="800">
+    <Grid Height="525" VerticalAlignment="Center">
+        <Grid.Background>
+            <ImageBrush Opacity="0.7" ImageSource="/Images/Leave (2).jpeg"  />
+        </Grid.Background>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="333*"/>
+            <ColumnDefinition Width="102*"/>
+            <ColumnDefinition Width="29*"/>
+            <ColumnDefinition Width="204*"/>
+            <ColumnDefinition Width="132*"/>
+        </Grid.ColumnDefinitions>
+        <DataGrid Opacity="0.6" d:ItemsSource="{d:SampleData ItemCount=5}" AutoGenerateColumns="False" Margin="166,148,173,142" RenderTransformOrigin="1.04,0.521" Grid.ColumnSpan="4">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="RollNo"/>
+                <DataGridTextColumn Header="StudentName"/>
+                <DataGridTextColumn Header="Standard"/>
+                <DataGridTextColumn Header="Division"/>
+                <DataGridTextColumn Header="Message"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <ComboBox Text="Select Standard" HorizontalAlignment="Left" Margin="25,32,0,0" VerticalAlignment="Top" Width="120" Grid.Column="1" Grid.ColumnSpan="3" Background="White">
+            <TextBlock Text="LKG"></TextBlock>
+            <TextBlock Text="UKG"></TextBlock>
+            <TextBlock Text="FIRST"></TextBlock>
+            <TextBlock Text="SECOND"></TextBlock>
+            <TextBlock Text="THIRD"></TextBlock>
+            <TextBlock Text="FOURTH"></TextBlock>
+        </ComboBox>
+        <ComboBox x:Name="Division" Text="Select Division" Grid.Column="1" HorizontalAlignment="Left" Margin="23,89,0,0" VerticalAlignment="Top" Width="120" Grid.ColumnSpan="3" Background="White"></ComboBox>
+        <Label x:Name="lblstandard" Content="Standard" HorizontalAlignment="Left" Margin="191,24,0,0" VerticalAlignment="Top" FontWeight="Bold" Background="White"/>
+        <Label Content="Division" HorizontalAlignment="Left" Margin="195,89,0,0" VerticalAlignment="Top" FontWeight="Bold" Background="White"/>
+        <Button Content="Update" HorizontalAlignment="Left" Margin="314,427,0,0" VerticalAlignment="Top" FontWeight="Bold" Background="White" Grid.ColumnSpan="2" Width="86"/>
+        <DatePicker Margin="197,10,33,488" Grid.Column="3" Background="White" Grid.ColumnSpan="2"/>
+        <DatePicker Grid.Column="3" HorizontalAlignment="Left" Margin="195,89,0,0" VerticalAlignment="Top" Width="106" Height="22" Grid.ColumnSpan="2"/>
+        <Label Grid.Column="3" Content="End Date" HorizontalAlignment="Left" Margin="45,89,0,0" VerticalAlignment="Top" Width="78" Height="22"  Background="White"/>
+        <Label Grid.Column="3" Content="Start Date" HorizontalAlignment="Left" Margin="45,10,0,0" VerticalAlignment="Top" Width="78" Height="27" Background="White" Foreground="Black"/>
+    </Grid>
+</UserControl>

@@ -1,0 +1,32 @@
+﻿<UserControl x:Class="StudentAttendanceManagementSystem.Views.StudentHome"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:StudentAttendanceManagementSystem.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="500" d:DesignWidth="1000">
+    <Grid Background="White">
+        <Label Content="Attendance Portal" Margin="60 0 0 0" FontWeight="Bold" FontSize="50"></Label>
+        <Grid HorizontalAlignment="Left" Height="388" Margin="58,85,0,0" VerticalAlignment="Top" Width="190">
+            <ContentControl >
+                <Menu Name="MenuSample" HorizontalAlignment="Left" VerticalAlignment="Top" Height="435" Background="#eb8dde" Foreground="White">
+                    <Menu.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <StackPanel>
+                            </StackPanel>
+                        </ItemsPanelTemplate>
+                    </Menu.ItemsPanel>
+                    <Image Grid.Row="1" Grid.Column="0" Source="/Images/stdfirst.png" HorizontalAlignment="Left" VerticalAlignment="Center" Width="132" />
+                    <MenuItem Header="HOME" ></MenuItem>
+                    <MenuItem Header="MY PROFILE"></MenuItem>
+                    <MenuItem Header="LEAVE"></MenuItem>
+                    <MenuItem Header="COMPLAINT"></MenuItem>
+                    <MenuItem Header="ATTENDANCE REPORT"></MenuItem>
+                    <MenuItem Header="PASSWORD"></MenuItem>
+                    <MenuItem Header="LOGOUT"></MenuItem>
+                </Menu>
+            </ContentControl>
+        </Grid>
+    </Grid>
+</UserControl>

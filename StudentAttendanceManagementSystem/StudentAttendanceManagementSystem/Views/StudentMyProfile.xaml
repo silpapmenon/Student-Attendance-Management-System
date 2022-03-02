@@ -1,0 +1,32 @@
+﻿<UserControl x:Class="StudentAttendanceManagementSystem.Views.StudentMyProfile"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:StudentAttendanceManagementSystem.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Label Content="My Profile" FontWeight="Bold" Margin="10" Background="#eb8dde" Foreground="White"></Label>
+        <Grid Background="White" Margin="0,40,0,0">
+            <Label x:Name="lblEmail" Content="Email" HorizontalAlignment="Left" Margin="10,96,0,0" VerticalAlignment="Top" FontSize="22"/>
+            <Label x:Name="lblMobile" Content="Mobile" HorizontalAlignment="Left" Margin="10,136,0,0" VerticalAlignment="Top" FontSize="22"/>
+            <Label x:Name="lblAddress" Content="Address" HorizontalAlignment="Left" Margin="10,176,0,0" VerticalAlignment="Top" FontSize="22"/>
+            <Label x:Name="lblCity" Content="City" HorizontalAlignment="Left" Margin="7,217,0,0" VerticalAlignment="Top" FontSize="22"/>
+            <Label x:Name="lblPincode" Content="Pincode" HorizontalAlignment="Left" Margin="7,261,0,0" VerticalAlignment="Top" FontSize="22"/>
+            <Button x:Name="btnUpdate" Content="Update" HorizontalAlignment="Left" Margin="139,340,0,0" VerticalAlignment="Top" FontSize="22" FontWeight="Bold" Click="btnUpdate_Click" Foreground="White" Background="#eb8dde"/>
+            <Button x:Name="btnChoosefile" Content="Choose File" HorizontalAlignment="Left" Margin="228,22,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+            <Button x:Name="btnAdd" Content="Add" Foreground="White" Background="#eb8dde" HorizontalAlignment="Left" Margin="348,22,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+            <TextBox x:Name="txtEmail" HorizontalAlignment="Left" Margin="139,144,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+            <TextBox x:Name="txtAddress" HorizontalAlignment="Left" Margin="139,187,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+            <TextBox x:Name="txtEmail1" HorizontalAlignment="Left" Margin="139,107,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+            <TextBox x:Name="txtCity" HorizontalAlignment="Left" Margin="139,228,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+            <TextBox x:Name="txtPincode" HorizontalAlignment="Left" Margin="139,272,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+            <Label x:Name="lblName" Content="Name : John" HorizontalAlignment="Left" Margin="17,10,0,0" VerticalAlignment="Top" FontSize="20" FontWeight="Bold" Foreground="#eb8dde"/>
+            <Label x:Name="lblRollno" Content="Roll No : 16" HorizontalAlignment="Left" Margin="17,47,0,0" VerticalAlignment="Top" FontSize="20" FontStyle="Normal" FontWeight="Bold" Foreground="#eb8dde"/>
+        </Grid>
+    </Grid>
+</UserControl>
