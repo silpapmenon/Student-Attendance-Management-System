@@ -24,5 +24,10 @@ namespace StudentAttendanceManagementSystem.Views
         {
             InitializeComponent();
         }
+
+        private void grdProductData_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
 }
