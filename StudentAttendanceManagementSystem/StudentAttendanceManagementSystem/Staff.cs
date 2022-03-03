@@ -24,7 +24,7 @@ namespace StudentAttendanceManagementSystem
         public string StaffName { get; set; }
         public string Email { get; set; }
         public string Mobile { get; set; }
-        public string Image { get; set; }
+        public byte[] Image { get; set; }
         public string Qualification { get; set; }
         public string Address { get; set; }
         public string City { get; set; }
