@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="adef95c1091d4afc81716efe41110e4b" Name="Diagram1">
+        <EntityTypeShape EntityType="StudentManagementSystemModel.Admin" Width="1.5" PointX="0.75" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="StudentManagementSystemModel.Attendance" Width="1.5" PointX="8.25" PointY="5.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="StudentManagementSystemModel.Complaint" Width="1.5" PointX="8.25" PointY="9.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="StudentManagementSystemModel.Division" Width="1.5" PointX="3" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="StudentManagementSystemModel.Gender" Width="1.5" PointX="3.75" PointY="10.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="StudentManagementSystemModel.Leave" Width="1.5" PointX="8.25" PointY="12.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="StudentManagementSystemModel.Role" Width="1.5" PointX="3.75" PointY="13.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="StudentManagementSystemModel.Staff" Width="1.5" PointX="6" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="StudentManagementSystemModel.StaffStandard" Width="1.5" PointX="3" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="StudentManagementSystemModel.Standard" Width="1.5" PointX="0.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="StudentManagementSystemModel.Student" Width="1.5" PointX="6" PointY="6.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="StudentManagementSystemModel.Subject" Width="1.5" PointX="0.75" PointY="5" IsExpanded="true" />
+        <AssociationConnector Association="StudentManagementSystemModel.FK_Attendance_Staff" ManuallyRouted="false" />
+        <AssociationConnector Association="StudentManagementSystemModel.FK_Attendance_Student" ManuallyRouted="false" />
+        <AssociationConnector Association="StudentManagementSystemModel.FK_Complaint_Student" ManuallyRouted="false" />
+        <AssociationConnector Association="StudentManagementSystemModel.FK_Division_Standard" ManuallyRouted="false" />
+        <AssociationConnector Association="StudentManagementSystemModel.FK_Staff_Gender" ManuallyRouted="false" />
+        <AssociationConnector Association="StudentManagementSystemModel.FK_Student_Gender" ManuallyRouted="false" />
+        <AssociationConnector Association="StudentManagementSystemModel.FK_Leave_Student" ManuallyRouted="false" />
+        <AssociationConnector Association="StudentManagementSystemModel.FK_Staff_Roles" ManuallyRouted="false" />
+        <AssociationConnector Association="StudentManagementSystemModel.FK_Student_Roles" ManuallyRouted="false" />
+        <AssociationConnector Association="StudentManagementSystemModel.FK_StaffStandard_Standard1" ManuallyRouted="false" />
+        <AssociationConnector Association="StudentManagementSystemModel.FK_StaffStandard_Subject" ManuallyRouted="false" />
+        <AssociationConnector Association="StudentManagementSystemModel.FK_Student_Standard" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
