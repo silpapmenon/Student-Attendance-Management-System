@@ -134,6 +134,9 @@
     <Compile Include="Views\MissionandVision.xaml.cs">
       <DependentUpon>MissionandVision.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\StudentReport.xaml.cs">
+      <DependentUpon>StudentReport.xaml</DependentUpon>
+    </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -227,6 +230,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\MissionandVision.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\StudentReport.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
