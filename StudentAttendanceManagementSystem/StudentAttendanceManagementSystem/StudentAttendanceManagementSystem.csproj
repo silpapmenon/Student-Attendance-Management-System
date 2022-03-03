@@ -77,6 +77,9 @@
     <Compile Include="Views\AddDivision.xaml.cs">
       <DependentUpon>AddDivision.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\AddStaff.xaml.cs">
+      <DependentUpon>AddStaff.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\AddStandard.xaml.cs">
       <DependentUpon>AddStandard.xaml</DependentUpon>
     </Compile>
@@ -154,6 +157,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\AddDivision.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AddStaff.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
