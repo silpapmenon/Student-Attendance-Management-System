@@ -72,10 +72,13 @@
             <TextBox x:Name="txtCity" HorizontalAlignment="Left" Margin="139,259,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="140" Height="22" FontSize="14"/>
             <TextBox x:Name="txtPincode" HorizontalAlignment="Left" Margin="139,289,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="140" Height="22" FontSize="14"/>
             <DatePicker HorizontalAlignment="Left" Height="28" Margin="139,169,0,0" VerticalAlignment="Top" Width="140"/>
-            <RadioButton Content="Male" HorizontalAlignment="Left" Margin="139,331,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold"/>
-            <RadioButton Content="Female" HorizontalAlignment="Left" Margin="239,331,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold"/>
             <TextBox x:Name="txtUsername" HorizontalAlignment="Left" Margin="139,356,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="140" Height="22" FontSize="14"/>
             <PasswordBox x:Name="pwdUsername" HorizontalAlignment="Left" Margin="139,386,0,0"  VerticalAlignment="Top" Width="140" Height="22" FontSize="14"/>
+            <ComboBox HorizontalAlignment="Left" Height="20" Margin="139,323,0,0" VerticalAlignment="Top" Width="140">
+                <TextBlock Text="Male"></TextBlock>
+                <TextBlock Text="Female"></TextBlock>
+                <TextBlock Text="Others"></TextBlock>
+            </ComboBox>
         </Grid>
         <Grid Margin="570,203,35,-30"  Background="Red" Grid.RowSpan="5">
             <!--<Grid.Background>
@@ -104,14 +107,24 @@
             <Label Content="Username" HorizontalAlignment="Left" Margin="10,362,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
             <Label Content="Password" HorizontalAlignment="Left" Margin="10,392,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
             <DatePicker HorizontalAlignment="Left" Height="33" Margin="139,173,0,0" VerticalAlignment="Top" Width="135"/>
-            <RadioButton Content="Male" HorizontalAlignment="Left" Margin="139,340,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold"/>
-            <RadioButton Content="Female" HorizontalAlignment="Left" Margin="239,340,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold"/>
             <TextBox x:Name="txtEditUsername" HorizontalAlignment="Left" Margin="139,368,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="140" Height="22" FontSize="14"/>
             <PasswordBox x:Name="pwdEditUsername" HorizontalAlignment="Left" Margin="139,401,0,0"  VerticalAlignment="Top" Width="140" Height="22" FontSize="14"/>
+            <ComboBox HorizontalAlignment="Left" Height="29" Margin="139,323,0,0" VerticalAlignment="Top" Width="140">
+                <TextBlock Text="Male"></TextBlock>
+                <TextBlock Text="Female"></TextBlock>
+                <TextBlock Text="Others"></TextBlock>
+            </ComboBox>
 
         </Grid>
-        <ComboBox HorizontalAlignment="Left" Height="30" Margin="267,163,0,0" VerticalAlignment="Top" Width="136"/>
-        <ComboBox HorizontalAlignment="Left" Height="30" Margin="768,165,0,0" VerticalAlignment="Top" Width="136"/>
+        <ComboBox HorizontalAlignment="Left" Height="30" Margin="267,163,0,0" VerticalAlignment="Top" Width="136">
+            <TextBlock Text="Male"></TextBlock>
+            <TextBlock Text="Male"></TextBlock>
+            <TextBlock Text="Male"></TextBlock>
+        </ComboBox>
+        <ComboBox HorizontalAlignment="Left" Height="30" Margin="768,165,0,0" VerticalAlignment="Top" Width="136">
+            <TextBlock Text="Male"></TextBlock>
+            <TextBlock Text="Male"></TextBlock>
+        </ComboBox>
         <Label Content="Select Standard" HorizontalAlignment="Left" Height="30" Margin="124,159,0,0" VerticalAlignment="Top" Width="136"/>
         <Label Content="Select Division" HorizontalAlignment="Left" Height="30" Margin="628,162,0,0" VerticalAlignment="Top" Width="136"/>
 
