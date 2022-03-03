@@ -119,6 +119,9 @@
     <Compile Include="Views\StaffProfile.xaml.cs">
       <DependentUpon>StaffProfile.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\StaffReport.xaml.cs">
+      <DependentUpon>StaffReport.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Standards.xaml.cs">
       <DependentUpon>Standards.xaml</DependentUpon>
     </Compile>
@@ -207,6 +210,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\StaffProfile.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\StaffReport.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
