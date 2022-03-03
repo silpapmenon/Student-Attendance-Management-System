@@ -74,6 +74,9 @@
     <Compile Include="Views\AboutUs.xaml.cs">
       <DependentUpon>AboutUs.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\AddDivision.xaml.cs">
+      <DependentUpon>AddDivision.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\AddStandard.xaml.cs">
       <DependentUpon>AddStandard.xaml</DependentUpon>
     </Compile>
@@ -116,6 +119,9 @@
     <Compile Include="Views\StaffProfile.xaml.cs">
       <DependentUpon>StaffProfile.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\StaffReport.xaml.cs">
+      <DependentUpon>StaffReport.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Standards.xaml.cs">
       <DependentUpon>Standards.xaml</DependentUpon>
     </Compile>
@@ -127,6 +133,9 @@
     </Compile>
     <Compile Include="Views\MissionandVision.xaml.cs">
       <DependentUpon>MissionandVision.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\StudentReport.xaml.cs">
+      <DependentUpon>StudentReport.xaml</DependentUpon>
     </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -141,6 +150,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="Views\AboutUs.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AddDivision.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -200,6 +213,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Views\StaffReport.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\Standards.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -213,6 +230,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\MissionandVision.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\StudentReport.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -285,6 +306,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\Complaint.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Standard.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace StudentAttendanceManagementSystem.Views
 {
     /// <summary>
-    /// Interaction logic for AddStandard.xaml
+    /// Interaction logic for AddDivision.xaml
     /// </summary>
-    public partial class AddStandard : UserControl
+    public partial class AddDivision : UserControl
     {
-        public AddStandard()
+        public AddDivision()
         {
             InitializeComponent();
         }
@@ -31,6 +31,11 @@ namespace StudentAttendanceManagementSystem.Views
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
         }

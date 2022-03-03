@@ -16,23 +16,13 @@ using System.Windows.Shapes;
 namespace StudentAttendanceManagementSystem.Views
 {
     /// <summary>
-    /// Interaction logic for AddStandard.xaml
+    /// Interaction logic for StaffReport.xaml
     /// </summary>
-    public partial class AddStandard : UserControl
+    public partial class StaffReport : UserControl
     {
-        public AddStandard()
+        public StaffReport()
         {
             InitializeComponent();
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void Button_Click_1(object sender, RoutedEventArgs e)
-        {
-
         }
     }
 }
