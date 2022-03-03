@@ -8,7 +8,7 @@
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid Height="188" VerticalAlignment="Top">
         <Grid.Background>
-            <ImageBrush  Opacity="0.8" ImageSource="/Images/Div1.jpg"/>
+            <ImageBrush  Opacity="0.8"/>
         </Grid.Background>
         <ListView Name="UserGrid" Grid.Row="1"  ItemsSource="{Binding Division}" >
             <DataGrid Name="grdStandardData" AutoGenerateColumns="False" CanUserAddRows="False" ColumnWidth="*" Width="864" Height="174">
