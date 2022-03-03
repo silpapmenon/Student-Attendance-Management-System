@@ -76,45 +76,44 @@
             <RadioButton Content="Female" HorizontalAlignment="Left" Margin="239,340,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold"/>
             <TextBox x:Name="txtUsername" HorizontalAlignment="Left" Margin="139,368,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="140" Height="22" FontSize="14"/>
             <PasswordBox x:Name="pwdUsername" HorizontalAlignment="Left" Margin="139,398,0,0"  VerticalAlignment="Top" Width="140" Height="22" FontSize="14"/>
-
-            <TextBlock  HorizontalAlignment="Left" Background="White" Margin="142,116,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="23" Width="137"/>
-
-</Grid>
-        <Grid Margin="570,206,35,-33" Grid.RowSpan="5">
-            <!--<Grid.Background>
+<TextBlock  HorizontalAlignment="Left" Background="White" Margin="142,116,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="23" Width="137"/>
+            <Grid Margin="570,206,35,-33" Grid.RowSpan="5">
+                <!--<Grid.Background>
                 <ImageBrush/>
             </Grid.Background>-->
-            <Label Content="Edit Staff" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold"/>
-            <Label Content="Staff ID" HorizontalAlignment="Left" Margin="10,54,0,0" VerticalAlignment="Top" Width="107" FontWeight="Bold"/>
-            <Label Content="Staff Name" HorizontalAlignment="Left" Margin="10,85,0,0" VerticalAlignment="Top" Width="107" FontWeight="Bold"/>
+                <Label Content="Edit Staff" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold"/>
+                <Label Content="Staff ID" HorizontalAlignment="Left" Margin="10,54,0,0" VerticalAlignment="Top" Width="107" FontWeight="Bold"/>
+                <Label Content="Staff Name" HorizontalAlignment="Left" Margin="10,85,0,0" VerticalAlignment="Top" Width="107" FontWeight="Bold"/>
 
-            <Label Content="Address" HorizontalAlignment="Left" Margin="10,116,0,0" VerticalAlignment="Top" Width="107" FontWeight="Bold"/>
-            <Label Content="Staff Mobile" HorizontalAlignment="Left" Margin="10,146,0,0" VerticalAlignment="Top" Width="107" FontWeight="Bold"/>
-            <Label Content="Qualification" HorizontalAlignment="Left" Margin="10,176,0,0" VerticalAlignment="Top" Width="107" FontWeight="Bold"/>
-            <Label Content="Image" HorizontalAlignment="Left" Margin="10,206,0,0" VerticalAlignment="Top" Width="107" FontWeight="Bold"/>
-            <Label Content="Staff Email" HorizontalAlignment="Left" Margin="10,236,0,0" VerticalAlignment="Top" Width="107" FontWeight="Bold"/>
-            <Label Content="Staff City" HorizontalAlignment="Left" Margin="10,266,0,0" VerticalAlignment="Top" Width="107" FontWeight="Bold"/>
-            <Label Content="Staff Pincode" HorizontalAlignment="Left" Margin="10,296,0,0" VerticalAlignment="Top" Width="107" FontWeight="Bold"/>
-            <Button x:Name="btnEdit" Content="Edit" HorizontalAlignment="Left" Margin="139,441,0,0" VerticalAlignment="Top" Width="140" Height="26"  FontSize="18" FontWeight="Bold" Background="White"/>
-            <TextBox x:Name="txtEditRollNo" HorizontalAlignment="Left" Margin="139,58,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="135" Height="22" FontSize="14" />
-            <TextBox x:Name="txtEditStaffName" HorizontalAlignment="Left" Margin="139,88,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="135" Height="22" FontSize="14"/>
+                <Label Content="Address" HorizontalAlignment="Left" Margin="10,116,0,0" VerticalAlignment="Top" Width="107" FontWeight="Bold"/>
+                <Label Content="Staff Mobile" HorizontalAlignment="Left" Margin="10,146,0,0" VerticalAlignment="Top" Width="107" FontWeight="Bold"/>
+                <Label Content="Qualification" HorizontalAlignment="Left" Margin="10,176,0,0" VerticalAlignment="Top" Width="107" FontWeight="Bold"/>
+                <Label Content="Image" HorizontalAlignment="Left" Margin="10,206,0,0" VerticalAlignment="Top" Width="107" FontWeight="Bold"/>
+                <Label Content="Staff Email" HorizontalAlignment="Left" Margin="10,236,0,0" VerticalAlignment="Top" Width="107" FontWeight="Bold"/>
+                <Label Content="Staff City" HorizontalAlignment="Left" Margin="10,266,0,0" VerticalAlignment="Top" Width="107" FontWeight="Bold"/>
+                <Label Content="Staff Pincode" HorizontalAlignment="Left" Margin="10,296,0,0" VerticalAlignment="Top" Width="107" FontWeight="Bold"/>
+                <Button x:Name="btnEdit" Content="Edit" HorizontalAlignment="Left" Margin="139,441,0,0" VerticalAlignment="Top" Width="140" Height="26"  FontSize="18" FontWeight="Bold" Background="White"/>
+                <TextBox x:Name="txtEditRollNo" HorizontalAlignment="Left" Margin="139,58,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="135" Height="22" FontSize="14" />
+                <TextBox x:Name="txtEditStaffName" HorizontalAlignment="Left" Margin="139,88,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="135" Height="22" FontSize="14"/>
 
-            <TextBlock x:Name="txtEditAddress" HorizontalAlignment="Left" Background="White" Margin="139,118,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="135" Height="22" FontSize="14" />
-            <TextBox x:Name="txtEditMobile" HorizontalAlignment="Left" Margin="139,148,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="135" Height="22" FontSize="14" />
-            <Button x:Name="btnEditImage" HorizontalAlignment="Left" Margin="139,206,0,244" Width="135" Content="Select Image"/>
-            <TextBox x:Name="txtEditEmail" HorizontalAlignment="Left" Margin="139,238,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="135" Height="22" FontSize="14"/>
-            <TextBox x:Name="txtEditCity" HorizontalAlignment="Left" Margin="139,268,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="135" Height="22" FontSize="14"/>
-            <TextBox x:Name="txtEditPincode" HorizontalAlignment="Left" Margin="139,298,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="135" Height="22" FontSize="14"/>
-            <Label Content="Gender" HorizontalAlignment="Left" Margin="10,326,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
-            <Label Content="Username" HorizontalAlignment="Left" Margin="10,362,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
-            <Label Content="Password" HorizontalAlignment="Left" Margin="10,392,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
-            <TextBox HorizontalAlignment="Left" Height="33" Margin="139,173,0,0" VerticalAlignment="Top" Width="135"/>
-            <RadioButton Content="Male" HorizontalAlignment="Left" Margin="139,340,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold"/>
-            <RadioButton Content="Female" HorizontalAlignment="Left" Margin="239,340,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold"/>
-            <TextBox x:Name="txtEditUsername" HorizontalAlignment="Left" Margin="139,368,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="140" Height="22" FontSize="14"/>
-            <PasswordBox x:Name="pwdEditUsername" HorizontalAlignment="Left" Margin="139,401,0,0"  VerticalAlignment="Top" Width="140" Height="22" FontSize="14"/>
+                <TextBlock x:Name="txtEditAddress" HorizontalAlignment="Left" Background="White" Margin="139,118,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="135" Height="22" FontSize="14" />
+                <TextBox x:Name="txtEditMobile" HorizontalAlignment="Left" Margin="139,148,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="135" Height="22" FontSize="14" />
+                <Button x:Name="btnEditImage" HorizontalAlignment="Left" Margin="139,206,0,244" Width="135" Content="Select Image"/>
+                <TextBox x:Name="txtEditEmail" HorizontalAlignment="Left" Margin="139,238,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="135" Height="22" FontSize="14"/>
+                <TextBox x:Name="txtEditCity" HorizontalAlignment="Left" Margin="139,268,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="135" Height="22" FontSize="14"/>
+                <TextBox x:Name="txtEditPincode" HorizontalAlignment="Left" Margin="139,298,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="135" Height="22" FontSize="14"/>
+                <Label Content="Gender" HorizontalAlignment="Left" Margin="10,326,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+                <Label Content="Username" HorizontalAlignment="Left" Margin="10,362,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+                <Label Content="Password" HorizontalAlignment="Left" Margin="10,392,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+                <TextBox HorizontalAlignment="Left" Height="33" Margin="139,173,0,0" VerticalAlignment="Top" Width="135"/>
+                <RadioButton Content="Male" HorizontalAlignment="Left" Margin="139,340,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold"/>
+                <RadioButton Content="Female" HorizontalAlignment="Left" Margin="239,340,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold"/>
+                <TextBox x:Name="txtEditUsername" HorizontalAlignment="Left" Margin="139,368,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="140" Height="22" FontSize="14"/>
+                <PasswordBox x:Name="pwdEditUsername" HorizontalAlignment="Left" Margin="139,401,0,0"  VerticalAlignment="Top" Width="140" Height="22" FontSize="14"/>
 
+            </Grid>
         </Grid>
+        
         <ComboBox HorizontalAlignment="Left" Height="30" Margin="267,163,0,0" VerticalAlignment="Top" Width="136"/>
         <ComboBox HorizontalAlignment="Left" Height="30" Margin="768,165,0,0" VerticalAlignment="Top" Width="136"/>
         <Label Content="Select Standard" HorizontalAlignment="Left" Height="30" Margin="124,159,0,0" VerticalAlignment="Top" Width="136"/>

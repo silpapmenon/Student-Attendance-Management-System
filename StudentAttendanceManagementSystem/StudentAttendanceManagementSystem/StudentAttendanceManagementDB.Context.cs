@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace DataAccessLayer
+namespace StudentAttendanceManagementSystem
 {
     using System;
     using System.Data.Entity;

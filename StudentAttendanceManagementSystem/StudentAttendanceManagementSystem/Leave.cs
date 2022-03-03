@@ -7,17 +7,17 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace DataAccessLayer
+namespace StudentAttendanceManagementSystem
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class Complaint
+    public partial class Leave
     {
-        public int ComplaintID { get; set; }
+        public int LeaveID { get; set; }
         public int StudentID { get; set; }
-        public string Subject { get; set; }
         public string Message { get; set; }
+        public int Numdays { get; set; }
         public System.DateTime Date { get; set; }
     
         public virtual Student Student { get; set; }

@@ -7,18 +7,15 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace DataAccessLayer
+namespace StudentAttendanceManagementSystem
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class Division
+    public partial class Admin
     {
-        public int DivisionID { get; set; }
-        public string DivisionName { get; set; }
-        public int StandardID { get; set; }
-        public int Seat { get; set; }
-    
-        public virtual Standard Standard { get; set; }
+        public string Username { get; set; }
+        public string Password { get; set; }
+        public int UserID { get; set; }
     }
 }

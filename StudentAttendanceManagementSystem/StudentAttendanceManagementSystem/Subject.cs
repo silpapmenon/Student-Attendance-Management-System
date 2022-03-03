@@ -7,23 +7,16 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace DataAccessLayer
+namespace StudentAttendanceManagementSystem
 {
     using System;
     using System.Collections.Generic;
     
     public partial class Subject
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Subject()
-        {
-            this.StaffStandards = new HashSet<StaffStandard>();
-        }
-    
         public int SubjectID { get; set; }
         public string SubjectName { get; set; }
     
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<StaffStandard> StaffStandards { get; set; }
+        public virtual StaffStandard StaffStandard { get; set; }
     }
 }

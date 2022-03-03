@@ -7,19 +7,19 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace DataAccessLayer
+namespace StudentAttendanceManagementSystem
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class StaffStandard
+    public partial class Complaint
     {
-        public int StaffID { get; set; }
-        public int StandardID { get; set; }
-        public int SubjectID { get; set; }
-        public int StaffStandardID { get; set; }
+        public int ComplaintID { get; set; }
+        public int StudentID { get; set; }
+        public string Subject { get; set; }
+        public string Message { get; set; }
+        public System.DateTime Date { get; set; }
     
-        public virtual Standard Standard { get; set; }
-        public virtual Subject Subject { get; set; }
+        public virtual Student Student { get; set; }
     }
 }
