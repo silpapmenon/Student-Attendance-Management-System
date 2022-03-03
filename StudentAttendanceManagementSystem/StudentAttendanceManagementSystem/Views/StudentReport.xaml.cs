@@ -16,28 +16,13 @@ using System.Windows.Shapes;
 namespace StudentAttendanceManagementSystem.Views
 {
     /// <summary>
-    /// Interaction logic for AddStudent.xaml
+    /// Interaction logic for StudentReport.xaml
     /// </summary>
-    public partial class AddStudent : UserControl
+    public partial class StudentReport : UserControl
     {
-        public AddStudent()
+        public StudentReport()
         {
             InitializeComponent();
-        }
-
-        private void grdProductData_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void Button_Click_1(object sender, RoutedEventArgs e)
-        {
-
         }
     }
 }
