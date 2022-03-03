@@ -41,20 +41,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Model\AdminModel.cs" />
-    <Compile Include="Model\AttendanceModel.cs" />
-    <Compile Include="Model\ComplaintModel.cs" />
-    <Compile Include="Model\DivisionModel.cs" />
-    <Compile Include="Model\GenderModel.cs" />
-    <Compile Include="Model\LeaveModel.cs" />
-    <Compile Include="Model\RoleModel.cs" />
-    <Compile Include="Model\StaffModel.cs" />
-    <Compile Include="Model\StaffStandardModel.cs" />
-    <Compile Include="Model\StandardModel.cs" />
-    <Compile Include="Model\StudentModel.cs" />
-    <Compile Include="Model\SubjectModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Model\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
