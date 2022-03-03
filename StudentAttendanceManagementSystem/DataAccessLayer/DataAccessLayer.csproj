@@ -50,84 +50,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Admin.cs">
-      <DependentUpon>StudentAttendanceDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Attendance.cs">
-      <DependentUpon>StudentAttendanceDB.tt</DependentUpon>
-    </Compile>
     <Compile Include="Class1.cs" />
-    <Compile Include="Complaint.cs">
-      <DependentUpon>StudentAttendanceDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Division.cs">
-      <DependentUpon>StudentAttendanceDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Leave.cs">
-      <DependentUpon>StudentAttendanceDB.tt</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Role.cs">
-      <DependentUpon>StudentAttendanceDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Staff.cs">
-      <DependentUpon>StudentAttendanceDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="StaffStandard.cs">
-      <DependentUpon>StudentAttendanceDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Standard.cs">
-      <DependentUpon>StudentAttendanceDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Student.cs">
-      <DependentUpon>StudentAttendanceDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="StudentAttendanceDB.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>StudentAttendanceDB.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="StudentAttendanceDB.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>StudentAttendanceDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="StudentAttendanceDB.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>StudentAttendanceDB.edmx</DependentUpon>
-    </Compile>
-    <Compile Include="Subject.cs">
-      <DependentUpon>StudentAttendanceDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="sysdiagram.cs">
-      <DependentUpon>StudentAttendanceDB.tt</DependentUpon>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <EntityDeploy Include="StudentAttendanceDB.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>StudentAttendanceDB.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.Config" />
-    <None Include="packages.config" />
-    <None Include="StudentAttendanceDB.edmx.diagram">
-      <DependentUpon>StudentAttendanceDB.edmx</DependentUpon>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="StudentAttendanceDB.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>StudentAttendanceDB.Context.cs</LastGenOutput>
-      <DependentUpon>StudentAttendanceDB.edmx</DependentUpon>
-    </Content>
-    <Content Include="StudentAttendanceDB.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>StudentAttendanceDB.edmx</DependentUpon>
-      <LastGenOutput>StudentAttendanceDB.cs</LastGenOutput>
-    </Content>
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
