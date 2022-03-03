@@ -18,8 +18,7 @@ namespace DataAccessLayer
         public int StudentID { get; set; }
         public string Message { get; set; }
         public int NumDays { get; set; }
-        public System.DateTime StartDate { get; set; }
-        public Nullable<System.DateTime> EndDate { get; set; }
+        public System.DateTime Date { get; set; }
     
         public virtual Student Student { get; set; }
     }
