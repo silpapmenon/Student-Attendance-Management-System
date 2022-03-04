@@ -11,7 +11,7 @@ namespace EntityLayer.Model
         private int _studentID;
         private string _studentName;
         private string _divisionName;
-        private string _email;
+        private string _email; 
         private int _studentMobile;
         private DateTime _dob;
         private string _image;

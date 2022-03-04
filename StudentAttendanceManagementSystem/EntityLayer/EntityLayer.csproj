@@ -50,6 +50,7 @@
     <Compile Include="Model\RolesModel.cs" />
     <Compile Include="Model\StaffModel.cs" />
     <Compile Include="Model\StaffStandardModel.cs" />
+    <Compile Include="Model\StandardModel.cs" />
     <Compile Include="Model\StudentModel.cs" />
     <Compile Include="Model\SubjectModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
