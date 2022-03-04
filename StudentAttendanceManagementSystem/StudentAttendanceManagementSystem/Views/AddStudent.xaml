@@ -14,30 +14,30 @@
             <RowDefinition Height="293*"/>
             <RowDefinition Height="0*"/>
         </Grid.RowDefinitions>
-        <!--<ListView Name="UserGrid" Grid.Row="1"  >-->
-        <DataGrid Name="grdProductData" AutoGenerateColumns="False" CanUserAddRows="False" MaxColumnWidth="100" SelectionChanged="grdProductData_SelectionChanged" Margin="3,3,104,94">
-            <DataGrid.Columns>
-                <DataGridTextColumn Header="Roll No" Width="50" />
-                <DataGridTextColumn Header="Student Name" Width="90" />
-                <DataGridTextColumn Header="Student Email" Width="85" />
-                <DataGridTextColumn Header="Gender" Width="50" />
-                <DataGridTextColumn Header="Student Mobile" Width="95" />
-                <DataGridTextColumn Header="DOB" Width="40" />
-                <DataGridTextColumn Header="Image"  Width="50"/>
-                <DataGridTextColumn Header="Student Address" Width="100"/>
-                <DataGridTextColumn Header="Student City" Width="75"/>
-                <DataGridTextColumn Header="Student Pincode" Width="98"/>
-                <DataGridTextColumn Header="Username" Width="65"/>
-                <DataGridTextColumn Header="Password" Width="65"/>
 
-                <DataGridTemplateColumn Header="Edit Student Profile" Width="100">
+        <DataGrid Name="grdProductData" AutoGenerateColumns="False" CanUserAddRows="False" MaxColumnWidth="100"  Margin="3,3,10,94" ItemsSource="{Binding StudentViewList}" SelectionChanged="grdProductData_SelectionChanged_1">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Roll No" Width="50" Binding="{Binding RollNo}" />
+                <DataGridTextColumn Header="Student Name" Width="90"  Binding="{Binding StudentName}"/>
+                <DataGridTextColumn Header="Student Email" Width="85" Binding="{Binding StudentEmail}" />
+                <DataGridTextColumn Header="Gender" Width="50"  Binding="{Binding Gender}"/>
+                <DataGridTextColumn Header="Student Mobile" Width="95" Binding="{Binding StudentMobile}" />
+                <DataGridTextColumn Header="DOB" Width="40"  Binding="{Binding DOB}"/>
+                <DataGridTextColumn Header="Image"  Width="50" Binding="{Binding Image}"/>
+                <DataGridTextColumn Header="Student Address" Width="100" Binding="{Binding StudentAddress}" />
+                <DataGridTextColumn Header="Student City" Width="75" Binding="{Binding StudentCity}"/>
+                <DataGridTextColumn Header="Student Pincode" Width="98" Binding="{Binding StudentPincode}"/>
+                <DataGridTextColumn Header="Username" Width="65" Binding="{Binding StudentUsername}"/>
+                <DataGridTextColumn Header="Password" Width="65" Binding="{Binding StudentPassword}"/>
+
+                <DataGridTemplateColumn Header="Edit" Width="40">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
                             <Button Click="Button_Click_1">Edit</Button>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>
-                <DataGridTemplateColumn Header="Delete Student">
+                <DataGridTemplateColumn Header="Delete">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
                             <Button Click="Button_Click">Delete</Button>
@@ -46,14 +46,14 @@
                 </DataGridTemplateColumn>
             </DataGrid.Columns>
         </DataGrid>
-        <!--</ListView>-->
+        
         <Grid Margin="6,208,317,95" Background="Wheat" Grid.RowSpan="4">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="245*"/>
                 <ColumnDefinition Width="432*"/>
             </Grid.ColumnDefinitions>
             <Label Content="Add Student" HorizontalAlignment="Left" Margin="35,4,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold" Grid.Column="1"/>
-            <Label Content="Roll No" HorizontalAlignment="Left" Margin="10,42,0,0" VerticalAlignment="Top" Width="107" FontWeight="Bold"/>
+            <Label Content="Roll No" HorizontalAlignment="Left" Margin="10,42,0,0" VerticalAlignment="Top" Width="107" FontWeight="Bold" />
             <Label Content="Student Name" HorizontalAlignment="Left" Margin="10,76,0,0" VerticalAlignment="Top" Width="107" FontWeight="Bold"/>
             <Label Content="Address" HorizontalAlignment="Left" Margin="101,35,0,0" VerticalAlignment="Top" Width="107" FontWeight="Bold" Grid.Column="1" />
             <Label Content="Student Mobile" HorizontalAlignment="Left" Margin="101,77,0,0" VerticalAlignment="Top" Width="107" FontWeight="Bold" Grid.Column="1"/>
@@ -65,23 +65,23 @@
             <Label Content="Gender" HorizontalAlignment="Left" Margin="107,183,0,0" VerticalAlignment="Top" FontWeight="Bold" Grid.Column="1"/>
             <Label Content="Username" HorizontalAlignment="Left" Margin="10,216,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
             <Label Content="Password" HorizontalAlignment="Left" Margin="104,213,0,0" VerticalAlignment="Top" FontWeight="Bold" Grid.Column="1"/>
-            <Button x:Name="btnAdd" Content="Add" HorizontalAlignment="Left" Margin="35,274,0,0" VerticalAlignment="Top" Width="140" Height="43"  FontSize="18" FontWeight="Bold" Grid.Column="1" />
-            <TextBox x:Name="txtRollNo" HorizontalAlignment="Left" Margin="139,40,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="140" Height="22" FontSize="14" Grid.ColumnSpan="2" />
-            <TextBox x:Name="txtStudentName" HorizontalAlignment="Left" Margin="139,79,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="140" Height="22" FontSize="14" Grid.ColumnSpan="2" />
-            <TextBox x:Name="txtAddress" HorizontalAlignment="Left" Background="White" Margin="253,40,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="140" Height="22" FontSize="14" Grid.Column="1" />
-            <TextBox x:Name="txtStudentMobile" HorizontalAlignment="Left" Margin="253,79,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="140" Height="22" FontSize="14" Grid.Column="1" />
+            <Button x:Name="btnAdd" Content="Add" HorizontalAlignment="Left" Margin="35,274,0,0" VerticalAlignment="Top" Width="140" Height="43"  FontSize="18" FontWeight="Bold" Grid.Column="1" Command="{Binding Submit}" />
+            <TextBox x:Name="txtRollNo" Text="{Binding  RollNo}" HorizontalAlignment="Left" Margin="139,40,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="140" Height="22" FontSize="14" Grid.ColumnSpan="2" />
+            <TextBox x:Name="txtStudentName" Text="{Binding StudentName}" HorizontalAlignment="Left" Margin="139,79,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="140" Height="22" FontSize="14" Grid.ColumnSpan="2" />
+            <TextBox x:Name="txtAddress" Text="{Binding StudentAddress}" HorizontalAlignment="Left" Background="White" Margin="253,40,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="140" Height="22" FontSize="14" Grid.Column="1" />
+            <TextBox x:Name="txtStudentMobile" Text="{Binding StudentMobile}" HorizontalAlignment="Left" Margin="253,79,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="140" Height="22" FontSize="14" Grid.Column="1" />
             <!--<TextBox x:Name="txtDob" HorizontalAlignment="Left" Margin="139,178,0,276"   TextWrapping="Wrap" VerticalAlignment="Top" Width="140" Height="22" FontSize="14"/>-->
-            <Button x:Name="btnImage" HorizontalAlignment="Left" Margin="253,115,0,187" Width="140" Content="Select Image" Grid.Column="1"/>
-            <TextBox x:Name="txtEmail" HorizontalAlignment="Left" Margin="139,0,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Width="140" Height="22" FontSize="14" Grid.ColumnSpan="2"/>
-            <TextBox x:Name="txtCity" HorizontalAlignment="Left" Margin="253,0,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Width="140" Height="22" FontSize="14" Grid.Column="1"/>
-            <TextBox x:Name="txtPincode" HorizontalAlignment="Left" Margin="139,188,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="140" Height="22" FontSize="14" Grid.ColumnSpan="2"/>
-            <DatePicker HorizontalAlignment="Left" Height="28" Margin="139,112,0,0" VerticalAlignment="Top" Width="140" Grid.ColumnSpan="2"/>
-            <TextBox x:Name="txtUsername" HorizontalAlignment="Left" Margin="139,221,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="140" Height="22" FontSize="14" Grid.ColumnSpan="2"/>
-            <PasswordBox x:Name="pwdUsername" HorizontalAlignment="Left" Margin="253,215,0,0"  VerticalAlignment="Top" Width="140" Height="22" FontSize="14" Grid.Column="1"/>
+            <Button x:Name="btnImage"  Command="{Binding Image }" HorizontalAlignment="Left" Margin="253,115,0,187" Width="140" Content="Select Image" Grid.Column="1"/>
+            <TextBox x:Name="txtEmail" Text="{Binding StudentEmail}" HorizontalAlignment="Left" Margin="139,0,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Width="140" Height="22" FontSize="14" Grid.ColumnSpan="2"/>
+            <TextBox x:Name="txtCity"  Text="{Binding StudentCity}" HorizontalAlignment="Left" Margin="253,0,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Width="140" Height="22" FontSize="14" Grid.Column="1"/>
+            <TextBox x:Name="txtPincode" Text="{Binding StudentPincode}" HorizontalAlignment="Left" Margin="139,188,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="140" Height="22" FontSize="14" Grid.ColumnSpan="2"/>
+            <DatePicker HorizontalAlignment="Left" SelectedDate="{Binding Date}" Height="28" Margin="139,112,0,0" VerticalAlignment="Top" Width="140" Grid.ColumnSpan="2"/>
+            <TextBox x:Name="txtUsername" Text="{Binding StudentUsername}" HorizontalAlignment="Left" Margin="139,221,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="140" Height="22" FontSize="14" Grid.ColumnSpan="2"/>
+            <TextBox x:Name="pwdUsername" HorizontalAlignment="Left" Text="{Binding StudentPassword}" Margin="253,215,0,0"  VerticalAlignment="Top" Width="140" Height="22" FontSize="14" Grid.Column="1"/>
             <ComboBox HorizontalAlignment="Left" Height="20" Margin="253,185,0,0" VerticalAlignment="Top" Width="140" Grid.Column="1">
-                <TextBlock Text="Male"></TextBlock>
-                <TextBlock Text="Female"></TextBlock>
-                <TextBlock Text="Others"></TextBlock>
+                <TextBlock Text="1"></TextBlock>
+                <TextBlock Text="2"></TextBlock>
+                <TextBlock Text="3"></TextBlock>
             </ComboBox>
         </Grid>
         <!--<Grid Margin="570,203,35,-30"  Background="Red" Grid.RowSpan="5">
@@ -136,6 +136,5 @@
         </ComboBox>
         <Label Content="Select Standard" HorizontalAlignment="Left" Height="30" Margin="22,162,0,0" VerticalAlignment="Top" Width="136"/>
         <Label Content="Select Division" HorizontalAlignment="Left" Height="30" Margin="396,162,0,0" VerticalAlignment="Top" Width="136"/>
-
     </Grid>
 </UserControl>

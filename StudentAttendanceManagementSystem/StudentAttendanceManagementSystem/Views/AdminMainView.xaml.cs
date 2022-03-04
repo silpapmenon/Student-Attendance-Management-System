@@ -16,18 +16,13 @@ using System.Windows.Shapes;
 namespace StudentAttendanceManagementSystem.Views
 {
     /// <summary>
-    /// Interaction logic for StudentReport.xaml
+    /// Interaction logic for AdminMainView.xaml
     /// </summary>
-    public partial class StudentReport : UserControl
+    public partial class AdminMainView : UserControl
     {
-        public StudentReport()
+        public AdminMainView()
         {
             InitializeComponent();
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-
         }
     }
 }

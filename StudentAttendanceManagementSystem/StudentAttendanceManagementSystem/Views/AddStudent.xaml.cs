@@ -37,6 +37,11 @@ namespace StudentAttendanceManagementSystem.Views
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
+            btnAdd.Content = "Edit";
+        }
+
+        private void grdProductData_SelectionChanged_1(object sender, SelectionChangedEventArgs e)
+        {
 
         }
     }
