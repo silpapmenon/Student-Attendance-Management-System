@@ -46,6 +46,7 @@
     <Compile Include="Model\ComplaintModel.cs" />
     <Compile Include="Model\DivisionModel.cs" />
     <Compile Include="Model\LeaveModel.cs" />
+    <Compile Include="Model\RolesModel.cs" />
     <Compile Include="Model\StaffModel.cs" />
     <Compile Include="Model\StudentModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
