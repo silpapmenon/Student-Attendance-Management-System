@@ -7,11 +7,11 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid Height="188" VerticalAlignment="Top">
-        <ListView Name="UserGrid" Grid.Row="1"  ItemsSource="{Binding Student}" >
-            <DataGrid Name="grdStudentReport" AutoGenerateColumns="False" CanUserAddRows="False" ColumnWidth="*" Width="789" Height="174">
+        <ListView Name="UserGrid" Grid.Row="1" >
+            <DataGrid Name="grdStudentReport" AutoGenerateColumns="False" CanUserAddRows="False" ColumnWidth="*" Width="789" Height="322" SelectionChanged="grdStudentReport_SelectionChanged" Margin="0,50" ItemsSource="{Binding StudentReport}">
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="Roll No" Binding="{Binding RollNo}" IsReadOnly="True"/>
-                    <DataGridTextColumn Header="Student name" Width="90" Binding="{Binding StudentName}" IsReadOnly="True"/>
+                    <DataGridTextColumn Header="Student Name" Width="90" Binding="{Binding StudentName}" IsReadOnly="True"/>
                     <DataGridTextColumn Header="DOB" Binding="{Binding DOB}" IsReadOnly="True"/>
                     <DataGridTextColumn Header="Address" Binding="{Binding StudentAddress}" IsReadOnly="True"/>
                     <DataGridTextColumn Header="Gender" Binding="{Binding Gender}" IsReadOnly="True"/>
@@ -20,6 +20,7 @@
                     <DataGridTextColumn Header="City" Binding="{Binding StudentCity}" IsReadOnly="True"/>
                     <DataGridTextColumn Header="Pincode" Binding="{Binding StudentPincode}" IsReadOnly="True"/>
                     <DataGridTextColumn Header="Image" Binding="{Binding Image}" IsReadOnly="True"/>
+                    <DataGridTextColumn Header="Username" Binding="{Binding Username}" IsReadOnly="True"/>
                     <DataGridTemplateColumn Header="Delete">
                         <DataGridTemplateColumn.CellTemplate>
                             <DataTemplate>

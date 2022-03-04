@@ -85,6 +85,7 @@
     <Compile Include="ViewModels\StandardsViewModel.cs" />
     <Compile Include="ViewModels\StudentHomeViewModel.cs" />
     <Compile Include="ViewModels\StudentProfileViewModel.cs" />
+    <Compile Include="ViewModels\StudentReportViewModel.cs" />
     <Compile Include="Views\AboutUs.xaml.cs">
       <DependentUpon>AboutUs.xaml</DependentUpon>
     </Compile>

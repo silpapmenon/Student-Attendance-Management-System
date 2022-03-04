@@ -19,7 +19,11 @@
                 <MenuItem Header="OUR PATRONS" FontWeight="Bold" Height="30" Foreground="Black" Command="{Binding RedirectViewCommand}" CommandParameter="OUR PATRONS"></MenuItem>
             </MenuItem>
             <MenuItem Header="STANDARDS" FontWeight="Bold" Height="30" Width="80" Background="{x:Null}" Command="{Binding RedirectViewCommand}" CommandParameter="STANDARDS"/>
-            <MenuItem Header="STAFF" FontWeight="Bold" Height="30" Width="80" Command="{Binding RedirectViewCommand}" CommandParameter="STAFF"></MenuItem>
+            <MenuItem Header="FACULTY" FontWeight="Bold" Height="30" Width="100" >
+                <MenuItem Header="STAFF" FontWeight="Bold" Height="30" Foreground="Black" Command="{Binding RedirectViewCommand}" CommandParameter="STAFF"></MenuItem>
+                <MenuItem Header="STUDENT REPORT" FontWeight="Bold" Height="30" Foreground="Black" Command="{Binding RedirectViewCommand}" CommandParameter="STUDENT REPORT"></MenuItem>
+                
+            </MenuItem>
             <MenuItem Header="CLICK" FontWeight="Bold" Height="30" Width="100" Command="{Binding RedirectViewCommand}" >
                 <MenuItem Header="ADMIN PANEL" FontWeight="Bold" Height="30" Foreground="Black" Command="{Binding RedirectViewCommand}" CommandParameter="ADMIN PANEL"></MenuItem>
                 <MenuItem Header="ADD STUDENT" FontWeight="Bold" Height="30" Foreground="Black" Command="{Binding RedirectViewCommand}" CommandParameter="ADD STUDENT"></MenuItem>

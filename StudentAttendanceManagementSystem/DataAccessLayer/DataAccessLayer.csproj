@@ -104,6 +104,7 @@
     <Compile Include="Student.cs">
       <DependentUpon>AttendanceManagementDB.tt</DependentUpon>
     </Compile>
+    <Compile Include="StudentReportData.cs" />
     <Compile Include="Subject.cs">
       <DependentUpon>AttendanceManagementDB.tt</DependentUpon>
     </Compile>
