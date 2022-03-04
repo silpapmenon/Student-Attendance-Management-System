@@ -17,7 +17,8 @@ namespace DataAccessLayer
                 Student student = new Student();
                 student.RollNo = studentModel.RollNo;
                 student.StudentName = studentModel.StudentName;
-                student.DivisionName = studentModel.DivisionName;
+                student.DivisionName = "A";
+                student.StandardID = 2;
                 student.StudentEmail = studentModel.StudentEmail;
                 student.StudentMobile =studentModel.StudentMobile;
                 student.DOB= studentModel.DOB;
@@ -27,7 +28,9 @@ namespace DataAccessLayer
                 student.StudentPassword = studentModel.StudentPassword;
                 student.StudentUsername = studentModel.StudentUsername;
                 student.StudentPincode = studentModel.StudentPincode;
-                student.Gender = studentModel.Gender;                               
+                student.Gender = 2;    
+                student.StandardID = 1;
+                student.RoleID = 3;
                 studentManagementSystemEntities.Students.Add(student);
                 studentManagementSystemEntities.SaveChanges();
             }
@@ -57,10 +60,30 @@ namespace DataAccessLayer
                 studentModel.StudentAddress = item.StudentAddress;
                 studentModel.StudentCity= item.StudentCity;
                 studentModel.StudentPincode= item.StudentPincode;
-                studentModel.Gender= item.Gender;           
+                studentModel.Gender=item.Gender;           
                 studentModels.Add(studentModel);
             }
             return studentModels;
+
+        }
+        public void DeleteData(StudentModel studentModel)
+        {
+            try
+            {
+                StudentManagementSystemEntities entities = new StudentManagementSystemEntities();
+                var result = from studObj in entities.Students
+                             where studObj.StudentID.Equals( studentModel.StudentID)
+                             select studObj;
+                foreach (var entity in result)
+                {
+                    entities.Students.Remove(entity);
+                }
+                entities.SaveChanges();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
         }
     }
 }

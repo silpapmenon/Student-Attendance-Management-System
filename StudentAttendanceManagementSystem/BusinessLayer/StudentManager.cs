@@ -1,4 +1,5 @@
-﻿using EntityLayer.Model;
+﻿using DataAccessLayer;
+using EntityLayer.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,17 +10,22 @@ namespace BusinessLayer
 {
     public class StudentManager
     {
-        //    public void SaveStudentDetails(StudentModel studentModel)
-        //    {
-        //        HotelReservationData hotelReservationData = new HotelReservationData();
-        //        hotelReservationData.SaveReservationData(makeReservationModel);
-        //    }
-        //    public List<MakeReservationModel> DisplayResult()
-        //    {
-        //        HotelReservationData objmake = new HotelReservationData();
-        //        return objmake.GetReservationList();
-        //    }
-        //}
+        public void SaveStudentDetails(StudentModel studentModel)
+        {
+            StudentData studentData = new StudentData ();
+            studentData.SaveStudentData(studentModel);
+        }
+        public List<StudentModel> DisplayResult()
+        {
+             StudentData studentData = new StudentData();
+            return studentData.GetStudentList();
+        }
+        public void DeleteStudentDetails(StudentModel studentModel)
+        {
+            StudentData studentData = new StudentData();
+            studentData.DeleteData(studentModel);
+        }
     }
 }
+
 

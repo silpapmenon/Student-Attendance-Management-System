@@ -1,4 +1,5 @@
-﻿using StudentAttendanceManagementSystem.ViewModels;
+﻿using EntityLayer.Model;
+using StudentAttendanceManagementSystem.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -52,6 +53,12 @@ namespace StudentAttendanceManagementSystem.Command
             {
                 model.SelectedView = new AdminPanelViewModel();
             }
+            else if (parameter.ToString() == "ADD STUDENT")
+            {
+                StudentModel studentModel = new StudentModel();
+                model.SelectedView = new AddStudentViewModel(studentModel);
+
+            }
             else if (parameter.ToString() == "CONTACT US")
             {
                 model.SelectedView = new ContactUsViewModel();
@@ -61,5 +68,6 @@ namespace StudentAttendanceManagementSystem.Command
                 model.SelectedView = new HomeViewModel();
             }
         }
+
     }
 }
