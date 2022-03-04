@@ -45,6 +45,7 @@
     <Compile Include="Model\AttendanceModel.cs" />
     <Compile Include="Model\ComplaintModel.cs" />
     <Compile Include="Model\DivisionModel.cs" />
+    <Compile Include="Model\GenderModel.cs" />
     <Compile Include="Model\LeaveModel.cs" />
     <Compile Include="Model\RolesModel.cs" />
     <Compile Include="Model\StaffModel.cs" />
