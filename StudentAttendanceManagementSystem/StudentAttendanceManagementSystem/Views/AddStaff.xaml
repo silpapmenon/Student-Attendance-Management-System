@@ -118,7 +118,7 @@
             </ComboBox>
 
         </Grid>-->
-        <ComboBox HorizontalAlignment="Left" Height="30" Margin="357,163,0,0" VerticalAlignment="Top" Width="136">
+        <!--<ComboBox HorizontalAlignment="Left" Height="30" Margin="357,163,0,0" VerticalAlignment="Top" Width="136">
             <TextBlock Text="LKG"></TextBlock>
             <TextBlock Text="UKG"></TextBlock>
             <TextBlock Text="FIRST"></TextBlock>
@@ -129,9 +129,9 @@
         <ComboBox HorizontalAlignment="Left" Height="30" Margin="696,165,0,0" VerticalAlignment="Top" Width="136">
             <TextBlock Text="A"></TextBlock>
             <TextBlock Text="B"></TextBlock>
-        </ComboBox>
-        <Label Content="Select Standard" HorizontalAlignment="Left" Height="30" Margin="193,162,0,0" VerticalAlignment="Top" Width="136"/>
-        <Label Content="Select Division" HorizontalAlignment="Left" Height="30" Margin="553,162,0,0" VerticalAlignment="Top" Width="136"/>
+        </ComboBox>-->
+        <!--<Label Content="Select Standard" HorizontalAlignment="Left" Height="30" Margin="193,162,0,0" VerticalAlignment="Top" Width="136"/>
+        <Label Content="Select Division" HorizontalAlignment="Left" Height="30" Margin="553,162,0,0" VerticalAlignment="Top" Width="136"/>-->
 
     </Grid>
 </UserControl>
