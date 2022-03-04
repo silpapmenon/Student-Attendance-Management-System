@@ -67,58 +67,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Admin.cs">
-      <DependentUpon>StudentAttendanceManagementDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Attendance.cs">
-      <DependentUpon>StudentAttendanceManagementDB.tt</DependentUpon>
-    </Compile>
     <Compile Include="Command\RedirectViewCommand.cs" />
-    <Compile Include="Complaint.cs">
-      <DependentUpon>StudentAttendanceManagementDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Division.cs">
-      <DependentUpon>StudentAttendanceManagementDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Gender.cs">
-      <DependentUpon>StudentAttendanceManagementDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Leave.cs">
-      <DependentUpon>StudentAttendanceManagementDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Role.cs">
-      <DependentUpon>StudentAttendanceManagementDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Staff.cs">
-      <DependentUpon>StudentAttendanceManagementDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="StaffStandard.cs">
-      <DependentUpon>StudentAttendanceManagementDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Standard.cs">
-      <DependentUpon>StudentAttendanceManagementDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Student.cs">
-      <DependentUpon>StudentAttendanceManagementDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="StudentAttendanceManagementDB.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>StudentAttendanceManagementDB.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="StudentAttendanceManagementDB.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>StudentAttendanceManagementDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="StudentAttendanceManagementDB.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>StudentAttendanceManagementDB.edmx</DependentUpon>
-    </Compile>
-    <Compile Include="Subject.cs">
-      <DependentUpon>StudentAttendanceManagementDB.tt</DependentUpon>
-    </Compile>
     <Compile Include="ViewModels\AboutUsViewModel.cs" />
     <Compile Include="ViewModels\AdminPanelViewModel.cs" />
     <Compile Include="ViewModels\BaseViewModel.cs" />
@@ -331,13 +280,6 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
-    <EntityDeploy Include="StudentAttendanceManagementDB.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>StudentAttendanceManagementDB.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <None Include="StudentAttendanceManagementDB.edmx.diagram">
-      <DependentUpon>StudentAttendanceManagementDB.edmx</DependentUpon>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -390,18 +332,6 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="StudentAttendanceManagementDB.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>StudentAttendanceManagementDB.edmx</DependentUpon>
-      <LastGenOutput>StudentAttendanceManagementDB.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="StudentAttendanceManagementDB.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>StudentAttendanceManagementDB.edmx</DependentUpon>
-      <LastGenOutput>StudentAttendanceManagementDB.cs</LastGenOutput>
-    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
