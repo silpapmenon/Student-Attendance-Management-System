@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Model\AdminModel.cs" />
+    <Compile Include="Model\AttendanceModel.cs" />
     <Compile Include="Model\ComplaintModel.cs" />
     <Compile Include="Model\DivisionModel.cs" />
     <Compile Include="Model\StaffModel.cs" />
