@@ -9,10 +9,11 @@ namespace EntityLayer.Model
     public class StudentModel
     {
         private int _studentID;
+        private int _rollNo;
         private string _studentName;
         private string _divisionName;
         private string _email; 
-        private int _studentMobile;
+        private string _studentMobile;
         private DateTime _dob;
         private string _image;
         private string _studentAddress;
@@ -21,13 +22,14 @@ namespace EntityLayer.Model
         private string _studentUsername;
         private string _studentPassword;
         private int _standardID;
-        private string _gender;
+        private int _gender;
         private int _roleID;
+        public int RollNo { get =>  _rollNo;  set => _rollNo = value; } 
         public int StudentID { get => _studentID; set => _studentID = value; }
         public string StudentName { get => _studentName; set => _studentName = value; }
         public string DivisionName { get => _divisionName; set => _divisionName = value; }
-        public string Email { get => _email; set => _email = value; }
-        public int StudentMobile { get => _studentMobile; set => _studentMobile = value; }
+        public string StudentEmail { get => _email; set => _email = value; } 
+        public string StudentMobile { get => _studentMobile; set => _studentMobile = value; }
         public DateTime DOB { get => _dob; set => _dob = value; }
         public string Image { get => _image; set => _image = value; }
         public string StudentAddress { get => _studentAddress; set => _studentAddress = value; }
@@ -36,7 +38,7 @@ namespace EntityLayer.Model
         public string StudentUsername { get => _studentUsername; set => _studentUsername = value; }
         public string StudentPassword { get => _studentPassword; set => _studentPassword = value; }
         public int StandardID { get => _standardID; set => _standardID = value; }
-        public string Gender { get => _gender; set => _gender = value; }
+        public int Gender { get => _gender; set => _gender = value; }
         public int RoleID { get => _roleID; set => _roleID = value; }
     }
     
