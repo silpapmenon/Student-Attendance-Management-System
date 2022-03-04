@@ -39,4 +39,5 @@ namespace EntityLayer.Model
         public string Gender { get => _gender; set => _gender = value; }
         public int RoleID { get => _roleID; set => _roleID = value; }
     }
+    
 }
