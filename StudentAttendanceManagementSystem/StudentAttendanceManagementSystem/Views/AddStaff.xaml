@@ -15,29 +15,29 @@
             <RowDefinition Height="0*"/>
         </Grid.RowDefinitions>
         <!--<ListView Name="UserGrid" Grid.Row="1"  >-->
-        <DataGrid Name="grdProductData" AutoGenerateColumns="False" CanUserAddRows="False" MaxColumnWidth="100" SelectionChanged="grdProductData_SelectionChanged" Margin="72,15,35,82">
+        <DataGrid Name="grdProductData" AutoGenerateColumns="False" CanUserAddRows="False" MaxColumnWidth="80" SelectionChanged="grdProductData_SelectionChanged" Margin="10,15,268,82">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="StaffID" Width="50" />
-                <DataGridTextColumn Header="Staff Name" Width="90" />
-                <DataGridTextColumn Header="Staff Email" Width="85" />
+                <DataGridTextColumn Header="StaffID" Width="50"  />
+                <DataGridTextColumn Header="Name" Width="50" />
+                <DataGridTextColumn Header="Email" Width="45" />
                 <DataGridTextColumn Header="Gender" Width="50" />
-                <DataGridTextColumn Header="Staff Mobile" Width="95" />
-                <DataGridTextColumn Header="Qualification" Width="50" />
-                <DataGridTextColumn Header="Image"  Width="50"/>
-                <DataGridTextColumn Header="Staff Address" Width="100"/>
-                <DataGridTextColumn Header="Staff City" Width="75"/>
-                <DataGridTextColumn Header="Staff Pincode" Width="98"/>
+                <DataGridTextColumn Header="Mobile" Width="50" />
+                <DataGridTextColumn Header="Qualification" Width="80" />
+                <DataGridTextColumn Header="Image"  Width="45"/>
+                <DataGridTextColumn Header="Address" Width="55"/>
+                <DataGridTextColumn Header="City" Width="30"/>
+                <DataGridTextColumn Header="Pincode" Width="55"/>
                 <DataGridTextColumn Header="Username" Width="65"/>
                 <DataGridTextColumn Header="Password" Width="65"/>
 
-                <DataGridTemplateColumn Header="Edit Staff Profile" Width="100">
+                <DataGridTemplateColumn Header="Edit" Width="30">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
                             <Button Click="Button_Click_1">Edit</Button>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>
-                <DataGridTemplateColumn Header="Delete Staff">
+                <DataGridTemplateColumn Header="Delete" Width="45">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
                             <Button Click="Button_Click_2">Delete</Button>
@@ -50,14 +50,14 @@
         <Grid Margin="192,208,131,95"  Grid.RowSpan="4">
             <Label Content="Add Staff" HorizontalAlignment="Left" Margin="280,4,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold"/>
             <Label Content="StaffID" HorizontalAlignment="Left" Margin="10,42,0,0" VerticalAlignment="Top" Width="107" FontWeight="Bold"/>
-            <Label Content="Staff Name" HorizontalAlignment="Left" Margin="10,76,0,0" VerticalAlignment="Top" Width="107" FontWeight="Bold"/>
+            <Label Content="Name" HorizontalAlignment="Left" Margin="10,76,0,0" VerticalAlignment="Top" Width="107" FontWeight="Bold"/>
             <Label Content="Address" HorizontalAlignment="Left" Margin="346,35,0,0" VerticalAlignment="Top" Width="107" FontWeight="Bold" />
-            <Label Content="Staff Mobile" HorizontalAlignment="Left" Margin="346,77,0,0" VerticalAlignment="Top" Width="107" FontWeight="Bold"/>
+            <Label Content="Mobile" HorizontalAlignment="Left" Margin="346,77,0,0" VerticalAlignment="Top" Width="107" FontWeight="Bold"/>
             <Label Content="Qualification" HorizontalAlignment="Left" Margin="10,110,0,0" VerticalAlignment="Top" Width="107" FontWeight="Bold"/>
             <Label Content="Image" HorizontalAlignment="Left" Margin="350,113,0,0" VerticalAlignment="Top" Width="106" FontWeight="Bold"/>
-            <Label Content="Staff Email" HorizontalAlignment="Left" Margin="10,150,0,0" VerticalAlignment="Top" Width="107" FontWeight="Bold"/>
-            <Label Content="Staff City" HorizontalAlignment="Left" Margin="350,147,0,0" VerticalAlignment="Top" Width="106" FontWeight="Bold"/>
-            <Label Content="Staff Pincode" HorizontalAlignment="Left" Margin="7,185,0,111" Width="107" FontWeight="Bold"/>
+            <Label Content="Email" HorizontalAlignment="Left" Margin="10,150,0,0" VerticalAlignment="Top" Width="107" FontWeight="Bold"/>
+            <Label Content="City" HorizontalAlignment="Left" Margin="350,147,0,0" VerticalAlignment="Top" Width="106" FontWeight="Bold"/>
+            <Label Content="Pincode" HorizontalAlignment="Left" Margin="7,185,0,111" Width="107" FontWeight="Bold"/>
             <Label Content="Gender" HorizontalAlignment="Left" Margin="352,183,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
             <Label Content="Username" HorizontalAlignment="Left" Margin="10,216,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
             <Label Content="Password" HorizontalAlignment="Left" Margin="349,213,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
@@ -73,7 +73,7 @@
             <TextBox x:Name="txtPincode" HorizontalAlignment="Left" Margin="139,188,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="140" Height="22" FontSize="14"/>
             <TextBox HorizontalAlignment="Left" Height="28" Margin="139,112,0,0" VerticalAlignment="Top" Width="140"/>
             <TextBox x:Name="txtUsername" HorizontalAlignment="Left" Margin="139,221,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="140" Height="22" FontSize="14"/>
-            <PasswordBox x:Name="pwdUsername" HorizontalAlignment="Left" Margin="498,215,0,0"  VerticalAlignment="Top" Width="140" Height="22" FontSize="14"/>
+            <TextBox x:Name="pwdUsername" HorizontalAlignment="Left" Margin="498,215,0,0"  VerticalAlignment="Top" Width="140" Height="22" FontSize="14"/>
             <ComboBox HorizontalAlignment="Left" Height="20" Margin="498,185,0,0" VerticalAlignment="Top" Width="140">
                 <TextBlock Text="Male"></TextBlock>
                 <TextBlock Text="Female"></TextBlock>
