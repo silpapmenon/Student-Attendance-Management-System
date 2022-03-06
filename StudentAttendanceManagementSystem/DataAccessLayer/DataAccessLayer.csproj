@@ -75,6 +75,8 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>AttendanceManagementDB.edmx</DependentUpon>
     </Compile>
+    <Compile Include="StaffData.cs" />
+    <Compile Include="StaffReport.cs" />
     <Compile Include="StudentData.cs" />
     <Compile Include="Complaint.cs">
       <DependentUpon>AttendanceManagementDB.tt</DependentUpon>

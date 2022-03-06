@@ -72,6 +72,11 @@ namespace StudentAttendanceManagementSystem.Command
                 StudentModel studentModel=new StudentModel();
                 model.SelectedView = new StudentReportViewModel(studentModel);
             }
+            else if (parameter.ToString() == "STAFF REPORT")
+            {
+                StaffModel staffModel = new StaffModel();
+                model.SelectedView = new StaffReportViewModel(staffModel);
+            }
 
         }
 

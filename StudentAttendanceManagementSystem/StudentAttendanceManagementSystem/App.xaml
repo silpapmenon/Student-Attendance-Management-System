@@ -39,5 +39,8 @@
         <DataTemplate DataType="{x:Type viewModel:StudentReportViewModel}">
             <views:StudentReport/>
         </DataTemplate>
+        <DataTemplate DataType="{x:Type viewModel:StaffReportViewModel}">
+            <views:StaffReport/>
+        </DataTemplate>
     </Application.Resources>
 </Application>
