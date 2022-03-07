@@ -20,10 +20,15 @@ namespace BusinessLayer
             StaffData staffData = new StaffData();
             return staffData.GetStaffList();
         }
-        public void DeleteStaffDetails(StudentModel studentModel)
+        public void UpdateData(StaffModel staffModel)
         {
-            StudentData studentData = new StudentData();
-            studentData.DeleteData(studentModel);
+            StaffData staffData = new StaffData();
+            staffData.DeleteData(staffModel);
+        }
+        public void DeleteStaffDetails(StaffModel staffModel)
+        {
+            StaffData staffData = new StaffData();
+            staffData.DeleteData(staffModel);
         }
     }
 }

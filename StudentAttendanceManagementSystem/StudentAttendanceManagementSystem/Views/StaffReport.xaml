@@ -8,18 +8,18 @@
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid Height="188" VerticalAlignment="Top">
         <ListView Name="UserGrid" Margin="0,94,0,-111"    >
-            <DataGrid Name="grdStaffReport" AutoGenerateColumns="False" CanUserAddRows="False" ColumnWidth="*" Width="798" Height="220" ItemsSource="{Binding StaffReport}" >
+            <DataGrid Name="grdStaffReport" AutoGenerateColumns="False" CanUserAddRows="False" ColumnWidth="*" Width="798" Height="220" ItemsSource="{Binding StaffReports}" >
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="ID" Binding="{Binding StaffID }" IsReadOnly="True"/>
                     <DataGridTextColumn Header="Staff Name" Binding="{Binding StaffName}" IsReadOnly="True"/>
-                    <DataGridTextColumn Header="Mobile" Binding="{Binding Mobile}" IsReadOnly="True"/>
-                    <DataGridTextColumn Header="Email" Binding="{Binding Email}" IsReadOnly="True"/>
+                    <DataGridTextColumn Header="Mobile" Binding="{Binding StaffMobile}" IsReadOnly="True"/>
+                    <DataGridTextColumn Header="Email" Binding="{Binding StaffEmail}" IsReadOnly="True"/>
                     <DataGridTextColumn Header="Qualification" Binding="{Binding Qualification}" IsReadOnly="True"/>
-                    <DataGridTextColumn Header="Image" Binding="{Binding Image}" IsReadOnly="True"/>
-                    <DataGridTextColumn Header="Address" Binding="{Binding Address}" IsReadOnly="True"/>
-                    <DataGridTextColumn Header="City" Binding="{Binding City}" IsReadOnly="True"/>
-                    <DataGridTextColumn Header="Pincode" Binding="{Binding Pincode}" IsReadOnly="True"/>
-                    <DataGridTextColumn Header="Gender" Binding="{Binding Gender}" IsReadOnly="True"/>
+                    <DataGridTextColumn Header="Image" Binding="{Binding StaffImage}" IsReadOnly="True"/>
+                    <DataGridTextColumn Header="Address" Binding="{Binding StaffAddress}" IsReadOnly="True"/>
+                    <DataGridTextColumn Header="City" Binding="{Binding StaffCity}" IsReadOnly="True"/>
+                    <DataGridTextColumn Header="Pincode" Binding="{Binding StaffPincode}" IsReadOnly="True"/>
+                    <DataGridTextColumn Header="Gender" Binding="{Binding StaffGender}" IsReadOnly="True"/>
                     <DataGridTemplateColumn Header="Delete">
                         <DataGridTemplateColumn.CellTemplate>
                             <DataTemplate>

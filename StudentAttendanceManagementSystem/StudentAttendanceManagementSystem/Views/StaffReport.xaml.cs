@@ -34,11 +34,11 @@ namespace StudentAttendanceManagementSystem.Views
                 if (grdStaffReport.Items.Count > 0)
                 {
                     var value = (grdStaffReport.SelectedItem as StaffModel).StaffID;
-                    StudentModel staffModel = new StudentModel();
-                    StaffManager student = new StaffManager();
-                    staffModel.RollNo = value;
-                    student.DeleteStaffDetails(staffModel);
-                    MessageBox.Show("Staff Deleted :" + staffModel.RollNo);
+                    StaffModel staffModel = new StaffModel();
+                    StaffManager staff = new StaffManager();
+                    staffModel.StaffID = value;
+                    staff.DeleteStaffDetails(staffModel);
+                    MessageBox.Show("Staff Deleted :" + staffModel.StaffID);
                 }
                 else
                 {
