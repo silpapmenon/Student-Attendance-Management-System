@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="IStudentManager.cs" />
+    <Compile Include="LeaveBusinessModel.cs" />
     <Compile Include="StaffManager.cs" />
     <Compile Include="StaffReportBusinessModel.cs" />
     <Compile Include="StudentManager.cs" />

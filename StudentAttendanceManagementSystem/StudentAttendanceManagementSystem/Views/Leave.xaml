@@ -17,13 +17,13 @@
             <ColumnDefinition Width="204*"/>
             <ColumnDefinition Width="132*"/>
         </Grid.ColumnDefinitions>
-        <DataGrid Opacity="0.6" d:ItemsSource="{d:SampleData ItemCount=5}" AutoGenerateColumns="False" Margin="166,148,173,142" RenderTransformOrigin="1.04,0.521" Grid.ColumnSpan="4">
+        <DataGrid Opacity="0.6" d:ItemsSource="{d:SampleData ItemCount=5}" AutoGenerateColumns="False" Margin="166,148,173,246" RenderTransformOrigin="1.04,0.521" Grid.ColumnSpan="4">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="RollNo"/>
-                <DataGridTextColumn Header="StudentName"/>
-                <DataGridTextColumn Header="Standard"/>
-                <DataGridTextColumn Header="Division"/>
+                <DataGridTextColumn Header="LeaveID"/>
+                <DataGridTextColumn Header="StudentID"/>
                 <DataGridTextColumn Header="Message"/>
+                <DataGridTextColumn Header="NumDays"/>
+                <DataGridTextColumn Header="Date"/>
             </DataGrid.Columns>
         </DataGrid>
         <ComboBox Text="Select Standard" HorizontalAlignment="Left" Margin="25,32,0,0" VerticalAlignment="Top" Width="120" Grid.Column="1" Grid.ColumnSpan="3" Background="White">
