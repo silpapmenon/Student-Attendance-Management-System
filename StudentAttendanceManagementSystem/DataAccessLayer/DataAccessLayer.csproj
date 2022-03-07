@@ -76,6 +76,7 @@
       <DependentUpon>AttendanceManagementDB.edmx</DependentUpon>
     </Compile>
     <Compile Include="StaffData.cs" />
+    <Compile Include="StanadardData.cs" />
     <Compile Include="StudentData.cs" />
     <Compile Include="Complaint.cs">
       <DependentUpon>AttendanceManagementDB.tt</DependentUpon>

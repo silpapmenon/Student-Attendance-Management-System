@@ -15,7 +15,7 @@ namespace DataAccessLayer
             {
                 StudentManagementSystemEntities studentManagementSystemEntities = new StudentManagementSystemEntities();
                 Staff staff = new Staff();
-               // staff.StaffID = staffModel.StaffID;
+                // staff.StaffID = staffModel.StaffID;
                 staff.StaffName = staffModel.StaffName;
                 staff.Email = staffModel.StaffEmail;
                 staff.Mobile = staffModel.StaffMobile;
@@ -30,7 +30,7 @@ namespace DataAccessLayer
                 staff.RoleID = 3;
                 studentManagementSystemEntities.Staffs.Add(staff);
                 studentManagementSystemEntities.SaveChanges();
-               // MessageBox.Show("Value Added");
+                // MessageBox.Show("Value Added");
             }
             catch (Exception ex)
             {
@@ -38,6 +38,32 @@ namespace DataAccessLayer
             }
 
         }
+        //public List<StaffModel> SaveStaffData()
+        //{
+        //    StudentManagementSystemEntities studentManagementSystemEntities = new StudentManagementSystemEntities();
+        //    var result = from staffObj in studentManagementSystemEntities.Staffs
+        //                 join newObj in studentManagementSystemEntities.Genders on staffObj.Gender equals newObj.GenderID
+        //                 select staffObj;
+        //    List<StaffModel> staffModels = new List<StaffModel>();
+        //    foreach (var item in result)
+        //    {
+        //        StaffModel model = new StaffModel();
+        //        model.StaffID = item.StaffID;
+        //        model.StaffName=item.StaffName;
+        //        model.StaffEmail = item.Email;
+        //        model.StaffMobile = item.Mobile;
+        //        model.Qualification=item.Qualification;
+        //        model.StaffAddress=item.Address;
+        //        model.StaffCity=item.City;
+        //        model.StaffPincode=item.Pincode;
+        //        model.StaffUserName=item.UserName;
+        //        model.StaffPassword=item.Password;
+        //        model.StaffGender = item.GenderName;
+        //        model.RoleID = 3;
+        //        staffModels.Add(model);
+        //    }
+        //    return staffModels;
+        //}
         public List<StaffModel> GetStaffList()
         {
             StudentManagementSystemEntities studentManagementSystemEntities = new StudentManagementSystemEntities();
@@ -89,9 +115,9 @@ namespace DataAccessLayer
                     entity.Password = staffModel.StaffPassword;
                     entity.Gender = staffModel.StaffGender;
                     entity.RoleID = 3;
-                    
-                   }
-             studentManagementSystemEntities.SaveChanges();
+
+                }
+                studentManagementSystemEntities.SaveChanges();
 
             }
             catch (Exception ex)
@@ -99,24 +125,25 @@ namespace DataAccessLayer
                 throw ex;
             }
         }
-        //public void DeleteData(StaffModel staffModel)
-        //{
-        //    try
-        //    {
-        //        StudentManagementSystemEntities entities = new StudentManagementSystemEntities();
-        //        var result = from staffObj in entities.Staffs
-        //                     where staffObj.StaffID.Equals(staffModel.StaffID)
-        //                     select staffObj;
-        //        foreach (var entity in result)
-        //        {
-        //            entities.Staffs.Remove(entity);
-        //        }
-        //        entities.SaveChanges();
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        throw ex;
-        //    }
+        public void DeleteData(StaffModel staffModel)
+        {
+            try
+            {
+                StudentManagementSystemEntities entities = new StudentManagementSystemEntities();
+                var result = from staffObj in entities.Staffs
+                             where staffObj.StaffID==staffModel.StaffID
+                             select staffObj;
+                foreach (var entity in result)
+                {
+                    entities.Staffs.Remove(entity);
+                }
+                entities.SaveChanges();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }
 

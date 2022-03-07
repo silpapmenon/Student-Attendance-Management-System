@@ -73,6 +73,11 @@ namespace StudentAttendanceManagementSystem.Command
                 StudentModel studentModel=new StudentModel();
                 model.SelectedView = new StudentReportViewModel(studentModel);
             }
+            else if (parameter.ToString() == "ADD STANDARDS")
+            {
+                StandardModel standardModel = new StandardModel();
+                model.SelectedView = new AddStandardViewModel(standardModel);
+            }
 
         }
 

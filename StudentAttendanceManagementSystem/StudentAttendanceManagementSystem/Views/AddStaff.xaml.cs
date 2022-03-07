@@ -27,33 +27,15 @@ namespace StudentAttendanceManagementSystem.Views
         {
             InitializeComponent();
         }
-
-        private void grdProductData_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        void Refresh()
         {
-
+            StaffManager staffManager = new StaffManager();
+            grdProductData.ItemsSource = staffManager.DisplayResult();
         }
 
-        //private void Button_Click(object sender, RoutedEventArgs e)
-        //{
 
-        //}
 
-        //private void Button_Click_1(object sender, RoutedEventArgs e)
-        //{
-
-        //}
-
-        //private void Button_Click_2(object sender, RoutedEventArgs e)
-        //{
-
-        //}
-
-        //private void btnAdd_Click(object sender, RoutedEventArgs e)
-        //{
-        //    btnAdd.Content = "Edit";
-        //}
-
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void Edit_Click(object sender, RoutedEventArgs e)
         {
             id = (grdProductData.SelectedItem as StaffModel).StaffID;
             txtstaffID.Text= (grdProductData.SelectedItem as StaffModel).StaffID.ToString();
@@ -67,37 +49,9 @@ namespace StudentAttendanceManagementSystem.Views
             txtUsername.Text= (grdProductData.SelectedItem as StaffModel).StaffUserName.ToString();
             pwdUsername.Text= (grdProductData.SelectedItem as StaffModel).StaffPassword.ToString();
             txtgender.Text= (grdProductData.SelectedItem as StaffModel).StaffGender.ToString();
-
-
-
-            //Refresh();
-
-            //btnAdd.Content = "Edit";
-
-            //    StaffModel staffModel = new StaffModel();
-            //    string name = txtProductName.Text;
-            //    string description = txtProductDescription.Text;
-            //    Products product = new Products();
-            //    if (name != null && description != null && txtProductDescription.Text.ToString() != null && txtProductUnit.Text.ToString() != null)
-            //    {
-            //        productModel.ProductName = name;
-            //        productModel.ProductDescription = description;
-            //        productModel.ProductPrice = float.Parse(txtProductPrice.Text);
-            //        productModel.ProductUnit = Int32.Parse(txtProductUnit.Text);
-            //        product.SaveData(productModel);
-            //        MessageBox.Show("Product Added");
-            //        Refresh();
-            //        ClearTextBox();
-            //    }
-            //    else
-            //        MessageBox.Show("Enter all Values");
-            //}
-        }
-        void Refresh()
-        {
-            StaffManager staffManager = new StaffManager();
-            grdProductData.ItemsSource = staffManager.DisplayResult();
-        }
+            Refresh();
+         }
+        
 
 
         private void btnedit_Click(object sender, RoutedEventArgs e)
@@ -121,5 +75,34 @@ namespace StudentAttendanceManagementSystem.Views
             
 
         }
+        private void Delete_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                if (grdProductData.Items.Count > 0)
+                {
+                    var value = (grdProductData.SelectedItem as StaffModel).StaffID;
+                    StaffModel staffModel = new StaffModel();
+                    StaffManager staffManager = new StaffManager();
+                    staffModel.StaffID=value;
+                    staffManager.DeleteStaffDetails(staffModel);
+                    MessageBox.Show("Deleted");
+                    Refresh();
+                }
+                else
+                {
+                    MessageBox.Show("No ID Found");
+                }
+
+
+            }
+            catch(Exception ex)
+            {
+             MessageBox.Show(ex.ToString());
+            }
+        }
+
+
+
     }
 }
