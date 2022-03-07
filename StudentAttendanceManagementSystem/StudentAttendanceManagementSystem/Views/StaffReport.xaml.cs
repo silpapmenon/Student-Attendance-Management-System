@@ -27,33 +27,33 @@ namespace StudentAttendanceManagementSystem.Views
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            try
-            {
-                if (grdStaffReport.Items.Count > 0)
-                {
-                    var value = (grdStaffReport.SelectedItem as StaffModel).StaffID;
-                    StudentModel staffModel = new StudentModel();
-                    StaffManager student = new StaffManager();
-                    staffModel.RollNo = value;
-                    student.DeleteStaffDetails(staffModel);
-                    MessageBox.Show("Staff Deleted :" + staffModel.RollNo);
-                }
-                else
-                {
-                    MessageBox.Show("No Product available for Delete:??");
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.ToString());
-            }
-        }
+        //private void Button_Click(object sender, RoutedEventArgs e)
+        //{
+        //    try
+        //    {
+        //        if (grdStaffReport.Items.Count > 0)
+        //        {
+        //            var value = (grdStaffReport.SelectedItem as StaffModel).StaffID;
+        //            StudentModel staffModel = new StudentModel();
+        //            StaffManager student = new StaffManager();
+        //            staffModel.RollNo = value;
+        //            student.DeleteStaffDetails(staffModel);
+        //            MessageBox.Show("Staff Deleted :" + staffModel.RollNo);
+        //        }
+        //        else
+        //        {
+        //            MessageBox.Show("No Product available for Delete:??");
+        //        }
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        MessageBox.Show(ex.ToString());
+        //    }
+        //}
 
-        private void grdStaffReport_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
+        //private void grdStaffReport_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        //{
 
-        }
+        //}
     }
 }
