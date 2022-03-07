@@ -68,8 +68,10 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Command\RedirectViewCommand.cs" />
+    <Compile Include="Command\StaffSubmit.cs" />
     <Compile Include="Command\SubmitCommand.cs" />
     <Compile Include="ViewModels\AboutUsViewModel.cs" />
+    <Compile Include="ViewModels\AddStaffViewModel.cs" />
     <Compile Include="ViewModels\AddStudentViewModel.cs" />
     <Compile Include="ViewModels\AdminPanelViewModel.cs" />
     <Compile Include="ViewModels\BaseViewModel.cs" />
