@@ -27,7 +27,7 @@ namespace DataAccessLayer
                 staff.Password = staffModel.StaffPassword;
                 staff.Gender = 2;
                 staff.RoleID = 2;
-                studentManagementSystemEntities.Staffs.Add(staff);
+                studentManagementSystemEntities.Staff.Add(staff);
                 studentManagementSystemEntities.SaveChanges();
             }
             catch (Exception ex)
@@ -39,7 +39,7 @@ namespace DataAccessLayer
         public List<StaffModel> GetStaffList()
         {
             StudentManagementSystemEntities studentManagementSystemEntities = new StudentManagementSystemEntities();
-            var result = from getdata in studentManagementSystemEntities.Staffs
+            var result = from getdata in studentManagementSystemEntities.Staff
                          select getdata;
 
             List<StaffModel> staffModels = new List<StaffModel>();
@@ -63,17 +63,17 @@ namespace DataAccessLayer
             return staffModels;
 
         }
-        public void DeleteData(StaffModel staffModel)
+        public void UpdateData(StaffModel staffModel)
         {
             try
             {
                 StudentManagementSystemEntities entities = new StudentManagementSystemEntities();
-                var result = from staffObj in entities.Staffs
+                var result = from staffObj in entities.Staff
                              where staffObj.StaffID.Equals(staffModel.StaffID)
                              select staffObj;
                 foreach (var entity in result)
                 {
-                    entities.Staffs.Remove(entity);
+                    entities.Staff.Remove(entity);
                 }
                 entities.SaveChanges();
             }

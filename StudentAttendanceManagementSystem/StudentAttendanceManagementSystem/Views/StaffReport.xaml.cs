@@ -27,33 +27,30 @@ namespace StudentAttendanceManagementSystem.Views
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            try
-            {
-                if (grdStaffReport.Items.Count > 0)
-                {
-                    var value = (grdStaffReport.SelectedItem as StaffModel).StaffID;
-                    StaffModel staffModel = new StaffModel();
-                    StaffManager staff = new StaffManager();
-                    staffModel.StaffID = value;
-                    staff.DeleteStaffDetails(staffModel);
-                    MessageBox.Show("Staff Deleted :" + staffModel.StaffID);
-                }
-                else
-                {
-                    MessageBox.Show("No Product available for Delete:??");
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.ToString());
-            }
-        }
+        //private void btn_Delete(object sender, RoutedEventArgs e)
+        //{
+        //    try
+        //    {
+        //        if (grdStaffReport.Items.Count > 0)
+        //        {
+        //            var value = (grdStaffReport.SelectedItem as StaffModel).StaffEmail;
+        //            StaffModel staffModel = new StaffModel();
+        //            StaffReportBusinessModel staff = new StaffReportBusinessModel();
+        //            staffModel.StaffEmail = value;
+        //            staff.DeleteStaffReport(staffModel);
+        //            MessageBox.Show("Staff Deleted :" + staffModel.StaffEmail);
+        //        }
+        //        else
+        //        {
+        //            MessageBox.Show("No staff available for Delete:??");
+        //        }
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        MessageBox.Show(ex.ToString());
+        //    }
+        //}
 
-        private void grdStaffReport_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-
-        }
+       
     }
 }

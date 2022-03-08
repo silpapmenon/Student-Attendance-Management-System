@@ -23,12 +23,8 @@ namespace BusinessLayer
         public void UpdateData(StaffModel staffModel)
         {
             StaffData staffData = new StaffData();
-            staffData.DeleteData(staffModel);
+            staffData.UpdateData(staffModel);
         }
-        public void DeleteStaffDetails(StaffModel staffModel)
-        {
-            StaffData staffData = new StaffData();
-            staffData.DeleteData(staffModel);
-        }
+        
     }
 }
