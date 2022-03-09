@@ -15,6 +15,7 @@ namespace DataAccessLayer
             {
                 StudentManagementSystemEntities studentManagementSystemEntities = new StudentManagementSystemEntities();
                 Staff staff = new Staff();
+                // staff.StaffID = staffModel.StaffID;
                 staff.StaffName = staffModel.StaffName;
                 staff.Email = staffModel.StaffEmail;
                 staff.Mobile = staffModel.StaffMobile;
@@ -26,9 +27,10 @@ namespace DataAccessLayer
                 staff.UserName = staffModel.StaffUserName;
                 staff.Password = staffModel.StaffPassword;
                 staff.Gender = 2;
-                staff.RoleID = 2;
+                staff.RoleID = 3;
                 studentManagementSystemEntities.Staffs.Add(staff);
                 studentManagementSystemEntities.SaveChanges();
+                // MessageBox.Show("Value Added");
             }
             catch (Exception ex)
             {
@@ -36,6 +38,32 @@ namespace DataAccessLayer
             }
 
         }
+        //public List<StaffModel> SaveStaffData()
+        //{
+        //    StudentManagementSystemEntities studentManagementSystemEntities = new StudentManagementSystemEntities();
+        //    var result = from staffObj in studentManagementSystemEntities.Staffs
+        //                 join newObj in studentManagementSystemEntities.Genders on staffObj.Gender equals newObj.GenderID
+        //                 select staffObj;
+        //    List<StaffModel> staffModels = new List<StaffModel>();
+        //    foreach (var item in result)
+        //    {
+        //        StaffModel model = new StaffModel();
+        //        model.StaffID = item.StaffID;
+        //        model.StaffName=item.StaffName;
+        //        model.StaffEmail = item.Email;
+        //        model.StaffMobile = item.Mobile;
+        //        model.Qualification=item.Qualification;
+        //        model.StaffAddress=item.Address;
+        //        model.StaffCity=item.City;
+        //        model.StaffPincode=item.Pincode;
+        //        model.StaffUserName=item.UserName;
+        //        model.StaffPassword=item.Password;
+        //        model.StaffGender = item.GenderName;
+        //        model.RoleID = 3;
+        //        staffModels.Add(model);
+        //    }
+        //    return staffModels;
+        //}
         public List<StaffModel> GetStaffList()
         {
             StudentManagementSystemEntities studentManagementSystemEntities = new StudentManagementSystemEntities();
@@ -46,6 +74,7 @@ namespace DataAccessLayer
             foreach (var item in result)
             {
                 StaffModel staffModel = new StaffModel();              
+                staffModel.StaffID = item.StaffID;
                 staffModel.StaffName = item.StaffName;
                 staffModel.StaffEmail = item.Email;
                 staffModel.StaffMobile = item.Mobile;
@@ -57,11 +86,44 @@ namespace DataAccessLayer
                 staffModel.StaffUserName = item.UserName;
                 staffModel.StaffPassword = item.Password;
                 staffModel.StaffGender = item.Gender;
-                staffModel.RoleID = item.RoleID;
+                staffModel.RoleID = 3;
                 staffModels.Add(staffModel);
             }
             return staffModels;
 
+        }
+        public void UpdateStaffData(StaffModel staffModel)
+        {
+            try
+            {
+                StudentManagementSystemEntities studentManagementSystemEntities = new StudentManagementSystemEntities();
+                var query = from staffObj in studentManagementSystemEntities.Staffs
+                            where staffObj.StaffID == staffModel.StaffID
+                            select staffObj;
+                foreach (var entity in query)
+                {
+                    entity.StaffID = staffModel.StaffID;
+                    entity.StaffName = staffModel.StaffName;
+                    entity.Email = staffModel.StaffEmail;
+                    entity.Mobile = staffModel.StaffMobile;
+                    entity.Image = staffModel.StaffImage;
+                    entity.Qualification = staffModel.Qualification;
+                    entity.Address = staffModel.StaffAddress;
+                    entity.City = staffModel.StaffCity;
+                    entity.Pincode = staffModel.StaffPincode;
+                    entity.UserName = staffModel.StaffUserName;
+                    entity.Password = staffModel.StaffPassword;
+                    entity.Gender = staffModel.StaffGender;
+                    entity.RoleID = 3;
+
+                }
+                studentManagementSystemEntities.SaveChanges();
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
         }
         public void DeleteData(StaffModel staffModel)
         {
@@ -69,7 +131,7 @@ namespace DataAccessLayer
             {
                 StudentManagementSystemEntities entities = new StudentManagementSystemEntities();
                 var result = from staffObj in entities.Staffs
-                             where staffObj.StaffID.Equals(staffModel.StaffID)
+                             where staffObj.StaffID==staffModel.StaffID
                              select staffObj;
                 foreach (var entity in result)
                 {
@@ -84,3 +146,4 @@ namespace DataAccessLayer
         }
     }
 }
+

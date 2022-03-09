@@ -78,6 +78,11 @@ namespace StudentAttendanceManagementSystem.Command
                 StaffModel staffModel = new StaffModel();
                 model.SelectedView = new StaffReportViewModel(staffModel);
             }
+            else if (parameter.ToString() == "ADD STANDARDS")
+            {
+                StandardModel standardModel = new StandardModel();
+                model.SelectedView = new AddStandardViewModel();
+            }
 
         }
 
