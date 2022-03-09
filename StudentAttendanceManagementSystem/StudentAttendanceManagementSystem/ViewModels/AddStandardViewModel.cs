@@ -14,14 +14,14 @@ namespace StudentAttendanceManagementSystem.ViewModels
     {
         private StandardModel _standardModel;
         private List<StandardModel> _standardViewList;
-        public List<StandardModel> StandardViewList { get => _standardViewList; set => _standardViewList = value; }
+        public List<StandardModel> StandardViewList { get; set; }
 
         public StandardManager standardManager = new StandardManager();
-        public AddStandardViewModel(StandardModel standard)
+        public AddStandardViewModel()
         {
-            _standardModel = standard;
+            StandardViewList=new List<StandardModel>();
+            StandardManager standardManager = new StandardManager();
             StandardViewList = standardManager.DisplayResult();
-            Submit = new StandardSubmit(this);
 
         }
         private int _standardId;
@@ -34,7 +34,7 @@ namespace StudentAttendanceManagementSystem.ViewModels
             set
             {
                 _standardId = value;
-                OnPropertyChanged("DivisionID");
+                OnPropertyChanged("StandardID");
             }
         }
         public string StandardName

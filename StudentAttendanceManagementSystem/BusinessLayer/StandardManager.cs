@@ -20,5 +20,15 @@ namespace BusinessLayer
             StanadardData standardData = new StanadardData();
             return standardData.GetStandardList();
         }
+        public void UpdateStandardData(StandardModel standardModel)
+        {
+            StanadardData stanadardData = new StanadardData();
+            stanadardData.UpdateStandardData(standardModel);
+        }
+        public void DeleteStandardDetails(StandardModel standardModel)
+        {
+            StanadardData stanadardData = new StanadardData();
+            stanadardData.DeleteStandardData(standardModel);
+        }
     }
 }

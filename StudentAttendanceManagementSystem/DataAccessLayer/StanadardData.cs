@@ -15,8 +15,9 @@ namespace DataAccessLayer
             {
                 StudentManagementSystemEntities studentManagementSystemEntities = new StudentManagementSystemEntities();
                 Standard standard = new Standard();
-                standard.StandardID = standardModel.StandardID;
-                standard.StandardName= standardModel.StandardName;
+                //standard.StandardID = standardModel.StandardID;
+                //standard.StandardID = 4;
+                standard.StandardName = standardModel.StandardName;
                 studentManagementSystemEntities.Standards.Add(standard);
                 studentManagementSystemEntities.SaveChanges();
                 // MessageBox.Show("Value Added");
@@ -43,5 +44,47 @@ namespace DataAccessLayer
             return standardModels;
 
         }
+        public void UpdateStandardData(StandardModel standardModel)
+        {
+            try
+            {
+                StudentManagementSystemEntities studentManagementSystemEntities = new StudentManagementSystemEntities();
+                var query = from standardObj in studentManagementSystemEntities.Standards
+                            where standardObj.StandardID == standardModel.StandardID
+                            select standardObj;
+                foreach (var entity in query)
+                {
+                    entity.StandardID = standardModel.StandardID;
+                    entity.StandardName = standardModel.StandardName;
+                }
+                studentManagementSystemEntities.SaveChanges();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+        }
+        public void DeleteStandardData(StandardModel standardModel)
+        {
+            try
+            {
+                StudentManagementSystemEntities entities = new StudentManagementSystemEntities();
+                var result = from standardObj in entities.Standards
+                             where standardObj.StandardID == standardModel.StandardID
+                             select standardObj;
+                foreach (var entity in result)
+                {
+                    entities.Standards.Remove(entity);
+                }
+                entities.SaveChanges();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
+
+
 }

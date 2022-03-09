@@ -76,9 +76,9 @@
             <TextBox x:Name="txtUsername" HorizontalAlignment="Left" Margin="139,221,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="140" Height="22" FontSize="14" Text="{Binding StaffUsername}"/>
             <TextBox x:Name="pwdUsername" HorizontalAlignment="Left" Margin="498,203,0,0"  VerticalAlignment="Top" Width="140" Height="22" FontSize="14" Text="{Binding StaffPassword}"/>
             <ComboBox x:Name="txtgender" HorizontalAlignment="Left" Height="20" Margin="498,161,0,0" VerticalAlignment="Top" Width="140">
-                <TextBlock Text="Male"></TextBlock>
-                <TextBlock Text="Female"></TextBlock>
-                <TextBlock Text="Others"></TextBlock>
+                <TextBlock Text="1"></TextBlock>
+                <TextBlock Text="2"></TextBlock>
+                <TextBlock Text="3"></TextBlock>
             </ComboBox>
             <Button x:Name="btnedit" Content="Edit" HorizontalAlignment="Left" Margin="486,274,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="24" Width="152" Height="43" Click="btnedit_Click"/>
         </Grid>

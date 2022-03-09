@@ -76,7 +76,7 @@ namespace StudentAttendanceManagementSystem.Command
             else if (parameter.ToString() == "ADD STANDARDS")
             {
                 StandardModel standardModel = new StandardModel();
-                model.SelectedView = new AddStandardViewModel(standardModel);
+                model.SelectedView = new AddStandardViewModel();
             }
 
         }

@@ -28,7 +28,7 @@
                 <!--<MenuItem Header="ADMIN PANEL" FontWeight="Bold" Height="30" Foreground="Black" Command="{Binding RedirectViewCommand}" CommandParameter="ADMIN PANEL"></MenuItem>-->
                 <MenuItem Header="ADD STUDENT" FontWeight="Bold" Height="30" Foreground="Black" Command="{Binding RedirectViewCommand}" CommandParameter="ADD STUDENT"></MenuItem>
                 <MenuItem Header="ADD STAFF" FontWeight="Bold" Height="30" Foreground="Black" Command="{Binding RedirectViewCommand}" CommandParameter="ADD STAFF"></MenuItem>
-                <MenuItem Header="ADD STANDRADS" FontWeight="Bold" Height="30" Foreground="Black" Command="{Binding RedirectViewCommand}" CommandParameter="ADD STANDRADS"></MenuItem>
+                <MenuItem Header="ADD STANDARDS" FontWeight="Bold" Height="30" Foreground="Black" Command="{Binding RedirectViewCommand}" CommandParameter="ADD STANDARDS"></MenuItem>
             </MenuItem>
             <MenuItem Header="LOGIN" FontWeight="Bold" Height="30" Width="80" Command="{Binding RedirectViewCommand}" CommandParameter="LOGIN"></MenuItem>
             <MenuItem Header="CONTACT US" FontWeight="Bold" Height="30" Width="80" Command="{Binding RedirectViewCommand}" CommandParameter="CONTACT US"></MenuItem>
