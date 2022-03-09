@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace BusinessLayer
 {
-    public class StaffManager
+   public class StaffManager
     {
         public void SaveStaffDetails(StaffModel staffModel)
         {

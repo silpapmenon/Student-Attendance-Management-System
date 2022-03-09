@@ -73,7 +73,7 @@ namespace DataAccessLayer
             List<StaffModel> staffModels = new List<StaffModel>();
             foreach (var item in result)
             {
-                StaffModel staffModel = new StaffModel();
+                StaffModel staffModel = new StaffModel();              
                 staffModel.StaffID = item.StaffID;
                 staffModel.StaffName = item.StaffName;
                 staffModel.StaffEmail = item.Email;

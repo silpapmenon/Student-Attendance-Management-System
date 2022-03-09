@@ -23,6 +23,7 @@
                 <MenuItem Header="STAFF" FontWeight="Bold" Height="30" Foreground="Black" Command="{Binding RedirectViewCommand}" CommandParameter="STAFF"></MenuItem>
                 <MenuItem Header="STUDENT REPORT" FontWeight="Bold" Height="30" Foreground="Black" Command="{Binding RedirectViewCommand}" CommandParameter="STUDENT REPORT"></MenuItem>
 
+                <MenuItem Header="STAFF REPORT" FontWeight="Bold" Height="30" Foreground="Black" Command="{Binding RedirectViewCommand}" CommandParameter="STAFF REPORT"></MenuItem>
             </MenuItem>
             <MenuItem Header="ADMIN" FontWeight="Bold" Height="30" Width="100" Command="{Binding RedirectViewCommand}" >
                 <!--<MenuItem Header="ADMIN PANEL" FontWeight="Bold" Height="30" Foreground="Black" Command="{Binding RedirectViewCommand}" CommandParameter="ADMIN PANEL"></MenuItem>-->

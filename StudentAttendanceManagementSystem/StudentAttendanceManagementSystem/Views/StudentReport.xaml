@@ -20,7 +20,7 @@
                     <DataGridTextColumn Header="City" Binding="{Binding StudentCity}" IsReadOnly="True"/>
                     <DataGridTextColumn Header="Pincode" Binding="{Binding StudentPincode}" IsReadOnly="True"/>
                     <DataGridTextColumn Header="Image" Binding="{Binding Image}" IsReadOnly="True"/>
-                    <DataGridTextColumn Header="Username" Binding="{Binding Username}" IsReadOnly="True"/>
+                    <DataGridTextColumn Header="Username" Binding="{Binding StudentUsername}" IsReadOnly="True"/>
                     <DataGridTemplateColumn Header="Delete">
                         <DataGridTemplateColumn.CellTemplate>
                             <DataTemplate>

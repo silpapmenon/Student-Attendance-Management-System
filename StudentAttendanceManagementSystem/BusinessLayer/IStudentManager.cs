@@ -12,3 +12,4 @@ namespace BusinessLayer
         void SaveStudentDetails(StudentData istudent);
     }
 }
+//New
