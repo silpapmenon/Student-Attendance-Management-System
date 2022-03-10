@@ -25,6 +25,7 @@
                     <MenuItem Header="ADD STUDENT"></MenuItem>
                     <MenuItem Header="STAFF REPORT"></MenuItem>
                     <MenuItem Header="STUDENT REPORT"></MenuItem>
+                    <MenuItem Header="ATTENDANCE"></MenuItem>
                     <MenuItem Header="LOGOUT"></MenuItem>
                 </Menu>
             </ContentControl>

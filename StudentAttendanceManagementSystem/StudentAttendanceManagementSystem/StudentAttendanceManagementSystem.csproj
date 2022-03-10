@@ -68,12 +68,11 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Command\RedirectViewCommand.cs" />
-    <Compile Include="Command\StaffSubmit.cs" />
     <Compile Include="Command\SubmitCommand.cs" />
     <Compile Include="ViewModels\AboutUsViewModel.cs" />
-    <Compile Include="ViewModels\AddStaffViewModel.cs" />
     <Compile Include="ViewModels\AddStudentViewModel.cs" />
     <Compile Include="ViewModels\AdminPanelViewModel.cs" />
+    <Compile Include="ViewModels\AttendanceViewModel.cs" />
     <Compile Include="ViewModels\BaseViewModel.cs" />
     <Compile Include="ViewModels\ContactUsViewModel.cs" />
     <Compile Include="ViewModels\HomeViewModel.cs" />
@@ -91,6 +90,9 @@
     <Compile Include="ViewModels\StudentReportViewModel.cs" />
     <Compile Include="Views\AboutUs.xaml.cs">
       <DependentUpon>AboutUs.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AddAttendance.xaml.cs">
+      <DependentUpon>AddAttendance.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\AddDivision.xaml.cs">
       <DependentUpon>AddDivision.xaml</DependentUpon>
@@ -174,6 +176,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="Views\AboutUs.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AddAttendance.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

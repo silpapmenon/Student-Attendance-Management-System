@@ -15,10 +15,6 @@ namespace BusinessLayer
             StaffReport staffReport = new StaffReport();
             return staffReport.GetStaffList();
         }
-        //public void DeleteStaffReport(StaffModel staffModel)
-        //{
-        //    StaffReport staffReport = new StaffReport();
-        //    staffReport.DeleteStaffData(staffModel);
-        //}
+        
     }
 }

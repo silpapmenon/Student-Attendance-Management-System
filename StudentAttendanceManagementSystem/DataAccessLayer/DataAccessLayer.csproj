@@ -60,6 +60,7 @@
     <Compile Include="Attendance.cs">
       <DependentUpon>AttendanceManagementDB.tt</DependentUpon>
     </Compile>
+    <Compile Include="AttendanceData.cs" />
     <Compile Include="AttendanceManagementDB.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -75,7 +76,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>AttendanceManagementDB.edmx</DependentUpon>
     </Compile>
-    <Compile Include="StaffData.cs" />
     <Compile Include="StaffReport.cs" />
     <Compile Include="StudentData.cs" />
     <Compile Include="Complaint.cs">
