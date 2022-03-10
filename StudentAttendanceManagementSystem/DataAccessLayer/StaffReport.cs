@@ -12,7 +12,7 @@ namespace DataAccessLayer
         public List<StaffModel> GetStaffList()
         {
             StudentManagementSystemEntities studentManagementSystemEntities = new StudentManagementSystemEntities();
-            var result = from getdata in studentManagementSystemEntities.Staffs
+            var result = from getdata in studentManagementSystemEntities.Staff
                          select getdata;
 
             List<StaffModel> staffModels = new List<StaffModel>();
@@ -35,5 +35,24 @@ namespace DataAccessLayer
             return staffModels;
 
         }
+        //public void DeleteStaffData(StaffModel staffModel)
+        //{
+        //    try
+        //    {
+        //        StudentManagementSystemEntities entities = new StudentManagementSystemEntities();
+        //        var result = from Obj in entities.Staff
+        //                     where Obj.Email == staffModel.StaffEmail
+        //                     select Obj;
+        //        foreach (var entity in result)
+        //        {
+        //            entities.Staff.Remove(entity);
+        //        }
+        //        entities.SaveChanges();
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        throw ex;
+        //    }
+        //}
     }
 }

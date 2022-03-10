@@ -32,7 +32,7 @@ namespace DataAccessLayer
         public DbSet<Gender> Genders { get; set; }
         public DbSet<Leave> Leaves { get; set; }
         public DbSet<Role> Roles { get; set; }
-        public DbSet<Staff> Staffs { get; set; }
+        public DbSet<Staff> Staff { get; set; }
         public DbSet<StaffStandard> StaffStandards { get; set; }
         public DbSet<Standard> Standards { get; set; }
         public DbSet<Student> Students { get; set; }
