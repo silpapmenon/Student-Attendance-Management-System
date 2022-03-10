@@ -144,6 +144,6 @@
 
         <Label Content="Select Standard" HorizontalAlignment="Left" Height="30" Margin="22,201,0,0" VerticalAlignment="Top" Width="136" Grid.RowSpan="2"/>
         <Label Content="Select Division" HorizontalAlignment="Left" Height="30" Margin="396,198,0,0" VerticalAlignment="Top" Width="136" Grid.RowSpan="2"/>
-        <TextBox x:Name="txtid" HorizontalAlignment="Left" Height="46" Margin="767,47,0,0" Grid.Row="3" TextWrapping="Wrap"  VerticalAlignment="Top" Width="172"/>
+        <TextBox x:Name="txtid" HorizontalAlignment="Left" Height="46" Margin="743,47,0,0" Grid.Row="3" TextWrapping="Wrap"  VerticalAlignment="Top" Width="130"/>
     </Grid>
 </UserControl>
