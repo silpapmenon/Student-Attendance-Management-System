@@ -20,16 +20,16 @@
                     <DataGridTextColumn Header="City" Binding="{Binding StaffCity}" IsReadOnly="True"/>
                     <DataGridTextColumn Header="Pincode" Binding="{Binding StaffPincode}" IsReadOnly="True"/>
                     <DataGridTextColumn Header="Gender" Binding="{Binding StaffGender}" IsReadOnly="True"/>    
-                    <!--<DataGridTemplateColumn Header="Delete">
+                    <DataGridTemplateColumn Header="Delete">
                         <DataGridTemplateColumn.CellTemplate>
                             <DataTemplate>
                                 <Button Click="btn_Delete">Delete</Button>
                             </DataTemplate>
                         </DataGridTemplateColumn.CellTemplate>
-                    </DataGridTemplateColumn>-->
+                    </DataGridTemplateColumn>
                 </DataGrid.Columns>
             </DataGrid>
-        </ListView>
+        </ListView>-->
 
-    </Grid>-->
+    <!--</Grid>-->
 </UserControl>
