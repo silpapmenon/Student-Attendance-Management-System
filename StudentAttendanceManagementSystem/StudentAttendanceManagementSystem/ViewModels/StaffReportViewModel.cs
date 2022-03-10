@@ -24,5 +24,6 @@ namespace StudentAttendanceManagementSystem.ViewModels
             //StaffReportBusinessModel objbusiness = new StaffReportBusinessModel();
             //StaffReports = objbusiness.DisplayResult();
         }
+
     }
 }
