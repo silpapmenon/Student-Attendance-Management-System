@@ -17,12 +17,12 @@ namespace StudentAttendanceManagementSystem.ViewModels
         private StaffModel _staffReport;
         public List<StaffModel> StaffReports { get; set; }
 
-        public StaffReportBusinessModel staffReport = new StaffReportBusinessModel();
+        //public StaffReportBusinessModel staffReport = new StaffReportBusinessModel();
         public StaffReportViewModel(StaffModel staffModel)
         {
             StaffReports = new List<StaffModel>();
-            StaffReportBusinessModel objbusiness = new StaffReportBusinessModel();
-            StaffReports = objbusiness.DisplayResult();
+           // StaffReportBusinessModel objbusiness = new StaffReportBusinessModel();
+           // StaffReports = objbusiness.DisplayResult();
         }
 
     }

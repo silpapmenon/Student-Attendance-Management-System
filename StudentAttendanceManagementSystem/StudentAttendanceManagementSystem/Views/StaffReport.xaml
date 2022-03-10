@@ -6,7 +6,7 @@
              xmlns:local="clr-namespace:StudentAttendanceManagementSystem.Views" xmlns:viewmodels="clr-namespace:StudentAttendanceManagementSystem.ViewModels" d:DataContext="{d:DesignInstance Type=viewmodels:StaffReportViewModel}"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <Grid Height="188" VerticalAlignment="Top">
+    <!--<Grid Height="188" VerticalAlignment="Top">
         <ListView Name="UserGrid" Margin="0,94,0,-111"    >
             <DataGrid Name="grdStaffReport" AutoGenerateColumns="False" CanUserAddRows="False" ColumnWidth="*" Width="798" Height="220" ItemsSource="{Binding StaffReports}">
                 <DataGrid.Columns>
@@ -31,5 +31,5 @@
             </DataGrid>
         </ListView>
 
-    </Grid>
+    </Grid>-->
 </UserControl>
