@@ -16,12 +16,12 @@ namespace StudentAttendanceManagementSystem.ViewModels
         private LeaveModel _leaveData;
         public List<LeaveModel> LeaveData { get; set; }
 
-        public LeaveBusinessModel leaveBusiness = new LeaveBusinessModel();
+        //public LeaveBusinessModel leaveBusiness = new LeaveBusinessModel();
         public LeaveViewModel(LeaveModel leave)
         {
             LeaveData = new List<LeaveModel>();
-            LeaveBusinessModel leaveBusinessModel = new LeaveBusinessModel();
-            LeaveData = leaveBusinessModel.DisplayResult();
+            //LeaveBusinessModel leaveBusinessModel = new LeaveBusinessModel();
+           // LeaveData = leaveBusinessModel.DisplayResult();
         }
     }
 }
