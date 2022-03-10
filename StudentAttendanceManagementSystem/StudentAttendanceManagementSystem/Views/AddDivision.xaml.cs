@@ -35,7 +35,6 @@ namespace StudentAttendanceManagementSystem.Views
             grdDivisionData.ItemsSource = divisionManager.DisplayResult();
         }
        
-
        
         private void btnAdd_Click(object sender, RoutedEventArgs e)
         {

@@ -33,7 +33,7 @@
 
             <Label Content="Division Name" HorizontalAlignment="Left" Margin="30,121,0,0" VerticalAlignment="Top" Width="107" FontWeight="Bold"/>
 
-            <Button x:Name="btnAdd" Content="Add" HorizontalAlignment="Left" Margin="147,159,0,0" VerticalAlignment="Top" Width="89" Height="26" FontSize="18" FontWeight="Bold" Background="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}" Click="btnAdd_Click"/>
+            <Button x:Name="btnAdd" Content="Add" HorizontalAlignment="Left" Margin="147,161,0,0" VerticalAlignment="Top" Width="89" Height="26" FontSize="18" FontWeight="Bold" Background="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}" Click="btnAdd_Click"/>
             <TextBox x:Name="txtDivisionName" HorizontalAlignment="Left" Margin="146,125,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="134" Height="22" FontSize="14" Text="{Binding ElementName=UserGrid,Path=SelectedItem.StandardName}"/>
             <Label Content="Seat" HorizontalAlignment="Left" Margin="32,88,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
             <TextBox x:Name="txtSeat" HorizontalAlignment="Left" Margin="148,89,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="130" Height="25"/>
