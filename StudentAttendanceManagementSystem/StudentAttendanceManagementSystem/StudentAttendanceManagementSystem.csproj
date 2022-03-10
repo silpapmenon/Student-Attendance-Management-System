@@ -67,12 +67,14 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Command\DivisionSubmit.cs" />
     <Compile Include="Command\RedirectViewCommand.cs" />
     <Compile Include="Command\StaffSubmit.cs" />
     <Compile Include="Command\StandardSubmit.cs" />
     <Compile Include="Command\StaffSubmit.cs" />
     <Compile Include="Command\SubmitCommand.cs" />
     <Compile Include="ViewModels\AboutUsViewModel.cs" />
+    <Compile Include="ViewModels\AddDivisionViewModel.cs" />
     <Compile Include="ViewModels\AddStaffViewModel.cs" />
     <Compile Include="ViewModels\AddStandardViewModel.cs" />
     <Compile Include="ViewModels\AddStaffViewModel.cs" />

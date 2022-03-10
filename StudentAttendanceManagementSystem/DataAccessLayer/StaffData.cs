@@ -64,7 +64,7 @@ namespace DataAccessLayer
         //    }
         //    return staffModels;
         //}
-        public List<StaffModel> GetStaffList()
+        public List<StaffModel> GetStaffList() 
         {
             StudentManagementSystemEntities studentManagementSystemEntities = new StudentManagementSystemEntities();
             var result = from getdata in studentManagementSystemEntities.Staffs

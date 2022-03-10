@@ -83,6 +83,11 @@ namespace StudentAttendanceManagementSystem.Command
                 StandardModel standardModel = new StandardModel();
                 model.SelectedView = new AddStandardViewModel();
             }
+            else if (parameter.ToString() == "ADD DIVISIONS")
+            {
+                DivisionModel divisionModel = new DivisionModel();
+                model.SelectedView = new AddDivisionViewModel(divisionModel);
+            }
 
         }
 

@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DivisionManager.cs" />
     <Compile Include="IStudentManager.cs" />
     <Compile Include="StaffManager.cs" />
     <Compile Include="StandardManager.cs" />
