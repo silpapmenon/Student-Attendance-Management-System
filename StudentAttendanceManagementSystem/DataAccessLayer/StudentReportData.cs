@@ -28,7 +28,7 @@ namespace DataAccessLayer
                 studentModel.Image = item.Image;
                 studentModel.StudentAddress = item.StudentAddress;
                 studentModel.StudentCity = item.StudentCity;
-                studentModel.StudentPincode = item.StudentPincode;
+                //studentModel.StudentPincode = item.StudentPincode;
                 studentModel.Gender = item.Gender;
                 studentModels.Add(studentModel);
             }

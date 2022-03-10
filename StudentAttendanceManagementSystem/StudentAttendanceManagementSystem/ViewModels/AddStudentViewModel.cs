@@ -12,13 +12,14 @@ namespace StudentAttendanceManagementSystem.ViewModels
 {
     public class AddStudentViewModel : BaseViewModel
     {
+
         private StudentModel _studentModel;
         private List<StudentModel> _studentViewList;
         public List<StudentModel> StudentViewList { get => _studentViewList; set => _studentViewList = value; }
 
         public StudentManager studentManager = new StudentManager();
-        public AddStudentViewModel(StudentModel student)   
-        {      
+        public AddStudentViewModel(StudentModel student)
+        {
             _studentModel = student;
             StudentViewList = studentManager.DisplayResult();
             Submit = new SubmitCommand(this);
@@ -39,6 +40,27 @@ namespace StudentAttendanceManagementSystem.ViewModels
         private int _standardID;
         private int _gender;
         private int _roleID;
+        private string _standardName;
+        private string _genderName;
+
+        public string StandardName
+        {
+            get { return _standardName; }
+            set
+            {
+                _standardName = value;
+                OnPropertyChanged("StandardName");
+            }
+        }
+        public string GenderName
+        {
+            get { return _genderName; }
+            set
+            {
+                _genderName = value;
+                OnPropertyChanged("GenderName");
+            }
+        }
         public int StudentID
         {
             get { return _studentID; }
@@ -186,8 +208,4 @@ namespace StudentAttendanceManagementSystem.ViewModels
         public ICommand Submit { get; set; }
     }
 }
-
-
-
-
 
