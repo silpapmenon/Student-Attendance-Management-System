@@ -22,5 +22,6 @@ namespace BusinessLayer
             return attendanceData.GetDivision(divisionModel);
 
         }
+       
     }
 }

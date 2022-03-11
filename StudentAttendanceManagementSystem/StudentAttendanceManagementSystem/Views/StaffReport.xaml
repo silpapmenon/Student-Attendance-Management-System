@@ -3,10 +3,10 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:local="clr-namespace:StudentAttendanceManagementSystem.Views" xmlns:viewmodels="clr-namespace:StudentAttendanceManagementSystem.ViewModels" d:DataContext="{d:DesignInstance Type=viewmodels:StaffReportViewModel}"
+             xmlns:local="clr-namespace:StudentAttendanceManagementSystem.Views" xmlns:viewmodels="clr-namespace:StudentAttendanceManagementSystem.ViewModels"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <!--<Grid Height="188" VerticalAlignment="Top">
+    <Grid Height="188" VerticalAlignment="Top">
         <ListView Name="UserGrid" Margin="0,94,0,-111"    >
             <DataGrid Name="grdStaffReport" AutoGenerateColumns="False" CanUserAddRows="False" ColumnWidth="*" Width="798" Height="220" ItemsSource="{Binding StaffReports}">
                 <DataGrid.Columns>
@@ -23,13 +23,13 @@
                     <DataGridTemplateColumn Header="Delete">
                         <DataGridTemplateColumn.CellTemplate>
                             <DataTemplate>
-                                <Button Click="btn_Delete">Delete</Button>
+                               
                             </DataTemplate>
                         </DataGridTemplateColumn.CellTemplate>
                     </DataGridTemplateColumn>
                 </DataGrid.Columns>
             </DataGrid>
-        </ListView>-->
+        </ListView>
 
-    <!--</Grid>-->
+    </Grid>
 </UserControl>
