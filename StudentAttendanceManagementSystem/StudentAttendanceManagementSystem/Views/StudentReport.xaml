@@ -21,13 +21,7 @@
                     <DataGridTextColumn Header="Pincode" Binding="{Binding StudentPincode}" IsReadOnly="True"/>
                     <DataGridTextColumn Header="Image" Binding="{Binding Image}" IsReadOnly="True"/>
                     <DataGridTextColumn Header="Username" Binding="{Binding StudentUsername}" IsReadOnly="True"/>
-                    <DataGridTemplateColumn Header="Delete">
-                        <DataGridTemplateColumn.CellTemplate>
-                            <DataTemplate>
-                                <Button Click="Button_Click">Delete</Button>
-                            </DataTemplate>
-                        </DataGridTemplateColumn.CellTemplate>
-                    </DataGridTemplateColumn>
+                    
                 </DataGrid.Columns>
             </DataGrid>
         </ListView>
