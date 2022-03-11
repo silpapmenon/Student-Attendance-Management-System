@@ -25,36 +25,6 @@ namespace StudentAttendanceManagementSystem.Views
         public StudentReport()
         {
             InitializeComponent();
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            try
-            {
-                if (grdStudentReport.Items.Count > 0)
-                {
-                    var value = (grdStudentReport.SelectedItem as StudentModel).RollNo;
-                    StudentModel studentModel = new StudentModel();
-                    StudentManager student = new StudentManager();
-                    studentModel.RollNo = value;
-                    student.DeleteStudentDetails(studentModel);
-                    MessageBox.Show("Student Deleted :" + studentModel.RollNo);                   
-                }
-                else
-                {
-                    MessageBox.Show("No Product available for Delete:??");
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.ToString());
-            }
-        }
-       
-
-        private void grdStudentReport_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-
-        }
+        }       
     }
 }
