@@ -45,11 +45,11 @@ namespace StudentAttendanceManagementSystem.Command
             {
                 model.SelectedView = new StandardsViewModel();
             }
-            //else if (parameter.ToString() == "ADD STAFF")
-            //{
-            //    StaffModel staffModel = new StaffModel();
-            //    model.SelectedView = new AddStaffViewModel(staffModel);
-            //}
+            else if (parameter.ToString() == "ADD STAFF")
+            {
+                StaffModel staffModel = new StaffModel();
+                model.SelectedView = new AddStaffViewModel(staffModel);
+            }
             else if (parameter.ToString() == "ADMIN PANEL")
             {
                 model.SelectedView = new AdminPanelViewModel();
