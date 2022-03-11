@@ -41,9 +41,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AttendanceBusinessModel.cs" />
+    <Compile Include="DivisionManager.cs" />
     <Compile Include="IStudentManager.cs" />
-    <Compile Include="StaffManager.cs" />
     <Compile Include="StaffReportBusinessModel.cs" />
+    <Compile Include="StaffManager.cs" />
+    <Compile Include="StandardManager.cs" />
     <Compile Include="StudentManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StudentReportBusinessModel.cs" />

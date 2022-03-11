@@ -10,7 +10,7 @@ using System.Windows.Input;
 
 namespace StudentAttendanceManagementSystem.Command
 {
-    public class StaffSubmit:ICommand
+    public class StaffSubmit :ICommand
     {
         public event EventHandler CanExecuteChanged;
         public AddStaffViewModel addStaffViewModel { get; set; }
@@ -42,6 +42,8 @@ namespace StudentAttendanceManagementSystem.Command
             staff.RoleID = addStaffViewModel.RoleID;
             StaffManager staffManager = new StaffManager();
             staffManager.SaveStaffDetails(staff);
+
         }
     }
 }
+

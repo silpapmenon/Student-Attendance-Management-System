@@ -67,13 +67,20 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Command\DivisionSubmit.cs" />
     <Compile Include="Command\RedirectViewCommand.cs" />
+    <Compile Include="Command\StaffSubmit.cs" />
+    <Compile Include="Command\StandardSubmit.cs" />
     <Compile Include="Command\StaffSubmit.cs" />
     <Compile Include="Command\SubmitCommand.cs" />
     <Compile Include="ViewModels\AboutUsViewModel.cs" />
+    <Compile Include="ViewModels\AddDivisionViewModel.cs" />
+    <Compile Include="ViewModels\AddStaffViewModel.cs" />
+    <Compile Include="ViewModels\AddStandardViewModel.cs" />
     <Compile Include="ViewModels\AddStaffViewModel.cs" />
     <Compile Include="ViewModels\AddStudentViewModel.cs" />
     <Compile Include="ViewModels\AdminPanelViewModel.cs" />
+    <Compile Include="ViewModels\AttendanceViewModel.cs" />
     <Compile Include="ViewModels\BaseViewModel.cs" />
     <Compile Include="ViewModels\ContactUsViewModel.cs" />
     <Compile Include="ViewModels\HomeViewModel.cs" />
@@ -91,6 +98,9 @@
     <Compile Include="ViewModels\StudentReportViewModel.cs" />
     <Compile Include="Views\AboutUs.xaml.cs">
       <DependentUpon>AboutUs.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AddAttendance.xaml.cs">
+      <DependentUpon>AddAttendance.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\AddDivision.xaml.cs">
       <DependentUpon>AddDivision.xaml</DependentUpon>
@@ -174,6 +184,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="Views\AboutUs.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AddAttendance.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -350,6 +364,10 @@
     <ProjectReference Include="..\BusinessLayer\BusinessLayer.csproj">
       <Project>{4DE4CFF6-8543-4A90-8880-A1A154985F0F}</Project>
       <Name>BusinessLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DataAccessLayer\DataAccessLayer.csproj">
+      <Project>{F9D7A4D8-4E8E-4762-B1EE-2213A90C6E91}</Project>
+      <Name>DataAccessLayer</Name>
     </ProjectReference>
     <ProjectReference Include="..\EntityLayer\EntityLayer.csproj">
       <Project>{B4CC7778-37F8-41C1-BFD9-1840056E560F}</Project>

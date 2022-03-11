@@ -10,7 +10,7 @@ using System.Windows.Input;
 
 namespace StudentAttendanceManagementSystem.ViewModels
 {
-    public class AddStaffViewModel:BaseViewModel
+    public class AddStaffViewModel :BaseViewModel
     {
         private StaffModel _staffModel;
         private List<StaffModel> _staffViewList;
@@ -22,7 +22,9 @@ namespace StudentAttendanceManagementSystem.ViewModels
             _staffModel = staff;
             StaffViewList = staffManager.DisplayResult();
             Submit = new StaffSubmit(this);
+           
         }
+       
         private int _staffID;
         private string _staffName;
         private string _staffEmail;
@@ -157,5 +159,6 @@ namespace StudentAttendanceManagementSystem.ViewModels
         }
         public ICommand Submit { get; set; }
     }
+
 }
 

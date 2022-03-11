@@ -27,13 +27,13 @@ namespace DataAccessLayer
         }
         public List<DivisionModel> GetDivision(DivisionModel divisionModel)
         {
-
+        
             List<DivisionModel> divisionModels = new List<DivisionModel>();
 
             StudentManagementSystemEntities studentManagementSystemEntities = new StudentManagementSystemEntities();
             var result1 = from division in studentManagementSystemEntities.Divisions
-                          where division.DivisionID >= divisionModel.DivisionID
-                          select division;
+                         where division.DivisionID >= divisionModel.DivisionID
+                         select division;
             foreach (var div in result1)
             {
                 DivisionModel divisionModel1 = new DivisionModel();

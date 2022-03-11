@@ -45,11 +45,11 @@ namespace StudentAttendanceManagementSystem.Command
             {
                 model.SelectedView = new StandardsViewModel();
             }
-            else if (parameter.ToString() == "ADD STAFF")
-            {
-                StaffModel staffModel = new StaffModel();
-                model.SelectedView = new AddStaffViewModel(staffModel);
-            }
+            //else if (parameter.ToString() == "ADD STAFF")
+            //{
+            //    StaffModel staffModel = new StaffModel();
+            //    model.SelectedView = new AddStaffViewModel(staffModel);
+            //}
             else if (parameter.ToString() == "ADMIN PANEL")
             {
                 model.SelectedView = new AdminPanelViewModel();
@@ -78,6 +78,23 @@ namespace StudentAttendanceManagementSystem.Command
                 StaffModel staffModel = new StaffModel();
                 model.SelectedView = new StaffReportViewModel(staffModel);
             }
+            else if (parameter.ToString() == "ADD STANDARDS")
+            {
+                StandardModel standardModel = new StandardModel();
+                model.SelectedView = new AddStandardViewModel();
+            }
+            else if (parameter.ToString() == "ATTENDANCE")
+            {
+
+                AttendanceModel attendanceModel = new AttendanceModel();
+                model.SelectedView = new AttendanceViewModel(attendanceModel);
+            }
+            else if (parameter.ToString() == "ADD DIVISIONS")
+            {
+                DivisionModel divisionModel = new DivisionModel();
+                model.SelectedView = new AddDivisionViewModel(divisionModel);
+            }
+
 
         }
 

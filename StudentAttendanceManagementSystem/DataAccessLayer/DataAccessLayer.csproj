@@ -40,6 +40,7 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
@@ -60,6 +61,7 @@
     <Compile Include="Attendance.cs">
       <DependentUpon>AttendanceManagementDB.tt</DependentUpon>
     </Compile>
+    <Compile Include="AttendanceData.cs" />
     <Compile Include="AttendanceManagementDB.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -75,7 +77,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>AttendanceManagementDB.edmx</DependentUpon>
     </Compile>
+    <Compile Include="DivisionData.cs" />
     <Compile Include="StaffData.cs" />
+    <Compile Include="StanadardData.cs" />
     <Compile Include="StaffReport.cs" />
     <Compile Include="StudentData.cs" />
     <Compile Include="Complaint.cs">
