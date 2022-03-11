@@ -12,8 +12,8 @@ namespace BusinessLayer
     {
         public List<StaffModel> DisplayResult()
         {
-            StaffReport staffReport = new StaffReport();
-            return staffReport.GetStaffList();
+            StaffData staffData = new StaffData();
+            return staffData.GetStaffList();
         }
     }
 }

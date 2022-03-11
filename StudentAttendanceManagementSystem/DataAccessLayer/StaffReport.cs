@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace DataAccessLayer
 {
     public class StaffReport
@@ -25,11 +26,11 @@ namespace DataAccessLayer
                 staffModel.StaffMobile = item.Mobile;
                 staffModel.StaffImage = item.Image;
                 staffModel.Qualification = item.Qualification;
-                staffModel.StaffAddress= item.Address;
+                staffModel.StaffAddress = item.Address;
                 staffModel.StaffCity = item.City;
                 staffModel.StaffPincode = item.Pincode;
                 staffModel.StaffGender = item.Gender;
-                
+
                 staffModels.Add(staffModel);
             }
             return staffModels;

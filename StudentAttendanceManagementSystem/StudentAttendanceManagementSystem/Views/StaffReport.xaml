@@ -21,11 +21,11 @@
                     <DataGridTextColumn Header="Pincode" Binding="{Binding Pincode}" IsReadOnly="True"/>
                     <DataGridTextColumn Header="Gender" Binding="{Binding Gender}" IsReadOnly="True"/>
                     <DataGridTemplateColumn Header="Delete">
-                        <DataGridTemplateColumn.CellTemplate>
+                        <!--<DataGridTemplateColumn.CellTemplate>
                             <DataTemplate>
                                 <Button Click="Button_Click">Delete</Button>
                             </DataTemplate>
-                        </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn.CellTemplate>-->
                     </DataGridTemplateColumn>
                 </DataGrid.Columns>
             </DataGrid>
