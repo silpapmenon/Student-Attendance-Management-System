@@ -12,18 +12,23 @@ namespace BusinessLayer
     {
         public void SaveStudentDetails(StudentModel studentModel)
         {
-            StudentData studentData = new StudentData ();
+            StudentData studentData = new StudentData();
             studentData.SaveStudentData(studentModel);
         }
         public List<StudentModel> DisplayResult()
         {
-             StudentData studentData = new StudentData();
+            StudentData studentData = new StudentData();
             return studentData.GetStudentList();
+        }
+        public void UpdateData(StudentModel studentModel)
+        {
+            StudentData studentData = new StudentData();
+            studentData.UpdateStudentData(studentModel);
         }
         public void DeleteStudentDetails(StudentModel studentModel)
         {
             StudentData studentData = new StudentData();
-            studentData.DeleteData(studentModel);
+            studentData.DeleteStudentData(studentModel);
         }
     }
 }

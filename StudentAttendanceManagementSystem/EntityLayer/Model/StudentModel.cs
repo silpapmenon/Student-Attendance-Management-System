@@ -8,38 +8,38 @@ namespace EntityLayer.Model
 {
     public class StudentModel
     {
-        
-        private int _studentID;
-        private int _rollNo;
-        private string _studentName;
-        private string _divisionName;
-        private string _email; 
-        private string _studentMobile;
-        private DateTime _dob = DateTime.Now;
-        private string _image;
-        private string _studentAddress;
-        private string _studentCity;
-        private int _studentPincode;
-        private string _studentUsername;
-        private string _studentPassword;
-        private int _standardID;
-        private int _gender;
-        private int _roleID;
-        public int StudentID { get => _studentID; set => _studentID = value; }
-        public int RollNo { get => _rollNo; set => _rollNo = value; }
-        public string StudentName { get => _studentName; set => _studentName = value; }
-        public string DivisionName { get => _divisionName; set => _divisionName = value; }
-        public string StudentEmail { get => _email; set => _email = value; }
-        public string StudentMobile { get => _studentMobile; set => _studentMobile = value; }
-        public DateTime  DOB{ get => _dob; set => _dob = value; } 
-        public string Image { get => _image; set => _image = value; }
-        public string StudentAddress { get => _studentAddress; set => _studentAddress = value; }
-        public string StudentCity { get => _studentCity; set => _studentCity = value; }
-        public int StudentPincode { get => _studentPincode; set => _studentPincode = value; }
-        public string StudentUsername { get => _studentUsername; set => _studentUsername = value; }
-        public string StudentPassword { get => _studentPassword; set => _studentPassword = value; }
-        public int StandardID { get => _standardID; set => _standardID = value; }
-        public int Gender { get => _gender; set => _gender = value; }
-        public int RoleID { get => _roleID; set => _roleID = value; }
-    } 
+
+        public int StudentID { get; set; }
+        public int RollNo { get; set; }
+        public string StudentName { get; set; }
+        public string StudentAddress { get; set; }
+        public string StandardName { get; set; }
+        public string DivisionName { get; set; }
+        public string StudentCity { get; set; }
+        public string Image { get; set; }
+        public int Studentpincode { get; set; }
+        public string Studentusername { get; set; }
+        public string Studentpassword { get; set; }
+        public int StandardID { get; set; }
+        public int RoleID { get; set; }
+        public int Gender { get; set; }
+        public DateTime DOB { get; set; }
+        public string StudentEmail { get; set; }
+        public string StudentMobile { get; set; }
+        public string GenderName { get; set; }
+        public GenderClass genderClass { get; set; }
+        public StandardClass standardClass { get; set; }
+
+
+    }
+    public class GenderClass
+    {
+        public int GenderID { get; set; }
+        public string GenderName { get; set; }
+    }
+    public class StandardClass
+    {
+        public int StandardID { get; set; }
+        public string StandardName { get; set; }
+    }
 }
