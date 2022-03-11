@@ -36,24 +36,6 @@ namespace DataAccessLayer
             return staffModels;
 
         }
-        //public void DeleteStaffData(StaffModel staffModel)
-        //{
-        //    try
-        //    {
-        //        StudentManagementSystemEntities entities = new StudentManagementSystemEntities();
-        //        var result = from Obj in entities.Staff
-        //                     where Obj.Email == staffModel.StaffEmail
-        //                     select Obj;
-        //        foreach (var entity in result)
-        //        {
-        //            entities.Staff.Remove(entity);
-        //        }
-        //        entities.SaveChanges();
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        throw ex;
-        //    }
-        //}
+        
     }
 }
