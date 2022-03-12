@@ -54,5 +54,9 @@
         <DataTemplate DataType="{x:Type viewModel:AttendanceViewModel}">
             <views:Attendance/>
         </DataTemplate>
+        <DataTemplate DataType="{x:Type viewModel:AddLeaveViewModel}">
+            <views:Leave/>
+        </DataTemplate>
+        
     </Application.Resources>
 </Application>

@@ -99,6 +99,11 @@ namespace StudentAttendanceManagementSystem.Command
                 AttendanceModel attendanceModel = new AttendanceModel();
                 model.SelectedView = new AttendanceViewModel(attendanceModel);
             }
+            else if (parameter.ToString() == "APPLY LEAVE")
+            {
+                LeaveModel leaveModel = new LeaveModel();
+                model.SelectedView = new AddLeaveViewModel();
+            }
 
         }
 
