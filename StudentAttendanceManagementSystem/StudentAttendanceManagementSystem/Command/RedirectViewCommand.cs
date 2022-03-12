@@ -94,7 +94,11 @@ namespace StudentAttendanceManagementSystem.Command
                 DivisionModel divisionModel = new DivisionModel();
                 model.SelectedView = new AddDivisionViewModel(divisionModel);
             }
-
+            else if (parameter.ToString() == "APPLY LEAVE")
+            {
+                LeaveModel leaveModel = new LeaveModel();
+                model.SelectedView = new AddLeaveViewModel();
+            }
 
         }
 

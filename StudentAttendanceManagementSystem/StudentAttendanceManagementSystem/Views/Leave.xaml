@@ -17,16 +17,19 @@
             <ColumnDefinition Width="204*"/>
             <ColumnDefinition Width="132*"/>
         </Grid.ColumnDefinitions>
-        <DataGrid Opacity="0.6" d:ItemsSource="{d:SampleData ItemCount=5}" AutoGenerateColumns="False" Margin="166,148,173,246" RenderTransformOrigin="1.04,0.521" Grid.ColumnSpan="4">
+        <DataGrid Opacity="0.6" d:ItemsSource="{d:SampleData ItemCount=5}" AutoGenerateColumns="False" Margin="166,323,102,71" RenderTransformOrigin="1.04,0.521" Grid.ColumnSpan="4"  ItemsSource="{Binding LeaveViewList}">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="LeaveID"/>
-                <DataGridTextColumn Header="StudentID"/>
-                <DataGridTextColumn Header="Message"/>
-                <DataGridTextColumn Header="NumDays"/>
-                <DataGridTextColumn Header="Date"/>
+                <DataGridTextColumn Header="LeaveID" Binding="{Binding LeaveID}"/>
+                <DataGridTextColumn Header="StudentID" Binding="{Binding StudentID}"/>
+                <DataGridTextColumn Header="Standard" />
+                <DataGridTextColumn Header="Division" />
+
+                <DataGridTextColumn Header="Message" Binding="{Binding Message}"/>
+                <DataGridTextColumn Header="NumDays" Binding="{Binding NumDays}"/>
+                <DataGridTextColumn Header="Date" Binding="{Binding Date}"/>
             </DataGrid.Columns>
         </DataGrid>
-        <ComboBox Text="Select Standard" HorizontalAlignment="Left" Margin="25,32,0,0" VerticalAlignment="Top" Width="120" Grid.Column="1" Grid.ColumnSpan="3" Background="White">
+        <ComboBox x:Name="txtstandard" Text="Select Standard" HorizontalAlignment="Left" Margin="139,72,0,0" VerticalAlignment="Top" Width="120" Background="White">
             <TextBlock Text="LKG"></TextBlock>
             <TextBlock Text="UKG"></TextBlock>
             <TextBlock Text="FIRST"></TextBlock>
@@ -34,13 +37,22 @@
             <TextBlock Text="THIRD"></TextBlock>
             <TextBlock Text="FOURTH"></TextBlock>
         </ComboBox>
-        <ComboBox x:Name="Division" Text="Select Division" Grid.Column="1" HorizontalAlignment="Left" Margin="23,89,0,0" VerticalAlignment="Top" Width="120" Grid.ColumnSpan="3" Background="White"></ComboBox>
-        <Label x:Name="lblstandard" Content="Standard" HorizontalAlignment="Left" Margin="191,24,0,0" VerticalAlignment="Top" FontWeight="Bold" Background="White"/>
-        <Label Content="Division" HorizontalAlignment="Left" Margin="195,89,0,0" VerticalAlignment="Top" FontWeight="Bold" Background="White"/>
-        <Button Content="Update" HorizontalAlignment="Left" Margin="314,427,0,0" VerticalAlignment="Top" FontWeight="Bold" Background="White" Grid.ColumnSpan="2" Width="86"/>
-        <DatePicker Margin="197,10,33,488" Grid.Column="3" Background="White" Grid.ColumnSpan="2"/>
-        <DatePicker Grid.Column="3" HorizontalAlignment="Left" Margin="195,89,0,0" VerticalAlignment="Top" Width="106" Height="22" Grid.ColumnSpan="2"/>
-        <Label Grid.Column="3" Content="End Date" HorizontalAlignment="Left" Margin="45,89,0,0" VerticalAlignment="Top" Width="78" Height="22"  Background="White"/>
-        <Label Grid.Column="3" Content="Start Date" HorizontalAlignment="Left" Margin="45,10,0,0" VerticalAlignment="Top" Width="78" Height="27" Background="White" Foreground="Black"/>
+        <ComboBox x:Name="txtDivision" Text="Select Division" HorizontalAlignment="Left" Margin="140,122,0,0" VerticalAlignment="Top" Width="120" Background="White"/>
+        <Label x:Name="lblstandard" Content="Standard" HorizontalAlignment="Left" Margin="20,60,0,0" VerticalAlignment="Top" FontWeight="Bold"  FontSize="18"/>
+        <Label x:Name="txtdivision" Content="Division" HorizontalAlignment="Left" Margin="19,109,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="18"/>
+        <Button Content="Apply" HorizontalAlignment="Left" Margin="314,474,0,0" VerticalAlignment="Top" FontWeight="Bold" Background="White" Grid.ColumnSpan="2" Width="86" Height="28"/>
+        <Label Content="Message" HorizontalAlignment="Left" Margin="21,158,0,0" VerticalAlignment="Top" FontSize="18"/>
+        <TextBox x:Name="txtmsg" HorizontalAlignment="Left" Margin="143,168,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="119" Height="37"/>
+        <Label Content="NumDays" HorizontalAlignment="Left" Margin="19,208,0,0" VerticalAlignment="Top" FontSize="18"/>
+        <ComboBox x:Name="txtnumdays" HorizontalAlignment="Left" Margin="141,220,0,0" VerticalAlignment="Top" Width="120">
+            <TextBlock Text="1"></TextBlock>
+            <TextBlock Text="2"></TextBlock>
+            <TextBlock Text="3"></TextBlock>
+            <TextBlock Text="4"></TextBlock>
+            <TextBlock Text="5"></TextBlock>
+            <TextBlock Text="6"></TextBlock>
+            <TextBlock Text="7"></TextBlock>
+        </ComboBox>
+        <DatePicker Grid.Column="3" HorizontalAlignment="Center" Margin="0,62,0,0" VerticalAlignment="Top"/>
     </Grid>
 </UserControl>
