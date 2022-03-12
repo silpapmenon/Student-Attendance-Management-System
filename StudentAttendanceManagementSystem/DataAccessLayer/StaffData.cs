@@ -16,6 +16,7 @@ namespace DataAccessLayer
                 StudentManagementSystemEntities studentManagementSystemEntities = new StudentManagementSystemEntities();
                 Staff staff = new Staff();
                 // staff.StaffID = staffModel.StaffID;
+                staff.Standard=staffModel.Standard;
                 staff.StaffName = staffModel.StaffName;
                 staff.Email = staffModel.StaffEmail;
                 staff.Mobile = staffModel.StaffMobile;
@@ -74,7 +75,8 @@ namespace DataAccessLayer
             foreach (var item in result)
             {
                 StaffModel staffModel = new StaffModel();              
-                staffModel.StaffID = item.StaffID;
+                //staffModel.StaffID = item.StaffID;
+                staffModel.Standard=item.Standard;
                 staffModel.StaffName = item.StaffName;
                 staffModel.StaffEmail = item.Email;
                 staffModel.StaffMobile = item.Mobile;

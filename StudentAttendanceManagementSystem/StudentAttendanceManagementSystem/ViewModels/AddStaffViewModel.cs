@@ -26,6 +26,7 @@ namespace StudentAttendanceManagementSystem.ViewModels
         }
        
         private int _staffID;
+        private string _standard;
         private string _staffName;
         private string _staffEmail;
         private string _staffMobile;
@@ -46,6 +47,15 @@ namespace StudentAttendanceManagementSystem.ViewModels
             {
                 _staffID = value;
                 OnPropertyChanged("StaffID");
+            }
+        }
+        public string Standard
+        {
+            get { return _standard; }
+            set
+            {
+                _standard = value;
+                OnPropertyChanged("Standard");
             }
         }
         public string StaffName

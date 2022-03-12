@@ -38,7 +38,7 @@ namespace StudentAttendanceManagementSystem.Views
         private void Edit_Click(object sender, RoutedEventArgs e)
         {
             id = (grdProductData.SelectedItem as StaffModel).StaffID;
-            txtstaffID.Text= (grdProductData.SelectedItem as StaffModel).StaffID.ToString();
+            //txtstaffID.Text= (grdProductData.SelectedItem as StaffModel).StaffID.ToString();
             txtStaffName.Text = (grdProductData.SelectedItem as StaffModel).StaffName.ToString();
             txtEmail.Text = (grdProductData.SelectedItem as StaffModel).StaffEmail.ToString();
             txtStaffMobile.Text = (grdProductData.SelectedItem as StaffModel).StaffMobile.ToString();

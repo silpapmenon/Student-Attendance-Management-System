@@ -9,6 +9,7 @@ namespace EntityLayer.Model
     public class StaffModel
     {
         private int _staffID;
+        private string _standard;
         private string _staffName;
         private string _staffEmail;
         private string _staffMobile;
@@ -23,6 +24,7 @@ namespace EntityLayer.Model
         private int _roleID;
 
         public int StaffID { get => _staffID; set => _staffID = value; }
+        public string Standard { get => _standard; set => _standard = value; }
         public string StaffName { get => _staffName; set => _staffName = value; }
         public string StaffEmail { get => _staffEmail; set => _staffEmail = value; }
         public string StaffMobile { get => _staffMobile; set => _staffMobile = value; }

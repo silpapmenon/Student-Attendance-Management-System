@@ -17,7 +17,7 @@
         <ListView Name="UserGrid" Margin="0,10,0,10"  >
             <DataGrid Name="grdProductData" AutoGenerateColumns="False" CanUserAddRows="False" MaxColumnWidth="80"  Margin="10,15,268,82" ItemsSource="{Binding StaffViewList}" Height="156" Width="961">
                 <DataGrid.Columns>
-                    <DataGridTextColumn Header="StaffID" Width="50" Binding="{Binding StaffID}"  />
+                    <DataGridTextColumn Header="Standard" Width="50" Binding="{Binding Standard}"  />
                     <DataGridTextColumn Header="Name" Width="50" Binding="{Binding StaffName}" />
                     <DataGridTextColumn Header="Email" Width="60" Binding="{Binding StaffEmail}" />
                     <DataGridTextColumn Header="Gender" Width="50" Binding="{Binding StaffGender}" />
@@ -51,36 +51,46 @@
 
         </ListView>
         <Grid Margin="192,208,131,95"  Grid.RowSpan="4">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="364*"/>
+                <ColumnDefinition Width="313*"/>
+            </Grid.ColumnDefinitions>
             <Label Content="Add Staff" HorizontalAlignment="Left" Margin="280,4,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold"/>
-            <Label Content="StaffID" HorizontalAlignment="Left" Margin="10,42,0,0" VerticalAlignment="Top" Width="107" FontWeight="Bold"/>
+            <Label Content="Standard" HorizontalAlignment="Left" Margin="10,42,0,0" VerticalAlignment="Top" Width="107" FontWeight="Bold"/>
             <Label Content="Name" HorizontalAlignment="Left" Margin="10,76,0,0" VerticalAlignment="Top" Width="107" FontWeight="Bold"/>
-            <Label Content="Address" HorizontalAlignment="Left" Margin="346,35,0,0" VerticalAlignment="Top" Width="107" FontWeight="Bold" />
-            <Label Content="Mobile" HorizontalAlignment="Left" Margin="346,77,0,0" VerticalAlignment="Top" Width="107" FontWeight="Bold"/>
+            <Label Content="Address" HorizontalAlignment="Left" Margin="346,35,0,0" VerticalAlignment="Top" Width="107" FontWeight="Bold" Grid.ColumnSpan="2" />
+            <Label Content="Mobile" HorizontalAlignment="Left" Margin="346,77,0,0" VerticalAlignment="Top" Width="107" FontWeight="Bold" Grid.ColumnSpan="2"/>
             <Label Content="Qualification" HorizontalAlignment="Left" Margin="10,110,0,0" VerticalAlignment="Top" Width="107" FontWeight="Bold"/>
-            <Label Content="Email" HorizontalAlignment="Left" Margin="10,150,0,0" VerticalAlignment="Top" Width="107" FontWeight="Bold"/>
-            <Label Content="City" HorizontalAlignment="Left" Margin="350,114,0,0" VerticalAlignment="Top" Width="106" FontWeight="Bold"/>
+            <Label Content="Email" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Center" Width="107" FontWeight="Bold"/>
+            <Label Content="City" HorizontalAlignment="Left" Margin="350,114,0,0" VerticalAlignment="Top" Width="106" FontWeight="Bold" Grid.ColumnSpan="2"/>
             <Label Content="Pincode" HorizontalAlignment="Left" Margin="7,185,0,111" Width="107" FontWeight="Bold"/>
-            <Label Content="Gender" HorizontalAlignment="Left" Margin="352,0,0,0" VerticalAlignment="Center" FontWeight="Bold"/>
+            <Label Content="Gender" HorizontalAlignment="Left" Margin="352,0,0,0" VerticalAlignment="Center" FontWeight="Bold" Grid.ColumnSpan="2"/>
             <Label Content="Username" HorizontalAlignment="Left" Margin="10,216,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
-            <Label Content="Password" HorizontalAlignment="Left" Margin="349,198,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
-            <Button x:Name="btnAdd" Content="Add" HorizontalAlignment="Left" Margin="280,274,0,0" VerticalAlignment="Top" Width="140" Height="43"  FontSize="18" FontWeight="Bold" Command="{Binding Submit}"/>
-            <TextBox x:Name="txtstaffID" HorizontalAlignment="Left" Margin="139,40,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="140" Height="22" FontSize="14" Text="{Binding StaffID}"/>
+            <Label Content="Password" HorizontalAlignment="Left" Margin="349,198,0,0" VerticalAlignment="Top" FontWeight="Bold" Grid.ColumnSpan="2"/>
+            <Button x:Name="btnAdd" Content="Add" HorizontalAlignment="Left" Margin="280,274,0,0" VerticalAlignment="Top" Width="140" Height="43"  FontSize="18" FontWeight="Bold" Command="{Binding Submit}" Grid.ColumnSpan="2"/>
             <TextBox x:Name="txtStaffName" HorizontalAlignment="Left" Margin="139,79,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="140" Height="22" FontSize="14" Text="{Binding StaffName}" />
-            <TextBox x:Name="txtAddress" HorizontalAlignment="Left" Background="White" Margin="498,40,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="140" Height="22" FontSize="14" Text="{Binding StaffAddress}" />
-            <TextBox x:Name="txtStaffMobile" HorizontalAlignment="Left" Margin="498,79,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="140" Height="22" FontSize="14" Text="{Binding StaffMobile}" />
+            <TextBox x:Name="txtAddress" HorizontalAlignment="Left" Background="White" Margin="134,40,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="140" Height="22" FontSize="14" Text="{Binding StaffAddress}" Grid.Column="1" />
+            <TextBox x:Name="txtStaffMobile" HorizontalAlignment="Left" Margin="134,79,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="140" Height="22" FontSize="14" Text="{Binding StaffMobile}" Grid.Column="1" />
             <!--<TextBox x:Name="txtDob" HorizontalAlignment="Left" Margin="139,178,0,276"   TextWrapping="Wrap" VerticalAlignment="Top" Width="140" Height="22" FontSize="14"/>-->
-            <TextBox x:Name="txtEmail" HorizontalAlignment="Left" Margin="139,152,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="140" Height="22" FontSize="14" Text="{Binding StaffEmail}"/>
-            <TextBox x:Name="txtCity" HorizontalAlignment="Left" Margin="498,119,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="140" Height="22" FontSize="14" Text="{Binding StaffCity}"/>
+            <TextBox x:Name="txtEmail" HorizontalAlignment="Left" Margin="139,0,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Width="140" Height="22" FontSize="14" Text="{Binding StaffEmail}"/>
+            <TextBox x:Name="txtCity" HorizontalAlignment="Left" Margin="134,119,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="140" Height="22" FontSize="14" Text="{Binding StaffCity}" Grid.Column="1"/>
             <TextBox x:Name="txtPincode" HorizontalAlignment="Left" Margin="139,188,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="140" Height="22" FontSize="14" Text="{Binding StaffPincode}"/>
             <TextBox x:Name="txtqualification" HorizontalAlignment="Left" Height="28" Margin="139,112,0,0" VerticalAlignment="Top" Width="140" Text="{Binding Qualification}"/>
             <TextBox x:Name="txtUsername" HorizontalAlignment="Left" Margin="139,221,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="140" Height="22" FontSize="14" Text="{Binding StaffUsername}"/>
-            <TextBox x:Name="pwdUsername" HorizontalAlignment="Left" Margin="498,203,0,0"  VerticalAlignment="Top" Width="140" Height="22" FontSize="14" Text="{Binding StaffPassword}"/>
-            <ComboBox x:Name="txtgender" HorizontalAlignment="Left" Height="20" Margin="498,161,0,0" VerticalAlignment="Top" Width="140">
-                <TextBlock Text="1"></TextBlock>
-                <TextBlock Text="2"></TextBlock>
-                <TextBlock Text="3"></TextBlock>
+            <TextBox x:Name="pwdUsername" HorizontalAlignment="Left" Margin="134,203,0,0"  VerticalAlignment="Top" Width="140" Height="22" FontSize="14" Text="{Binding StaffPassword}" Grid.Column="1"/>
+            <ComboBox x:Name="txtgender" HorizontalAlignment="Left" Height="20" Margin="134,161,0,0" VerticalAlignment="Top" Width="140" Grid.Column="1">
+                <TextBlock Text="Female"></TextBlock>
+                <TextBlock Text="Male"></TextBlock>
+                <TextBlock Text="Others"></TextBlock>
             </ComboBox>
-            <Button x:Name="btnedit" Content="Edit" HorizontalAlignment="Left" Margin="486,274,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="24" Width="152" Height="43" Click="btnedit_Click"/>
+            <Button x:Name="btnedit" Content="Edit" HorizontalAlignment="Left" Margin="122,274,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="24" Width="152" Height="43" Click="btnedit_Click" Grid.Column="1"/>
+            <ComboBox HorizontalAlignment="Left" Margin="139,45,0,0" VerticalAlignment="Top" Width="140">
+                <TextBlock Text="First"></TextBlock>
+                <TextBlock Text="Second"></TextBlock>
+                <TextBlock Text="Third"></TextBlock>
+                <TextBlock Text="Third"></TextBlock>
+
+            </ComboBox>
         </Grid>
 
     </Grid>
