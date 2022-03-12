@@ -55,21 +55,79 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Admin.cs">
+      <DependentUpon>AttendanceManagementDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Attendance.cs">
+      <DependentUpon>AttendanceManagementDB.tt</DependentUpon>
+    </Compile>
     <Compile Include="AttendanceData.cs" />
+    <Compile Include="AttendanceManagementDB.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AttendanceManagementDB.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AttendanceManagementDB.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AttendanceManagementDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AttendanceManagementDB.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AttendanceManagementDB.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Division.cs">
+      <DependentUpon>AttendanceManagementDB.tt</DependentUpon>
+    </Compile>
     <Compile Include="DivisionData.cs" />
+    <Compile Include="Gender.cs">
+      <DependentUpon>AttendanceManagementDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Leave.cs">
+      <DependentUpon>AttendanceManagementDB.tt</DependentUpon>
+    </Compile>
     <Compile Include="LeaveData.cs" />
+    <Compile Include="Role.cs">
+      <DependentUpon>AttendanceManagementDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_helpdiagramdefinition_Result.cs">
+      <DependentUpon>AttendanceManagementDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_helpdiagrams_Result.cs">
+      <DependentUpon>AttendanceManagementDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Staff.cs">
+      <DependentUpon>AttendanceManagementDB.tt</DependentUpon>
+    </Compile>
     <Compile Include="StaffData.cs" />
     <Compile Include="StanadardData.cs" />
     <Compile Include="StaffReport.cs" />
+    <Compile Include="Standard.cs">
+      <DependentUpon>AttendanceManagementDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Student.cs">
+      <DependentUpon>AttendanceManagementDB.tt</DependentUpon>
+    </Compile>
     <Compile Include="StudentData.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StudentReportData.cs" />
+    <Compile Include="sysdiagram.cs">
+      <DependentUpon>AttendanceManagementDB.tt</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.Config" />
+    <EntityDeploy Include="AttendanceManagementDB.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>AttendanceManagementDB.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="AttendanceManagementDB.edmx.diagram">
+      <DependentUpon>AttendanceManagementDB.edmx</DependentUpon>
+    </None>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
@@ -77,6 +135,18 @@
       <Project>{B4CC7778-37F8-41C1-BFD9-1840056E560F}</Project>
       <Name>EntityLayer</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AttendanceManagementDB.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>AttendanceManagementDB.edmx</DependentUpon>
+      <LastGenOutput>AttendanceManagementDB.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="AttendanceManagementDB.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>AttendanceManagementDB.edmx</DependentUpon>
+      <LastGenOutput>AttendanceManagementDB.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
