@@ -29,7 +29,7 @@ namespace DataAccessLayer
                 studentModel.StudentAddress = item.StudentAddress;
                 studentModel.StudentCity = item.StudentCity;
                 //studentModel.StudentPincode = item.StudentPincode;
-                studentModel.Gender = item.Gender;
+                studentModel.GenderName = item.Gender;
                 studentModels.Add(studentModel);
             }
             return studentModels;

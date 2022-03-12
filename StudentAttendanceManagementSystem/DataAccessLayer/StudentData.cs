@@ -70,8 +70,8 @@ namespace DataAccessLayer
         {
             StudentManagementSystemEntities studentManagementSystemEntities = new StudentManagementSystemEntities();
             var result = from getdata in studentManagementSystemEntities.Students
-                         join genderjoin in studentManagementSystemEntities.Genders on getdata.Gender equals genderjoin.GenderID
-                         join standardjoin in studentManagementSystemEntities.Standards on getdata.StandardID equals standardjoin.StandardID
+                        
+       
                          select getdata;
 
             List<StudentModel> studentModels = new List<StudentModel>();
@@ -80,7 +80,7 @@ namespace DataAccessLayer
                 StudentModel studentModel = new StudentModel();
                 studentModel.genderClass = new GenderClass();
                 studentModel.standardClass = new StandardClass();
-                studentModel.StandardID = item.StandardID;
+                studentModel.StandardName = item.StandardName;
                 studentModel.StudentID = item.StudentID;
                 studentModel.RollNo = item.RollNo;
                 studentModel.StudentName = item.StudentName;
@@ -94,7 +94,7 @@ namespace DataAccessLayer
                 studentModel.StudentAddress = item.StudentAddress;
                 studentModel.StudentCity = item.StudentCity;
                 studentModel.Studentpincode = item.StudentPincode;
-                studentModel.Gender = item.Gender;
+                studentModel.GenderName = item.Gender;
                 //studentModel.standardClass.StandardName = item.Stan
                 studentModels.Add(studentModel);
             }

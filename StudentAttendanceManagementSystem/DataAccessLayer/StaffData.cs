@@ -26,9 +26,9 @@ namespace DataAccessLayer
                 staff.Pincode = staffModel.StaffPincode;
                 staff.UserName = staffModel.StaffUserName;
                 staff.Password = staffModel.StaffPassword;
-                staff.Gender = 2;
-                staff.RoleID = 3;
-                studentManagementSystemEntities.Staff.Add(staff);
+                staff.Gender = staffModel.StaffGender;
+                staff.RoleID = 2;
+                studentManagementSystemEntities.Staffs.Add(staff);
                 studentManagementSystemEntities.SaveChanges();
                 // MessageBox.Show("Value Added");
             }
@@ -67,7 +67,7 @@ namespace DataAccessLayer
         public List<StaffModel> GetStaffList() 
         {
             StudentManagementSystemEntities studentManagementSystemEntities = new StudentManagementSystemEntities();
-            var result = from getdata in studentManagementSystemEntities.Staff
+            var result = from getdata in studentManagementSystemEntities.Staffs
                          select getdata;
 
             List<StaffModel> staffModels = new List<StaffModel>();
@@ -97,7 +97,7 @@ namespace DataAccessLayer
             try
             {
                 StudentManagementSystemEntities studentManagementSystemEntities = new StudentManagementSystemEntities();
-                var query = from staffObj in studentManagementSystemEntities.Staff
+                var query = from staffObj in studentManagementSystemEntities.Staffs
                             where staffObj.StaffID == staffModel.StaffID
                             select staffObj;
                 foreach (var entity in query)
@@ -130,12 +130,12 @@ namespace DataAccessLayer
             try
             {
                 StudentManagementSystemEntities entities = new StudentManagementSystemEntities();
-                var result = from staffObj in entities.Staff
+                var result = from staffObj in entities.Staffs
                              where staffObj.StaffID==staffModel.StaffID
                              select staffObj;
                 foreach (var entity in result)
                 {
-                    entities.Staff.Remove(entity);
+                    entities.Staffs.Remove(entity);
                 }
                 entities.SaveChanges();
             }

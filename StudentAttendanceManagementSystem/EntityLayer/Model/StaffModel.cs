@@ -19,7 +19,7 @@ namespace EntityLayer.Model
         private string _staffPincode;
         private string _staffUsername;
         private string _staffPassword;
-        private int _staffGender;
+        private string _staffGender;
         private int _roleID;
 
         public int StaffID { get => _staffID; set => _staffID = value; }
@@ -33,7 +33,7 @@ namespace EntityLayer.Model
         public string StaffPincode { get => _staffPincode; set => _staffPincode = value; }
         public string StaffUserName { get => _staffUsername; set => _staffUsername = value; }
         public string StaffPassword { get => _staffPassword; set => _staffPassword = value; }
-        public int StaffGender { get => _staffGender; set => _staffGender = value; }
+        public string StaffGender { get => _staffGender; set => _staffGender = value; }
         public int RoleID { get => _roleID; set => _roleID = value; }
     }
 }

@@ -13,7 +13,7 @@ namespace DataAccessLayer
         public List<StaffModel> GetStaffList()
         {
             StudentManagementSystemEntities studentManagementSystemEntities = new StudentManagementSystemEntities();
-            var result = from getdata in studentManagementSystemEntities.Staff
+            var result = from getdata in studentManagementSystemEntities.Staffs
                          select getdata;
 
             List<StaffModel> staffModels = new List<StaffModel>();

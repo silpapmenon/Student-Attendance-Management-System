@@ -68,7 +68,7 @@ namespace StudentAttendanceManagementSystem.Views
             staffModel.StaffPincode= txtPincode.Text;
             staffModel.StaffUserName = txtUsername.Text;
             staffModel.StaffPassword= pwdUsername.Text;
-            staffModel.StaffGender = int.Parse(txtgender.Text);
+            staffModel.StaffGender = txtgender.Text;
             StaffManager staffManager=new StaffManager();
             staffManager.UpdateData(staffModel);
             MessageBox.Show("Edited");

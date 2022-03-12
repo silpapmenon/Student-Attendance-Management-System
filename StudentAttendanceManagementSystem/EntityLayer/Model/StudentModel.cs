@@ -23,6 +23,7 @@ namespace EntityLayer.Model
         public int StandardID { get; set; }
         public int RoleID { get; set; }
         public int Gender { get; set; }
+       
         public DateTime DOB { get; set; }
         public string StudentEmail { get; set; }
         public string StudentMobile { get; set; }

@@ -36,7 +36,7 @@ namespace StudentAttendanceManagementSystem.ViewModels
         private string _staffPincode;
         private string _staffUsername;
         private string _staffPassword;
-        private int _staffGender;
+        private string _staffGender;
         private int _roleID;
 
         public int StaffID
@@ -139,7 +139,7 @@ namespace StudentAttendanceManagementSystem.ViewModels
                 OnPropertyChanged("StaffPassword");
             }
         }
-        public int Gender
+        public string Gender
         {
             get { return _staffGender; }
             set
