@@ -94,3 +94,8 @@ namespace DataAccessLayer
         }
     }
 }
+//var result = from divisionObj in entities.Divisions
+//             join standardObj in entities.Standards
+//             on divisionObj.StandardID equals standardObj.StandardID
+//             where standardObj.StandardName = divisionObj.DivisionName
+//             select divisionObj;

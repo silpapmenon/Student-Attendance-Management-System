@@ -19,14 +19,9 @@
                     <DataGridTextColumn Header="Address" Binding="{Binding StaffAddress}" IsReadOnly="True"/>
                     <DataGridTextColumn Header="City" Binding="{Binding StaffCity}" IsReadOnly="True"/>
                     <DataGridTextColumn Header="Pincode" Binding="{Binding StaffPincode}" IsReadOnly="True"/>
-                    <DataGridTextColumn Header="Gender" Binding="{Binding StaffGender}" IsReadOnly="True"/>    
-                    <DataGridTemplateColumn Header="Delete">
-                        <DataGridTemplateColumn.CellTemplate>
-                            <DataTemplate>
-                               
-                            </DataTemplate>
-                        </DataGridTemplateColumn.CellTemplate>
-                    </DataGridTemplateColumn>
+                    <DataGridTextColumn Header="Gender" Binding="{Binding StaffGender}" IsReadOnly="True"/>
+                    <DataGridTextColumn Header="UserName" Binding="{Binding StaffUserName}" IsReadOnly="True"/>
+
                 </DataGrid.Columns>
             </DataGrid>
         </ListView>

@@ -6,20 +6,24 @@
              xmlns:local="clr-namespace:StudentAttendanceManagementSystem.Views"
              mc:Ignorable="d" d:DesignWidth="800" Height="370">
     <Grid Margin="0,164,0,131" >
-        <ListView Name="UserGrid" Margin="0,-96,0,75" >
-            <DataGrid Name="grdDivisionData" AutoGenerateColumns="False" CanUserAddRows="False" ColumnWidth="*" Width="809" Height="106" ItemsSource="{Binding DivisionViewList}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="559*"/>
+            <ColumnDefinition Width="241*"/>
+        </Grid.ColumnDefinitions>
+        <ListView Name="UserGrid" Margin="180,-111,120,50" Grid.ColumnSpan="2" >
+            <DataGrid Name="grdDivisionData" AutoGenerateColumns="False" CanUserAddRows="False" ColumnWidth="*" Width="488" Height="134" ItemsSource="{Binding DivisionViewList}">
                 <DataGrid.Columns>
-                    <DataGridTextColumn Header="Standard" Binding="{Binding StandardID}" IsReadOnly="True"/>
-                    <DataGridTextColumn Header="Division Name" Binding="{Binding DivisionName}" IsReadOnly="True"/>
-                    <DataGridTextColumn Header="Seats" Binding="{Binding Seat}" IsReadOnly="True"/>
-                    <DataGridTemplateColumn Header="Edit">
+                    <DataGridTextColumn Header="Standard" Binding="{Binding StandardID}" Width="100" IsReadOnly="True"/>
+                    <DataGridTextColumn Header="Division Name" Binding="{Binding DivisionName}" Width="100" IsReadOnly="True"/>
+                    <DataGridTextColumn Header="Seats" Binding="{Binding Seat}" Width="100" IsReadOnly="True"/>
+                    <DataGridTemplateColumn Header="Edit" Width="100">
                         <DataGridTemplateColumn.CellTemplate>
                             <DataTemplate>
                                 <Button Click="Edit_Click">Edit</Button>
                             </DataTemplate>
                         </DataGridTemplateColumn.CellTemplate>
                     </DataGridTemplateColumn>
-                    <DataGridTemplateColumn Header="Delete">
+                    <DataGridTemplateColumn Header="Delete" Width="100">
                         <DataGridTemplateColumn.CellTemplate>
                             <DataTemplate>
                                 <Button Click="Button_Click_1">Delete</Button>
@@ -29,7 +33,7 @@
                 </DataGrid.Columns>
             </DataGrid>
         </ListView>
-        <Grid Margin="102,-5,374,-144">
+        <Grid Margin="102,-15,133,-134">
 
             <Label Content="Division Name" HorizontalAlignment="Left" Margin="30,121,0,0" VerticalAlignment="Top" Width="107" FontWeight="Bold"/>
 
@@ -49,11 +53,11 @@
 
 
         </Grid>
-        <Grid Margin="464,-5,12,-144">
+        <Grid Margin="404,-9,72,-140" Grid.ColumnSpan="2">
 
             <Label Content="Standard ID" HorizontalAlignment="Left" Margin="22,41,0,0" VerticalAlignment="Top" Width="107" FontWeight="Bold" RenderTransformOrigin="0.611,0.617"/>
 
-            <Button x:Name="btnEdit" Content="Edit" HorizontalAlignment="Left" Margin="165,152,0,0" VerticalAlignment="Top" Width="84" Height="24" FontSize="18" FontWeight="Bold" Background="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}" Click="btnEdit_Click"/>
+            <Button x:Name="btnEdit" Content="Edit" HorizontalAlignment="Left" Margin="165,149,0,0" VerticalAlignment="Top" Width="84" Height="28" FontSize="18" FontWeight="Bold" Background="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}" Click="btnEdit_Click"/>
 
             <Label Content="Seat" HorizontalAlignment="Left" Margin="29,77,0,0" VerticalAlignment="Top"  FontWeight="Bold"/>
             <TextBox x:Name="txtSeatEdit" HorizontalAlignment="Left" Margin="162,79,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Height="24" RenderTransformOrigin="0.713,0.136"/>
