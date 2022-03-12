@@ -20,10 +20,10 @@
                 <DataGridTextColumn Header="Student ID" Width="50" Binding="{Binding StudentID}" />
                 <DataGridTextColumn Header="Roll No" Width="50" Binding="{Binding RollNo}" />
                 <DataGridTextColumn Header="Student Name" Width="90"  Binding="{Binding StudentName}"/>
-                <DataGridTextColumn Header="Standard" Width="90"  Binding="{Binding standardClass.StandardName}"/>
+                <DataGridTextColumn Header="Standard" Width="90"  Binding="{Binding StandardName}"/>
                 <DataGridTextColumn Header="Division" Width="90"  Binding="{Binding DivisionName}"/>
                 <DataGridTextColumn Header="Student Email" Width="85" Binding="{Binding StudentEmail}" />
-                <DataGridTextColumn Header="Gender" Width="50"  Binding="{Binding genderClass.GenderName}"/>
+                <DataGridTextColumn Header="Gender" Width="50"  Binding="{Binding GenderName}"/>
                 <DataGridTextColumn Header="Student Mobile" Width="95" Binding="{Binding StudentMobile}" />
                 <DataGridTextColumn Header="DOB" Width="40"  Binding="{Binding DOB}"/>
                 <DataGridTextColumn Header="Student Address" Width="100" Binding="{Binding StudentAddress}" />

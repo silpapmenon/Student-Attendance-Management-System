@@ -34,7 +34,7 @@ namespace DataAccessLayer
                     string image = "null";
                     string city = studentModel.StudentCity;
                     string gendername = studentModel.GenderName;
-                    int gender = studentModel.Gender;
+                    //int gender = studentModel.;
                     string password = studentModel.Studentpassword;
                     string division = studentModel.DivisionName;
                     string standardname = studentModel.StandardName;
@@ -183,7 +183,7 @@ namespace DataAccessLayer
                     connection.Open();
                     StudentModel student = new StudentModel();
                     int roll = studentModel.RollNo;
-                    int standardid = studentModel.StandardID;
+                    //int standardid = studentModel.;
                     int studentid = studentModel.StudentID;
                     string studname = studentModel.StudentName;
                     DateTime dob = studentModel.DOB;
@@ -195,7 +195,7 @@ namespace DataAccessLayer
                     string image = "null";
                     string city = studentModel.StudentCity;
                     string gendername = studentModel.GenderName;
-                    int gender = studentModel.Gender;
+                    //int gender = studentModel.Gender;
                     string password = studentModel.Studentpassword;
                     string division = studentModel.DivisionName;
                     string standardname = studentModel.StandardName;
