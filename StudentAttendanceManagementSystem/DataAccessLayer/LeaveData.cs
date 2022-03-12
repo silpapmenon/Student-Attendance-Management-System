@@ -23,7 +23,7 @@ namespace DataAccessLayer
                 leaveModel.StudentID=item.StudentID;
                 leaveModel.Message = item.Message;
                 leaveModel.NumDays = item.NumDays;
-                leaveModel.Date = item.;
+                
                // leaveModel.Date = (DateTime)item.EndDate;
                 leaveModels.Add(leaveModel);
             }
