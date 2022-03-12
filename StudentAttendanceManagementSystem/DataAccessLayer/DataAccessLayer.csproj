@@ -78,6 +78,7 @@
       <DependentUpon>AttendanceManagementDB.edmx</DependentUpon>
     </Compile>
     <Compile Include="DivisionData.cs" />
+    <Compile Include="LeaveData.cs" />
     <Compile Include="StaffData.cs" />
     <Compile Include="StanadardData.cs" />
     <Compile Include="StaffReport.cs" />

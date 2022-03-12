@@ -20,13 +20,15 @@ namespace DataAccessLayer
             {
                 LeaveModel leaveModel = new LeaveModel();
                 leaveModel.LeaveID = item.LeaveID;
-                leaveModel.StudentID = item.StudentID;
+                leaveModel.StudentID=item.StudentID;
                 leaveModel.Message = item.Message;
                 leaveModel.NumDays = item.NumDays;
-                leaveModel.Date = item.StartDate;
+                leaveModel.Date = item.;
+               // leaveModel.Date = (DateTime)item.EndDate;
                 leaveModels.Add(leaveModel);
             }
             return leaveModels;
+
         }
     }
 }
