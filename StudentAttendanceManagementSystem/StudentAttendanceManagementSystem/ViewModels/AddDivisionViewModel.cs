@@ -27,6 +27,7 @@ namespace StudentAttendanceManagementSystem.ViewModels
         private int _divisionID;
         private string _divisionName;
         private int _standardID;
+        private string _standardName;
         private int _seat;
         public int DivisionID
         {
@@ -52,6 +53,15 @@ namespace StudentAttendanceManagementSystem.ViewModels
             set
             {
                 _divisionName = value;
+                OnPropertyChanged("DivisionName");
+            }
+        }
+        public string StandardName
+        {
+            get { return _standardName; }
+            set
+            {
+                _standardName = value;
                 OnPropertyChanged("DivisionName");
             }
         }
