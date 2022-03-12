@@ -153,7 +153,7 @@ namespace StudentAttendanceManagementSystem.Views
             StudentManager studentManager = new StudentManager();
             grdProductData.ItemsSource = studentManager.DisplayResult();
         }
-        void ClearTextBox() //vokey
+        void ClearTextBox() 
         {
             txtRollNo.Text = String.Empty;
             txtStudentName.Text = String.Empty;
