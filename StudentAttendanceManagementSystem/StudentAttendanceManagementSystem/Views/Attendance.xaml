@@ -23,9 +23,9 @@
         </DataGrid>
         <Label x:Name="lblselectstandard" Content="Select Standard" HorizontalAlignment="Left" Margin="119,28,0,0" VerticalAlignment="Top" Width="105" Height="35" Background="White"/>
         <Label x:Name="lblselectdivision" Content="Select Division" HorizontalAlignment="Left" Margin="119,110,0,0" VerticalAlignment="Top" Width="105" Background="White"/>
-        <ComboBox x:Name="cmbSelectdivision" HorizontalAlignment="Left" Margin="284,107,0,0" VerticalAlignment="Top" Width="120" Height="26" ItemsSource="{Binding StudentDivision}" DisplayMemberPath="DivisionName"/>
+        <ComboBox x:Name="cmbSelectdivision" HorizontalAlignment="Left" Margin="284,107,0,0" VerticalAlignment="Top" Width="120" Height="26" ItemsSource="{Binding StudentDivision}" DisplayMemberPath="DivisionName" />
 
-        <Button x:Name="btndivision" Content="SELECT" HorizontalAlignment="Left" Margin="466,146,0,0" VerticalAlignment="Top" Height="26" Width="121" Background="RED"/>
+        <Button x:Name="btndivision" Content="SELECT" HorizontalAlignment="Left" Margin="466,146,0,0" VerticalAlignment="Top" Height="26" Width="121" Background="RED" />
         <ComboBox HorizontalAlignment="Left" Margin="284,28,0,0" VerticalAlignment="Top" Width="120" Background="White" ItemsSource="{Binding StudentStandard}" DisplayMemberPath="StandardName"/>
         <DatePicker HorizontalAlignment="Left" Margin="702,28,0,0" VerticalAlignment="Top"/>
         <Label x:Name="lblrollno" Content="Roll No" HorizontalAlignment="Left" Margin="119,199,0,0" VerticalAlignment="Top" Width="105" Background="White"/>

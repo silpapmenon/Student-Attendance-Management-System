@@ -94,7 +94,11 @@ namespace StudentAttendanceManagementSystem.Command
                 DivisionModel divisionModel = new DivisionModel();
                 model.SelectedView = new AddDivisionViewModel(divisionModel);
             }
-
+            else if (parameter.ToString() == "ATTENDANCE")
+            {
+                AttendanceModel attendanceModel = new AttendanceModel();
+                model.SelectedView = new AttendanceViewModel(attendanceModel);
+            }
 
         }
 

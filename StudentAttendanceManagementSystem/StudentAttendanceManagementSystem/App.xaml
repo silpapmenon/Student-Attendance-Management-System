@@ -51,5 +51,8 @@
         <DataTemplate DataType="{x:Type viewModel:AddDivisionViewModel}">
             <views:AddDivision/>
         </DataTemplate>
+        <DataTemplate DataType="{x:Type viewModel:AttendanceViewModel}">
+            <views:Attendance/>
+        </DataTemplate>
     </Application.Resources>
 </Application>
