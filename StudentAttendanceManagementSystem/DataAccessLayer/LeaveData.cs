@@ -20,7 +20,7 @@ namespace DataAccessLayer
             {
                 LeaveModel leaveModel = new LeaveModel();
                 leaveModel.LeaveID = item.LeaveID;
-                leaveModel.StudentID=item.StudentID;
+                //leaveModel.StudentID=item.StudentID;
                 leaveModel.Message = item.Message;
                 leaveModel.NumDays = item.NumDays;
                 

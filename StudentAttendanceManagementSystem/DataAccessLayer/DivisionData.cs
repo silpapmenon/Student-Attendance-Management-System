@@ -16,7 +16,7 @@ namespace DataAccessLayer
                 StudentManagementSystemEntities studentManagementSystemEntities = new StudentManagementSystemEntities();
                 Division division = new Division();
 
-                division.StandardID = divisionModel.StandardID;
+                division.StandardName = divisionModel.StandardName;
                 division.DivisionName = divisionModel.DivisionName;
                 division.Seat = divisionModel.Seat;
 
@@ -40,7 +40,7 @@ namespace DataAccessLayer
             foreach (var item in result)
             {
                 DivisionModel model = new DivisionModel();
-                model.StandardID = item.StandardID;
+                model.StandardName = item.StandardName;
                 model.DivisionName = item.DivisionName;
                 model.Seat = item.Seat;
 
@@ -54,11 +54,11 @@ namespace DataAccessLayer
             {
                 StudentManagementSystemEntities divisions = new StudentManagementSystemEntities();
                 var query = from divisionObj in divisions.Divisions
-                            where divisionObj.StandardID == divisionModel.StandardID
+                            where divisionObj.StandardName == divisionModel.StandardName
                             select divisionObj;
                 foreach (var entity in query)
                 {
-                    entity.StandardID = divisionModel.StandardID;
+                    entity.StandardName= divisionModel.StandardName;
                     entity.DivisionName = divisionModel.DivisionName;
                     entity.Seat = divisionModel.Seat;
 
@@ -79,7 +79,7 @@ namespace DataAccessLayer
             {
                 StudentManagementSystemEntities entities = new StudentManagementSystemEntities();
                 var result = from divisionObj in entities.Divisions
-                             where divisionObj.StandardID == divisionModel.StandardID
+                             where divisionObj.StandardName == divisionModel.StandardName
                              select divisionObj;
                 foreach (var entity in result)
                 {
