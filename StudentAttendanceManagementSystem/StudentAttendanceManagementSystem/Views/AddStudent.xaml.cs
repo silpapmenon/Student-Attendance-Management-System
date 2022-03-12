@@ -45,7 +45,7 @@ namespace StudentAttendanceManagementSystem.Views
             dt.Text = (grdProductData.SelectedItem as StudentModel).DOB.ToString();
             txtUsername.Text = (grdProductData.SelectedItem as StudentModel).Studentusername;
             pwdUsername.Text = (grdProductData.SelectedItem as StudentModel).Studentpassword;
-            gender.Text = (grdProductData.SelectedItem as StudentModel).genderClass.GenderName;
+            gender.Text = (grdProductData.SelectedItem as StudentModel).GenderName;
             txtEmail.Text = (grdProductData.SelectedItem as StudentModel).StudentEmail;
             txtPincode.Text = (grdProductData.SelectedItem as StudentModel).Studentpincode.ToString();
             txtAddress.Text = (grdProductData.SelectedItem as StudentModel).StudentAddress;
@@ -53,7 +53,7 @@ namespace StudentAttendanceManagementSystem.Views
             txtCity.Text = (grdProductData.SelectedItem as StudentModel).StudentCity;
             //gender.Text = (grdProductData.SelectedItem as StudentModel).GenderName;
             div.Text = (grdProductData.SelectedItem as StudentModel).DivisionName;
-            standard.Text = (grdProductData.SelectedItem as StudentModel).standardClass.StandardName;
+            standard.Text = (grdProductData.SelectedItem as StudentModel).StandardName;
             Refresh();
         }
 

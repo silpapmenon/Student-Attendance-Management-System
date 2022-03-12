@@ -20,9 +20,9 @@ namespace EntityLayer.Model
         public int Studentpincode { get; set; }
         public string Studentusername { get; set; }
         public string Studentpassword { get; set; }
-        public int StandardID { get; set; }
+       // public int StandardID { get; set; }
         public int RoleID { get; set; }
-        public int Gender { get; set; }
+      //  public int Gender { get; set; }
        
         public DateTime DOB { get; set; }
         public string StudentEmail { get; set; }
