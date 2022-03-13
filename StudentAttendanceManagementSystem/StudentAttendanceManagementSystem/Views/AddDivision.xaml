@@ -35,15 +35,19 @@
             </DataGrid>
         </ListView>
         <Grid Margin="102,-15,133,-134">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="16*"/>
+                <ColumnDefinition Width="11*"/>
+            </Grid.ColumnDefinitions>
 
             <Label Content="Division" HorizontalAlignment="Left" Margin="30,93,0,0" VerticalAlignment="Top" Width="107" FontWeight="Bold"/>
 
-            <Button x:Name="btnAdd" Content="Add" HorizontalAlignment="Left" Margin="147,164,0,34" Width="90" FontSize="18" FontWeight="Bold" Background="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}" Click="btnAdd_Click"/>
-            <TextBox x:Name="txtSeat" HorizontalAlignment="Left" Margin="148,125,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="122" Height="25"/>
+            <Button x:Name="btnAdd" Content="Add" HorizontalAlignment="Left" Margin="147,164,0,34" Width="90" FontSize="18" FontWeight="Bold" Background="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}" Click="btnAdd_Click" Grid.ColumnSpan="2"/>
+            <TextBox x:Name="txtSeat" HorizontalAlignment="Left" Margin="148,125,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="122" Height="25" Grid.ColumnSpan="2"/>
 
             <Label Content="Seat" HorizontalAlignment="Left" Margin="32,126,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
             <Label Content="Standard" HorizontalAlignment="Left" Margin="30,56,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
-            <ComboBox Name="StandardName" HorizontalAlignment="Left" Margin="150,56,0,0" VerticalAlignment="Top" Width="120" Height="22">
+            <ComboBox x:Name="txtStandardName" HorizontalAlignment="Left" Margin="150,56,0,0" VerticalAlignment="Top" Width="120" Height="22" Grid.ColumnSpan="2">
                 <TextBlock Text="LKG"></TextBlock>
                 <TextBlock Text="UKG"></TextBlock>
                 <TextBlock Text="FIRST"></TextBlock>
@@ -51,7 +55,7 @@
                 <TextBlock Text="THIRD"></TextBlock>
                 <TextBlock Text="FOURTH"></TextBlock>
             </ComboBox>
-            <ComboBox Name="DivisionName" HorizontalAlignment="Left" Margin="150,90,0,0" VerticalAlignment="Top" Width="120" >
+            <ComboBox x:Name="txtDivisionName" HorizontalAlignment="Left" Margin="150,90,0,0" VerticalAlignment="Top" Width="120" Grid.ColumnSpan="2" >
                 <TextBlock Text="A"></TextBlock>
                 <TextBlock Text="B"></TextBlock>
             </ComboBox>
