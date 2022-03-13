@@ -58,13 +58,14 @@ namespace StudentAttendanceManagementSystem.Views
             leaveManager.SaveLeaveDetails(leaveModel);
             MessageBox.Show("Value Inserted");
             ClearTextBox();
+            Refresh();
 
 
         }
         void Refresh()
         {
             LeaveManager leaveManager = new LeaveManager();
-           // grdLeaveData.ItemsSource = grdLeaveData.DisplayResult();
+            grdLeaveData.ItemsSource = leaveManager.DisplayResult();
         }
     }
 }
