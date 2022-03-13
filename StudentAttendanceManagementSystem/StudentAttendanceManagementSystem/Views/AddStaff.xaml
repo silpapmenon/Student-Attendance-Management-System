@@ -29,7 +29,7 @@
                     <DataGridTextColumn Header="City" Width="70" Binding="{Binding StaffCity}"/>
                     <DataGridTextColumn Header="Pincode" Width="55" Binding="{Binding StaffPincode}"/>
                     <DataGridTextColumn Header="Username" Width="65" Binding="{Binding StaffUserName}"/>
-                    <DataGridTextColumn Header="Password" Width="65" Binding="{Binding StaffPassword}"/>
+                    <!--<DataGridTextColumn Header="Password" Width="65" Binding="{Binding StaffPassword}"/>-->
 
                     <DataGridTemplateColumn Header="Edit" Width="30">
                         <DataGridTemplateColumn.CellTemplate>

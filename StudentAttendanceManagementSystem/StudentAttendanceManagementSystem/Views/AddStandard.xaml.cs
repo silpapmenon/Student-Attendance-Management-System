@@ -41,7 +41,7 @@ namespace StudentAttendanceManagementSystem.Views
 
 
             private void Button_Click(object sender, RoutedEventArgs e)
-        {
+            {
             id = (grdStandardData.SelectedItem as StandardModel).StandardID;
             txtID.Text = (grdStandardData.SelectedItem as StandardModel).StandardID.ToString();
             txtStandardName.Text = (grdStandardData.SelectedItem as StandardModel).StandardName.ToString();
@@ -55,6 +55,7 @@ namespace StudentAttendanceManagementSystem.Views
             {
                 if (grdStandardData.Items.Count > 0)
                 {
+                    string StandardName = txtStandardName.Text;
                     var value = (grdStandardData.SelectedItem as StandardModel).StandardID;
                     StandardModel standardModel = new StandardModel();
                     StandardManager standardManager = new StandardManager();
@@ -80,6 +81,8 @@ namespace StudentAttendanceManagementSystem.Views
 
         private void btnAdd_Click(object sender, RoutedEventArgs e)
         {
+            string StandardName = txtStandardName.Text;
+
             StandardModel standardModel = new StandardModel();
             //standardModel.StandardID = Convert.ToInt32(txtID.Text);
             standardModel.StandardName = txtStandardName.Text;
@@ -96,6 +99,7 @@ namespace StudentAttendanceManagementSystem.Views
 
         private void btnEdit_Click(object sender, RoutedEventArgs e)
         {
+            string StandardName = txtStandardName.Text;
             StandardModel standardModel = new StandardModel();
             standardModel.StandardID = id;
 
