@@ -45,7 +45,7 @@ namespace StudentAttendanceManagementSystem.Views
             txtStudentName.Text = (grdProductData.SelectedItem as StudentModel).StudentName;
             dt.Text = (grdProductData.SelectedItem as StudentModel).DOB.ToString();
             txtUsername.Text = (grdProductData.SelectedItem as StudentModel).Studentusername;
-            pwdUsername.Text = (grdProductData.SelectedItem as StudentModel).Studentpassword;
+            pwdUsername.Password = (grdProductData.SelectedItem as StudentModel).Studentpassword;
             gender.Text = (grdProductData.SelectedItem as StudentModel).GenderName;
             txtEmail.Text = (grdProductData.SelectedItem as StudentModel).StudentEmail;
             txtPincode.Text = (grdProductData.SelectedItem as StudentModel).Studentpincode.ToString();
@@ -101,7 +101,7 @@ namespace StudentAttendanceManagementSystem.Views
                 string StudentName = txtStudentName.Text;
                 string DOB = dt.Text;
                 string Studentusername = txtUsername.Text;
-                string Studentpassword = pwdUsername.Text;
+                string Studentpassword = pwdUsername.Password;
                 string GenderName = gender.Text;
                 string StudentEmail = txtEmail.Text;
                 string Studentpincode = txtPincode.Text;
@@ -148,7 +148,7 @@ namespace StudentAttendanceManagementSystem.Views
                                         studentModel.StudentName = txtStudentName.Text;
                                         studentModel.DOB = Convert.ToDateTime(dt.Text);
                                         studentModel.Studentusername = txtUsername.Text;
-                                        studentModel.Studentpassword = pwdUsername.Text;
+                                        studentModel.Studentpassword = pwdUsername.Password;
                                         studentModel.GenderName = gender.Text;
                                         studentModel.StudentEmail = txtEmail.Text;
                                         studentModel.Studentpincode = Convert.ToInt32(txtPincode.Text);
@@ -190,7 +190,7 @@ namespace StudentAttendanceManagementSystem.Views
                 string StudentName = txtStudentName.Text;
                 string DOB = dt.Text;
                 string Studentusername = txtUsername.Text;
-                string Studentpassword = pwdUsername.Text;
+                string Studentpassword = pwdUsername.Password;
                 string GenderName = gender.Text;
                 string StudentEmail = txtEmail.Text;
                 string Studentpincode = txtPincode.Text;
@@ -236,7 +236,7 @@ namespace StudentAttendanceManagementSystem.Views
                                         studentModels.StudentName = txtStudentName.Text;
                                         studentModels.DOB = Convert.ToDateTime(dt.Text);
                                         studentModels.Studentusername = txtUsername.Text;
-                                        studentModels.Studentpassword = pwdUsername.Text;
+                                        studentModels.Studentpassword = pwdUsername.Password;
                                         studentModels.GenderName = gender.Text;
                                         studentModels.StudentEmail = txtEmail.Text;
                                         studentModels.Studentpincode = Convert.ToInt32(txtPincode.Text);
@@ -286,7 +286,16 @@ namespace StudentAttendanceManagementSystem.Views
     else
         return (false);
 }
-void Refresh()
+        public static bool isValidPhoneNumber(string StudentMobile)
+        {
+            string strRegex = @"\(?\d{3}\)?-? *\d{3}-? *-?\d{4}";
+            Regex re = new Regex(strRegex);
+            if (re.IsMatch(StudentMobile))
+                return (true);
+            else
+                return (false);
+        }
+        void Refresh()
         {
             StudentManager studentManager = new StudentManager();
             grdProductData.ItemsSource = studentManager.DisplayResult();
@@ -301,12 +310,13 @@ void Refresh()
             txtCity.Text = String.Empty;
             txtPincode.Text = String.Empty;
             txtUsername.Text = String.Empty;
-            pwdUsername.Text = String.Empty;
+            pwdUsername.Password = String.Empty;
             div.Text = String.Empty;
             gender.Text = String.Empty;
             standard.Text = String.Empty;
             dt.Text = String.Empty;
         }
+      
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             try
