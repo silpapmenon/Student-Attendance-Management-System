@@ -70,6 +70,7 @@ namespace StudentAttendanceManagementSystem.Views
                         var data = grdProductData.SelectedItem;
                         string id = (grdProductData.SelectedCells[0].Column.GetCellContent(data) as TextBlock).Text;
                         txtid.Text = id;
+                        //Refresh();
 
                     }
                 }
@@ -117,6 +118,7 @@ namespace StudentAttendanceManagementSystem.Views
                 studentManager.UpdateData(studentModel);
                 // MessageBox.Show("Student Details Edited");
                 Refresh();
+                txtid.Text = String.Empty;
 
                 ClearTextBox();
 
