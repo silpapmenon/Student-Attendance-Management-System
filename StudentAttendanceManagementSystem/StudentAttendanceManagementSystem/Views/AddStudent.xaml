@@ -30,7 +30,7 @@
                 <DataGridTextColumn Header="Student City" Width="75" Binding="{Binding StudentCity}"/>
                 <DataGridTextColumn Header="Student Pincode" Width="98" Binding="{Binding Studentpincode}"/>
                 <DataGridTextColumn Header="Username" Width="65" Binding="{Binding Studentusername}"/>
-                <DataGridTextColumn Header="Password" Width="65" Binding="{Binding Studentpassword}"/>
+                <!--<DataGridTextColumn Header="Password" Width="65" Binding="{Binding Studentpassword}"/>-->
 
                 <DataGridTemplateColumn Header="Edit" Width="35">
                     <DataGridTemplateColumn.CellTemplate>
@@ -80,7 +80,7 @@
             <TextBox x:Name="txtPincode" HorizontalAlignment="Left" Margin="2,188,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="140" Height="22" FontSize="14" Grid.Column="1"/>
             <DatePicker x:Name="dt" HorizontalAlignment="Left" SelectedDate="{Binding DOB}" Height="28" Margin="4,112,0,0" VerticalAlignment="Top" Width="140" Grid.Column="1"/>
             <TextBox x:Name="txtUsername" Text="{Binding StudentUsername}" HorizontalAlignment="Left" Margin="2,221,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="140" Height="22" FontSize="14" Grid.Column="1"/>
-            <TextBox x:Name="pwdUsername" HorizontalAlignment="Left" Text="{Binding StudentPassword}" Margin="377,164,0,0"  VerticalAlignment="Top" Width="140" Height="22" FontSize="14" Grid.Column="1"/>
+            <TextBox x:Name="pwdUsername"   HorizontalAlignment="Left" Text="{Binding StudentPassword}" Margin="377,164,0,0"  VerticalAlignment="Top" Width="140" Height="22" FontSize="14" Grid.Column="1"/>
             <ComboBox x:Name="gender" HorizontalAlignment="Left" Text="{Binding  GenderName}" Height="22" Margin="377,137,0,0" VerticalAlignment="Top" Width="140" Grid.Column="1">
                 <TextBlock Text="Male"></TextBlock>
                 <TextBlock Text="Female"></TextBlock>
