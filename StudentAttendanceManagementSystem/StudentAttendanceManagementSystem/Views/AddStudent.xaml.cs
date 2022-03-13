@@ -5,6 +5,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -77,10 +78,7 @@ namespace StudentAttendanceManagementSystem.Views
 
             }
             catch { }
-
         }
-
-
         public IEnumerable<DataGridRow> GetDataGridRows(DataGrid grdProductData)
         {
             var itemsSource = grdProductData.ItemsSource as IEnumerable;
@@ -93,64 +91,202 @@ namespace StudentAttendanceManagementSystem.Views
         }
 
         private void btnAdd_Click(object sender, RoutedEventArgs e)
-        {
+        {           
             //btnAdd.Content = "Edit";
             Refresh();
             if (btnAdd.Content == "Edit")
             {
-                StudentModel  studentModel = new StudentModel();
-               studentModel.StudentID = Convert.ToInt32(txtid.Text);
-                studentModel.RollNo = Convert.ToInt32(txtRollNo.Text);
-                studentModel.StudentName = txtStudentName.Text;
-                studentModel.DOB = Convert.ToDateTime(dt.Text);
-                studentModel.Studentusername = txtUsername.Text;
-                studentModel.Studentpassword = pwdUsername.Text;
-                studentModel.GenderName = gender.Text;
-                studentModel.StudentEmail = txtEmail.Text;
-                studentModel.Studentpincode = Convert.ToInt32(txtPincode.Text);
-                studentModel.StudentAddress = txtAddress.Text;
-                studentModel.StudentMobile = txtStudentMobile.Text;
-                studentModel.StudentCity = txtCity.Text;
-                //studentModel.Gender = gender.Text;
-                studentModel.DivisionName = div.Text;
-                studentModel.StandardName = standard.Text;
-                StudentManager studentManager = new StudentManager();
-                studentManager.UpdateData(studentModel);
-                // MessageBox.Show("Student Details Edited");
-                Refresh();
-                txtid.Text = String.Empty;
+                string StudentID = txtid.Text;
+                string RollNo = txtRollNo.Text;
+                string StudentName = txtStudentName.Text;
+                string DOB = dt.Text;
+                string Studentusername = txtUsername.Text;
+                string Studentpassword = pwdUsername.Text;
+                string GenderName = gender.Text;
+                string StudentEmail = txtEmail.Text;
+                string Studentpincode = txtPincode.Text;
+                string StudentAddress = txtAddress.Text;
+                string StudentMobile = txtStudentMobile.Text;
+                string StudentCity = txtCity.Text;
+                string DivisionName = div.Text;
+                string StandardName = standard.Text;
+                if (!string.IsNullOrEmpty(StudentID) && !string.IsNullOrEmpty(RollNo) && !string.IsNullOrEmpty(StudentName)
+                    && !string.IsNullOrEmpty(DOB) && !string.IsNullOrEmpty(Studentusername) && !string.IsNullOrEmpty(Studentpassword)
+                    && !string.IsNullOrEmpty(GenderName) && !string.IsNullOrEmpty(StudentEmail) && !string.IsNullOrEmpty(Studentpincode)
+                    && !string.IsNullOrEmpty(StudentAddress) && !string.IsNullOrEmpty(StudentMobile) && !string.IsNullOrEmpty(StudentCity)
+                    && !string.IsNullOrEmpty(DivisionName) && !string.IsNullOrEmpty(StandardName))
+                {
+                    if (!int.TryParse(RollNo, out _))
+                    {
+                        MessageBox.Show("RollNo should be a number");
+                    }
+                    else
+                    {
+                        if (!int.TryParse(Studentpincode, out _))
+                        {
+                            MessageBox.Show("Pincode should be a number");
+                        }
+                        else
+                        {
+                            if (!int.TryParse(StudentMobile, out _))
+                            {
+                                MessageBox.Show("Mobile Number should be number");
+                            }
+                            else
+                            {
+                                if (StudentMobile.Count() == 10 )
+                                {
+                                    if (!isValidEmail(StudentEmail))
+                                    {
+                                        MessageBox.Show("Invalid Email ID");
+                                    }
+                                    else
+                                    {
+                                        StudentModel studentModel = new StudentModel();
+                                        studentModel.StudentID = Convert.ToInt32(txtid.Text);
+                                        studentModel.RollNo = Convert.ToInt32(txtRollNo.Text);
+                                        studentModel.StudentName = txtStudentName.Text;
+                                        studentModel.DOB = Convert.ToDateTime(dt.Text);
+                                        studentModel.Studentusername = txtUsername.Text;
+                                        studentModel.Studentpassword = pwdUsername.Text;
+                                        studentModel.GenderName = gender.Text;
+                                        studentModel.StudentEmail = txtEmail.Text;
+                                        studentModel.Studentpincode = Convert.ToInt32(txtPincode.Text);
+                                        studentModel.StudentAddress = txtAddress.Text;
+                                        studentModel.StudentMobile = txtStudentMobile.Text;
+                                        studentModel.StudentCity = txtCity.Text;
+                                        //studentModel.Gender = gender.Text;
+                                        studentModel.DivisionName = div.Text;
+                                        studentModel.StandardName = standard.Text;
+                                        StudentManager studentManager = new StudentManager();
+                                        studentManager.UpdateData(studentModel);
+                                        // MessageBox.Show("Student Details Edited");
+                                        Refresh();
+                                        txtid.Text = String.Empty;
 
-                ClearTextBox();
+                                        ClearTextBox();
 
+                                    }
+                                }
+                                else
+                                {
+                                    MessageBox.Show("Mobile Number should be 10 digits");
+                                }
+                            }
+
+                        }             
+                    }
+                }
+                else
+                {
+                    MessageBox.Show(" Enter all Fields ");
+                }
+               
             }
             else
             {
-                StudentModel studentModel = new StudentModel();
-                //studentModel.StudentID = Convert.ToInt32(txtid.Text);
-                studentModel.RollNo = Convert.ToInt32(txtRollNo.Text);
-                studentModel.StudentName = txtStudentName.Text;
-                studentModel.DOB = Convert.ToDateTime(dt.Text);
-                studentModel.Studentusername = txtUsername.Text;
-                studentModel.Studentpassword = pwdUsername.Text;
-                studentModel.GenderName = gender.Text;
-                studentModel.StudentEmail = txtEmail.Text;
-                studentModel.Studentpincode = Convert.ToInt32(txtPincode.Text);
-                studentModel.StudentAddress = txtAddress.Text;
-                studentModel.StudentMobile = txtStudentMobile.Text;
-                studentModel.StudentCity = txtCity.Text;
-                //studentModel.Gender = gender.Text;
-                studentModel.DivisionName = div.Text;
-                studentModel.StandardName = standard.Text;
-                StudentManager studentManager = new StudentManager();
-                studentManager.SaveStudentDetails(studentModel);
-                // MessageBox.Show("Student Details Edited");
-                Refresh();
+                //string StudentID = txtid.Text;
+                string RollNo = txtRollNo.Text;
+                string StudentName = txtStudentName.Text;
+                string DOB = dt.Text;
+                string Studentusername = txtUsername.Text;
+                string Studentpassword = pwdUsername.Text;
+                string GenderName = gender.Text;
+                string StudentEmail = txtEmail.Text;
+                string Studentpincode = txtPincode.Text;
+                string StudentAddress = txtAddress.Text;
+                string StudentMobile = txtStudentMobile.Text;
+                string StudentCity = txtCity.Text;
+                string DivisionName = div.Text;
+                string StandardName = standard.Text;
+                if (  !string.IsNullOrEmpty(RollNo) && !string.IsNullOrEmpty(StudentName)
+                    && !string.IsNullOrEmpty(DOB) && !string.IsNullOrEmpty(Studentusername) && !string.IsNullOrEmpty(Studentpassword)
+                    && !string.IsNullOrEmpty(GenderName) && !string.IsNullOrEmpty(StudentEmail) && !string.IsNullOrEmpty(Studentpincode)
+                    && !string.IsNullOrEmpty(StudentAddress) && !string.IsNullOrEmpty(StudentMobile) && !string.IsNullOrEmpty(StudentCity)
+                    && !string.IsNullOrEmpty(DivisionName) && !string.IsNullOrEmpty(StandardName))
+                {
+                    if (!int.TryParse(RollNo, out _))
+                    {
+                        MessageBox.Show("RollNo should be a number");
+                    }
+                    else
+                    {
+                        if (!int.TryParse(Studentpincode, out _))
+                        {
+                            MessageBox.Show("Pincode should be a number");
+                        }
+                        else
+                        {
+                            if (!int.TryParse(StudentMobile, out _))
+                            {
+                                MessageBox.Show("Mobile Number should be number");
+                            }
+                            else
+                            {
+                                if (StudentMobile.Count() == 10)
+                                {
+                                    if (!isValidEmail(StudentEmail))
+                                    {
+                                        MessageBox.Show("Invalid Email ID");
+                                    }
+                                    else
+                                    {
+                                        StudentModel studentModels = new StudentModel();                                      
+                                        studentModels.RollNo = Convert.ToInt32(txtRollNo.Text);
+                                        studentModels.StudentName = txtStudentName.Text;
+                                        studentModels.DOB = Convert.ToDateTime(dt.Text);
+                                        studentModels.Studentusername = txtUsername.Text;
+                                        studentModels.Studentpassword = pwdUsername.Text;
+                                        studentModels.GenderName = gender.Text;
+                                        studentModels.StudentEmail = txtEmail.Text;
+                                        studentModels.Studentpincode = Convert.ToInt32(txtPincode.Text);
+                                        studentModels.StudentAddress = txtAddress.Text;
+                                        studentModels.StudentMobile = txtStudentMobile.Text;
+                                        studentModels.StudentCity = txtCity.Text;
+                                        //studentModel.Gender = gender.Text;
+                                        studentModels.DivisionName = div.Text;
+                                        studentModels.StandardName = standard.Text;
+                                        StudentManager studentManagers = new StudentManager();
+                                        studentManagers.SaveStudentDetails(studentModels);
+                                        // MessageBox.Show("Student Details Edited");
+                                        Refresh();
+                                        txtid.Text = String.Empty;
+                                        ClearTextBox();
 
-                ClearTextBox();
+                                    }
+                                }
+                                else
+                                {
+                                    MessageBox.Show("Mobile Number should be 10 digits");
+                                }
+                            }
+
+                        }
+
+                    }
+
+                }
+            
+                else
+                {
+                    MessageBox.Show(" Enter all Fields ");
+                }
+               
             }
 
         }
-        void Refresh()
+ public static bool isValidEmail(string inputEmail)
+{
+    string strRegex = @"^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}" +
+ @"\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\" +
+ @".)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$";
+    Regex re = new Regex(strRegex);
+    if (re.IsMatch(inputEmail))
+        return (true);
+    else
+        return (false);
+}
+void Refresh()
         {
             StudentManager studentManager = new StudentManager();
             grdProductData.ItemsSource = studentManager.DisplayResult();
@@ -171,15 +307,34 @@ namespace StudentAttendanceManagementSystem.Views
             standard.Text = String.Empty;
             dt.Text = String.Empty;
         }
-
-
-
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             try
             {
                 if (grdProductData.Items.Count > 0)
                 {
+                    string StudentID = txtid.Text;
+                    if (!string.IsNullOrEmpty(StudentID))
+                    {
+
+                    }
+                    else
+                    {
+
+                    }
+                    //string RollNo = txtRollNo.Text;
+                    //string StudentName = txtStudentName.Text;
+                    //string DOB = dt.Text;
+                    //string Studentusername = txtUsername.Text;
+                    //string Studentpassword = pwdUsername.Text;
+                    //string GenderName = gender.Text;
+                    //string StudentEmail = txtEmail.Text;
+                    //string Studentpincode = txtPincode.Text;
+                    //string StudentAddress = txtAddress.Text;
+                    //string StudentMobile = txtStudentMobile.Text;
+                    //string StudentCity = txtCity.Text;
+                    //string DivisionName = div.Text;
+                    //string StandardName = standard.Text;
                     var value = (grdProductData.SelectedItem as StudentModel).StudentID;
                     StudentModel studentModel = new StudentModel();
                     StudentManager studentManager = new StudentManager();
