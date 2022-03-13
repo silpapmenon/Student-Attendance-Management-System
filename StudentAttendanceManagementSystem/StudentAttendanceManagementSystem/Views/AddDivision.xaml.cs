@@ -34,59 +34,54 @@ namespace StudentAttendanceManagementSystem.Views
             DivisionManager divisionManager = new DivisionManager();
             grdDivisionData.ItemsSource = divisionManager.DisplayResult();
         }
-       
-
-       
         private void btnAdd_Click(object sender, RoutedEventArgs e)
         {
             DivisionModel divisionModel = new DivisionModel();
-            divisionModel.StandardID = Convert.ToInt32(StandardID.Text);
-            divisionModel.DivisionName = txtDivisionName.Text;
+            divisionModel.StandardName = StandardName.Text;
+            divisionModel.DivisionName = DivisionName.Text;
             divisionModel.Seat = Convert.ToInt32(txtSeat.Text);
             DivisionData addDivisionData = new DivisionData();
             addDivisionData.SaveDivisionData(divisionModel);
             MessageBox.Show("Value Inserted");
             Refresh();
-            //    ClearTextBox();
+            ClearTextBox();
         }
-
         private void btnEdit_Click(object sender, RoutedEventArgs e)
         {
             DivisionModel divisionModel = new DivisionModel();
-            divisionModel.StandardID = id;
-            divisionModel.DivisionName = txtDivisionName1.Text;
+            divisionModel.DivisionID = id;
+            divisionModel.DivisionName = DivisionName1.Text;
+            divisionModel.StandardName = StandardName1.Text;
             divisionModel.Seat = Convert.ToInt32(txtSeatEdit.Text);
             DivisionManager addDivisionBusinessModel = new DivisionManager();
             addDivisionBusinessModel.UpdateData(divisionModel);
             MessageBox.Show("Edited");
             Refresh();
-            //    ClearTextBox();
+            ClearTextBox();
         }
-
         private void Edit_Click(object sender, RoutedEventArgs e)
         {
-            id = (grdDivisionData.SelectedItem as DivisionModel).StandardID;
-            StandardID1.Text = (grdDivisionData.SelectedItem as DivisionModel).StandardID.ToString();
-            txtDivisionName1.Text = (grdDivisionData.SelectedItem as DivisionModel).DivisionName;
+            id = (grdDivisionData.SelectedItem as DivisionModel).DivisionID;
+            StandardName1.Text = (grdDivisionData.SelectedItem as DivisionModel).StandardName.ToString();
+            DivisionName1.Text = (grdDivisionData.SelectedItem as DivisionModel).DivisionName;
             txtSeatEdit.Text = (grdDivisionData.SelectedItem as DivisionModel).Seat.ToString();
             Refresh();
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-
             try
             {
                 if (grdDivisionData.Items.Count > 0)
                 {
-                    var value = (grdDivisionData.SelectedItem as DivisionModel).StandardID;
+                    var value = (grdDivisionData.SelectedItem as DivisionModel).DivisionID;
                     DivisionModel divisionModel = new DivisionModel();
                     DivisionManager division = new DivisionManager();
-                    divisionModel.StandardID = value;
+                    divisionModel.DivisionID = value;
                     division.DeleteDivisionDetails(divisionModel);
-                    MessageBox.Show("Division Deleted :" + divisionModel.StandardID);
+                    MessageBox.Show("Division Deleted :" + divisionModel.DivisionID);
                     Refresh();
-                    //ClearTextBox();
+                    ClearTextBox();
                 }
                 else
                 {
@@ -98,19 +93,14 @@ namespace StudentAttendanceManagementSystem.Views
                 MessageBox.Show(ex.ToString());
             }
         }
-
-
-
-        //void Refresh()
-        //{
-        //    AddDivisionBusinessModel addDivisionBusinessModel = new AddDivisionBusinessModel();
-        //    grdDivisionData.ItemsSource = addDivisionBusinessModel.GetData();
-        //}
-        //void ClearTextBox()
-        //{
-        //    txtStandardID.Text = String.Empty;
-        //    txtDivisionName.Text = String.Empty;
-        //    txtSeats.Text = String.Empty;
-        //}
+        void ClearTextBox()
+        {
+            StandardName.Text = String.Empty;
+            DivisionName.Text = String.Empty;
+            txtSeatEdit.Text = String.Empty;
+            DivisionName1.Text = String.Empty;
+            txtSeat.Text = String.Empty;
+            StandardName1.Text = String.Empty;            
+        }
     }
 }

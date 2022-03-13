@@ -15,7 +15,7 @@ namespace DataAccessLayer
             {
                 StudentManagementSystemEntities studentManagementSystemEntities = new StudentManagementSystemEntities();
                 Division division = new Division();
-
+                division.DivisionID = divisionModel.DivisionID;
                 division.StandardName = divisionModel.StandardName;
                 division.DivisionName = divisionModel.DivisionName;
                 division.Seat = divisionModel.Seat;
@@ -40,6 +40,7 @@ namespace DataAccessLayer
             foreach (var item in result)
             {
                 DivisionModel model = new DivisionModel();
+                model.DivisionID = item.DivisionID;
                 model.StandardName = item.StandardName;
                 model.DivisionName = item.DivisionName;
                 model.Seat = item.Seat;
@@ -54,10 +55,11 @@ namespace DataAccessLayer
             {
                 StudentManagementSystemEntities divisions = new StudentManagementSystemEntities();
                 var query = from divisionObj in divisions.Divisions
-                            where divisionObj.StandardName == divisionModel.StandardName
+                            where divisionObj.DivisionID == divisionModel.DivisionID
                             select divisionObj;
                 foreach (var entity in query)
                 {
+                    entity.DivisionID = divisionModel.DivisionID;
                     entity.StandardName= divisionModel.StandardName;
                     entity.DivisionName = divisionModel.DivisionName;
                     entity.Seat = divisionModel.Seat;
@@ -79,7 +81,7 @@ namespace DataAccessLayer
             {
                 StudentManagementSystemEntities entities = new StudentManagementSystemEntities();
                 var result = from divisionObj in entities.Divisions
-                             where divisionObj.StandardName == divisionModel.StandardName
+                             where divisionObj.DivisionID == divisionModel.DivisionID
                              select divisionObj;
                 foreach (var entity in result)
                 {
@@ -94,8 +96,3 @@ namespace DataAccessLayer
         }
     }
 }
-//var result = from divisionObj in entities.Divisions
-//             join standardObj in entities.Standards
-//             on divisionObj.StandardID equals standardObj.StandardID
-//             where standardObj.StandardName = divisionObj.DivisionName
-//             select divisionObj;
