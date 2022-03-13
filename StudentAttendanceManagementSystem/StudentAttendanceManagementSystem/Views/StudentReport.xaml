@@ -10,16 +10,15 @@
         <ListView Name="UserGrid" Grid.Row="1" >
             <DataGrid Name="grdStudentReport" AutoGenerateColumns="False" CanUserAddRows="False" ColumnWidth="*" Width="789" Height="322" Margin="0,50" ItemsSource="{Binding StudentReport}">
                 <DataGrid.Columns>
-                    <DataGridTextColumn Header="Roll No" Binding="{Binding RollNo}" IsReadOnly="True"/>
+                    <DataGridTextColumn Header="Roll No" Binding="{Binding RollNo}" Width="60" IsReadOnly="True"/>
                     <DataGridTextColumn Header="Student Name" Width="90" Binding="{Binding StudentName}" IsReadOnly="True"/>
                     <DataGridTextColumn Header="Gender" Binding="{Binding GenderName}" IsReadOnly="True"/>
-                    <DataGridTextColumn Header="DOB" Binding="{Binding DOB}" IsReadOnly="True"/>
+                    <DataGridTextColumn Header="DOB" Width="60" Binding="{Binding DOB}" IsReadOnly="True"/>
                     <DataGridTextColumn Header="Mobile" Binding="{Binding StudentMobile}" IsReadOnly="True"/>
                     <DataGridTextColumn Header="Address" Binding="{Binding StudentAddress}" IsReadOnly="True"/>
-                    <DataGridTextColumn Header="City" Binding="{Binding StudentCity}" IsReadOnly="True"/>
+                    <DataGridTextColumn Header="City" Width="60" Binding="{Binding StudentCity}" IsReadOnly="True"/>
                     <DataGridTextColumn Header="Pincode" Binding="{Binding Studentpincode}" IsReadOnly="True"/>
                     <DataGridTextColumn Header="Email" Binding="{Binding StudentEmail}" IsReadOnly="True"/>
-                    <DataGridTextColumn Header="Image" Binding="{Binding Image}" IsReadOnly="True"/>
                 </DataGrid.Columns>
             </DataGrid>
         </ListView>
