@@ -24,7 +24,9 @@ namespace StudentAttendanceManagementSystem.ViewModels
 
         }
         private int _leaveId;
-        private int _studentId;
+        private int _roleNo;
+        private string _standard;
+        private string _division;
         private string _message;
         private int _numDays;
         private DateTime _date;
@@ -35,13 +37,31 @@ namespace StudentAttendanceManagementSystem.ViewModels
                 OnPropertyChanged("LeaveID");
             }
         }
-        public int StudentID
+        public int RollNo
         {
-            get { return _studentId; }
+            get { return _roleNo; }
             set
             {
-                _studentId = value;
-                OnPropertyChanged("StudentID");
+                _roleNo = value;
+                OnPropertyChanged("RollNo");
+            }
+        }
+        public string Standard
+        {
+            get { return _standard; }
+            set
+            {
+                _standard = value;
+                OnPropertyChanged("Standard");
+            }
+        }
+        public string Division
+        {
+            get { return _division; }
+            set
+            {
+                _division = value;
+                OnPropertyChanged("Division");
             }
         }
         public string Message

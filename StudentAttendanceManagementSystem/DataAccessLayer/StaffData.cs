@@ -15,12 +15,12 @@ namespace DataAccessLayer
             {
                 StudentManagementSystemEntities studentManagementSystemEntities = new StudentManagementSystemEntities();
                 Staff staff = new Staff();
-                // staff.StaffID = staffModel.StaffID;
+                staff.StaffID = staffModel.StaffID;
                 staff.Standard=staffModel.Standard;
                 staff.StaffName = staffModel.StaffName;
                 staff.Email = staffModel.StaffEmail;
                 staff.Mobile = staffModel.StaffMobile;
-                staff.Image = staffModel.StaffImage;
+                //staff.Image = staffModel.StaffImage;
                 staff.Qualification = staffModel.Qualification;
                 staff.Address = staffModel.StaffAddress;
                 staff.City = staffModel.StaffCity;
@@ -28,7 +28,7 @@ namespace DataAccessLayer
                 staff.UserName = staffModel.StaffUserName;
                 staff.Password = staffModel.StaffPassword;
                 staff.Gender = staffModel.StaffGender;
-                staff.RoleID = 2;
+                //staff.RoleID = 2;
                 studentManagementSystemEntities.Staffs.Add(staff);
                 studentManagementSystemEntities.SaveChanges();
                 // MessageBox.Show("Value Added");
@@ -75,7 +75,7 @@ namespace DataAccessLayer
             foreach (var item in result)
             {
                 StaffModel staffModel = new StaffModel();              
-                //staffModel.StaffID = item.StaffID;
+                staffModel.StaffID = item.StaffID;
                 staffModel.Standard=item.Standard;
                 staffModel.StaffName = item.StaffName;
                 staffModel.StaffEmail = item.Email;
@@ -105,6 +105,7 @@ namespace DataAccessLayer
                 foreach (var entity in query)
                 {
                     entity.StaffID = staffModel.StaffID;
+                    entity.Standard = staffModel.Standard;
                     entity.StaffName = staffModel.StaffName;
                     entity.Email = staffModel.StaffEmail;
                     entity.Mobile = staffModel.StaffMobile;

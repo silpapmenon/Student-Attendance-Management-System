@@ -23,11 +23,12 @@ namespace StudentAttendanceManagementSystem.Command
         {
             return true;
         }
+        
 
         public void Execute(object parameter)
         {
             StaffModel staff = new StaffModel();
-           // staff.StaffID = addStaffViewModel.StaffID;
+            staff.StaffID = addStaffViewModel.StaffID;
             staff.Standard=addStaffViewModel.Standard;
             staff.StaffName = addStaffViewModel.StaffName;
             staff.StaffEmail = addStaffViewModel.StaffEmail;
@@ -43,6 +44,8 @@ namespace StudentAttendanceManagementSystem.Command
             staff.RoleID = addStaffViewModel.RoleID;
             StaffManager staffManager = new StaffManager();
             staffManager.SaveStaffDetails(staff);
+            //Refresh();
+
 
         }
     }

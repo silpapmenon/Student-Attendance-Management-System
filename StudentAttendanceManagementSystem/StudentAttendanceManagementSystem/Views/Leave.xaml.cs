@@ -1,4 +1,7 @@
-﻿using System;
+﻿using BusinessLayer;
+using DataAccessLayer;
+using EntityLayer.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +26,45 @@ namespace StudentAttendanceManagementSystem.Views
         public Leave()
         {
             InitializeComponent();
+        }
+        void ClearTextBox()
+        {
+            txtrollno.Text = String.Empty;
+            txtDivision.Text = String.Empty;
+            txtmsg.Text = String.Empty;
+            txtnumdays.Text = String.Empty;
+            txtstandard.Text = String.Empty;
+            dt.Text = String.Empty;
+
+        }
+
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            LeaveManager leaveManager = new LeaveManager();
+            LeaveModel leaveModel = new LeaveModel();
+            int RollNo =Convert.ToInt32(txtrollno.Text);
+            string Message = txtmsg.Text;
+            int NumDays = Convert.ToInt32(txtnumdays.Text);
+            string StandardName = txtstandard.Text;
+            string DivisionName = txtDivision.Text;
+            DateTime Date = DateTime.Now;
+            leaveModel.Date = Convert.ToDateTime(dt.SelectedDate);
+            leaveModel.RollNo=RollNo;
+            leaveModel.NumDays=NumDays;
+            leaveModel.Division=DivisionName;
+            leaveModel.Message=Message;
+            leaveModel.Standard=StandardName;
+            leaveManager.SaveLeaveDetails(leaveModel);
+            MessageBox.Show("Value Inserted");
+            ClearTextBox();
+
+
+        }
+        void Refresh()
+        {
+            LeaveManager leaveManager = new LeaveManager();
+           // grdLeaveData.ItemsSource = grdLeaveData.DisplayResult();
         }
     }
 }

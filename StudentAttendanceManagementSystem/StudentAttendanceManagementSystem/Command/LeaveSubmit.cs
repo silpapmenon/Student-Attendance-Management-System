@@ -28,13 +28,15 @@ namespace StudentAttendanceManagementSystem.Command
         {
             LeaveModel leave = new LeaveModel();
             leave.LeaveID = addLeaveViewModel.LeaveID;
-            leave.StudentID=addLeaveViewModel.StudentID;
+            leave.RollNo = addLeaveViewModel.RollNo;
+            leave.Standard=addLeaveViewModel.Standard;
+            leave.Division = addLeaveViewModel.Division;
             leave.Message = addLeaveViewModel.Message;
             leave.NumDays=addLeaveViewModel.NumDays;
             leave.Date=addLeaveViewModel.Date;
 
             LeaveManager leaveManager = new LeaveManager();
-            //leaveManager.SaveLeaveDetails(leave);
+            leaveManager.SaveLeaveDetails(leave);
         }
     }
 }

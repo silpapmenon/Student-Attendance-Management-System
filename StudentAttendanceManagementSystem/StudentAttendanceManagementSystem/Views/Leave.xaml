@@ -6,7 +6,7 @@
              xmlns:local="clr-namespace:StudentAttendanceManagementSystem.Views"
              mc:Ignorable="d" 
              d:DesignHeight="600" d:DesignWidth="800">
-    <Grid Height="525" VerticalAlignment="Center">
+    <Grid Height="580" VerticalAlignment="Center">
         <Grid.Background>
             <ImageBrush Opacity="0.7" ImageSource="/Images/Leave (2).jpeg"  />
         </Grid.Background>
@@ -17,12 +17,12 @@
             <ColumnDefinition Width="204*"/>
             <ColumnDefinition Width="132*"/>
         </Grid.ColumnDefinitions>
-        <DataGrid Opacity="0.6" d:ItemsSource="{d:SampleData ItemCount=5}" AutoGenerateColumns="False" Margin="166,323,102,71" RenderTransformOrigin="1.04,0.521" Grid.ColumnSpan="4"  ItemsSource="{Binding LeaveViewList}">
+        <DataGrid Opacity="0.6" x:Name="grdLeaveData"  d:ItemsSource="{d:SampleData ItemCount=5}" AutoGenerateColumns="False" Margin="166,323,102,71" RenderTransformOrigin="1.04,0.521" Grid.ColumnSpan="4"  ItemsSource="{Binding LeaveViewList}">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="LeaveID" Binding="{Binding LeaveID}"/>
-                <DataGridTextColumn Header="StudentID" Binding="{Binding StudentID}"/>
-                <DataGridTextColumn Header="Standard" />
-                <DataGridTextColumn Header="Division" />
+                <DataGridTextColumn Header="RollNo" Binding="{Binding RollNo}"/>
+                <DataGridTextColumn Header="Standard" Binding="{Binding Standard}" />
+                <DataGridTextColumn Header="Division" Binding="{Binding Division}"/>
 
                 <DataGridTextColumn Header="Message" Binding="{Binding Message}"/>
                 <DataGridTextColumn Header="NumDays" Binding="{Binding NumDays}"/>
@@ -37,10 +37,13 @@
             <TextBlock Text="THIRD"></TextBlock>
             <TextBlock Text="FOURTH"></TextBlock>
         </ComboBox>
-        <ComboBox x:Name="txtDivision" Text="Select Division" HorizontalAlignment="Left" Margin="140,122,0,0" VerticalAlignment="Top" Width="120" Background="White"/>
+        <ComboBox x:Name="txtDivision" Text="Select Division" HorizontalAlignment="Left" Margin="140,122,0,0" VerticalAlignment="Top" Width="120" Background="White">
+            <TextBlock Text="A"></TextBlock>
+            <TextBlock Text="B"></TextBlock>
+        </ComboBox>
         <Label x:Name="lblstandard" Content="Standard" HorizontalAlignment="Left" Margin="20,60,0,0" VerticalAlignment="Top" FontWeight="Bold"  FontSize="18"/>
         <Label x:Name="txtdivision" Content="Division" HorizontalAlignment="Left" Margin="19,109,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="18"/>
-        <Button Content="Apply" HorizontalAlignment="Left" Margin="314,474,0,0" VerticalAlignment="Top" FontWeight="Bold" Background="White" Grid.ColumnSpan="2" Width="86" Height="28"/>
+        <Button Content="Apply" HorizontalAlignment="Left" Margin="314,474,0,0" VerticalAlignment="Top" FontWeight="Bold" Background="White" Grid.ColumnSpan="2" Width="86" Height="28" Click="Button_Click"/>
         <Label Content="Message" HorizontalAlignment="Left" Margin="21,158,0,0" VerticalAlignment="Top" FontSize="18"/>
         <TextBox x:Name="txtmsg" HorizontalAlignment="Left" Margin="143,168,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="119" Height="37"/>
         <Label Content="NumDays" HorizontalAlignment="Left" Margin="19,208,0,0" VerticalAlignment="Top" FontSize="18"/>
@@ -53,6 +56,8 @@
             <TextBlock Text="6"></TextBlock>
             <TextBlock Text="7"></TextBlock>
         </ComboBox>
-        <DatePicker Grid.Column="3" HorizontalAlignment="Center" Margin="0,62,0,0" VerticalAlignment="Top"/>
+        <DatePicker x:Name="dt" Grid.Column="3" HorizontalAlignment="Center" Margin="0,62,0,0" VerticalAlignment="Top"/>
+        <Label Content="Roll No" HorizontalAlignment="Left" Margin="26,24,0,0" VerticalAlignment="Top" FontSize="18" FontWeight="Bold"/>
+        <TextBox x:Name="txtrollno" HorizontalAlignment="Left" Margin="139,31,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
     </Grid>
 </UserControl>

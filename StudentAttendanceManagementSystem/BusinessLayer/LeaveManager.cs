@@ -15,5 +15,11 @@ namespace BusinessLayer
             LeaveData leaveData = new LeaveData();
             return leaveData.GetLeaveList();
         }
+        public void SaveLeaveDetails(LeaveModel leaveModel)
+        {
+            LeaveData leaveData = new LeaveData();
+            leaveData.SaveLeaveData(leaveModel);
+        }
+
     }
 }

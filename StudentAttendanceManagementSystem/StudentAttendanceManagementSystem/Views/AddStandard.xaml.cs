@@ -33,9 +33,14 @@ namespace StudentAttendanceManagementSystem.Views
             StandardManager standardManager = new StandardManager();
             grdStandardData.ItemsSource = standardManager.DisplayResult();
         }
+        void ClearTextBox()
+        {
+            txtID.Text = String.Empty;
+            txtStandardName.Text = String.Empty;
+        }
 
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+            private void Button_Click(object sender, RoutedEventArgs e)
         {
             id = (grdStandardData.SelectedItem as StandardModel).StandardID;
             txtID.Text = (grdStandardData.SelectedItem as StandardModel).StandardID.ToString();
@@ -57,6 +62,7 @@ namespace StudentAttendanceManagementSystem.Views
                     standardManager.DeleteStandardDetails(standardModel);
                     MessageBox.Show("Deleted");
                     Refresh();
+                    ClearTextBox();
                 }
                 else
                 {
@@ -80,6 +86,8 @@ namespace StudentAttendanceManagementSystem.Views
             StanadardData stanadardData = new StanadardData();
             stanadardData.SaveStandardData(standardModel);
             MessageBox.Show("Value Inserted");
+            Refresh();
+            ClearTextBox();
 
 
 
@@ -96,6 +104,8 @@ namespace StudentAttendanceManagementSystem.Views
             StandardManager standardManager = new StandardManager();
             standardManager.UpdateStandardData(standardModel);
             MessageBox.Show("Edited");
+            Refresh();
+            ClearTextBox();
         }
     }
 }
