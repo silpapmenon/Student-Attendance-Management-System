@@ -30,9 +30,9 @@
         <DataTemplate DataType="{x:Type viewModel:HomeViewModel}">
             <views:Home></views:Home>
         </DataTemplate>
-        <DataTemplate DataType="{x:Type viewModel:AdminPanelViewModel}">
+        <!--<DataTemplate DataType="{x:Type viewModel:AdminPanelViewModel}">
             <views:AdminPanel></views:AdminPanel>
-        </DataTemplate>
+        </DataTemplate>-->
         <DataTemplate DataType="{x:Type viewModel:AddStudentViewModel}">
             <views:AddStudent/>
         </DataTemplate>

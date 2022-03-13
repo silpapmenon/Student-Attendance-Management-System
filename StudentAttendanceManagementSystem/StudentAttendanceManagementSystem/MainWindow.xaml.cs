@@ -1,4 +1,5 @@
 ﻿using StudentAttendanceManagementSystem.ViewModels;
+using StudentAttendanceManagementSystem.Views;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -25,6 +26,13 @@ namespace StudentAttendanceManagementSystem
         {
             InitializeComponent();
             DataContext = new MainViewModel();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            AdminPanel adminHome = new AdminPanel();
+            adminHome.Show();
+            this.Close();
         }
     }
 }

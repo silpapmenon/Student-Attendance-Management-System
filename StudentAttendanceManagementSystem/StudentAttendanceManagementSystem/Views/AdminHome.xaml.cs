@@ -10,7 +10,6 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace StudentAttendanceManagementSystem.Views
@@ -18,11 +17,18 @@ namespace StudentAttendanceManagementSystem.Views
     /// <summary>
     /// Interaction logic for AdminHome.xaml
     /// </summary>
-    public partial class AdminHome : UserControl
+    public partial class AdminHome : Window
     {
         public AdminHome()
         {
             InitializeComponent();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow mainWindow = new MainWindow();
+            mainWindow.Show();
+            this.Close();
         }
     }
 }
