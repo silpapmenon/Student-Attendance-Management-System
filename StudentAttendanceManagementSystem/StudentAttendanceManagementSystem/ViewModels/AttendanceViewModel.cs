@@ -1,62 +1,100 @@
 ﻿using BusinessLayer;
 using EntityLayer.Model;
+using StudentAttendanceManagementSystem.Command;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Input;
 
 namespace StudentAttendanceManagementSystem.ViewModels
 {
     public class AttendanceViewModel : BaseViewModel
     {
-        private ObservableCollection<StandardModel> _studentStandard;
-        public ObservableCollection<StandardModel> StudentStandard
+        private AttendanceModel _attendanceModel;
+        private List<AttendanceModel> _attendanceViewList;
+        public List<AttendanceModel> AttendanceViewList { get => _attendanceViewList; set => _attendanceViewList = value; }
+        public AttendanceBusinessModel attendanceBusinessModel = new AttendanceBusinessModel();
+    
+      
+        private int _attendanceId;
+        private string _studentName;
+        private string _divisionName;
+        private DateTime _attendanceDate = DateTime.Now;
+        private string _status;
+        private int _rollno;
+        private string _standardName;
+
+        public int AttendanceId
         {
-            get { return _studentStandard; }
+            get { return _attendanceId; }
+            set { _attendanceId = value;
+                OnPropertyChanged("AttendanceId");
+                 }
+        }
+        public string StudentName
+        {
+            get { return _studentName; }
             set
             {
-                if (_studentStandard == value) return;
-                _studentStandard = value;
-
+                _studentName = value;
+                OnPropertyChanged("StudentName");
             }
         }
-        private ObservableCollection<DivisionModel> _studentDivision;
-        public ObservableCollection<DivisionModel> StudentDivision
+        public string DivisionName
         {
-            get { return _studentDivision; }
+            get { return _divisionName; }
             set
             {
-                if (_studentDivision == value) return;
-                _studentDivision = value;
-
+                _divisionName = value;
+                OnPropertyChanged("DivisionName");
             }
         }
-
-        AttendanceBusinessModel attendance = new AttendanceBusinessModel();
-        public AttendanceViewModel(AttendanceModel attendanceModel)
+        public DateTime AttendanceDate 
         {
-            StudentStandard = new ObservableCollection<StandardModel>();
-            StandardModel standardModel = new StandardModel();
-            var querry = attendance.standard(standardModel);
-            foreach (var item in querry)
+            get { return _attendanceDate; }
+            set
             {
-                StandardModel standardModel2 = new StandardModel();
-                standardModel2.StandardName = item.StandardName;
-                StudentStandard.Add(standardModel2);
-            }
-            StudentDivision = new ObservableCollection<DivisionModel>();
-            DivisionModel divisionModel = new DivisionModel();
-            var querry1 = attendance.division(divisionModel);
-            foreach (var item in querry1)
-            {
-                DivisionModel divisionModel2 = new DivisionModel();
-                divisionModel2.DivisionName = item.DivisionName;
-                StudentDivision.Add(divisionModel2);
+                _attendanceDate = value;
+                OnPropertyChanged("AttendanceDate");
             }
         }
-       
-       
+        public string Status
+        {
+            get { return _status; }
+            set
+            {
+                _status = value;
+                OnPropertyChanged("Status");
+            }
+        }
+        public int RollNo
+        {
+            get { return _rollno; }
+            set
+            {
+                _rollno = value;
+                OnPropertyChanged("RollNo");
+            }
+        }
+        public string StandardName
+        {
+            get { return _standardName; }
+            set
+            {
+                _standardName = value;
+                OnPropertyChanged("StandardName");
+            }
+        }
+        public ICommand Submit { get; set; }
+
+
+
+
+
+
+
     }
 }

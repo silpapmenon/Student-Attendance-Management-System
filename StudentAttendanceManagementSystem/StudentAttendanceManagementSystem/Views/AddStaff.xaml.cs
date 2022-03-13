@@ -26,6 +26,7 @@ namespace StudentAttendanceManagementSystem.Views
         public AddStaff()
         {
             InitializeComponent();
+            Refresh();
         }
         void Refresh()
         {

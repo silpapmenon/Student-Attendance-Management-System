@@ -10,18 +10,17 @@ namespace BusinessLayer
 {
     public class AttendanceBusinessModel
     {
-        public List<StandardModel> standard(StandardModel standardModel)
+        public void SaveAttendanceData(AttendanceModel attendanceModel)
         {
             AttendanceData attendanceData = new AttendanceData();
-            return attendanceData.GetStandard(standardModel);
-
+            attendanceData.SaveAttendanceData(attendanceModel);
         }
-        public List<DivisionModel> division(DivisionModel divisionModel)
+        public List<AttendanceModel> DisplayResult()
         {
             AttendanceData attendanceData = new AttendanceData();
-            return attendanceData.GetDivision(divisionModel);
-
+            return attendanceData.GetAttendanceList();
         }
        
+
     }
 }

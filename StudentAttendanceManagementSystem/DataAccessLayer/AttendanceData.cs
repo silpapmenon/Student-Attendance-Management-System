@@ -9,38 +9,49 @@ namespace DataAccessLayer
 {
     public class AttendanceData
     {
-        public List<StandardModel> GetStandard(StandardModel standardModel)
+       
+        public void SaveAttendanceData(AttendanceModel attendanceModel)
         {
-            List<StandardModel> standardModels = new List<StandardModel>();
-
-            StudentManagementSystemEntities studentManagementSystemEntities = new StudentManagementSystemEntities();
-            var result = from standard in studentManagementSystemEntities.Standards
-                         where standard.StandardID >= standardModel.StandardID
-                         select standard;
-            foreach (var std in result)
+            try
             {
-                StandardModel standardModel1 = new StandardModel();
-                standardModel1.StandardName = std.StandardName;
-                standardModels.Add(standardModel1);
+                StudentManagementSystemEntities studentManagementSystemEntities = new StudentManagementSystemEntities();
+                Attendance attendance = new Attendance();
+                attendance.StandardName = attendanceModel.StandardName;
+                attendance.DivisionName = attendanceModel.DivisionName;
+                attendance.RollNo = attendanceModel.Rollno;
+                attendance.StudentName = attendanceModel.StudentName;
+                attendance.Status = attendanceModel.Status;
+                attendance.AttendanceDate = attendanceModel.AttendanceDate;
+                studentManagementSystemEntities.Attendances.Add(attendance);
+                studentManagementSystemEntities.SaveChanges();
+
             }
-            return standardModels;
+            catch (Exception ex)
+            {
+                throw ex;
+            }
         }
-        public List<DivisionModel> GetDivision(DivisionModel divisionModel)
+        public List<AttendanceModel> GetAttendanceList()
         {
-        
-            List<DivisionModel> divisionModels = new List<DivisionModel>();
-
             StudentManagementSystemEntities studentManagementSystemEntities = new StudentManagementSystemEntities();
-            var result1 = from division in studentManagementSystemEntities.Divisions
-                         where division.DivisionID >= divisionModel.DivisionID
-                         select division;
-            foreach (var div in result1)
+            var result = from getdata in studentManagementSystemEntities.Attendances
+                         select getdata;
+
+            List<AttendanceModel> attendanceModels = new List<AttendanceModel>();
+            foreach (var item in result)
             {
-                DivisionModel divisionModel1 = new DivisionModel();
-                divisionModel1.DivisionName = div.DivisionName;
-                divisionModels.Add(divisionModel1);
+                AttendanceModel attendanceModel = new AttendanceModel();
+                attendanceModel.StandardName = item.StandardName;
+                attendanceModel.DivisionName = item.DivisionName;
+                attendanceModel.StudentName = item.StudentName;
+                attendanceModel.Rollno = item.RollNo;
+                attendanceModel.Status = item.Status;
+                attendanceModel.AttendanceDate = item.AttendanceDate;
+                attendanceModels.Add(attendanceModel);
             }
-            return divisionModels;
+            return attendanceModels;
+
         }
+       
     }
 }

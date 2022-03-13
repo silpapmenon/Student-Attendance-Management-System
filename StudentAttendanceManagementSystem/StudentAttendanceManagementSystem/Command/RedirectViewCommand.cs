@@ -87,18 +87,18 @@ namespace StudentAttendanceManagementSystem.Command
             {
 
                 AttendanceModel attendanceModel = new AttendanceModel();
-                model.SelectedView = new AttendanceViewModel(attendanceModel);
+                model.SelectedView = new AttendanceViewModel();
             }
             else if (parameter.ToString() == "ADD DIVISIONS")
             {
                 DivisionModel divisionModel = new DivisionModel();
                 model.SelectedView = new AddDivisionViewModel(divisionModel);
             }
-            else if (parameter.ToString() == "ATTENDANCE")
-            {
-                AttendanceModel attendanceModel = new AttendanceModel();
-                model.SelectedView = new AttendanceViewModel(attendanceModel);
-            }
+            //else if (parameter.ToString() == "ATTENDANCE")
+            //{
+            //    AttendanceModel attendanceModel = new AttendanceModel();
+            //    model.SelectedView = new AttendanceViewModel(attendanceModel);
+            //}
             else if (parameter.ToString() == "APPLY LEAVE")
             {
                 LeaveModel leaveModel = new LeaveModel();

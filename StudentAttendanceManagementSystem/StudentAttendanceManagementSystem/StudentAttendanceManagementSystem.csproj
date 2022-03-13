@@ -67,6 +67,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Command\AttendanceSubmit.cs" />
     <Compile Include="Command\DivisionSubmit.cs" />
     <Compile Include="Command\LeaveSubmit.cs" />
     <Compile Include="Command\RedirectViewCommand.cs" />
