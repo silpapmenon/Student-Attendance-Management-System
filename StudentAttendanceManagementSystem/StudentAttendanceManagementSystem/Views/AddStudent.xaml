@@ -25,7 +25,7 @@
                 <DataGridTextColumn Header="Student Email" Width="85" Binding="{Binding StudentEmail}" />
                 <DataGridTextColumn Header="Gender" Width="50"  Binding="{Binding GenderName}"/>
                 <DataGridTextColumn Header="Student Mobile" Width="95" Binding="{Binding StudentMobile}" />
-                <DataGridTextColumn Header="DOB" Width="40"  Binding="{Binding DOB}"/>
+                <DataGridTextColumn Header="DOB" Width="60"  Binding="{Binding DOB}"/>
                 <DataGridTextColumn Header="Student Address" Width="100" Binding="{Binding StudentAddress}" />
                 <DataGridTextColumn Header="Student City" Width="75" Binding="{Binding StudentCity}"/>
                 <DataGridTextColumn Header="Student Pincode" Width="98" Binding="{Binding Studentpincode}"/>
