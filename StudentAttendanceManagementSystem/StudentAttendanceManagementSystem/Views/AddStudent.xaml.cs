@@ -98,7 +98,7 @@ namespace StudentAttendanceManagementSystem.Views
             if (btnAdd.Content == "Edit")
             {
                 StudentModel  studentModel = new StudentModel();
-                studentModel.StudentID = Convert.ToInt32(txtid.Text);
+               studentModel.StudentID = Convert.ToInt32(txtid.Text);
                 studentModel.RollNo = Convert.ToInt32(txtRollNo.Text);
                 studentModel.StudentName = txtStudentName.Text;
                 studentModel.DOB = Convert.ToDateTime(dt.Text);
