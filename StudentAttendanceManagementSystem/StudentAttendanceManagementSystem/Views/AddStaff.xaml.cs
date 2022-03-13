@@ -44,7 +44,7 @@ namespace StudentAttendanceManagementSystem.Views
             txtCity.Text = String.Empty;
             txtPincode.Text = String.Empty;
             txtUsername.Text = String.Empty;
-            pwdUsername.Text = String.Empty;
+            pwdUsername.Password = String.Empty;
             txtgender.Text = String.Empty;
             txtstandard.Text = String.Empty;
         }
@@ -64,7 +64,7 @@ namespace StudentAttendanceManagementSystem.Views
             txtCity.Text = (grdProductData.SelectedItem as StaffModel).StaffCity.ToString();
             txtPincode.Text = (grdProductData.SelectedItem as StaffModel).StaffPincode.ToString();
             txtUsername.Text = (grdProductData.SelectedItem as StaffModel).StaffUserName.ToString();
-            pwdUsername.Text = (grdProductData.SelectedItem as StaffModel).StaffPassword.ToString();
+            pwdUsername.Password = (grdProductData.SelectedItem as StaffModel).StaffPassword.ToString();
             txtgender.Text = (grdProductData.SelectedItem as StaffModel).StaffGender.ToString();
             Refresh();
 
@@ -83,7 +83,7 @@ namespace StudentAttendanceManagementSystem.Views
             string City = txtCity.Text;
             string Pincode = txtPincode.Text;
             string UserName = txtUsername.Text;
-            string Password = pwdUsername.Text;
+            string Password = pwdUsername.Password;
             string Gender = txtgender.Text;
             string Standard = txtstandard.Text;
             if (!string.IsNullOrEmpty(StaffName) && !string.IsNullOrEmpty(Email) && !string.IsNullOrEmpty(Mobile)
@@ -122,7 +122,7 @@ namespace StudentAttendanceManagementSystem.Views
                                 staffModel.StaffCity = txtCity.Text;
                                 staffModel.StaffPincode = txtPincode.Text;
                                 staffModel.StaffUserName = txtUsername.Text;
-                                staffModel.StaffPassword = pwdUsername.Text;
+                                staffModel.StaffPassword = pwdUsername.Password;
                                 staffModel.StaffGender = txtgender.Text;
                                 StaffManager staffManager = new StaffManager();
                                 staffManager.UpdateData(staffModel);
@@ -192,7 +192,7 @@ namespace StudentAttendanceManagementSystem.Views
             string City = txtCity.Text;
             string Pincode = txtPincode.Text;
             string UserName = txtUsername.Text;
-            string Password = pwdUsername.Text;
+            string Password = pwdUsername.Password;
             string Gender = txtgender.Text;
             string Standard = txtstandard.Text;
             if (!string.IsNullOrEmpty(StaffName) && !string.IsNullOrEmpty(Email) && !string.IsNullOrEmpty(Mobile)
