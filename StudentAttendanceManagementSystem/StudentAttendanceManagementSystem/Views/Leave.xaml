@@ -17,7 +17,7 @@
             <ColumnDefinition Width="204*"/>
             <ColumnDefinition Width="132*"/>
         </Grid.ColumnDefinitions>
-        <DataGrid Opacity="0.6" x:Name="grdLeaveData"  d:ItemsSource="{d:SampleData ItemCount=5}" AutoGenerateColumns="False" Margin="166,323,102,71" RenderTransformOrigin="1.04,0.521" Grid.ColumnSpan="4"  ItemsSource="{Binding LeaveViewList}">
+        <DataGrid Opacity="0.6" x:Name="grdLeaveData"  AutoGenerateColumns="False" Margin="166,323,102,71" RenderTransformOrigin="1.04,0.521" Grid.ColumnSpan="4"  ItemsSource="{Binding LeaveViewList}">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="LeaveID" Binding="{Binding LeaveID}"/>
                 <DataGridTextColumn Header="RollNo" Binding="{Binding RollNo}"/>

@@ -7,17 +7,19 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
-        <DataGrid d:ItemsSource="{d:SampleData ItemCount=5}" Margin="88,58,247,268" AutoGenerateColumns="False" ItemsSource="{Binding LeaveReport}">
-            <DataGrid.Columns>
-                <DataGridTextColumn Header="Leave ID" Binding="{Binding LeaveID}"/>
-                <DataGridTextColumn Header="Roll No" Binding="{Binding RollNo}"/>
-                <DataGridTextColumn Header="Message" Binding="{Binding Message}"/>
-                <DataGridTextColumn Header="NumDays" Binding="{Binding NumDays}"/>
-                <DataGridTextColumn Header="Date" Binding="{Binding Date}"/>
-                <DataGridTextColumn Header="Standard Name" Binding="{Binding Standard}"/>
-                <DataGridTextColumn Header="Division Name" Binding="{Binding Division}"/>
-            </DataGrid.Columns>
-        </DataGrid>
+        <ListView Margin="88,58,58,166" >
+            <DataGrid x:Name="grdLeave" Margin="88,58,247,268" AutoGenerateColumns="False" ItemsSource="{Binding LeaveReport}" Height="111">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Leave ID" Binding="{Binding LeaveID}"/>
+                    <DataGridTextColumn Header="Roll No" Binding="{Binding RollNo}"/>
+                    <DataGridTextColumn Header="Message" Binding="{Binding Message}"/>
+                    <DataGridTextColumn Header="NumDays" Binding="{Binding NumDays}"/>
+                    <DataGridTextColumn Header="Date" Binding="{Binding Date}"/>
+                    <DataGridTextColumn Header="Standard Name" Binding="{Binding Standard}"/>
+                    <DataGridTextColumn Header="Division Name" Binding="{Binding Division}"/>
+                </DataGrid.Columns>
+            </DataGrid>
 
+        </ListView>
     </Grid>
 </UserControl>
