@@ -21,9 +21,9 @@
         <DataTemplate DataType="{x:Type viewModel:StaffViewModel}">
             <views:Staff></views:Staff>
         </DataTemplate>
-        <DataTemplate DataType="{x:Type viewModel:LoginViewModel}">
+        <!--<DataTemplate DataType="{x:Type viewModel:LoginViewModel}">
             <views:Login></views:Login>
-        </DataTemplate>
+        </DataTemplate>-->
         <DataTemplate DataType="{x:Type viewModel:ContactUsViewModel}">
             <views:ContactUs></views:ContactUs>
         </DataTemplate>
@@ -57,6 +57,6 @@
         <DataTemplate DataType="{x:Type viewModel:AddLeaveViewModel}">
             <views:Leave/>
         </DataTemplate>
-        
+
     </Application.Resources>
 </Application>
