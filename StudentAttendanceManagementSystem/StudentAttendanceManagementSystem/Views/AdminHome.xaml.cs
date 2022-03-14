@@ -60,5 +60,10 @@ namespace StudentAttendanceManagementSystem.Views
         {
             Front.Content = new StudentReport();
         }
+
+        private void MenuItem_Click_6(object sender, RoutedEventArgs e)
+        {
+            Front.Content = new AttendanceReport();
+        }
     }
 }
