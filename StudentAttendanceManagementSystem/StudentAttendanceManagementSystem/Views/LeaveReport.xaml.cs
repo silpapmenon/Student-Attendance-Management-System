@@ -1,4 +1,6 @@
 ﻿
+using BusinessLayer;
+using EntityLayer.Model;
 using StudentAttendanceManagementSystem.ViewModels;
 using System;
 using System.Collections.Generic;
@@ -25,7 +27,10 @@ namespace StudentAttendanceManagementSystem.Views
         public LeaveReport()
         {
             InitializeComponent();
-            
-        }
+            List<LeaveModel> LeaveReport = new List<LeaveModel>();
+            LeaveReportManager objbusiness = new LeaveReportManager();
+            grdLeave.ItemsSource = objbusiness.DisplayResult();
+        
+    }
     }
 }

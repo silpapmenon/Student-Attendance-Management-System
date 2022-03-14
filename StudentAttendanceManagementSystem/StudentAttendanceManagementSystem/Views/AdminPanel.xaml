@@ -13,11 +13,11 @@
             </Grid.Background>
             <TextBlock Height="50" HorizontalAlignment="Left" Margin="24,48,0,0" Name="textBlockHeading" VerticalAlignment="Top" FontSize="12" FontStyle="Italic" Padding="5">
             </TextBlock>
-            <TextBlock Opacity="0.7" Height="24" HorizontalAlignment="Left" Margin="205,130,0,0" Name="textBlock1" Text="User ID" VerticalAlignment="Top" Width="73" FontWeight="Bold" FontSize="20" />
-            <TextBlock Opacity="0.7" Height="44" HorizontalAlignment="Left" Margin="205,180,0,0" Name="textBlock2" Text="Password" VerticalAlignment="Top" Width="93" FontWeight="Bold" FontSize="20" />
-            <TextBox Opacity="0.7" Height="24" HorizontalAlignment="Left" Margin="384,133,0,0" Name="txtUsername" VerticalAlignment="Top" Width="248" />
-            <PasswordBox Opacity="0.7" Height="24" HorizontalAlignment="Left" Margin="384,178,0,0" Name="passwordBox1" VerticalAlignment="Top" Width="247" />
-            <Button Opacity="0.7" Content="Login" Height="44" HorizontalAlignment="Left" Margin="508,264,0,0" Name="button1" VerticalAlignment="Top" Width="104" FontWeight="Bold" FontSize="20" Click="button1_Click" />
+            <TextBlock Opacity="0.7" Height="24" HorizontalAlignment="Left" Margin="274,195,0,0" Name="textBlock1" Text="User ID" VerticalAlignment="Top" Width="72" FontWeight="Bold" FontSize="20" />
+            <TextBlock Opacity="0.7" Height="43" HorizontalAlignment="Left" Margin="276,243,0,0" Name="textBlock2" Text="Password" VerticalAlignment="Top" Width="92" FontWeight="Bold" FontSize="20" />
+            <TextBox Opacity="0.7" Height="30" HorizontalAlignment="Left" Margin="438,192,0,0" Name="txtUsername" VerticalAlignment="Top" Width="176" />
+            <PasswordBox Opacity="0.7" Height="31" HorizontalAlignment="Left" Margin="440,243,0,0" Name="passwordBox1" VerticalAlignment="Top" Width="176" />
+            <Button Opacity="0.7" Content="Login" Height="44" HorizontalAlignment="Left" Margin="514,331,0,0" Name="button1" VerticalAlignment="Top" Width="104" FontWeight="Bold" FontSize="20" Click="button1_Click" />
             <TextBlock Height="23" HorizontalAlignment="Left" x:Name ="errormessage" VerticalAlignment="Top" Width="247" Margin="118,253,0,0"  OpacityMask="Crimson" Foreground="#FFE5572C"  />
         </Grid>
     </Grid>

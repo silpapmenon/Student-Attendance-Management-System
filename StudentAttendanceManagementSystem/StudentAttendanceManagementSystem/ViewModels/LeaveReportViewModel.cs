@@ -19,9 +19,6 @@ namespace StudentAttendanceManagementSystem.ViewModels
         public LeaveReportManager leaveReport = new LeaveReportManager();
         public LeaveReportViewModel(LeaveModel leave)
         {
-            LeaveReport = new List<LeaveModel>();
-            LeaveReportManager objbusiness = new LeaveReportManager();
-            LeaveReport = objbusiness.DisplayResult();
         }
     }
 }

@@ -43,6 +43,6 @@
                 </Menu>
             </ContentControl>
         </Grid>
-        <Frame x:Name="Front" Margin="196,50,96,0" Height="450" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
+        <Frame x:Name="Front" Margin="50,85,50,0" Height="400" VerticalAlignment="Top" Width="600" Grid.ColumnSpan="2"/>
     </Grid>
 </Window>
