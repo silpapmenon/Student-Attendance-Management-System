@@ -13,14 +13,14 @@
         <Label Content="My Profile" FontWeight="Bold" Margin="10" Background="#eb8dde" Foreground="White"></Label>
         <Grid Background="White" Margin="0,40,0,0">
             <Label x:Name="lblEmail" Content="Email" HorizontalAlignment="Left" Margin="199,162,0,0" VerticalAlignment="Top" FontSize="22" Width="98"/>
-            <Label x:Name="lblMobile" Content="Mobile" HorizontalAlignment="Left" Margin="199,228,0,0" VerticalAlignment="Top" FontSize="22" Width="91"/>
+            <Label x:Name="lblMobile" Content="Mobile" HorizontalAlignment="Left" Margin="199,324,0,0" VerticalAlignment="Top" FontSize="22" Width="91"/>
             <Label x:Name="lblAddress" Content="Address" HorizontalAlignment="Left" Margin="491,45,0,0" VerticalAlignment="Top" FontSize="22"/>
             <Label x:Name="lblCity" Content="City" HorizontalAlignment="Left" Margin="491,93,0,0" VerticalAlignment="Top" FontSize="22" Width="88"/>
             <Label x:Name="lblPincode" Content="Pincode" HorizontalAlignment="Left" Margin="491,140,0,0" VerticalAlignment="Top" FontSize="22" Width="109"/>
-            <Button x:Name="btnUpdate" Content="Update" HorizontalAlignment="Left" Margin="400,347,0,0" VerticalAlignment="Top" FontSize="22" FontWeight="Bold" Foreground="White" Background="#eb8dde"/>
-            <TextBox x:Name="txtEmail" HorizontalAlignment="Left" Margin="333,229,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="31"/>
+            <Button x:Name="btnUpdate" Content="Update" HorizontalAlignment="Left" Margin="513,363,0,0" VerticalAlignment="Top" FontSize="22" FontWeight="Bold" Foreground="White" Background="#eb8dde"/>
+            <TextBox x:Name="txtEmail" HorizontalAlignment="Left" Margin="333,322,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="31"/>
             <TextBox x:Name="txtAddress" HorizontalAlignment="Left" Margin="632,46,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="28"/>
-            <TextBox x:Name="txtEmail1" HorizontalAlignment="Left" Margin="333,165,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="28"/>
+            <TextBox x:Name="txtEmail1" HorizontalAlignment="Left" Margin="333,0,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Width="120" Height="33"/>
             <TextBox x:Name="txtCity" HorizontalAlignment="Left" Margin="632,96,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="28"/>
             <TextBox x:Name="txtPincode" HorizontalAlignment="Left" Margin="632,146,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="28"/>
             <Label x:Name="lblname" Content="Name" HorizontalAlignment="Left" Margin="199,40,0,0" VerticalAlignment="Top" Width="82" FontSize="22" Height="39"/>
@@ -29,8 +29,8 @@
             <TextBox x:Name="txtstandard" HorizontalAlignment="Left" Margin="333,101,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="36" FontSize="22"/>
             <Label x:Name="lblusername" Content="User Name" HorizontalAlignment="Left" Margin="491,211,0,0" VerticalAlignment="Top" Width="125" FontSize="22"/>
             <TextBox x:Name="txtusername" HorizontalAlignment="Left" Margin="632,215,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="22"/>
-            <Label x:Name="lblpassword" Content="Password" HorizontalAlignment="Left" Margin="199,291,0,0" VerticalAlignment="Top" Width="107" FontSize="22"/>
-            <TextBox x:Name="txtpassword" HorizontalAlignment="Left" Margin="333,288,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="22"/>
+            <Label x:Name="lblpassword" Content="Password" HorizontalAlignment="Left" Margin="199,361,0,0" VerticalAlignment="Top" Width="107" FontSize="22"/>
+            <TextBox x:Name="txtpassword" HorizontalAlignment="Left" Margin="333,365,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="22"/>
         </Grid>
     </Grid>
 </UserControl>

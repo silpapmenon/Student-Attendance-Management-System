@@ -17,23 +17,8 @@
                 <MenuItem Header="OUR PATRONS" FontWeight="Bold" Height="30" Foreground="Black" Command="{Binding RedirectViewCommand}" CommandParameter="OUR PATRONS"></MenuItem>
             </MenuItem>
             <MenuItem Header="STANDARDS" FontWeight="Bold" Height="30" Width="80" Background="{x:Null}" Command="{Binding RedirectViewCommand}" CommandParameter="STANDARDS"/>
-            <MenuItem Header="STAFF" FontWeight="Bold" Height="30" Width="50" >
-                
-                <MenuItem Header="STUDENT REPORT" FontWeight="Bold" Height="30" Foreground="Black" Command="{Binding RedirectViewCommand}" CommandParameter="STUDENT REPORT"></MenuItem>
-                <MenuItem Header="ATTENDANCE" FontWeight="Bold" Height="30" Foreground="Black" Command="{Binding RedirectViewCommand}" CommandParameter="ATTENDANCE"></MenuItem>
-                <MenuItem Header="APPLY LEAVE" FontWeight="Bold" Height="30" Foreground="Black" Command="{Binding RedirectViewCommand}" CommandParameter="APPLY LEAVE"></MenuItem>
-                <MenuItem Header="STAFF REPORT" FontWeight="Bold" Height="30" Foreground="Black" Command="{Binding RedirectViewCommand}" CommandParameter="STAFF REPORT"></MenuItem>
-            </MenuItem>
-            <MenuItem Header="ADMIN" FontWeight="Bold" Height="30" Width="60" Command="{Binding RedirectViewCommand}" >
-                <!--<MenuItem Header="ADMIN PANEL" FontWeight="Bold" Height="30" Foreground="Black" Command="{Binding RedirectViewCommand}" CommandParameter="ADMIN PANEL"></MenuItem>-->
-                <MenuItem Header="ADD STUDENT" FontWeight="Bold" Height="30" Foreground="Black" Command="{Binding RedirectViewCommand}" CommandParameter="ADD STUDENT"></MenuItem>
-                <MenuItem Header="ADD STAFF" FontWeight="Bold" Height="30" Foreground="Black" Command="{Binding RedirectViewCommand}" CommandParameter="ADD STAFF"></MenuItem>
-                <MenuItem Header="ADD STANDARDS" FontWeight="Bold" Height="30" Foreground="Black" Command="{Binding RedirectViewCommand}" CommandParameter="ADD STANDARDS"></MenuItem>
-                <MenuItem Header="ADD DIVISIONS" FontWeight="Bold" Height="30" Foreground="Black" Command="{Binding RedirectViewCommand}" CommandParameter="ADD DIVISIONS"></MenuItem>
-                
-            </MenuItem>
 
-            <MenuItem Header="CONTACT US" FontWeight="Bold" Height="30" Width="80" Command="{Binding RedirectViewCommand}" CommandParameter="CONTACT US"></MenuItem>
+            <MenuItem Header="CONTACT US" FontWeight="Bold" Height="30" Width="85" Command="{Binding RedirectViewCommand}" CommandParameter="CONTACT US"></MenuItem>
             <Button Content="ADMIN PANEL" Click="Button_Click" Background="White" BorderThickness="0" FontWeight="Bold" Height="21"/>
             <Button x:Name="btnstudentlogin" BorderThickness="0" Content="Login" FontSize="14" Background="White" FontWeight="Bold" Click="btnstudentlogin_Click"/>
             <Button x:Name="btnlogin" BorderThickness="0" Content="Staff Login" Background="White" FontWeight="Bold" FontSize="14" Click="btnlogin_Click"/>
