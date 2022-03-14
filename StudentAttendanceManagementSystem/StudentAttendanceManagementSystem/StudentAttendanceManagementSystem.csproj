@@ -83,6 +83,7 @@
     <Compile Include="ViewModels\AddStaffViewModel.cs" />
     <Compile Include="ViewModels\AddStudentViewModel.cs" />
     <Compile Include="ViewModels\AdminPanelViewModel.cs" />
+    <Compile Include="ViewModels\AttendanceReportViewModel.cs" />
     <Compile Include="ViewModels\AttendanceViewModel.cs" />
     <Compile Include="ViewModels\BaseViewModel.cs" />
     <Compile Include="ViewModels\ContactUsViewModel.cs" />
@@ -126,6 +127,9 @@
     </Compile>
     <Compile Include="Views\Attendance.xaml.cs">
       <DependentUpon>Attendance.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AttendanceReport.xaml.cs">
+      <DependentUpon>AttendanceReport.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\Complaint.xaml.cs">
       <DependentUpon>Complaint.xaml</DependentUpon>
@@ -223,6 +227,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\Attendance.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AttendanceReport.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

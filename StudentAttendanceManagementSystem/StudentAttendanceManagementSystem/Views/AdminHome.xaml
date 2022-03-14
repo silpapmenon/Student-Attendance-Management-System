@@ -5,14 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:StudentAttendanceManagementSystem.Views"
         mc:Ignorable="d"
-        Title="AdminHome" Height="450" Width="800">
+        Title="AdminHome" Height="550" Width="800">
     <Grid>
         <Grid.Background>
             <ImageBrush ImageSource="/Images/Design.jpg" />
         </Grid.Background>
-        <Grid HorizontalAlignment="Left" Height="395" Margin="75,53,0,0" VerticalAlignment="Top" Width="190">
+        <Grid HorizontalAlignment="Left" Height="395" Margin="100,53,0,0" VerticalAlignment="Top" Width="123">
             <ContentControl>
-                <Menu Name="MenuSample" HorizontalAlignment="Left" VerticalAlignment="Top" Height="324" Background="#eb8dde" Foreground="White" Width="123">
+                <Menu Name="MenuSample" HorizontalAlignment="Left" VerticalAlignment="Top" Height="424" Background="#eb8dde" Foreground="White" Width="123">
                     <Menu.ItemsPanel>
                         <ItemsPanelTemplate>
                             <StackPanel>
@@ -25,11 +25,12 @@
                     <MenuItem Header="ADD STUDENT" Click="MenuItem_Click_3"></MenuItem>
                     <MenuItem Header="STAFF REPORT" Click="MenuItem_Click_4"></MenuItem>
                     <MenuItem Header="STUDENT REPORT" Click="MenuItem_Click_5"></MenuItem>
+                    <MenuItem Header="ATTENDANCE REPORT" Click="MenuItem_Click_6"></MenuItem>
                 </Menu>
             </ContentControl>
         </Grid>
 
-        <Button Content="LOGOUT" HorizontalAlignment="Left" Margin="82,197,0,0" VerticalAlignment="Top" Background="#eb8dde" Foreground="White" Click="Button_Click"/>
-        <Frame x:Name="Front" Margin="225,81,83,0" Height="284" VerticalAlignment="Top"/>
+        <Button Content="LOGOUT" HorizontalAlignment="Left" Margin="121,197,0,0" VerticalAlignment="Top" Background="#eb8dde" Foreground="White" Click="Button_Click"/>
+        <Frame x:Name="Front" Margin="225,-252,-501,0" Height="1181" VerticalAlignment="Top"/>
     </Grid>
 </Window>
