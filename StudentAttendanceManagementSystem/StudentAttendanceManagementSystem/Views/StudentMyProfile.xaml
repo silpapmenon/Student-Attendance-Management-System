@@ -33,7 +33,7 @@
             <Grid Margin="300,20,0,350">
 
 
-                <DataGrid d:ItemsSource="{d:SampleData ItemCount=5}" AutoGenerateColumns="False" Height="66" VerticalAlignment="Top" Margin="0,-2,386,0">
+                <DataGrid d:ItemsSource="{d:SampleData ItemCount=5}" AutoGenerateColumns="False" Height="74" VerticalAlignment="Top" Margin="0,-2,183,0" RenderTransformOrigin="0.511,0.7">
                     <DataGrid.Columns>
                         <DataGridTextColumn Header="Name"/>
                         <DataGridTextColumn Header="Roll No"/>
