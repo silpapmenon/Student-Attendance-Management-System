@@ -1,11 +1,11 @@
-﻿<UserControl x:Class="StudentAttendanceManagementSystem.Views.StaffHome"
-             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:local="clr-namespace:StudentAttendanceManagementSystem.Views"
-             mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
+﻿<Window x:Class="StudentAttendanceManagementSystem.ViewModels.StaffHome"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:StudentAttendanceManagementSystem.ViewModels"
+        mc:Ignorable="d"
+        Title="StaffHome" Height="450" Width="800">
     <Grid >
         <Grid.Background>
             <ImageBrush ImageSource="/Images/Design.jpg" />
@@ -29,15 +29,14 @@
                         </ItemsPanelTemplate>
                     </Menu.ItemsPanel>
                     <Image Grid.Row="1" Grid.Column="0" Source="/Images/Staff.png" HorizontalAlignment="Center" VerticalAlignment="Center" Width="132" Height="214" />
-                    <MenuItem Header="HOME" ></MenuItem>
                     <MenuItem Header="MY PROFILE"></MenuItem>
                     <MenuItem Header="LEAVE"></MenuItem>
-                    <MenuItem Header="COMPLAIN"></MenuItem>
-                    <MenuItem Header="ATTENDANCE REPORT"></MenuItem>
-                    <MenuItem Header="PASSWORD"></MenuItem>
-                    <MenuItem Header="LOGOUT"></MenuItem>
+                    <MenuItem Header="ATTENDANCE">
+                        <Button Content="Button"/>
+                    </MenuItem>
+                    <Button x:Name="btnlogout" Content="LOGOUT" Foreground="White" Background="#eb8dde" FontWeight="Bold" FontSize="11" Click="btnlogout_Click"/>
                 </Menu>
             </ContentControl>
         </Grid>
     </Grid>
-</UserControl>
+</Window>

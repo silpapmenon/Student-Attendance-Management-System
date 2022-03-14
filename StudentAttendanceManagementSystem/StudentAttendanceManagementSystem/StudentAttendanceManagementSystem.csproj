@@ -90,6 +90,9 @@
     <Compile Include="ViewModels\LoginViewModel.cs" />
     <Compile Include="ViewModels\MissionandVisionViewModel.cs" />
     <Compile Include="ViewModels\OurPatronsViewModel.cs" />
+    <Compile Include="ViewModels\StaffHome.xaml.cs">
+      <DependentUpon>StaffHome.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ViewModels\StaffHomeViewModel.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
     <Compile Include="ViewModels\StaffProfileViewModel.cs" />
@@ -147,8 +150,8 @@
     <Compile Include="Views\Staff.xaml.cs">
       <DependentUpon>Staff.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\StaffHome.xaml.cs">
-      <DependentUpon>StaffHome.xaml</DependentUpon>
+    <Compile Include="Views\StaffLogin.xaml.cs">
+      <DependentUpon>StaffLogin.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\StaffProfile.xaml.cs">
       <DependentUpon>StaffProfile.xaml</DependentUpon>
@@ -186,6 +189,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="ViewModels\StaffHome.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\AboutUs.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -250,7 +257,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\StaffHome.xaml">
+    <Page Include="Views\StaffLogin.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
