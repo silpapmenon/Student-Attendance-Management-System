@@ -35,8 +35,8 @@
 
             <MenuItem Header="CONTACT US" FontWeight="Bold" Height="30" Width="80" Command="{Binding RedirectViewCommand}" CommandParameter="CONTACT US"></MenuItem>
             <Button Content="ADMIN PANEL" Click="Button_Click" Background="White" BorderThickness="0" FontWeight="Bold" Height="21"/>
-            <Button x:Name="btnstudentlogin" Content="Login" FontSize="14" Background="White" FontWeight="Bold" Click="btnstudentlogin_Click"/>
-            <Button x:Name="btnlogin" Content="Staff Login" Background="White" FontWeight="Bold" FontSize="14" Click="btnlogin_Click"/>
+            <Button x:Name="btnstudentlogin" BorderThickness="0" Content="Login" FontSize="14" Background="White" FontWeight="Bold" Click="btnstudentlogin_Click"/>
+            <Button x:Name="btnlogin" BorderThickness="0" Content="Staff Login" Background="White" FontWeight="Bold" FontSize="14" Click="btnlogin_Click"/>
         </Menu>
     </Grid>
 </Window>
