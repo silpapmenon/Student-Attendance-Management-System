@@ -29,6 +29,7 @@ namespace StudentAttendanceManagementSystem.Views
         {
 
             InitializeComponent();
+           
             Refresh();
         }
 
@@ -128,13 +129,17 @@ namespace StudentAttendanceManagementSystem.Views
                         }
                         else
                         {
-                            if (!int.TryParse(StudentMobile, out _))
+                            if (!isValidPhoneNumber(StudentMobile))
                             {
-                                MessageBox.Show("Mobile Number should be number");
+                                MessageBox.Show("Invalid Mobile number");
+                            }
+                            if (dt.SelectedDate > DateTime.Now)
+                            {
+                                MessageBox.Show("Oops, you haven't been born yet!");
                             }
                             else
                             {
-                                if (StudentMobile.Count() == 10 )
+                                if (StudentMobile.Count() == 10)
                                 {
                                     if (!isValidEmail(StudentEmail))
                                     {
@@ -217,9 +222,14 @@ namespace StudentAttendanceManagementSystem.Views
                         }
                         else
                         {
-                            if (!int.TryParse(StudentMobile, out _))
+                            if (!isValidPhoneNumber(StudentMobile))
                             {
-                                MessageBox.Show("Mobile Number should be number");
+                                MessageBox.Show(" Invalid Mobile number");
+                            }
+
+                            if (dt.SelectedDate > DateTime.Now)
+                            {
+                                MessageBox.Show("Oops, you haven't been born yet!");
                             }
                             else
                             {
@@ -231,7 +241,7 @@ namespace StudentAttendanceManagementSystem.Views
                                     }
                                     else
                                     {
-                                        StudentModel studentModels = new StudentModel();                                      
+                                        StudentModel studentModels = new StudentModel();
                                         studentModels.RollNo = Convert.ToInt32(txtRollNo.Text);
                                         studentModels.StudentName = txtStudentName.Text;
                                         studentModels.DOB = Convert.ToDateTime(dt.Text);

@@ -15,7 +15,7 @@
             <RowDefinition Height="0*"/>
         </Grid.RowDefinitions>
 
-        <DataGrid Name="grdProductData" AutoGenerateColumns="False" CanUserAddRows="False" MaxColumnWidth="100"  Margin="3,57,-111,40" ItemsSource="{Binding StudentViewList}" SelectionChanged="grdProductData_SelectionChanged_1">
+        <DataGrid Name="grdProductData" AutoGenerateColumns="False" CanUserAddRows="False" MaxColumnWidth="100"  Margin="3,57,10,40" ItemsSource="{Binding StudentViewList}" SelectionChanged="grdProductData_SelectionChanged_1">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Student ID" Width="50" Binding="{Binding StudentID}" />
                 <DataGridTextColumn Header="Roll No" Width="50" Binding="{Binding RollNo}" />
@@ -78,7 +78,7 @@
             <TextBox x:Name="txtEmail" Text="{Binding StudentEmail}" HorizontalAlignment="Left" Margin="2,0,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Width="140" Height="22" FontSize="14" Grid.Column="1"/>
             <TextBox x:Name="txtCity"  Text="{Binding StudentCity}" HorizontalAlignment="Left" Margin="377,104,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="140" Height="22" FontSize="14" Grid.Column="1"/>
             <TextBox x:Name="txtPincode" HorizontalAlignment="Left" Margin="2,188,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="140" Height="22" FontSize="14" Grid.Column="1"/>
-            <DatePicker x:Name="dt" HorizontalAlignment="Left" SelectedDate="{Binding DOB}" Height="28" Margin="4,112,0,0" VerticalAlignment="Top" Width="140" Grid.Column="1"/>
+            <DatePicker x:Name="dt"  HorizontalAlignment="Left" SelectedDate="{Binding DOB}" Height="28" Margin="4,112,0,0" VerticalAlignment="Top" Width="140" Grid.Column="1"/>
             <TextBox x:Name="txtUsername" Text="{Binding StudentUsername}" HorizontalAlignment="Left" Margin="2,221,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="140" Height="22" FontSize="14" Grid.Column="1"/>
             <PasswordBox x:Name="pwdUsername"   HorizontalAlignment="Left" Margin="377,164,0,0"  VerticalAlignment="Top" Width="140" Height="22" FontSize="14" Grid.Column="1"/>
             <ComboBox x:Name="gender" HorizontalAlignment="Left" Text="{Binding  GenderName}" Height="22" Margin="377,137,0,0" VerticalAlignment="Top" Width="140" Grid.Column="1">
