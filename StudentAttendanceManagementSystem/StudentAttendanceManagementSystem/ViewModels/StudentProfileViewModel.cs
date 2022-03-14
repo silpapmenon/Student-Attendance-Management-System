@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace StudentAttendanceManagementSystem.ViewModels
 {
-    public class StudentProfileViewModel
+    public class StudentProfileViewModel : BaseViewModel
     {
     }
 }

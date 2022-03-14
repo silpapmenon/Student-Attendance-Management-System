@@ -21,10 +21,11 @@
                     <MenuItem Header="MY PROFILE" Click="MenuItem_Click"></MenuItem>
                     <MenuItem Header="APPLY LEAVE" Click="MenuItem_Click_1"></MenuItem>
                     <Button x:Name="btnlogout" Content="LOGOUT" Background="#eb8dde" Foreground="White" FontWeight="Normal" Click="btnlogout_Click"/>
-                    <Frame x:Name="Front" Margin="200,-190,93,0" Height="330" VerticalAlignment="Top" Width="462"/>
+
                 </Menu>
             </ContentControl>
         </Grid>
+        <Frame x:Name="Front" Margin="222,85,47,0" Height="339" VerticalAlignment="Top"/>
     </Grid>
 
 </Window>

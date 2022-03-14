@@ -45,6 +45,7 @@
     <Compile Include="DivisionManager.cs" />
     <Compile Include="IStudentManager.cs" />
     <Compile Include="LeaveManager.cs" />
+    <Compile Include="LeaveReportManager.cs" />
     <Compile Include="StaffReportBusinessModel.cs" />
     <Compile Include="StaffManager.cs" />
     <Compile Include="StandardManager.cs" />

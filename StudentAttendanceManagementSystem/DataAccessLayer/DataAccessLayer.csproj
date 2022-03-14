@@ -88,6 +88,7 @@
       <DependentUpon>AttendanceManagementDB.tt</DependentUpon>
     </Compile>
     <Compile Include="LeaveData.cs" />
+    <Compile Include="LeaveReportData.cs" />
     <Compile Include="Role.cs">
       <DependentUpon>AttendanceManagementDB.tt</DependentUpon>
     </Compile>

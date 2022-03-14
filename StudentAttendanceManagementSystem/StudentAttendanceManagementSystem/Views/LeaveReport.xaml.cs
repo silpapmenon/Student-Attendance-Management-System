@@ -10,25 +10,19 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace StudentAttendanceManagementSystem.ViewModels
+namespace StudentAttendanceManagementSystem.Views
 {
     /// <summary>
-    /// Interaction logic for StaffHome.xaml
+    /// Interaction logic for LeaveReport.xaml
     /// </summary>
-    public partial class StaffHome : Window
+    public partial class LeaveReport : UserControl
     {
-        public StaffHome()
+        public LeaveReport()
         {
             InitializeComponent();
-        }
-
-        private void btnlogout_Click(object sender, RoutedEventArgs e)
-        {
-            MainWindow mainWindow = new MainWindow();
-            mainWindow.Show();
-            this.Close();
         }
     }
 }

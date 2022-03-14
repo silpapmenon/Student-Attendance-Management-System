@@ -87,12 +87,10 @@
     <Compile Include="ViewModels\BaseViewModel.cs" />
     <Compile Include="ViewModels\ContactUsViewModel.cs" />
     <Compile Include="ViewModels\HomeViewModel.cs" />
+    <Compile Include="ViewModels\LeaveReportViewModel.cs" />
     <Compile Include="ViewModels\LoginViewModel.cs" />
     <Compile Include="ViewModels\MissionandVisionViewModel.cs" />
     <Compile Include="ViewModels\OurPatronsViewModel.cs" />
-    <Compile Include="ViewModels\StaffHome.xaml.cs">
-      <DependentUpon>StaffHome.xaml</DependentUpon>
-    </Compile>
     <Compile Include="ViewModels\StaffHomeViewModel.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
     <Compile Include="ViewModels\StaffProfileViewModel.cs" />
@@ -141,11 +139,17 @@
     <Compile Include="Views\Leave.xaml.cs">
       <DependentUpon>Leave.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\LeaveReport.xaml.cs">
+      <DependentUpon>LeaveReport.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\OurPatrons.xaml.cs">
       <DependentUpon>OurPatrons.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\Staff.xaml.cs">
       <DependentUpon>Staff.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\StaffHome.xaml.cs">
+      <DependentUpon>StaffHome.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\StaffLogin.xaml.cs">
       <DependentUpon>StaffLogin.xaml</DependentUpon>
@@ -186,10 +190,6 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="ViewModels\StaffHome.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="Views\AboutUs.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -242,11 +242,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Views\LeaveReport.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\OurPatrons.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\Staff.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\StaffHome.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
