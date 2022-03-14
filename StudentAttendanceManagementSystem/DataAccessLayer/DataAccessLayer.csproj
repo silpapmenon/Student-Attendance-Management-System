@@ -112,6 +112,7 @@
     </Compile>
     <Compile Include="StudentData.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StudentDetailData.cs" />
     <Compile Include="StudentReportData.cs" />
     <Compile Include="sysdiagram.cs">
       <DependentUpon>AttendanceManagementDB.tt</DependentUpon>

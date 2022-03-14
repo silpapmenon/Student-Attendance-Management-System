@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:StudentAttendanceManagementSystem.Views"
         mc:Ignorable="d"
-        Title="StudentHome" Height="450" Width="800">
+        Title="StudentHome" Height="550" Width="800">
     <Grid Background="White">
         <!--<Label Content="Attendance Portal" Margin="60 0 0 0" FontWeight="Bold" FontSize="50"></Label>-->
         <Grid HorizontalAlignment="Left" Height="388" Margin="58,85,0,0" VerticalAlignment="Top" Width="190">
