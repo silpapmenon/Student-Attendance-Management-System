@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Interface\IStaffDetails.cs" />
     <Compile Include="Model\AdminModel.cs" />
     <Compile Include="Model\AttendanceModel.cs" />
     <Compile Include="Model\ComplaintModel.cs" />

@@ -8,16 +8,17 @@ using System.Threading.Tasks;
 
 namespace BusinessLayer
 {
-    internal class StudentDetailsManager
+    public class StudentDetailsManager
     {
-        public List<StudentModel> DisplayResult()
+        public List<StudentModel> DisplayResult(StudentModel studentmodel)
         {
-            StudentData studentData = new StudentData();
-            return studentData.GetStudentList();
+            
+            StudentDetailData studentData = new StudentDetailData();
+            return studentData.GetStudentList(studentmodel);
         }
         public void UpdateData(StudentModel studentModel)
         {
-            StudentData studentData = new StudentData();
+            StudentDetailData studentData = new StudentDetailData();
             studentData.UpdateStudentData(studentModel);
         }
     }

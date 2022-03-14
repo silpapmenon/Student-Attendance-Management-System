@@ -10,13 +10,13 @@ using System.Windows;
 
 namespace DataAccessLayer
 {
-    internal class StudentDetailData
+    public class StudentDetailData
     {
-        public List<StudentModel> GetStudentList()
+        public List<StudentModel> GetStudentList(StudentModel studentmodel)
         {
             StudentManagementSystemEntities studentManagementSystemEntities = new StudentManagementSystemEntities();
             var result = from getdata in studentManagementSystemEntities.Students
-
+                         where getdata.StudentUsername == studentmodel.Studentusername
 
                          select getdata;
 
@@ -25,8 +25,8 @@ namespace DataAccessLayer
             {
                 StudentModel studentModel = new StudentModel();
                 //studentModel.genderClass = new GenderClass();
-               // studentModel.standardClass = new StandardClass();
-               // studentModel.StandardName = item.StandardName;
+                // studentModel.standardClass = new StandardClass();
+                // studentModel.StandardName = item.StandardName;
                 studentModel.StudentID = item.StudentID;
                 studentModel.RollNo = item.RollNo;
                 studentModel.StudentName = item.StudentName;
@@ -40,7 +40,7 @@ namespace DataAccessLayer
                 studentModel.StudentAddress = item.StudentAddress;
                 studentModel.StudentCity = item.StudentCity;
                 studentModel.Studentpincode = item.StudentPincode;
-                studentModel.GenderName = item.Gender;
+               // studentModel.GenderName = item.Gender;
                 //studentModel.standardClass.StandardName = item.Stan
                 studentModels.Add(studentModel);
             }
@@ -49,60 +49,42 @@ namespace DataAccessLayer
         }
         public void UpdateStudentData(StudentModel studentModel)
         {
-
-
-            SqlConnection connection = null;
-            using (connection = new SqlConnection("data source =.; database = StudentManagementSystem; integrated security = SSPI"))
+            try
             {
-                try
+                StudentManagementSystemEntities students = new StudentManagementSystemEntities();
+                
+                var query=from studentinfo in students.Students
+                          where studentinfo.StudentUsername == studentModel.Studentusername
+                          select studentinfo;
+                foreach(var item in query)
                 {
-                    connection.Open();
-                    StudentModel student = new StudentModel();
-                    int roll = studentModel.RollNo;
-                    //int standardid = studentModel.;
-                    int studentid = studentModel.StudentID;
-                    string studname = studentModel.StudentName;
-                    DateTime dob = studentModel.DOB;
-                    string email = studentModel.StudentEmail;
-                    int pincode = studentModel.Studentpincode;
-                    string username = studentModel.Studentusername;
-                    string address = studentModel.StudentAddress;
-                    string mobile = studentModel.StudentMobile;
-                    //string image = "null";
-                    string city = studentModel.StudentCity;
-                    string gendername = studentModel.GenderName;
-                    //int gender = studentModel.Gender;
-                    string password = studentModel.Studentpassword;
-                   // string division = studentModel.DivisionName;
-                   // string standardname = studentModel.StandardName;
-
-                    SqlCommand command = new SqlCommand("UpdateStudent", connection);
-                    command.CommandType = CommandType.StoredProcedure;
-                    command.Parameters.AddWithValue("@rollNo", roll);
-                    command.Parameters.AddWithValue("@studName", studname);
-                    command.Parameters.AddWithValue("@dob", dob);
-                    command.Parameters.AddWithValue("@email", email);
-                    command.Parameters.AddWithValue("@pincode", pincode);
-                    command.Parameters.AddWithValue("@username", username);
-                    command.Parameters.AddWithValue("@address", address);
-                    command.Parameters.AddWithValue("@mobile", mobile);
-                    //command.Parameters.AddWithValue("@image", image);
-                    command.Parameters.AddWithValue("@city", city);
-                    command.Parameters.AddWithValue("@gendername", gendername);
-                    command.Parameters.AddWithValue("@password", password);
-                   // command.Parameters.AddWithValue("@division", division);
-                   // command.Parameters.AddWithValue("@standardname", standardname);
-                    command.Parameters.AddWithValue("@studentid", studentid);
-
-                    int rowsadded = command.ExecuteNonQuery();
-                    MessageBox.Show("Updated Succesfully");
+                    item.RollNo = studentModel.RollNo;
+                    item.StudentName = studentModel.StudentName;
+                    item.DOB = studentModel.DOB;
+                    //item.Gender = studentModel.GenderName;
+                    item.StudentEmail = studentModel.StudentEmail;
+                    item.StudentMobile = studentModel.StudentMobile;
+                    item.StudentAddress = studentModel.StudentAddress;
+                    item.StudentCity = studentModel.StudentCity;
+                    item.StudentPincode = studentModel.Studentpincode;
+                    item.StudentUsername = studentModel.Studentusername;
+                    item.StudentPassword = studentModel.Studentpassword;
                 }
-                catch (Exception ex)
-                {
-                    throw ex;
-                }
+                students.SaveChanges();
+                
 
+
+            }
+            catch (Exception ex)
+
+
+
+            {
+                throw ex;
             }
         }
     }
+
 }
+    
+

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EntityLayer.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,14 +20,16 @@ namespace StudentAttendanceManagementSystem.Views
     /// </summary>
     public partial class StaffHome : Window
     {
-        public StaffHome()
+        public StaffModel staffModels { get; set; }
+        public StaffHome(StaffModel staffModel)
         {
+            staffModels = staffModel;
             InitializeComponent();
         }
 
         private void MenuItem_Click(object sender, RoutedEventArgs e)
         {
-            Front.Content = new StaffProfile();
+            Front.Content = new StaffProfile(staffModels);
         }
 
         private void MenuItem_Click_1(object sender, RoutedEventArgs e)

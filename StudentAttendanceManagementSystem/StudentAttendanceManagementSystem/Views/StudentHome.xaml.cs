@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EntityLayer.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,8 +20,10 @@ namespace StudentAttendanceManagementSystem.Views
     /// </summary>
     public partial class StudentHome : Window
     {
-        public StudentHome()
+        StudentModel studentModels =new StudentModel();
+        public StudentHome( StudentModel studentModel)
         {
+            studentModels=studentModel;
             InitializeComponent();
         }
 
@@ -33,7 +36,7 @@ namespace StudentAttendanceManagementSystem.Views
 
         private void MenuItem_Click(object sender, RoutedEventArgs e)
         {
-            Front.Content = new StudentMyProfile();
+            Front.Content = new StudentMyProfile(studentModels);
         }
 
         private void MenuItem_Click_1(object sender, RoutedEventArgs e)

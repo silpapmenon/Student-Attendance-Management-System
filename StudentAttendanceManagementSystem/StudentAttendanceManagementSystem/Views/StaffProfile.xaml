@@ -33,9 +33,9 @@
             <Grid Margin="100,20,0,0">
 
 
-                <DataGrid  AutoGenerateColumns="False" Height="115" VerticalAlignment="Top" RenderTransformOrigin="0.511,0.7">
+                <DataGrid Name="grdstaffdetail" AutoGenerateColumns="False" Height="115" VerticalAlignment="Top" RenderTransformOrigin="0.511,0.7">
                     <DataGrid.Columns>
-                        <DataGridTextColumn Header="Name"/>
+                        <DataGridTextColumn Header="Name" Binding="{Binding StaffName}"/>
                         <DataGridTextColumn Header="Email" Width="50"/>
                         <DataGridTextColumn Header="Mobile"/>
                         <DataGridTextColumn Header="Address"/>

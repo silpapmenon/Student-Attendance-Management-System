@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EntityLayer.Model;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
@@ -22,7 +23,9 @@ namespace StudentAttendanceManagementSystem.Views
     public partial class StudentLogin : Window
     {
         public StudentLogin()
+
         {
+
             InitializeComponent();
         }
 
@@ -41,7 +44,9 @@ namespace StudentAttendanceManagementSystem.Views
                 int count = Convert.ToInt32(sqlCmd.ExecuteScalar());
                 if (count == 1)
                 {
-                    StudentHome dashboard = new StudentHome();
+                    StudentModel studentModel = new StudentModel();
+                    studentModel.Studentusername = textusername.Text;
+                    StudentHome dashboard = new StudentHome(studentModel);
                     dashboard.Show();
                     this.Close();
                 }

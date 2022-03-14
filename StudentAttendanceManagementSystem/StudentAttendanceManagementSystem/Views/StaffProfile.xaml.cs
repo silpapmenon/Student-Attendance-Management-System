@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BusinessLayer;
+using EntityLayer.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +22,13 @@ namespace StudentAttendanceManagementSystem.Views
     /// </summary>
     public partial class StaffProfile : UserControl
     {
-        public StaffProfile()
+        StaffModel staffModels = new StaffModel();
+        public StaffProfile(StaffModel staffModel)
         {
             InitializeComponent();
+            staffModels = staffModel;
+            Refresh();
+
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -33,6 +39,11 @@ namespace StudentAttendanceManagementSystem.Views
         private void btnUpdate_Click(object sender, RoutedEventArgs e)
         {
 
+        }
+        void Refresh()
+        {
+            StaffDetailsBusiness staffDetailsBusiness = new StaffDetailsBusiness();
+            grdstaffdetail.ItemsSource = staffDetailsBusiness.GetAllDetails(staffModels);
         }
     }
 }

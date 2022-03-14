@@ -1,4 +1,5 @@
-﻿using StudentAttendanceManagementSystem.ViewModels;
+﻿using EntityLayer.Model;
+using StudentAttendanceManagementSystem.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -42,7 +43,9 @@ namespace StudentAttendanceManagementSystem.Views
                 int count = Convert.ToInt32(sqlCmd.ExecuteScalar());
                 if (count == 1)
                 {
-                    StaffHome dashboard = new StaffHome();
+                    StaffModel staffModel = new StaffModel();
+                    staffModel.StaffUserName = textusername.Text;
+                    StaffHome dashboard = new StaffHome(staffModel);
                     dashboard.Show();
                     this.Close();
                 }

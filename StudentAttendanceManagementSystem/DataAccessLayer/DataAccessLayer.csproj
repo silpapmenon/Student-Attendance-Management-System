@@ -104,6 +104,7 @@
     </Compile>
     <Compile Include="StaffData.cs" />
     <Compile Include="StaffDetailData.cs" />
+    <Compile Include="StaffDetailsData.cs" />
     <Compile Include="StanadardData.cs" />
     <Compile Include="StaffReport.cs" />
     <Compile Include="Standard.cs">

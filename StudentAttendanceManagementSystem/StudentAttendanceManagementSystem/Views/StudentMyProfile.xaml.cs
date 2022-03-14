@@ -23,22 +23,27 @@ namespace StudentAttendanceManagementSystem.Views
     /// </summary>
     public partial class StudentMyProfile : UserControl
     {
+        public StudentModel studentModel = new StudentModel();
         public int ID;
-        public StudentMyProfile()
+        public StudentMyProfile(StudentModel studentModels)
         {
+            studentModel = studentModels;
+            StudentDetailsManager studentDetailsManager = new StudentDetailsManager();
+            
             InitializeComponent();
+           grdstuds.ItemsSource = studentDetailsManager.DisplayResult(studentModels);
             //Refresh();
         }
 
         private void btnUpdate_Click(object sender, RoutedEventArgs e)
         {
-            string StudentID = txtid.Text;
+            string StudentID = Convert.ToString( studentModel.StudentID);
             string RollNo = txtRollNo.Text;
             string StudentName = txtName1.Text;
             string DOB = dt.Text;
             string Studentusername = txtUsername.Text;
             string Studentpassword = password.Password;
-            string GenderName = gender.Text;
+            //string GenderName = gender.Text;
             string StudentEmail = txtEmail.Text;
             string Studentpincode = txtPincode.Text;
             string StudentAddress = txtAddress.Text;
@@ -48,7 +53,7 @@ namespace StudentAttendanceManagementSystem.Views
             // string StandardName = standard.Text;
             if (!string.IsNullOrEmpty(StudentID) && !string.IsNullOrEmpty(RollNo) && !string.IsNullOrEmpty(StudentName)
                 && !string.IsNullOrEmpty(DOB) && !string.IsNullOrEmpty(Studentusername) && !string.IsNullOrEmpty(Studentpassword)
-                && !string.IsNullOrEmpty(GenderName) && !string.IsNullOrEmpty(StudentEmail) && !string.IsNullOrEmpty(Studentpincode)
+                && !string.IsNullOrEmpty(StudentEmail) && !string.IsNullOrEmpty(Studentpincode)
                 && !string.IsNullOrEmpty(StudentAddress) && !string.IsNullOrEmpty(StudentMobile) && !string.IsNullOrEmpty(StudentCity)
                 )
             {
@@ -81,28 +86,30 @@ namespace StudentAttendanceManagementSystem.Views
                                     MessageBox.Show("Invalid Email ID");
                                 }
                                 else
-                                {
-                                    StudentModel studentModel = new StudentModel();
-                                    studentModel.StudentID = Convert.ToInt32( txtid.Text);
-                                    studentModel.RollNo = Convert.ToInt32(txtRollNo.Text);
-                                    studentModel.StudentName = txtName1.Text;
-                                    studentModel.DOB = Convert.ToDateTime(dt.Text);
-                                    studentModel.Studentusername = txtUsername.Text;
-                                    studentModel.Studentpassword = password.Password;
-                                    studentModel.GenderName = gender.Text;
-                                    studentModel.StudentEmail = txtEmail.Text;
-                                    studentModel.Studentpincode = Convert.ToInt32(txtPincode.Text);
-                                    studentModel.StudentAddress = txtAddress.Text;
-                                    studentModel.StudentMobile = txtMobile.Text;
-                                    studentModel.StudentCity = txtCity.Text;
+                                { 
+                                    StudentDetailsManager sdm=new StudentDetailsManager();
+                                    StudentModel studentModels = new StudentModel();
+                                    studentModels.StudentID =  studentModel.StudentID;
+                                    studentModels.RollNo = Convert.ToInt32(txtRollNo.Text);
+                                    studentModels.StudentName = txtName1.Text;
+                                    studentModels.DOB = Convert.ToDateTime(dt.Text);
+                                    studentModels.Studentusername = txtUsername.Text;
+                                    studentModels.Studentpassword = password.Password;
+                                    //studentModels.GenderName = gender.Text;
+                                    studentModels.StudentEmail = txtEmail.Text;
+                                    studentModels.Studentpincode = Convert.ToInt32(txtPincode.Text);
+                                    studentModels.StudentAddress = txtAddress.Text;
+                                    studentModels.StudentMobile = txtMobile.Text;
+                                    studentModels.StudentCity = txtCity.Text;
                                     //studentModel.Gender = gender.Text;
                                     //studentModel.DivisionName = div.Text;
                                     // studentModel.StandardName = standard.Text;
-                                    StudentManager studentManager = new StudentManager();
-                                    studentManager.UpdateData(studentModel);
-                                    // MessageBox.Show("Student Details Edited");
+                                    StudentDetailsManager studentManager = new StudentDetailsManager();
+                                    studentManager.UpdateData(studentModels);
+                                     MessageBox.Show("Student Details Edited");
                                     Refresh();
-                                    txtid.Text = String.Empty;
+                                    //txtid.Text = String.Empty;
+                                   // grdstuds.ItemsSource = sdm.DisplayResult(s);
 
                                     ClearTextBox();
 
@@ -128,32 +135,34 @@ namespace StudentAttendanceManagementSystem.Views
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-
+            txtRollNo.Text = (grdstuds.SelectedItem as StudentModel).RollNo.ToString();
+            txtName1.Text = (grdstuds.SelectedItem as StudentModel).StudentName;
+            dt.Text = (grdstuds.SelectedItem as StudentModel).DOB.ToString();
+            txtUsername.Text = (grdstuds.SelectedItem as StudentModel).Studentusername;
+            password.Password = (grdstuds.SelectedItem as StudentModel).Studentpassword;
+            //gender.Text = (grdstuds.SelectedItem as StudentModel).GenderName;
+            txtEmail.Text = (grdstuds.SelectedItem as StudentModel).StudentEmail;
+            txtPincode.Text = (grdstuds.SelectedItem as StudentModel).Studentpincode.ToString();
+            txtAddress.Text = (grdstuds.SelectedItem as StudentModel).StudentAddress;
+            txtMobile.Text = (grdstuds.SelectedItem as StudentModel).StudentMobile.ToString();
+            txtCity.Text = (grdstuds.SelectedItem as StudentModel).StudentCity;
         }
 
         private void grdstud_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            txtRollNo.Text = (grdstud.SelectedItem as StudentModel).RollNo.ToString();
-            txtName1.Text = (grdstud.SelectedItem as StudentModel).StudentName;
-            dt.Text = (grdstud.SelectedItem as StudentModel).DOB.ToString();
-            txtUsername.Text = (grdstud.SelectedItem as StudentModel).Studentusername;
-            password.Password = (grdstud.SelectedItem as StudentModel).Studentpassword;
-            gender.Text = (grdstud.SelectedItem as StudentModel).GenderName;
-            txtEmail.Text = (grdstud.SelectedItem as StudentModel).StudentEmail;
-            txtPincode.Text = (grdstud.SelectedItem as StudentModel).Studentpincode.ToString();
-            txtAddress.Text = (grdstud.SelectedItem as StudentModel).StudentAddress;
-            txtMobile.Text = (grdstud.SelectedItem as StudentModel).StudentMobile.ToString();
-            txtCity.Text = (grdstud.SelectedItem as StudentModel).StudentCity;
+            
             //gender.Text = (grdProductData.SelectedItem as StudentModel).GenderName;
             // div.Text = (grdstud.SelectedItem as StudentModel).DivisionName;
             //standard.Text = (grdstud.SelectedItem as StudentModel).StandardName;
-            Refresh();
+           // Refresh();
         }
 
         void Refresh()
         {
-            StudentManager studentManager = new StudentManager();
-            grdstud.ItemsSource = studentManager.DisplayResult();
+            StudentModel model = new StudentModel();
+            model = studentModel;
+            StudentDetailsManager studentDetailsManager = new StudentDetailsManager();
+            grdstuds.ItemsSource = studentDetailsManager.DisplayResult(studentModel);
         }
         void ClearTextBox()
         {
@@ -167,7 +176,7 @@ namespace StudentAttendanceManagementSystem.Views
             txtUsername.Text = String.Empty;
             password.Password = String.Empty;
             //div.Text = String.Empty;
-            gender.Text = String.Empty;
+            //gender.Text = String.Empty;
             //standard.Text = String.Empty;
             dt.Text = String.Empty;
         }

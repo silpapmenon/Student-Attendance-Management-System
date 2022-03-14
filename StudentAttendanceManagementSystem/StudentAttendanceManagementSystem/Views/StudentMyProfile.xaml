@@ -18,35 +18,35 @@
             <Label x:Name="lblCity" Content="City" HorizontalAlignment="Left" Margin="539,147,0,0" VerticalAlignment="Top" FontSize="14" Width="80" Height="28"/>
             <Label x:Name="lblPincode" Content="Pincode" HorizontalAlignment="Left" Margin="537,185,0,0" VerticalAlignment="Top" FontSize="14" Width="80" Height="28"/>
             <Button x:Name="btnUpdate" Content="Update" HorizontalAlignment="Left" Margin="643,310,0,0" VerticalAlignment="Top" FontSize="22" FontWeight="Bold" Click="btnUpdate_Click" Foreground="White" Background="#eb8dde"/>
-            <TextBox x:Name="txtMobile" HorizontalAlignment="Left" Margin="373,259,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="25"/>
-            <TextBox x:Name="txtAddress" HorizontalAlignment="Left" Margin="373,297,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="25"/>
-            <TextBox x:Name="txtEmail" HorizontalAlignment="Left" Margin="373,224,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="25"/>
-            <TextBox x:Name="txtCity" HorizontalAlignment="Left" Margin="644,148,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="25"/>
-            <TextBox x:Name="txtPincode" HorizontalAlignment="Left" Margin="645,186,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="25"/>
+            <TextBox x:Name="txtMobile" Text="{Binding StudentMobile}" HorizontalAlignment="Left" Margin="373,259,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="25"/>
+            <TextBox x:Name="txtAddress" Text="{Binding StudentAddress}" HorizontalAlignment="Left" Margin="373,297,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="25"/>
+            <TextBox x:Name="txtEmail" Text="{Binding StudentEmail}" HorizontalAlignment="Left" Margin="373,224,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="25"/>
+            <TextBox x:Name="txtCity" Text="{Binding  StudentCity}" HorizontalAlignment="Left" Margin="644,148,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="25"/>
+            <TextBox x:Name="txtPincode" Text="{Binding  Studentpincode}" HorizontalAlignment="Left" Margin="645,186,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="25"/>
             <Label x:Name="lblName" Content="Name " HorizontalAlignment="Left" Margin="280,152,0,0" VerticalAlignment="Top" FontSize="14" FontWeight="Normal" Foreground="#FF150E14" Width="80" Height="28"/>
             <Label x:Name="lblRollno" Content="Roll No " HorizontalAlignment="Left" Margin="279,122,0,0" VerticalAlignment="Top" FontSize="14" FontStyle="Normal" FontWeight="Normal" Foreground="#FF20121E" Width="80" Height="28"/>
-            <TextBox x:Name="txtRollNo" HorizontalAlignment="Left" Margin="373,123,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="25"/>
+            <TextBox x:Name="txtRollNo" Text="{Binding RollNo}" HorizontalAlignment="Left" Margin="373,123,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="25"/>
             <Label x:Name="lblUsername" Content="Username" HorizontalAlignment="Left" Margin="535,225,0,0" VerticalAlignment="Top" FontSize="14" Width="80" Height="28"/>
-            <TextBox x:Name="txtUsername" HorizontalAlignment="Left" Margin="644,226,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="25"/>
+            <TextBox x:Name="txtUsername" Text="{Binding  Studentusername}" HorizontalAlignment="Left" Margin="644,226,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="25"/>
             <Label x:Name="lblPassword" Content="Password" HorizontalAlignment="Left" Margin="536,261,0,0" VerticalAlignment="Top" FontSize="14" Width="80" Height="28"/>
             <PasswordBox x:Name="password" HorizontalAlignment="Left" Margin="644,264,0,0"  VerticalAlignment="Top" Width="120" Height="25"/>
             <Grid Margin="300,20,0,350">
 
 
-                <DataGrid x:Name="grdstud" AutoGenerateColumns="False" Height="74" VerticalAlignment="Top" Margin="0,-2,-134,0" RenderTransformOrigin="0.511,0.7" SelectionChanged="grdstud_SelectionChanged">
+                <DataGrid x:Name="grdstuds" AutoGenerateColumns="False" Height="74" VerticalAlignment="Top" Margin="0,-2,-134,0" RenderTransformOrigin="0.511,0.7" SelectionChanged="grdstud_SelectionChanged">
                     <DataGrid.Columns>
                         <DataGridTextColumn Header="Student ID" Binding="{Binding StudentID}"/>
                         <DataGridTextColumn Header="Name" Binding="{Binding StudentName}"/>
                         <DataGridTextColumn Header="Roll No" Binding="{Binding RollNo}"/>
                         <DataGridTextColumn Header="Email" Width="50" Binding="{Binding StudentEmail}"/>
                         <DataGridTextColumn Header="Mobile" Binding="{Binding StudentMobile}"/>
-                        <DataGridTextColumn Header="Gender" Binding="{Binding GenderName}"/>
+                        
 
-                        <DataGridTextColumn Header="Address"/>
-                        <DataGridTextColumn Header="City"/>
-                        <DataGridTextColumn Header="Pincode"/>
-                        <DataGridTextColumn Header="Username"/>
-                        <DataGridTextColumn Header="Password"/>
+                        <DataGridTextColumn Header="Address"  Binding="{Binding StudentAddress}"/>
+                        <DataGridTextColumn Header="City" Binding="{Binding StudentCity}"/>
+                        <DataGridTextColumn Header="Pincode"  Binding="{Binding Studentpincode}"/>
+                        <DataGridTextColumn Header="Username"  Binding="{Binding Studentusername}"/>
+                        <DataGridTextColumn Header="Password" Binding="{Binding Studentpassword}"/>
                         <DataGridTemplateColumn Header="Edit" Width="35">
                             <DataGridTemplateColumn.CellTemplate>
                                 <DataTemplate>
@@ -60,15 +60,9 @@
 
                 </DataGrid>
             </Grid>
-            <TextBox x:Name="txtName1" HorizontalAlignment="Left" Height="25" Margin="373,158,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+            <TextBox x:Name="txtName1" Text="{Binding StudentName}" HorizontalAlignment="Left" Height="25" Margin="373,158,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
             <Label x:Name="lbldob" Content="Dob" HorizontalAlignment="Left" Height="28" Margin="281,187,0,0" VerticalAlignment="Top" Width="80" FontSize="14"/>
-            <DatePicker x:Name="dt" HorizontalAlignment="Left" Height="21" Margin="373,191,0,0" VerticalAlignment="Top" Width="116"/>
-            <Label x:Name="lblgender" Content="Gender" HorizontalAlignment="Left" Height="28" Margin="539,111,0,0" VerticalAlignment="Top" Width="80" FontSize="14"/>
-            <ComboBox  Name="gender" HorizontalAlignment="Left" Height="27" Margin="645,109,0,0" VerticalAlignment="Top" Width="120">
-                <TextBlock Text="Male"></TextBlock>
-                <TextBlock Text="Female"></TextBlock>
-                <TextBlock Text="Others"></TextBlock>
-            </ComboBox>
+            <DatePicker x:Name="dt" SelectedDate="{Binding DOB}" HorizontalAlignment="Left" Height="21" Margin="373,191,0,0" VerticalAlignment="Top" Width="116"/>
             <TextBox x:Name="txtid" HorizontalAlignment="Left" Height="30" Margin="744,313,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="40"/>
         </Grid>
     </Grid>
