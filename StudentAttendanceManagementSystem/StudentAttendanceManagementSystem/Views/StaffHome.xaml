@@ -29,12 +29,9 @@
                         </ItemsPanelTemplate>
                     </Menu.ItemsPanel>
                     <Image Grid.Row="1" Grid.Column="0" Source="/Images/Staff.png" HorizontalAlignment="Center" VerticalAlignment="Center" Width="132" Height="214" />
-                    <MenuItem Header="HOME" ></MenuItem>
                     <MenuItem Header="MY PROFILE"></MenuItem>
                     <MenuItem Header="LEAVE"></MenuItem>
-                    <MenuItem Header="COMPLAIN"></MenuItem>
-                    <MenuItem Header="ATTENDANCE REPORT"></MenuItem>
-                    <MenuItem Header="PASSWORD"></MenuItem>
+                    <MenuItem Header="ATTENDANCE"></MenuItem>
                     <MenuItem Header="LOGOUT"></MenuItem>
                 </Menu>
             </ContentControl>

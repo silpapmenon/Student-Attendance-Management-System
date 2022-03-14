@@ -102,9 +102,6 @@
     <Compile Include="Views\AboutUs.xaml.cs">
       <DependentUpon>AboutUs.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\AddAttendance.xaml.cs">
-      <DependentUpon>AddAttendance.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Views\AddDivision.xaml.cs">
       <DependentUpon>AddDivision.xaml</DependentUpon>
     </Compile>
@@ -187,10 +184,6 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="Views\AboutUs.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Views\AddAttendance.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
