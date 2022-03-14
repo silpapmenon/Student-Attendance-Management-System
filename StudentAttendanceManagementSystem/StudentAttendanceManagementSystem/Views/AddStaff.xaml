@@ -64,7 +64,7 @@
             <Label Content="Email" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Center" Width="107" FontWeight="Bold"/>
             <Label Content="City" HorizontalAlignment="Left" Margin="301,114,0,0" VerticalAlignment="Top" Width="106" FontWeight="Bold" Grid.ColumnSpan="2"/>
             <Label Content="Pincode" HorizontalAlignment="Left" Margin="7,185,0,111" Width="107" FontWeight="Bold"/>
-            <Label Content="Gender" HorizontalAlignment="Left" Margin="305,0,0,0" VerticalAlignment="Center" FontWeight="Bold"/>
+            <Label Content="Gender" HorizontalAlignment="Left" Margin="305,0,0,0" VerticalAlignment="Center" FontWeight="Bold" Grid.ColumnSpan="2" Width="105"/>
             <Label Content="Username" HorizontalAlignment="Left" Margin="10,216,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
             <Label Content="Password" HorizontalAlignment="Left" Margin="307,198,0,0" VerticalAlignment="Top" FontWeight="Bold" Grid.ColumnSpan="2"/>
             <Button x:Name="btnAdd" Content="Add" HorizontalAlignment="Left" Margin="280,274,0,0" VerticalAlignment="Top" Width="140" Height="43"  FontSize="18" FontWeight="Bold" Grid.ColumnSpan="2" Click="btnAdd_Click"/>
