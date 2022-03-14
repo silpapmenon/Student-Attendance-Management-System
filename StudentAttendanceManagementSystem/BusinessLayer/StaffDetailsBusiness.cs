@@ -18,9 +18,14 @@ namespace BusinessLayer
             return staffDetailsData.GetAllDetails(staffModel);
         }
 
+        public void UpdateStaffData(StaffModel staffModel)
+        {
+            staffDetailsData.UpdateStaffData(staffModel);
+        }
+
         public void UpdateStudentData(StaffModel staffModel)
         {
-            staffDetailsData.UpdateStudentData(staffModel);
+            throw new NotImplementedException();
         }
     }
 }

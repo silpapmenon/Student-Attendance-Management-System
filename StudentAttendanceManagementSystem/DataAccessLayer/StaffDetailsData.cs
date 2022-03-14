@@ -24,6 +24,15 @@ namespace DataAccessLayer
                     StaffModel staffModelinfo = new StaffModel();
                     staffModelinfo.StaffName = item.StaffName;
                     staffModelinfo.StaffPincode = item.Pincode;
+                    staffModelinfo.StaffCity = item.City;
+                    staffModelinfo.StaffPassword= item.Password;
+                    staffModelinfo.Qualification = item.Qualification;
+                    staffModelinfo.StaffGender = item.Gender;
+                    staffModelinfo.Standard= item.Standard;
+                    staffModelinfo.StaffUserName= item.UserName;
+                    staffModelinfo.StaffEmail= item.Email;
+                    staffModelinfo.StaffMobile= item.Mobile;
+                    staffModelinfo.StaffAddress= item.Address;
                     stafflist.Add(staffModelinfo);
                 }
                 return stafflist;
@@ -35,21 +44,31 @@ namespace DataAccessLayer
             }
         }
 
-        public void UpdateStudentData(StaffModel staffModel)
+        public void UpdateStaffData(StaffModel staffModel)
         {
             try
             {
-                StudentManagementSystemEntities students = new StudentManagementSystemEntities();
+                StudentManagementSystemEntities staffs = new StudentManagementSystemEntities();
 
-                var query = from staffinfo in students.Staffs
+                var query = from staffinfo in staffs.Staffs
                             where staffinfo.UserName == staffModel.StaffUserName
                             select staffinfo;
                 foreach (var item in query)
                 {
                     item.StaffName = item.StaffName;
+                    item.Standard = item.Standard;
+                    item.Pincode = item.Pincode;
+                    item.City = item.City;
+                    item.Mobile= item.Mobile;
+                    item.Email = item.Email;
+                    item.Address= item.Address;
+                    item.Gender= item.Gender;
+                    item.Password= item.Password;
+                    item.Qualification= item.Qualification;
+                    item.UserName= item.UserName;
 
                 }
-                students.SaveChanges();
+                staffs.SaveChanges();
 
 
 
@@ -59,6 +78,11 @@ namespace DataAccessLayer
             {
                 throw ex;
             }
+        }
+
+        public void UpdateStudentData(StaffModel staffModel)
+        {
+            throw new NotImplementedException();
         }
     }
 }
