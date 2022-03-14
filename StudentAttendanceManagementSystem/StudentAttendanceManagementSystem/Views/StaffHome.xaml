@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:StudentAttendanceManagementSystem.Views"
         mc:Ignorable="d"
-        Title="StaffHome" Height="450" Width="800">
+        Title="StaffHome" Height="550" Width="800">
     <Grid >
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="361*"/>
@@ -35,7 +35,7 @@
                     <Image Grid.Row="1" Grid.Column="0" Source="/Images/Staff.png" HorizontalAlignment="Center" VerticalAlignment="Center" Width="132" Height="214" />
                     <MenuItem Header="MY PROFILE" Click="MenuItem_Click"></MenuItem>
                     <MenuItem Header="LEAVE" Click="MenuItem_Click_1"></MenuItem>
-                    <MenuItem Header="ATTENDANCE" Click="MenuItem_Click_2">
+                    <MenuItem Header="ATTENDANCE" Click="MenuItem_Click_2" >
 
                     </MenuItem>
                     <Button x:Name="btnlogout" Content="LOGOUT" Foreground="White" Background="#eb8dde" FontWeight="Bold" FontSize="11" Click="btnlogout_Click"/>
@@ -43,6 +43,6 @@
                 </Menu>
             </ContentControl>
         </Grid>
-        <Frame x:Name="Front" Margin="219,85,119,0" Height="283" VerticalAlignment="Top" Width="462" Grid.ColumnSpan="2"/>
+        <Frame x:Name="Front" Margin="196,50,96,0" Height="450" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
     </Grid>
 </Window>
