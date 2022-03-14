@@ -10,7 +10,7 @@
             <ColumnDefinition Width="559*"/>
             <ColumnDefinition Width="241*"/>
         </Grid.ColumnDefinitions>
-        <ListView Name="UserGrid" Margin="170,-122,110,50" Grid.ColumnSpan="2" Width="600" >
+        <ListView Name="UserGrid" Margin="112,-122,180,50" Grid.ColumnSpan="2" >
             <DataGrid Name="grdDivisionData" AutoGenerateColumns="False" CanUserAddRows="False" ColumnWidth="*" Width="495" Height="134" ItemsSource="{Binding DivisionViewList}">
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="Division ID" Binding="{Binding DivisionID}" Width="70" IsReadOnly="True"/>

@@ -4,11 +4,10 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:StudentAttendanceManagementSystem.Views"
-             mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
-    <Grid Height="188" VerticalAlignment="Top">
-        <ListView Name="UserGrid" Grid.Row="1" >
-            <DataGrid Name="grdStudentReport" AutoGenerateColumns="False" CanUserAddRows="False" ColumnWidth="*" Width="789" Height="322" Margin="0,50" ItemsSource="{Binding StudentReport}">
+             mc:Ignorable="d" d:DesignWidth="800" Height="574">
+    <Grid Height="542" VerticalAlignment="Center" Margin="0,0,29,0">
+        <ListView Name="UserGrid" Margin="23,-68,169,251" Background="Transparent" BorderThickness="0" >
+            <DataGrid Name="grdStudentReport" AutoGenerateColumns="False" CanUserAddRows="False" ColumnWidth="*" Margin="6,190,68,65" ItemsSource="{Binding StudentReport}" Height="132" Width="566">
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="Roll No" Binding="{Binding RollNo}" Width="60" IsReadOnly="True"/>
                     <DataGridTextColumn Header="Student Name" Width="90" Binding="{Binding StudentName}" IsReadOnly="True"/>

@@ -25,6 +25,9 @@ namespace StudentAttendanceManagementSystem.Views
         public StaffReport()
         {
             InitializeComponent();
+            List<StaffModel> staffreport = new List<StaffModel>();
+            StaffReportBusinessModel objbusiness = new StaffReportBusinessModel();
+            grdStaffReport.ItemsSource = objbusiness.DisplayResult();
         }
 
         

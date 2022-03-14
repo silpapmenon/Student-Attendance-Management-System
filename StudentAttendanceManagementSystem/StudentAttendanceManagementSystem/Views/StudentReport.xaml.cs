@@ -25,6 +25,9 @@ namespace StudentAttendanceManagementSystem.Views
         public StudentReport()
         {
             InitializeComponent();
+            List<StudentModel> studentreport = new List<StudentModel>();
+            StudentReportBusinessModel objbusiness = new StudentReportBusinessModel();
+            grdStudentReport.ItemsSource = objbusiness.DisplayResult();
         }       
     }
 }
