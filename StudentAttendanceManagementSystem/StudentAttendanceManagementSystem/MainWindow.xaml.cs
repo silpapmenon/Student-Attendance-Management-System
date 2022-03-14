@@ -34,5 +34,12 @@ namespace StudentAttendanceManagementSystem
             adminHome.Show();
             this.Close();
         }
+
+        private void btnstudentlogin_Click(object sender, RoutedEventArgs e)
+        {
+            StudentLogin studentHome = new StudentLogin();
+            studentHome.Show();
+            this.Close();
+        }
     }
 }

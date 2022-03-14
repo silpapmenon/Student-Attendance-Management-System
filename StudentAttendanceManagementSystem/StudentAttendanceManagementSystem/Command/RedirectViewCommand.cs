@@ -100,7 +100,6 @@ namespace StudentAttendanceManagementSystem.Command
                 LeaveModel leaveModel = new LeaveModel();
                 model.SelectedView = new AddLeaveViewModel();
             }
-
         }
 
     }

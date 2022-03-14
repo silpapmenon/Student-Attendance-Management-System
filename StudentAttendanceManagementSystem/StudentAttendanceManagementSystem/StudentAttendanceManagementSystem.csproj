@@ -141,9 +141,6 @@
     <Compile Include="Views\Leave.xaml.cs">
       <DependentUpon>Leave.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\Login.xaml.cs">
-      <DependentUpon>Login.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Views\OurPatrons.xaml.cs">
       <DependentUpon>OurPatrons.xaml</DependentUpon>
     </Compile>
@@ -164,6 +161,9 @@
     </Compile>
     <Compile Include="Views\StudentHome.xaml.cs">
       <DependentUpon>StudentHome.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\StudentLogin.xaml.cs">
+      <DependentUpon>StudentLogin.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\StudentMyProfile.xaml.cs">
       <DependentUpon>StudentMyProfile.xaml</DependentUpon>
@@ -242,10 +242,6 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\Login.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="Views\OurPatrons.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -271,6 +267,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\StudentHome.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\StudentLogin.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

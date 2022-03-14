@@ -10,19 +10,25 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace StudentAttendanceManagementSystem.Views
 {
     /// <summary>
-    /// Interaction logic for StudentProfile.xaml
+    /// Interaction logic for StudentHome.xaml
     /// </summary>
-    public partial class StudentProfile : UserControl
+    public partial class StudentHome : Window
     {
-        public StudentProfile()
+        public StudentHome()
         {
-            //InitializeComponent();
+            InitializeComponent();
+        }
+
+        private void btnlogout_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow mainWindow = new MainWindow();
+            mainWindow.Show();
+            this.Close();
         }
     }
 }
