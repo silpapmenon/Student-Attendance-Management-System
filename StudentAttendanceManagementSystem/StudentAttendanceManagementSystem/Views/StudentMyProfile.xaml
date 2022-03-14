@@ -12,21 +12,38 @@
         </Grid.RowDefinitions>
         <Label Content="My Profile" FontWeight="Bold" Margin="10" Background="#eb8dde" Foreground="White"></Label>
         <Grid Background="White" Margin="0,40,0,0">
-            <Label x:Name="lblEmail" Content="Email" HorizontalAlignment="Left" Margin="10,96,0,0" VerticalAlignment="Top" FontSize="22"/>
-            <Label x:Name="lblMobile" Content="Mobile" HorizontalAlignment="Left" Margin="10,136,0,0" VerticalAlignment="Top" FontSize="22"/>
-            <Label x:Name="lblAddress" Content="Address" HorizontalAlignment="Left" Margin="10,176,0,0" VerticalAlignment="Top" FontSize="22"/>
-            <Label x:Name="lblCity" Content="City" HorizontalAlignment="Left" Margin="7,217,0,0" VerticalAlignment="Top" FontSize="22"/>
-            <Label x:Name="lblPincode" Content="Pincode" HorizontalAlignment="Left" Margin="7,261,0,0" VerticalAlignment="Top" FontSize="22"/>
-            <Button x:Name="btnUpdate" Content="Update" HorizontalAlignment="Left" Margin="139,340,0,0" VerticalAlignment="Top" FontSize="22" FontWeight="Bold" Click="btnUpdate_Click" Foreground="White" Background="#eb8dde"/>
-            <Button x:Name="btnChoosefile" Content="Choose File" HorizontalAlignment="Left" Margin="228,22,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
-            <Button x:Name="btnAdd" Content="Add" Foreground="White" Background="#eb8dde" HorizontalAlignment="Left" Margin="348,22,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
-            <TextBox x:Name="txtEmail" HorizontalAlignment="Left" Margin="139,144,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-            <TextBox x:Name="txtAddress" HorizontalAlignment="Left" Margin="139,187,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-            <TextBox x:Name="txtEmail1" HorizontalAlignment="Left" Margin="139,107,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-            <TextBox x:Name="txtCity" HorizontalAlignment="Left" Margin="139,228,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-            <TextBox x:Name="txtPincode" HorizontalAlignment="Left" Margin="139,272,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-            <Label x:Name="lblName" Content="Name : John" HorizontalAlignment="Left" Margin="17,10,0,0" VerticalAlignment="Top" FontSize="20" FontWeight="Bold" Foreground="#eb8dde"/>
-            <Label x:Name="lblRollno" Content="Roll No : 16" HorizontalAlignment="Left" Margin="17,47,0,0" VerticalAlignment="Top" FontSize="20" FontStyle="Normal" FontWeight="Bold" Foreground="#eb8dde"/>
+            <Label x:Name="lblEmail" Content="Email" HorizontalAlignment="Left" Margin="281,141,0,0" VerticalAlignment="Top" FontSize="22"/>
+            <Label x:Name="lblMobile" Content="Mobile" HorizontalAlignment="Left" Margin="280,0,0,0" VerticalAlignment="Center" FontSize="22"/>
+            <Label x:Name="lblAddress" Content="Address" HorizontalAlignment="Left" Margin="280,228,0,0" VerticalAlignment="Top" FontSize="22"/>
+            <Label x:Name="lblCity" Content="City" HorizontalAlignment="Left" Margin="531,67,0,0" VerticalAlignment="Top" FontSize="22"/>
+            <Label x:Name="lblPincode" Content="Pincode" HorizontalAlignment="Left" Margin="531,103,0,0" VerticalAlignment="Top" FontSize="22"/>
+            <Button x:Name="btnUpdate" Content="Update" HorizontalAlignment="Left" Margin="625,228,0,0" VerticalAlignment="Top" FontSize="22" FontWeight="Bold" Click="btnUpdate_Click" Foreground="White" Background="#eb8dde"/>
+            <TextBox x:Name="txtEmail" HorizontalAlignment="Left" Margin="373,0,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Width="120"/>
+            <TextBox x:Name="txtAddress" HorizontalAlignment="Left" Margin="373,239,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+            <TextBox x:Name="txtEmail1" HorizontalAlignment="Left" Margin="373,152,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+            <TextBox x:Name="txtCity" HorizontalAlignment="Left" Margin="644,78,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+            <TextBox x:Name="txtPincode" HorizontalAlignment="Left" Margin="645,114,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+            <Label x:Name="lblName" Content="Name " HorizontalAlignment="Left" Margin="280,106,0,0" VerticalAlignment="Top" FontSize="20" FontWeight="Normal" Foreground="#FF150E14"/>
+            <Label x:Name="lblRollno" Content="Roll No " HorizontalAlignment="Left" Margin="279,70,0,0" VerticalAlignment="Top" FontSize="20" FontStyle="Normal" FontWeight="Normal" Foreground="#FF20121E"/>
+            <TextBox x:Name="txtName" HorizontalAlignment="Left" Margin="373,114,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+            <TextBox x:Name="txtRollNo" HorizontalAlignment="Left" Margin="373,79,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+            <Label x:Name="lblUsername" Content="Username" HorizontalAlignment="Left" Margin="531,141,0,0" VerticalAlignment="Top" FontSize="22"/>
+            <TextBox x:Name="txtUsername" HorizontalAlignment="Left" Margin="646,156,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+            <Label x:Name="lblPassword" Content="Password" HorizontalAlignment="Left" Margin="532,179,0,0" VerticalAlignment="Top" FontSize="22"/>
+            <TextBox x:Name="txtPassword" HorizontalAlignment="Left" Margin="646,192,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+            <DataGrid d:ItemsSource="{d:SampleData ItemCount=5}" Margin="281,310,0,58" AutoGenerateColumns="False">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Name"/>
+                    <DataGridTextColumn Header="Roll No"/>
+                    <DataGridTextColumn Header="Email" Width="70"/>
+                    <DataGridTextColumn Header="Mobile"/>
+                    <DataGridTextColumn Header="Address"/>
+                    <DataGridTextColumn Header="City"/>
+                    <DataGridTextColumn Header="Pincode"/>
+                    <DataGridTextColumn Header="Username"/>
+                    <DataGridTextColumn Header="Password"/>
+                </DataGrid.Columns>
+            </DataGrid>
         </Grid>
     </Grid>
 </UserControl>

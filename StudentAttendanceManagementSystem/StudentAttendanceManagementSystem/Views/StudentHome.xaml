@@ -18,14 +18,13 @@
                         </ItemsPanelTemplate>
                     </Menu.ItemsPanel>
                     <Image Grid.Row="1" Grid.Column="0" Source="/Images/stdfirst.png" HorizontalAlignment="Left" VerticalAlignment="Center" Width="132" />
-                    <MenuItem Header="MY PROFILE"></MenuItem>
-                    <MenuItem Header="LEAVE"></MenuItem>
-                    <MenuItem Header="ATTENDANCE REPORT"></MenuItem>
-                    <MenuItem Header="PASSWORD"></MenuItem>
+                    <MenuItem Header="MY PROFILE" Click="MenuItem_Click"></MenuItem>
+                    <MenuItem Header="APPLY LEAVE" Click="MenuItem_Click_1"></MenuItem>
                     <Button x:Name="btnlogout" Content="LOGOUT" Background="#eb8dde" Foreground="White" FontWeight="Normal" Click="btnlogout_Click"/>
+                    <Frame x:Name="Front" Margin="200,-190,93,0" Height="330" VerticalAlignment="Top" Width="462"/>
                 </Menu>
             </ContentControl>
         </Grid>
     </Grid>
-    
+
 </Window>

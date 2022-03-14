@@ -19,16 +19,17 @@
                             </StackPanel>
                         </ItemsPanelTemplate>
                     </Menu.ItemsPanel>
-                    <MenuItem Header="ADD STANDARD"></MenuItem>
-                    <MenuItem Header="ADD DIVISION"></MenuItem>
-                    <MenuItem Header="ADD STAFF"></MenuItem>
-                    <MenuItem Header="ADD STUDENT"></MenuItem>
-                    <MenuItem Header="STAFF REPORT"></MenuItem>
-                    <MenuItem Header="STUDENT REPORT"></MenuItem>
-                    <MenuItem Header="ATTENDANCE"></MenuItem>
+                    <MenuItem Header="ADD STANDARD" Click="MenuItem_Click"></MenuItem>
+                    <MenuItem Header="ADD DIVISION" Click="MenuItem_Click_1"></MenuItem>
+                    <MenuItem Header="ADD STAFF" Click="MenuItem_Click_2"></MenuItem>
+                    <MenuItem Header="ADD STUDENT" Click="MenuItem_Click_3"></MenuItem>
+                    <MenuItem Header="STAFF REPORT" Click="MenuItem_Click_4"></MenuItem>
+                    <MenuItem Header="STUDENT REPORT" Click="MenuItem_Click_5"></MenuItem>
                 </Menu>
             </ContentControl>
         </Grid>
+
         <Button Content="LOGOUT" HorizontalAlignment="Left" Margin="82,197,0,0" VerticalAlignment="Top" Background="#eb8dde" Foreground="White" Click="Button_Click"/>
+        <Frame x:Name="Front" Margin="225,81,83,0" Height="284" VerticalAlignment="Top"/>
     </Grid>
 </Window>

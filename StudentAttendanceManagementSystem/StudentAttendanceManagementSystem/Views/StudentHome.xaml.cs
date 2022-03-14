@@ -30,5 +30,15 @@ namespace StudentAttendanceManagementSystem.Views
             mainWindow.Show();
             this.Close();
         }
+
+        private void MenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            Front.Content = new StudentMyProfile();
+        }
+
+        private void MenuItem_Click_1(object sender, RoutedEventArgs e)
+        {
+            Front.Content = new Leave();
+        }
     }
 }

@@ -30,5 +30,35 @@ namespace StudentAttendanceManagementSystem.Views
             mainWindow.Show();
             this.Close();
         }
+
+        private void MenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            Front.Content = new AddStandard();
+        }
+
+        private void MenuItem_Click_1(object sender, RoutedEventArgs e)
+        {
+            Front.Content = new AddDivision();
+        }
+
+        private void MenuItem_Click_2(object sender, RoutedEventArgs e)
+        {
+            Front.Content = new AddStaff();
+        }
+
+        private void MenuItem_Click_3(object sender, RoutedEventArgs e)
+        {
+            Front.Content = new AddStudent();
+        }
+
+        private void MenuItem_Click_4(object sender, RoutedEventArgs e)
+        {
+            Front.Content = new StaffReport();
+        }
+
+        private void MenuItem_Click_5(object sender, RoutedEventArgs e)
+        {
+            Front.Content = new StudentReport();
+        }
     }
 }
