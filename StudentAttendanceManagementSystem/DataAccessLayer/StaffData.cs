@@ -20,7 +20,6 @@ namespace DataAccessLayer
                 staff.StaffName = staffModel.StaffName;
                 staff.Email = staffModel.StaffEmail;
                 staff.Mobile = staffModel.StaffMobile;
-                //staff.Image = staffModel.StaffImage;
                 staff.Qualification = staffModel.Qualification;
                 staff.Address = staffModel.StaffAddress;
                 staff.City = staffModel.StaffCity;
@@ -28,10 +27,8 @@ namespace DataAccessLayer
                 staff.UserName = staffModel.StaffUserName;
                 staff.Password = staffModel.StaffPassword;
                 staff.Gender = staffModel.StaffGender;
-                //staff.RoleID = 2;
                 studentManagementSystemEntities.Staffs.Add(staff);
                 studentManagementSystemEntities.SaveChanges();
-                // MessageBox.Show("Value Added");
             }
             catch (Exception ex)
             {
@@ -39,32 +36,6 @@ namespace DataAccessLayer
             }
 
         }
-        //public List<StaffModel> SaveStaffData()
-        //{
-        //    StudentManagementSystemEntities studentManagementSystemEntities = new StudentManagementSystemEntities();
-        //    var result = from staffObj in studentManagementSystemEntities.Staffs
-        //                 join newObj in studentManagementSystemEntities.Genders on staffObj.Gender equals newObj.GenderID
-        //                 select staffObj;
-        //    List<StaffModel> staffModels = new List<StaffModel>();
-        //    foreach (var item in result)
-        //    {
-        //        StaffModel model = new StaffModel();
-        //        model.StaffID = item.StaffID;
-        //        model.StaffName=item.StaffName;
-        //        model.StaffEmail = item.Email;
-        //        model.StaffMobile = item.Mobile;
-        //        model.Qualification=item.Qualification;
-        //        model.StaffAddress=item.Address;
-        //        model.StaffCity=item.City;
-        //        model.StaffPincode=item.Pincode;
-        //        model.StaffUserName=item.UserName;
-        //        model.StaffPassword=item.Password;
-        //        model.StaffGender = item.GenderName;
-        //        model.RoleID = 3;
-        //        staffModels.Add(model);
-        //    }
-        //    return staffModels;
-        //}
         public List<StaffModel> GetStaffList() 
         {
             StudentManagementSystemEntities studentManagementSystemEntities = new StudentManagementSystemEntities();

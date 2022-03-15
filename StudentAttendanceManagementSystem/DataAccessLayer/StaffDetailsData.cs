@@ -56,15 +56,12 @@ namespace DataAccessLayer
                 foreach (var item in query)
                 {
                     item.StaffName = staffModel.StaffName;
-                   // item.Standard = staffModel.Standard;
                     item.Pincode = staffModel.StaffPincode;
                     item.City = staffModel.StaffCity;
                     item.Mobile= staffModel.StaffMobile;
                     item.Email = staffModel.StaffEmail;
                     item.Address= staffModel.StaffAddress;
-                    //item.Gender= staffModel.StaffGender;
                     item.Password= staffModel.StaffPassword;
-                    //item.Qualification= staffModel.Qualification;
                     item.UserName= staffModel.StaffUserName;
 
                 }

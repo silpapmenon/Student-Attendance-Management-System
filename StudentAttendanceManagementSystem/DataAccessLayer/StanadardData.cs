@@ -15,12 +15,9 @@ namespace DataAccessLayer
             {
                 StudentManagementSystemEntities studentManagementSystemEntities = new StudentManagementSystemEntities();
                 Standard standard = new Standard();
-                //standard.StandardID = standardModel.StandardID;
-                //standard.StandardID = 4;
                 standard.StandardName = standardModel.StandardName;
                 studentManagementSystemEntities.Standards.Add(standard);
                 studentManagementSystemEntities.SaveChanges();
-                // MessageBox.Show("Value Added");
             }
             catch (Exception ex)
             {

@@ -20,16 +20,13 @@ namespace DataAccessLayer
             {
                 LeaveModel leaveModel = new LeaveModel();
                 leaveModel.LeaveID = item.LeaveID;
-                //leaveModel.StudentID=item.StudentID;
                 leaveModel.RollNo=item.RollNo;
                 leaveModel.Standard = item.StandardName;
                 leaveModel.Division = item.DivisionName;
                 leaveModel.Message = item.Message;
                 leaveModel.NumDays = item.NumDays;
                 leaveModel.Date=item.Date;
-                
-               // leaveModel.Date = (DateTime)item.EndDate;
-                leaveModels.Add(leaveModel);
+                 leaveModels.Add(leaveModel);
             }
             return leaveModels;
 
@@ -50,7 +47,7 @@ namespace DataAccessLayer
 
                 studentManagementSystemEntities.Leaves.Add(leave);
                 studentManagementSystemEntities.SaveChanges();
-                // MessageBox.Show("Value Added");
+                
             }
             catch (Exception ex)
             {
