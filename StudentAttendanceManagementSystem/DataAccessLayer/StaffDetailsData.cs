@@ -55,17 +55,17 @@ namespace DataAccessLayer
                             select staffinfo;
                 foreach (var item in query)
                 {
-                    item.StaffName = item.StaffName;
-                    item.Standard = item.Standard;
-                    item.Pincode = item.Pincode;
-                    item.City = item.City;
-                    item.Mobile= item.Mobile;
-                    item.Email = item.Email;
-                    item.Address= item.Address;
-                    item.Gender= item.Gender;
-                    item.Password= item.Password;
-                    item.Qualification= item.Qualification;
-                    item.UserName= item.UserName;
+                    item.StaffName = staffModel.StaffName;
+                   // item.Standard = staffModel.Standard;
+                    item.Pincode = staffModel.StaffPincode;
+                    item.City = staffModel.StaffCity;
+                    item.Mobile= staffModel.StaffMobile;
+                    item.Email = staffModel.StaffEmail;
+                    item.Address= staffModel.StaffAddress;
+                    //item.Gender= staffModel.StaffGender;
+                    item.Password= staffModel.StaffPassword;
+                    //item.Qualification= staffModel.Qualification;
+                    item.UserName= staffModel.StaffUserName;
 
                 }
                 staffs.SaveChanges();

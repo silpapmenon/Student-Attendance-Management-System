@@ -5,21 +5,20 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:StudentAttendanceManagementSystem.Views"
              mc:Ignorable="d" d:DesignWidth="800" Height="574">
-    <Grid Height="542" VerticalAlignment="Center" Margin="0,0,29,0">
-        <ListView Name="UserGrid" Margin="23,-68,169,251" Background="Transparent" BorderThickness="0" >
-            <DataGrid Name="grdStudentReport" AutoGenerateColumns="False" CanUserAddRows="False" ColumnWidth="*" Margin="6,190,68,65" ItemsSource="{Binding StudentReport}" Height="132" Width="566">
-                <DataGrid.Columns>
-                    <DataGridTextColumn Header="Roll No" Binding="{Binding RollNo}" Width="60" IsReadOnly="True"/>
-                    <DataGridTextColumn Header="Student Name" Width="90" Binding="{Binding StudentName}" IsReadOnly="True"/>
-                    <DataGridTextColumn Header="Gender" Binding="{Binding GenderName}" IsReadOnly="True"/>
-                    <DataGridTextColumn Header="DOB" Width="60" Binding="{Binding DOB}" IsReadOnly="True"/>
-                    <DataGridTextColumn Header="Mobile" Binding="{Binding StudentMobile}" IsReadOnly="True"/>
-                    <DataGridTextColumn Header="Address" Binding="{Binding StudentAddress}" IsReadOnly="True"/>
-                    <DataGridTextColumn Header="City" Width="60" Binding="{Binding StudentCity}" IsReadOnly="True"/>
-                    <DataGridTextColumn Header="Pincode" Binding="{Binding Studentpincode}" IsReadOnly="True"/>
-                    <DataGridTextColumn Header="Email" Binding="{Binding StudentEmail}" IsReadOnly="True"/>
-                </DataGrid.Columns>
-            </DataGrid>
-        </ListView>
+    <Grid Height="542" VerticalAlignment="Top" Margin="0,0,29,0">
+
+        <DataGrid Name="grdStudentReport" AutoGenerateColumns="False" CanUserAddRows="False" ColumnWidth="*" Margin="36,40,68,65" ItemsSource="{Binding StudentReport}" Height="300" Width="566" VerticalAlignment="Top" HorizontalAlignment="Left">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Roll No" Binding="{Binding RollNo}" Width="60" IsReadOnly="True"/>
+                <DataGridTextColumn Header="Student Name" Width="90" Binding="{Binding StudentName}" IsReadOnly="True"/>
+                <DataGridTextColumn Header="Gender" Binding="{Binding GenderName}" IsReadOnly="True"/>
+                <DataGridTextColumn Header="DOB" Width="60" Binding="{Binding DOB}" IsReadOnly="True"/>
+                <DataGridTextColumn Header="Mobile" Binding="{Binding StudentMobile}" IsReadOnly="True"/>
+                <DataGridTextColumn Header="Address" Binding="{Binding StudentAddress}" IsReadOnly="True"/>
+                <DataGridTextColumn Header="City" Width="60" Binding="{Binding StudentCity}" IsReadOnly="True"/>
+                <DataGridTextColumn Header="Pincode" Binding="{Binding Studentpincode}" IsReadOnly="True"/>
+                <DataGridTextColumn Header="Email" Binding="{Binding StudentEmail}" IsReadOnly="True"/>
+            </DataGrid.Columns>
+        </DataGrid>
     </Grid>
 </UserControl>

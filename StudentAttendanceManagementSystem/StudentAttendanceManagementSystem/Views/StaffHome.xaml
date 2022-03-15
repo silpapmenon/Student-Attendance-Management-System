@@ -8,16 +8,16 @@
         Title="StaffHome" Height="550" Width="800">
     <Grid >
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="361*"/>
-            <ColumnDefinition Width="439*"/>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="550"/>
         </Grid.ColumnDefinitions>
         <Grid.Background>
             <ImageBrush ImageSource="/Images/Design.jpg" />
         </Grid.Background>
 
-        <Grid HorizontalAlignment="Left" Height="365" Margin="58,85,0,0" VerticalAlignment="Top" Width="190">
+        <Grid HorizontalAlignment="Left" Height="450" Margin="58,85,0,0" VerticalAlignment="Top" Width="190">
             <ContentControl >
-                <Menu Name="MenuSample" HorizontalAlignment="Left" VerticalAlignment="Top" Height="355" Background="#eb8dde" Foreground="White" RenderTransformOrigin="0.5,0.5" Margin="0,-35,0,0" Width="132">
+                <Menu Name="MenuSample" HorizontalAlignment="Left" VerticalAlignment="Top" Height="430" Background="#eb8dde" Foreground="White" RenderTransformOrigin="0.5,0.5" Margin="0,-35,0,0" Width="132">
                     <Menu.RenderTransform>
                         <TransformGroup>
                             <ScaleTransform/>
@@ -43,6 +43,6 @@
                 </Menu>
             </ContentControl>
         </Grid>
-        <Frame x:Name="Front" Margin="50,85,50,0" Height="400" VerticalAlignment="Top" Width="600" Grid.ColumnSpan="2"/>
+        <Frame x:Name="Front" Margin="0,85,-450,0" Height="430" VerticalAlignment="Top" Grid.Column="1"/>
     </Grid>
 </Window>

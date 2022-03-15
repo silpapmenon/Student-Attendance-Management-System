@@ -23,23 +23,26 @@ namespace StudentAttendanceManagementSystem.Views
     /// </summary>
     public partial class StaffProfile : UserControl
     {
-        StaffModel staffModels = new StaffModel();
+         public StaffModel staffModels = new StaffModel();
         public StaffProfile(StaffModel staffModel)
         {
             InitializeComponent();
-            staffModels = staffModel;
+
+             staffModels = staffModel;
             //Refresh();
+            StaffDetailsBusiness staffDetailsBusiness = new StaffDetailsBusiness();
+            grdstaffdetail.ItemsSource = staffDetailsBusiness.GetAllDetails(staffModel);
 
         }
+        
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             
-            txtName1.Text = (grdstaffdetail.SelectedItem as StudentModel).StudentName;
+            txtName1.Text = (grdstaffdetail.SelectedItem as StaffModel).StaffName;
            
             txtUsername.Text = (grdstaffdetail.SelectedItem as StaffModel).StaffUserName;
             txtPassword.Password = (grdstaffdetail.SelectedItem as StaffModel).StaffPassword;
-            //gender.Text = (grdstuds.SelectedItem as StudentModel).GenderName;
             txtEmail.Text = (grdstaffdetail.SelectedItem as StaffModel).StaffEmail;
             txtPincode.Text = (grdstaffdetail.SelectedItem as StaffModel).StaffPincode;
             txtAddress.Text = (grdstaffdetail.SelectedItem as StaffModel).StaffAddress;
@@ -102,12 +105,12 @@ namespace StudentAttendanceManagementSystem.Views
 
                                 StaffDetailsBusiness staffDetailsBusiness = new StaffDetailsBusiness();
                                 staffDetailsBusiness.UpdateStaffData(staffModels);
-                                MessageBox.Show("Student Details Edited");
+                                MessageBox.Show("Staff Details Edited");
                                 //Refresh();
                                 //txtid.Text = String.Empty;
                                 // grdstuds.ItemsSource = sdm.DisplayResult(s);
-
-                                //ClearTextBox();
+                                Refresh();
+                                ClearTextBox();
 
                             }
                         }
@@ -124,14 +127,15 @@ namespace StudentAttendanceManagementSystem.Views
                 MessageBox.Show("Enter All Fields");
             }
 
-            void Refresh()
-            {
-                StaffDetailsBusiness staffDetailsBusiness = new StaffDetailsBusiness();
-                grdstaffdetail.ItemsSource = staffDetailsBusiness.GetAllDetails(staffModels);
-            }
-
+            
 
         }
+        void Refresh()
+        {
+            StaffDetailsBusiness staffDetailsBusiness = new StaffDetailsBusiness();
+            grdstaffdetail.ItemsSource = staffDetailsBusiness.GetAllDetails(staffModels);
+        }
+
         public static bool isValidEmail(string inputEmail)
         {
             string strRegex = @"^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}" +
@@ -157,13 +161,7 @@ namespace StudentAttendanceManagementSystem.Views
         {
 
         }
-        void Refresh()
-        {
-            StaffModel model = new StaffModel();
-            model = staffModels;
-            StaffDetailsBusiness sdm = new StaffDetailsBusiness();
-            grdstaffdetail.ItemsSource = sdm.GetAllDetails(staffModels);
-        }
+        
         void ClearTextBox()
         {
             

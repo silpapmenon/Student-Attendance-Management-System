@@ -14,8 +14,8 @@
             <RowDefinition Height="293*"/>
             <RowDefinition Height="0*"/>
         </Grid.RowDefinitions>
-        <ListView Name="UserGrid" Margin="0,10,154,10"  >
-            <DataGrid Name="grdProductData" AutoGenerateColumns="False" CanUserAddRows="False" MaxColumnWidth="80"  Margin="10,15,268,82" ItemsSource="{Binding StaffViewList}" Height="156" Width="961">
+        <ListView Name="UserGrid" Margin="0,10,154,10" HorizontalAlignment="Left"  >
+            <DataGrid Name="grdProductData" AutoGenerateColumns="False" CanUserAddRows="False" MaxColumnWidth="80"  Margin="10,30,268,82" ItemsSource="{Binding StaffViewList}" Height="156" Width="961" >
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="Standard" Width="50" Binding="{Binding Standard}"  />
                     <DataGridTextColumn Header="Name" Width="50" Binding="{Binding StaffName}" />
@@ -52,8 +52,8 @@
         </ListView>
         <Grid Margin="18,208,314,95"  Grid.RowSpan="4">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="364*"/>
-                <ColumnDefinition Width="313*"/>
+                <ColumnDefinition Width="364"/>
+                <ColumnDefinition Width="313"/>
             </Grid.ColumnDefinitions>
             <Label Content="Add Staff" HorizontalAlignment="Left" Margin="280,4,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold"/>
             <Label Content="Standard" HorizontalAlignment="Left" Margin="10,42,0,0" VerticalAlignment="Top" Width="107" FontWeight="Bold"/>
