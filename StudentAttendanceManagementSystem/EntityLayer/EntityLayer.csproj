@@ -41,12 +41,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Interface\IAdminLogin.cs" />
     <Compile Include="Interface\IStaffDetails.cs" />
     <Compile Include="Model\AdminModel.cs" />
     <Compile Include="Model\AttendanceModel.cs" />
     <Compile Include="Model\ComplaintModel.cs" />
     <Compile Include="Model\DivisionModel.cs" />
     <Compile Include="Model\GenderModel.cs" />
+    <Compile Include="Model\IStaffUserLogin.cs" />
     <Compile Include="Model\LeaveModel.cs" />
     <Compile Include="Model\RolesModel.cs" />
     <Compile Include="Model\StaffModel.cs" />

@@ -13,7 +13,9 @@ namespace StudentAttendanceManagementSystem.Command
     public class DivisionSubmit:ICommand
     {
         public event EventHandler CanExecuteChanged;
-        public AddDivisionViewModel addDivisionViewModel { get; set; } 
+        public AddDivisionViewModel addDivisionViewModel { get; set; }
+        public object Messagebox { get; private set; }
+
         public DivisionSubmit(AddDivisionViewModel addDivisionView)
         {
             addDivisionViewModel = addDivisionView;
@@ -26,12 +28,27 @@ namespace StudentAttendanceManagementSystem.Command
 
         public void Execute(object parameter)
         {
-            DivisionModel division = new DivisionModel();
-            division.StandardID = addDivisionViewModel.StandardID;
-            division.DivisionName = addDivisionViewModel.DivisionName;
+            if (parameter.ToString() == "Add")
+            {
+                DivisionModel division = new DivisionModel();
+                division.StandardName = addDivisionViewModel.StandardName;
+                division.DivisionName = addDivisionViewModel.DivisionName;
+                division.Seat = addDivisionViewModel.Seat;
+                DivisionManager divisionManager = new DivisionManager();
+                divisionManager.SaveDivisionDetails(division);
+               
+            }
+            else if (parameter.ToString() == "Edit")
+            {
+                DivisionModel division = new DivisionModel();
+                division.DivisionID = addDivisionViewModel.DivisionID;
+                division.StandardName = addDivisionViewModel.StandardName;
+                division.DivisionName = addDivisionViewModel.DivisionName;
+                division.Seat = addDivisionViewModel.Seat;
+                DivisionManager divisionManager = new DivisionManager();
+                divisionManager.UpdateData(division);
+            }
             
-            DivisionManager divisionManager = new DivisionManager();
-            divisionManager.SaveDivisionDetails(division);
 
         }
     }

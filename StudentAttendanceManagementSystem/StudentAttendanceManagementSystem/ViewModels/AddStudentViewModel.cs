@@ -18,9 +18,9 @@ namespace StudentAttendanceManagementSystem.ViewModels
         public List<StudentModel> StudentViewList { get => _studentViewList; set => _studentViewList = value; }
 
         public StudentManager studentManager = new StudentManager();
-        public AddStudentViewModel(StudentModel student)
+        public AddStudentViewModel()
         {
-            _studentModel = student;
+            
             StudentViewList = studentManager.DisplayResult();
             Submit = new SubmitCommand(this);
         }

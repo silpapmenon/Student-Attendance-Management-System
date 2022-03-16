@@ -19,7 +19,7 @@
             <StackPanel>
                 <StackPanel Orientation="Horizontal" Margin="250,10,0,0">
                 <Label x:Name="lblselectstandard" Content="Select Standard" HorizontalAlignment="Left" VerticalAlignment="Top" Width="105" Height="30" Background="White"/>
-                    <ComboBox x:Name="cmbstandard"   Margin="50,3,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120"  Height="25" Background="White" Foreground="Black" ItemsSource="{Binding StandardName}"  Grid.ColumnSpan="9">
+                    <ComboBox x:Name="cmbstandard"   Margin="50,3,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120"  Height="25" Background="White" Foreground="Black" Text="{Binding StandardName}"  Grid.ColumnSpan="9">
                     <TextBlock Text="LKG"></TextBlock>
                     <TextBlock Text="UKG"></TextBlock>
                     <TextBlock Text="FIRST"></TextBlock>
@@ -27,11 +27,11 @@
                     <TextBlock Text="THIRD"></TextBlock>
                     <TextBlock Text="FOURTH"></TextBlock>
                 </ComboBox>
-                    <DatePicker x:Name="dt" Margin="140,0,0,0" Height="25"/>
+                    <DatePicker x:Name="dt" Margin="140,0,0,0" Height="25"  SelectedDate="{Binding AttendanceDate }"/>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal" Margin="-200,20,0,0" Width="300">
                     <Label x:Name="lblselectdivision" Content="Select Division" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="105" Background="White"/>
-                    <ComboBox x:Name="cmbSelectdivision"  Margin="50,3,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Height="26" Background="White" Foreground="Black" ItemsSource="{Binding DivisionName}" Grid.ColumnSpan="9">
+                    <ComboBox x:Name="cmbSelectdivision"  Margin="50,3,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Height="26" Background="White" Foreground="Black" Text="{Binding DivisionName}" Grid.ColumnSpan="9">
                         <TextBlock Text="A"></TextBlock>
                         <TextBlock Text="B"></TextBlock>
                     </ComboBox>
@@ -39,16 +39,16 @@
                
                 <StackPanel Orientation="Horizontal"  Margin="0,20,0,0" Width="500">
                 <Label x:Name="lblrollno" Content="Roll No" Width="105" Height="25" Background="White"/>
-                    <TextBox x:Name="txtrollno"  Margin="50,3,0,0" TextWrapping="Wrap" Width="120" Height="26"/>
-                    <Button x:Name="btnadd" Content="ADD" Margin="50,0,0,0" Height="26" Width="121" Background="RED" Click="btndivision_Click" />
+                    <TextBox x:Name="txtrollno" Text="{Binding RollNo}"  Margin="50,3,0,0" TextWrapping="Wrap" Width="120" Height="26"/>
+                    <Button x:Name="btnadd" Content="ADD" Margin="50,0,0,0" Height="26" Width="121" Background="RED" Command="{Binding AttandanceSubmit}" />
                 </StackPanel>
                 <StackPanel Orientation="Horizontal" Margin="-200,20,0,0" Width="300">
                     <Label x:Name="lblstudentname" Content="Student Name" HorizontalAlignment="Left" VerticalAlignment="Center" Width="105" Background="White"/>
-                    <TextBox x:Name="txtstudentname"  Margin="50,3,0,0" TextWrapping="Wrap" Width="120" Height="26" />
+                    <TextBox x:Name="txtstudentname" Text="{Binding StudentName}"  Margin="50,3,0,0" TextWrapping="Wrap" Width="120" Height="26" />
                 </StackPanel>
                 <StackPanel Orientation="Horizontal" Margin="-200,20,0,0" Width="300">
                 <Label x:Name="lblstatus" Content="Status" HorizontalAlignment="Left" VerticalAlignment="Top" Width="105" Background="White"/>
-                <ComboBox x:Name="cmbstatus" Margin="50,3,0,0" VerticalAlignment="Top" Width="120" Background="White" Foreground="Black" ItemsSource="{Binding Status}">
+                    <ComboBox x:Name="cmbstatus" Text="{Binding  Status}" Margin="50,3,0,0"  VerticalAlignment="Top" Width="120" Background="White" Foreground="Black">
                     <TextBlock Text="PRESENT"></TextBlock>
                     <TextBlock Text="ABSENT"></TextBlock>
                 </ComboBox>

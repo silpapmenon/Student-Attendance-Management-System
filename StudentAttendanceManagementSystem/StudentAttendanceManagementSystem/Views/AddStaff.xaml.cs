@@ -1,5 +1,6 @@
 ﻿using BusinessLayer;
 using EntityLayer.Model;
+using StudentAttendanceManagementSystem.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -27,8 +28,43 @@ namespace StudentAttendanceManagementSystem.Views
         public AddStaff()
         {
             InitializeComponent();
+            this.DataContext = new AddStaffViewModel();
             Refresh();
         }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         void Refresh()
         {
             StaffManager staffManager = new StaffManager();
@@ -53,7 +89,8 @@ namespace StudentAttendanceManagementSystem.Views
 
         private void Edit_Click(object sender, RoutedEventArgs e)
         {
-            id = (grdProductData.SelectedItem as StaffModel).StaffID;
+
+            txtid.Text = (grdProductData.SelectedItem as StaffModel).StaffID.ToString();
             //txtstaffID.Text= (grdProductData.SelectedItem as StaffModel).StaffID.ToString();
             txtstandard.Text = (grdProductData.SelectedItem as StaffModel).Standard.ToString();
             txtStaffName.Text = (grdProductData.SelectedItem as StaffModel).StaffName.ToString();
@@ -72,85 +109,6 @@ namespace StudentAttendanceManagementSystem.Views
         }
 
 
-
-        private void btnedit_Click(object sender, RoutedEventArgs e)
-        {
-            string StaffName = txtStaffName.Text;
-            string Email = txtEmail.Text;
-            string Mobile = txtStaffMobile.Text;
-            string Qualification = txtqualification.Text;
-            string Address = txtAddress.Text;
-            string City = txtCity.Text;
-            string Pincode = txtPincode.Text;
-            string UserName = txtUsername.Text;
-            string Password = pwdUsername.Password;
-            string Gender = txtgender.Text;
-            string Standard = txtstandard.Text;
-            if (!string.IsNullOrEmpty(StaffName) && !string.IsNullOrEmpty(Email) && !string.IsNullOrEmpty(Mobile)
-                && !string.IsNullOrEmpty(Qualification) && !string.IsNullOrEmpty(Address)
-                && !string.IsNullOrEmpty(City) && !string.IsNullOrEmpty(Pincode) && !string.IsNullOrEmpty(UserName)
-                && !string.IsNullOrEmpty(Password) && !string.IsNullOrEmpty(Gender) && !string.IsNullOrEmpty(Standard))
-            {
-                if (!int.TryParse(Pincode, out _))
-                {
-                    MessageBox.Show("Pincode should be a number");
-                }
-                else
-                {
-                    if (!isValidPhoneNumber(Mobile))
-                    {
-                        MessageBox.Show("Invalid Phone Number");
-                    }
-                    else
-                    {
-                        if (Mobile.Count() == 10)
-                        {
-                            if (!isValidEmail(Email))
-                            {
-                                MessageBox.Show("Invalid Email ID");
-                            }
-                            else
-                            {
-                                StaffModel staffModel = new StaffModel();
-                                staffModel.StaffID = id;
-                                staffModel.Standard = txtstandard.Text;
-                                staffModel.StaffName = txtStaffName.Text;
-                                staffModel.StaffEmail = txtEmail.Text;
-                                staffModel.StaffMobile = txtStaffMobile.Text;
-                                staffModel.Qualification = txtqualification.Text;
-                                staffModel.StaffAddress = txtAddress.Text;
-                                staffModel.StaffCity = txtCity.Text;
-                                staffModel.StaffPincode = txtPincode.Text;
-                                staffModel.StaffUserName = txtUsername.Text;
-                                staffModel.StaffPassword = pwdUsername.Password;
-                                staffModel.StaffGender = txtgender.Text;
-                                StaffManager staffManager = new StaffManager();
-                                staffManager.UpdateData(staffModel);
-                                MessageBox.Show("Edited");
-                                Refresh();
-                                ClearTextBox();
-                            }
-                        }
-                        else
-                        {
-                            MessageBox.Show("Mobile Number Should be 10 Digit");
-
-                        }
-                    }
-
-                }
-            }
-            else
-            {
-                MessageBox.Show("Enter All Fields");
-            }
-
-
-           
-
-
-
-        }
         private void Delete_Click(object sender, RoutedEventArgs e)
         {
             try
@@ -181,79 +139,7 @@ namespace StudentAttendanceManagementSystem.Views
 
 
 
-        private void btnAdd_Click(object sender, RoutedEventArgs e)
-        {
-
-            string StaffName = txtStaffName.Text;
-            string Email = txtEmail.Text;
-            string Mobile = txtStaffMobile.Text;
-            string Qualification = txtqualification.Text;
-            string Address = txtAddress.Text;
-            string City = txtCity.Text;
-            string Pincode = txtPincode.Text;
-            string UserName = txtUsername.Text;
-            string Password = pwdUsername.Password;
-            string Gender = txtgender.Text;
-            string Standard = txtstandard.Text;
-            if (!string.IsNullOrEmpty(StaffName) && !string.IsNullOrEmpty(Email) && !string.IsNullOrEmpty(Mobile)
-                && !string.IsNullOrEmpty(Qualification) && !string.IsNullOrEmpty(Address)
-                && !string.IsNullOrEmpty(City) && !string.IsNullOrEmpty(Pincode) && !string.IsNullOrEmpty(UserName)
-                && !string.IsNullOrEmpty(Password) && !string.IsNullOrEmpty(Gender) && !string.IsNullOrEmpty(Standard))
-            {
-                if (!int.TryParse(Pincode, out _))
-                {
-                    MessageBox.Show("Pincode should be a number");
-                }
-                else
-                {
-                    if (!isValidPhoneNumber(Mobile))
-                    {
-                        MessageBox.Show("Invalid Phone Number");
-                    }
-                    else
-                    {
-                        if (Mobile.Count() == 10)
-                        {
-                            if (!isValidEmail(Email))
-                            {
-                                MessageBox.Show("Invalid Email ID");
-                            }
-                            else
-                            {
-                                StaffModel staffModel = new StaffModel();
-                                staffModel.Standard = Standard;
-                                staffModel.StaffName = StaffName;
-                                staffModel.StaffEmail = Email;
-                                staffModel.Qualification = Qualification;
-                                staffModel.StaffGender = Gender;
-                                staffModel.StaffAddress = Address;
-                                staffModel.StaffCity = City;
-                                staffModel.StaffUserName = UserName;
-                                staffModel.StaffPincode = Pincode;
-                                staffModel.StaffPassword = Password;
-                                staffModel.StaffMobile = Mobile;
-                                StaffManager staffManager = new StaffManager();
-                                staffManager.SaveStaffDetails(staffModel);
-                                MessageBox.Show("Value Inserted");
-                                Refresh();
-                                ClearTextBox();
-                            }
-                        }
-                        else
-                        {
-                            MessageBox.Show("Mobile Number Should be 10 Digit");
-
-                        }
-                    }
-                        
-                }
-            }
-
-            else
-            {
-                MessageBox.Show("Enter All Fields");
-            }
-        }
+        
         public static bool isValidEmail(string inputEmail)
         {
             string strRegex = @"^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}" +

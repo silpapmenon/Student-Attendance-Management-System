@@ -1,4 +1,5 @@
-﻿using EntityLayer.Model;
+﻿using BusinessLayer;
+using EntityLayer.Model;
 using StudentAttendanceManagementSystem.ViewModels;
 using System;
 using System.Collections.Generic;
@@ -30,18 +31,17 @@ namespace StudentAttendanceManagementSystem.Views
 
         private void button1_Click(object sender, RoutedEventArgs e)
         {
-            SqlConnection sqlCon = new SqlConnection(@"Data Source=.; Database=StudentManagementSystem; Integrated Security=SSPI;");
-            try
+
+            string username = textusername.Text;
+            string password = passwordbh.Password;
+            if (!string.IsNullOrEmpty(username) && !string.IsNullOrEmpty(password))
             {
-                if (sqlCon.State == ConnectionState.Closed)
-                    sqlCon.Open();
-                String query = "SELECT COUNT(1) FROM Staff WHERE UserName=@UserName AND Password=@Password";
-                SqlCommand sqlCmd = new SqlCommand(query, sqlCon);
-                sqlCmd.CommandType = CommandType.Text;
-                sqlCmd.Parameters.AddWithValue("@UserName", textusername.Text);
-                sqlCmd.Parameters.AddWithValue("@Password", password.Password);
-                int count = Convert.ToInt32(sqlCmd.ExecuteScalar());
-                if (count == 1)
+                StaffModel model = new StaffModel();
+                model.StaffUserName = username;
+                model.StaffPassword = password;
+                StaffUserLoginBusiness adminUserLoginBusiness = new StaffUserLoginBusiness();
+                var result = adminUserLoginBusiness.GetAll(model);
+                if (result == true)
                 {
                     StaffModel staffModel = new StaffModel();
                     staffModel.StaffUserName = textusername.Text;
@@ -50,18 +50,12 @@ namespace StudentAttendanceManagementSystem.Views
                     this.Close();
                 }
                 else
-                {
                     MessageBox.Show("Username or password is incorrect.");
-                }
+
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            finally
-            {
-                sqlCon.Close();
-            }
+            else
+                MessageBox.Show("Enter both fields");
+        
         }
     }
 }

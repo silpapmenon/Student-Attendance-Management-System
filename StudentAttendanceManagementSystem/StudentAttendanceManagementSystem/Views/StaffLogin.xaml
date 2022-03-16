@@ -15,7 +15,7 @@
     <TextBlock Opacity="0.7" Height="24" HorizontalAlignment="Left" Margin="400,118,0,0" Name="textBlock1" Text="User ID" VerticalAlignment="Top" Width="73" FontWeight="Bold" FontSize="20" />
     <TextBlock Opacity="0.7" Height="44" HorizontalAlignment="Left" Margin="400,178,0,0" Name="textBlock2" Text="Password" VerticalAlignment="Top" Width="93" FontWeight="Bold" FontSize="20" />
     <TextBox  Opacity="0.7" Height="24" HorizontalAlignment="Left" Margin="508,118,0,0" Name="textusername" VerticalAlignment="Top" Width="247" />
-    <PasswordBox Opacity="0.7" Height="24" HorizontalAlignment="Left" Margin="508,178,0,0" Name="password" VerticalAlignment="Top" Width="247" />
+    <PasswordBox Opacity="0.7" Height="24" HorizontalAlignment="Left" Margin="508,178,0,0" Name="passwordbh" VerticalAlignment="Top" Width="247" />
         <Button Opacity="0.7" Content="Login" Height="44" HorizontalAlignment="Left" Margin="580,254,0,0" Name="button1" VerticalAlignment="Top" Width="104" FontWeight="Bold" FontSize="20" Click="button1_Click">
             <Button.Resources>
                 <Style TargetType="Border">

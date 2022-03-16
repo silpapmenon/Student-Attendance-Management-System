@@ -58,6 +58,7 @@
     <Compile Include="Admin.cs">
       <DependentUpon>AttendanceManagementDB.tt</DependentUpon>
     </Compile>
+    <Compile Include="AdminLoginData.cs" />
     <Compile Include="Attendance.cs">
       <DependentUpon>AttendanceManagementDB.tt</DependentUpon>
     </Compile>
@@ -105,6 +106,7 @@
     <Compile Include="StaffData.cs" />
     <Compile Include="StaffDetailData.cs" />
     <Compile Include="StaffDetailsData.cs" />
+    <Compile Include="StaffUserLoginData.cs" />
     <Compile Include="StanadardData.cs" />
     <Compile Include="StaffReport.cs" />
     <Compile Include="Standard.cs">

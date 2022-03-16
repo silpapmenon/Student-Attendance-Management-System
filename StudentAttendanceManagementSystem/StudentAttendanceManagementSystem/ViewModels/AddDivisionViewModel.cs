@@ -10,19 +10,12 @@ using System.Windows.Input;
 
 namespace StudentAttendanceManagementSystem.ViewModels
 {
-    public class AddDivisionViewModel:BaseViewModel
+    public class AddDivisionViewModel : BaseViewModel
     {
-        public ICommand Submit { get; set; }
-        private DivisionModel _divisionModel;
-        private List<DivisionModel> _divisionViewList;
-        public List<DivisionModel> DivisionViewList { get => _divisionViewList; set => _divisionViewList = value; }
-
-        public DivisionManager divisionManager = new DivisionManager();
-        public AddDivisionViewModel(DivisionModel division)
+        public ICommand AddDivisionSubmit { get; set; }
+        public AddDivisionViewModel()
         {
-            _divisionModel = division;
-            DivisionViewList = divisionManager.DisplayResult();
-            Submit = new DivisionSubmit(this);
+            AddDivisionSubmit = new DivisionSubmit(this);
         }
         private int _divisionID;
         private string _divisionName;
@@ -62,7 +55,7 @@ namespace StudentAttendanceManagementSystem.ViewModels
             set
             {
                 _standardName = value;
-                OnPropertyChanged("DivisionName");
+                OnPropertyChanged("Standard Name");
             }
         }
         public int Seat

@@ -1,6 +1,7 @@
 ﻿using BusinessLayer;
 using DataAccessLayer;
 using EntityLayer.Model;
+using StudentAttendanceManagementSystem.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -26,6 +27,7 @@ namespace StudentAttendanceManagementSystem.Views
         public Attendance()
         {
             InitializeComponent();
+            this.DataContext = new AttendanceViewModel();
             Refresh();
         }
         void Refresh()
@@ -44,52 +46,7 @@ namespace StudentAttendanceManagementSystem.Views
         }
 
 
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void grdProductData_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-
-        }
-
-        private void Button_Click_1(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void Button_Click_2(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void grdProductData_SelectionChanged_1(object sender, SelectionChangedEventArgs e)
-        {
-
-        }
-
-        private void Button_Click_3(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void btndivision_Click(object sender, RoutedEventArgs e)
-        {
-            AttendanceModel attendanceModel = new AttendanceModel();
-            attendanceModel.StudentName = txtstudentname.Text;
-            attendanceModel.DivisionName = cmbSelectdivision.Text;
-            attendanceModel.StandardName = cmbstandard.Text;
-            //attendanceModel.AttendanceDate = DateTime.Now;
-            attendanceModel.AttendanceDate = Convert.ToDateTime(dt.Text);
-            attendanceModel.Rollno =Convert.ToInt32(txtrollno.Text);
-            attendanceModel.Status = cmbstatus.Text;
-            AttendanceData attendanceData = new AttendanceData();
-            attendanceData.SaveAttendanceData(attendanceModel);
-            MessageBox.Show("Value Inserted");
-            Refresh();
-            ClearTextBox();
-        }
+      
 
        
     }

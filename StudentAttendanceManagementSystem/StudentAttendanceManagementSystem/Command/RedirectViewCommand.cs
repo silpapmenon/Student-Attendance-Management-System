@@ -48,7 +48,7 @@ namespace StudentAttendanceManagementSystem.Command
             else if (parameter.ToString() == "ADD STAFF")
             {
                 StaffModel staffModel = new StaffModel();
-                model.SelectedView = new AddStaffViewModel(staffModel);
+                model.SelectedView = new AddStaffViewModel();
             }
             //else if (parameter.ToString() == "ADMIN PANEL")
             //{
@@ -57,7 +57,7 @@ namespace StudentAttendanceManagementSystem.Command
             else if (parameter.ToString() == "ADD STUDENT")
             {
                 StudentModel studentModel = new StudentModel();
-                model.SelectedView = new AddStudentViewModel(studentModel);
+                model.SelectedView = new AddStudentViewModel();
 
             }
             else if (parameter.ToString() == "CONTACT US")
@@ -91,8 +91,8 @@ namespace StudentAttendanceManagementSystem.Command
             }
             else if (parameter.ToString() == "ADD DIVISIONS")
             {
-                DivisionModel divisionModel = new DivisionModel();
-                model.SelectedView = new AddDivisionViewModel(divisionModel);
+                //DivisionModel divisionModel = new DivisionModel();
+                //model.SelectedView = new AddDivisionViewModel();
             }
             
             else if (parameter.ToString() == "APPLY LEAVE")

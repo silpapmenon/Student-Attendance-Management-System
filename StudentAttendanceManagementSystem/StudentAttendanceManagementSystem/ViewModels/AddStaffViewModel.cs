@@ -17,11 +17,11 @@ namespace StudentAttendanceManagementSystem.ViewModels
         public List<StaffModel> StaffViewList { get => _staffViewList; set => _staffViewList = value; }
 
         public StaffManager staffManager = new StaffManager();
-        public AddStaffViewModel(StaffModel staff)
+        public AddStaffViewModel()
         {
-            _staffModel = staff;
+           
             StaffViewList = staffManager.DisplayResult();
-            Submit = new StaffSubmit(this);
+            AddStaffSubmit = new StaffSubmit(this);
            
         }
        
@@ -168,7 +168,7 @@ namespace StudentAttendanceManagementSystem.ViewModels
                 OnPropertyChanged("RoleID");
             }
         }
-        public ICommand Submit { get; set; }
+        public ICommand AddStaffSubmit { get; set; }
     }
 
 }

@@ -8,7 +8,7 @@
     <Grid >
         <StackPanel Orientation="Vertical" Margin="50">
         <StackPanel>
-        <DataGrid Name="grdDivisionData" AutoGenerateColumns="False" CanUserAddRows="False" ColumnWidth="*" Width="495" Height="134" ItemsSource="{Binding DivisionViewList}" HorizontalAlignment="Left">
+        <DataGrid Name="grdDivisionData" AutoGenerateColumns="False" CanUserAddRows="False" ColumnWidth="*" Width="495" Height="134" HorizontalAlignment="Left">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Division ID" Binding="{Binding DivisionID}" Width="70" IsReadOnly="True"/>
                 <DataGridTextColumn Header="Standard" Binding="{Binding StandardName}" Width="70" IsReadOnly="True"/>
@@ -35,20 +35,16 @@
 
             <StackPanel Orientation="Horizontal" Margin="0,30,0,0">
                 <Label Content="Division" HorizontalAlignment="Left" Margin="30,10,0,0" VerticalAlignment="Top" Width="107" FontWeight="Bold"/>
-                <ComboBox x:Name="txtDivisionName" HorizontalAlignment="Left" Margin="0,10,0,0" VerticalAlignment="Top" Width="120" Grid.ColumnSpan="2" >
+                <ComboBox x:Name="txtDivisionName" HorizontalAlignment="Left" Margin="0,10,0,0" VerticalAlignment="Top" Width="120" Grid.ColumnSpan="2" Text="{Binding DivisionName}">
                     <TextBlock Text="A"></TextBlock>
                     <TextBlock Text="B"></TextBlock>
                 </ComboBox>
-                <Label Content="Division" HorizontalAlignment="Left" Margin="23,0,0,0" VerticalAlignment="Top"  FontWeight="Bold"/>
-                <ComboBox Name="DivisionName1" HorizontalAlignment="Left" Margin="20,0,0,0" VerticalAlignment="Top" Width="120">
-                    <TextBlock Text="A"></TextBlock>
-                    <TextBlock Text="B"></TextBlock>
-                </ComboBox>
+                <TextBox Height="26" TextWrapping="Wrap" Name="txtid" Width="41" Text="{Binding DivisionID}" Margin="100,0,0,0"/>
 
             </StackPanel>
             <StackPanel Orientation="Horizontal">
                 <Label Content="Standard" HorizontalAlignment="Left" Margin="30,10,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
-                <ComboBox x:Name="txtStandardName" HorizontalAlignment="Left" Margin="48,10,0,0" VerticalAlignment="Top" Width="120" Height="22" Grid.ColumnSpan="2">
+                <ComboBox x:Name="txtStandardName" HorizontalAlignment="Left" Margin="48,10,0,0" VerticalAlignment="Top" Width="120" Height="22" Grid.ColumnSpan="2" Text="{Binding StandardName}">
                     <TextBlock Text="LKG"></TextBlock>
                     <TextBlock Text="UKG"></TextBlock>
                     <TextBlock Text="FIRST"></TextBlock>
@@ -56,28 +52,17 @@
                     <TextBlock Text="THIRD"></TextBlock>
                     <TextBlock Text="FOURTH"></TextBlock>
                 </ComboBox>
-                <Label Content="Standard" HorizontalAlignment="Left" Margin="22,0,0,0" VerticalAlignment="Top" Width="107" FontWeight="Bold" RenderTransformOrigin="0.611,0.617"/>
-                <ComboBox Name="StandardName1"  HorizontalAlignment="Left" Margin="-30,0,0,0" VerticalAlignment="Top" Width="120">
-                    <TextBlock Text="LKG"/>
-                    <TextBlock Text="UKG"/>
-                    <TextBlock Text="FIRST"/>
-                    <TextBlock Text="SECOND"/>
-                    <TextBlock Text="THIRD"/>
-                    <TextBlock Text="FOURTH"/>
-                </ComboBox>
             </StackPanel>
 
             <StackPanel Orientation="Horizontal">
                 <Label Content="Seat" HorizontalAlignment="Left" Margin="30,10,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
-                <TextBox x:Name="txtSeat" HorizontalAlignment="Left" Margin="75,10,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="122" Height="25" Grid.ColumnSpan="2"/>
-                <Label Content="Seat" HorizontalAlignment="Left" Margin="26,10,0,0" VerticalAlignment="Top"  FontWeight="Bold"/>
-                <TextBox x:Name="txtSeatEdit" HorizontalAlignment="Left" Margin="38,10,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Height="24" RenderTransformOrigin="0.713,0.136"/>
+                <TextBox x:Name="txtSeat" HorizontalAlignment="Left" Margin="75,10,0,0" TextWrapping="Wrap" Text="{Binding Seat}" VerticalAlignment="Top" Width="122" Height="25" Grid.ColumnSpan="2"/>
 
             </StackPanel>
 
             <StackPanel Orientation="Horizontal">
-                <Button x:Name="btnAdd" Content="Add" HorizontalAlignment="Left" Margin="147,20,0,0"  Width="90" FontSize="18" FontWeight="Bold" Background="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}" Click="btnAdd_Click" />
-                <Button x:Name="btnEdit" Content="Edit" HorizontalAlignment="Left" Margin="162,20,0,0" VerticalAlignment="Top" Width="90" Height="28" FontSize="18" FontWeight="Bold" Background="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}" Click="btnEdit_Click"/>
+                <Button x:Name="btnAdd" Content="Add" HorizontalAlignment="Left" Margin="147,20,0,0"  Width="90" FontSize="18" FontWeight="Bold" Background="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}" Command="{Binding AddDivisionSubmit}" CommandParameter="Add" />
+                <Button x:Name="btnEdit" Content="Edit" HorizontalAlignment="Left" Margin="162,20,0,0" VerticalAlignment="Top" Width="90" Height="28" FontSize="18" FontWeight="Bold" Background="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}" Command="{Binding AddDivisionSubmit}" CommandParameter="Edit"/>
 
             </StackPanel>
            

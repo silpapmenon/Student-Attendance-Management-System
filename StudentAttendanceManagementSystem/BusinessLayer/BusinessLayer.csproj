@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdminUserLoginBusiness.cs" />
     <Compile Include="AttendanceBusinessModel.cs" />
     <Compile Include="AttendanceManager.cs" />
     <Compile Include="DivisionManager.cs" />
@@ -50,6 +51,7 @@
     <Compile Include="StaffDetailsBusiness.cs" />
     <Compile Include="StaffReportBusinessModel.cs" />
     <Compile Include="StaffManager.cs" />
+    <Compile Include="StaffUserLoginBusiness.cs" />
     <Compile Include="StandardManager.cs" />
     <Compile Include="StudentDetailsManager.cs" />
     <Compile Include="StudentManager.cs" />

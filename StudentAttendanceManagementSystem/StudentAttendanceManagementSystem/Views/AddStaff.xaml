@@ -67,7 +67,7 @@
             <Label Content="Gender" HorizontalAlignment="Left" Margin="305,0,0,0" VerticalAlignment="Center" FontWeight="Bold" Grid.ColumnSpan="2" Width="105"/>
             <Label Content="Username" HorizontalAlignment="Left" Margin="10,216,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
             <Label Content="Password" HorizontalAlignment="Left" Margin="307,198,0,0" VerticalAlignment="Top" FontWeight="Bold" Grid.ColumnSpan="2"/>
-            <Button x:Name="btnAdd" Content="Add" HorizontalAlignment="Left" Margin="187,274,0,0" VerticalAlignment="Top" Width="140" Height="43"  FontSize="18" FontWeight="Bold" Click="btnAdd_Click"/>
+            <Button x:Name="btnAdd" Content="Add" HorizontalAlignment="Left" Margin="187,274,0,0" VerticalAlignment="Top" Width="140" Height="43"  FontSize="18" FontWeight="Bold" Command="{Binding AddStaffSubmit}" CommandParameter="{Binding ElementName= pwdUsername }" />
             <TextBox x:Name="txtStaffName" HorizontalAlignment="Left" Margin="139,79,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="140" Height="22" FontSize="14" Text="{Binding StaffName}" />
             <TextBox x:Name="txtAddress" HorizontalAlignment="Center" Background="White" Margin="0,40,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="140" Height="22" FontSize="14" Text="{Binding StaffAddress}" Grid.Column="1" />
             <TextBox x:Name="txtStaffMobile" HorizontalAlignment="Center" Margin="0,79,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="140" Height="22" FontSize="14" Text="{Binding StaffMobile}" Grid.Column="1" />
@@ -78,13 +78,13 @@
             <TextBox x:Name="txtqualification" HorizontalAlignment="Left" Height="28" Margin="139,112,0,0" VerticalAlignment="Top" Width="140" Text="{Binding Qualification}"/>
             <TextBox x:Name="txtUsername" HorizontalAlignment="Left" Margin="139,221,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="140" Height="22" FontSize="14" Text="{Binding StaffUsername}"/>
             <PasswordBox x:Name="pwdUsername" HorizontalAlignment="Center" Margin="0,203,0,0"  VerticalAlignment="Top" Width="140" Height="22" FontSize="14"  Grid.Column="1"/>
-            <ComboBox x:Name="txtgender" HorizontalAlignment="Center" Height="20" Margin="0,161,0,0" VerticalAlignment="Top" Width="140" Grid.Column="1" >
+            <ComboBox x:Name="txtgender" Text="{Binding Gender}" HorizontalAlignment="Center" Height="20" Margin="0,161,0,0" VerticalAlignment="Top" Width="140" Grid.Column="1" >
                 <TextBlock Text="Female"></TextBlock>
                 <TextBlock Text="Male"></TextBlock>
                 <TextBlock Text="Others"></TextBlock>
             </ComboBox>
-            <Button x:Name="btnedit" Content="Edit" HorizontalAlignment="Center" Margin="0,275,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="24" Width="152" Height="43" Click="btnedit_Click" Grid.Column="1"/>
-            <ComboBox x:Name="txtstandard" HorizontalAlignment="Left" Margin="139,45,0,0" VerticalAlignment="Top" Width="140"  >
+            <Button x:Name="btnedit" Content="Edit" HorizontalAlignment="Center" Margin="0,275,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="24" Width="152" Height="43" Command="{Binding AddStaffSubmit}" CommandParameter="{Binding ElementName= pwdUsername }" Grid.Column="1"/>
+            <ComboBox x:Name="txtstandard"  Text="{Binding Standard}" HorizontalAlignment="Left" Margin="139,45,0,0" VerticalAlignment="Top" Width="140"  >
                 <TextBlock Text="First"></TextBlock>
                 <TextBlock Text="Second"></TextBlock>
                 <TextBlock Text="Third"></TextBlock>
@@ -95,6 +95,7 @@
 
             </ComboBox>
         </Grid>
+        <TextBox x:Name="txtid"  Text="{Binding StaffID}" HorizontalAlignment="Left" Height="42" Margin="695,60,0,0" Grid.Row="3" TextWrapping="Wrap" VerticalAlignment="Top" Width="119"/>
 
     </Grid>
 </UserControl>

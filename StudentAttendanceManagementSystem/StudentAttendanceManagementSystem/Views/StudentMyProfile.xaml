@@ -46,7 +46,6 @@
                         <DataGridTextColumn Header="City" Binding="{Binding StudentCity}"/>
                         <DataGridTextColumn Header="Pincode"  Binding="{Binding Studentpincode}"/>
                         <DataGridTextColumn Header="Username"  Binding="{Binding Studentusername}"/>
-                        <DataGridTextColumn Header="Password" Binding="{Binding Studentpassword}"/>
                         <DataGridTemplateColumn Header="Edit" Width="35">
                             <DataGridTemplateColumn.CellTemplate>
                                 <DataTemplate>

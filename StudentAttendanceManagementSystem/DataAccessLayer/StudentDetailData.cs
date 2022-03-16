@@ -15,18 +15,13 @@ namespace DataAccessLayer
         public List<StudentModel> GetStudentList(StudentModel studentmodel)
         {
             StudentManagementSystemEntities studentManagementSystemEntities = new StudentManagementSystemEntities();
-            var result = from getdata in studentManagementSystemEntities.Students
-                         where getdata.StudentUsername == studentmodel.Studentusername
-
-                         select getdata;
+            var result = studentManagementSystemEntities.Students.Where(x => x.StudentUsername == studentmodel.Studentusername);
 
             List<StudentModel> studentModels = new List<StudentModel>();
             foreach (var item in result)
             {
                 StudentModel studentModel = new StudentModel();
-                //studentModel.genderClass = new GenderClass();
-                // studentModel.standardClass = new StandardClass();
-                // studentModel.StandardName = item.StandardName;
+            
                 studentModel.StudentID = item.StudentID;
                 studentModel.RollNo = item.RollNo;
                 studentModel.StudentName = item.StudentName;
@@ -53,9 +48,8 @@ namespace DataAccessLayer
             {
                 StudentManagementSystemEntities students = new StudentManagementSystemEntities();
                 
-                var query=from studentinfo in students.Students
-                          where studentinfo.StudentUsername == studentModel.Studentusername
-                          select studentinfo;
+                var query= students.Students.Where(x => x.StudentID == studentModel.StudentID);
+
                 foreach(var item in query)
                 {
                     item.RollNo = studentModel.RollNo;

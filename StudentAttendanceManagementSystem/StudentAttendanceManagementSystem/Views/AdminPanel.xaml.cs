@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BusinessLayer;
+using EntityLayer.Model;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
@@ -28,36 +30,28 @@ namespace StudentAttendanceManagementSystem.Views
 
         private void button1_Click(object sender, RoutedEventArgs e)
         {
-            SqlConnection sqlCon = new SqlConnection(@"Data Source=.; Database=StudentManagementSystem; Integrated Security=SSPI;");
-            try
+            string username = txtUsername.Text;
+            string password = passwordBox1.Password;
+            if (!string.IsNullOrEmpty(username) && !string.IsNullOrEmpty(password))
             {
-                if (sqlCon.State == ConnectionState.Closed)
-                    sqlCon.Open();
-                String query = "SELECT COUNT(1) FROM Admin WHERE Username=@Username AND Password=@Password";
-                SqlCommand sqlCmd = new SqlCommand(query, sqlCon);
-                sqlCmd.CommandType = CommandType.Text;
-                sqlCmd.Parameters.AddWithValue("@Username", txtUsername.Text);
-                sqlCmd.Parameters.AddWithValue("@Password", passwordBox1.Password);
-                int count = Convert.ToInt32(sqlCmd.ExecuteScalar());
-                if (count == 1)
+                AdminModel adminModel = new AdminModel();
+                adminModel.Username = username;
+                adminModel.Password = password;
+                AdminUserLoginBusiness adminUserLoginBusiness = new AdminUserLoginBusiness();
+                var result = adminUserLoginBusiness.Login(adminModel);
+                if (result == true)
                 {
                     AdminHome dashboard = new AdminHome();
                     dashboard.Show();
                     this.Close();
                 }
                 else
-                {
                     MessageBox.Show("Username or password is incorrect.");
-                }
+
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            finally
-            {
-                sqlCon.Close();
-            }
+            else 
+                MessageBox.Show("Enter both fields");
+            
         }
     }
 }

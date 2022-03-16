@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace DataAccessLayer
 {
@@ -15,14 +16,14 @@ namespace DataAccessLayer
             {
                 StudentManagementSystemEntities studentManagementSystemEntities = new StudentManagementSystemEntities();
                 Division division = new Division();
-                division.DivisionID = divisionModel.DivisionID;
+                //division.DivisionID = divisionModel.DivisionID;
                 division.StandardName = divisionModel.StandardName;
                 division.DivisionName = divisionModel.DivisionName;
                 division.Seat = divisionModel.Seat;
 
                 studentManagementSystemEntities.Divisions.Add(division);
                 studentManagementSystemEntities.SaveChanges();
-                //MessageBox.Show("Value Added");
+                MessageBox.Show("Value Added");
             }
             catch (Exception ex)
             {
@@ -34,8 +35,7 @@ namespace DataAccessLayer
         public List<DivisionModel> GetDivisionData()
         {
             StudentManagementSystemEntities entities = new StudentManagementSystemEntities();
-            var result = from divisionObj in entities.Divisions
-                         select divisionObj;
+            var result = entities.Divisions.Select(entity => entity);
             List<DivisionModel> divisionModels = new List<DivisionModel>();
             foreach (var item in result)
             {
@@ -54,9 +54,7 @@ namespace DataAccessLayer
             try
             {
                 StudentManagementSystemEntities divisions = new StudentManagementSystemEntities();
-                var query = from divisionObj in divisions.Divisions
-                            where divisionObj.DivisionID == divisionModel.DivisionID
-                            select divisionObj;
+                var query = divisions.Divisions.Where(x => x.DivisionID == divisionModel.DivisionID);
                 foreach (var entity in query)
                 {
                     entity.DivisionID = divisionModel.DivisionID;
@@ -80,10 +78,8 @@ namespace DataAccessLayer
             try
             {
                 StudentManagementSystemEntities entities = new StudentManagementSystemEntities();
-                var result = from divisionObj in entities.Divisions
-                             where divisionObj.DivisionID == divisionModel.DivisionID
-                             select divisionObj;
-                foreach (var entity in result)
+                var query = entities.Divisions.Where(x => x.DivisionID == divisionModel.DivisionID);
+                foreach (var entity in query)
                 {
                     entities.Divisions.Remove(entity);
                 }

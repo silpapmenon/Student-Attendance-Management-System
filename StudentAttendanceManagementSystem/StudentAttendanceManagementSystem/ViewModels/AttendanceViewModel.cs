@@ -13,10 +13,7 @@ namespace StudentAttendanceManagementSystem.ViewModels
 {
     public class AttendanceViewModel : BaseViewModel
     {
-        private AttendanceModel _attendanceModel;
-        private List<AttendanceModel> _attendanceViewList;
-        public List<AttendanceModel> AttendanceViewList { get => _attendanceViewList; set => _attendanceViewList = value; }
-        public AttendanceBusinessModel attendanceBusinessModel = new AttendanceBusinessModel();
+      public AttendanceBusinessModel attendanceBusinessModel = new AttendanceBusinessModel();
     
       
         private int _attendanceId;
@@ -88,9 +85,12 @@ namespace StudentAttendanceManagementSystem.ViewModels
                 OnPropertyChanged("StandardName");
             }
         }
-        public ICommand Submit { get; set; }
+        public ICommand AttandanceSubmit { get; set; }
 
-
+        public AttendanceViewModel()
+        {
+            AttandanceSubmit = new AttendanceSubmit(this);
+        }
 
 
 

@@ -27,17 +27,18 @@ namespace StudentAttendanceManagementSystem.Views
         public int ID;
         public StudentMyProfile(StudentModel studentModels)
         {
-            studentModel = studentModels;
-            StudentDetailsManager studentDetailsManager = new StudentDetailsManager();
+            
             
             InitializeComponent();
-           grdstuds.ItemsSource = studentDetailsManager.DisplayResult(studentModels);
+            studentModel = studentModels;
+            StudentDetailsManager studentDetailsManager = new StudentDetailsManager();
+            grdstuds.ItemsSource = studentDetailsManager.DisplayResult(studentModels);
             //Refresh();
         }
 
         private void btnUpdate_Click(object sender, RoutedEventArgs e)
         {
-            string StudentID = Convert.ToString( studentModel.StudentID);
+            string StudentID = txtid.Text;
             string RollNo = txtRollNo.Text;
             string StudentName = txtName1.Text;
             string DOB = dt.Text;
@@ -87,9 +88,9 @@ namespace StudentAttendanceManagementSystem.Views
                                 }
                                 else
                                 { 
-                                    StudentDetailsManager sdm=new StudentDetailsManager();
+                                 
                                     StudentModel studentModels = new StudentModel();
-                                    studentModels.StudentID =  studentModel.StudentID;
+                                    studentModels.StudentID = Convert.ToInt32(txtid.Text);
                                     studentModels.RollNo = Convert.ToInt32(txtRollNo.Text);
                                     studentModels.StudentName = txtName1.Text;
                                     studentModels.DOB = Convert.ToDateTime(dt.Text);
@@ -135,6 +136,7 @@ namespace StudentAttendanceManagementSystem.Views
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            txtid.Text = (grdstuds.SelectedItem as StudentModel).StudentID.ToString();
             txtRollNo.Text = (grdstuds.SelectedItem as StudentModel).RollNo.ToString();
             txtName1.Text = (grdstuds.SelectedItem as StudentModel).StudentName;
             dt.Text = (grdstuds.SelectedItem as StudentModel).DOB.ToString();

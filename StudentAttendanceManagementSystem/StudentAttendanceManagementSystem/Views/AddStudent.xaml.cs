@@ -1,5 +1,6 @@
 ﻿using BusinessLayer;
 using EntityLayer.Model;
+using StudentAttendanceManagementSystem.ViewModels;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -29,8 +30,8 @@ namespace StudentAttendanceManagementSystem.Views
         {
 
             InitializeComponent();
-           
-            Refresh();
+            this.DataContext = new AddStudentViewModel();
+            //Refresh();
         }
 
         private void grdProductData_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -91,241 +92,14 @@ namespace StudentAttendanceManagementSystem.Views
             }
         }
 
-        private void btnAdd_Click(object sender, RoutedEventArgs e)
-        {           
-            //btnAdd.Content = "Edit";
-            Refresh();
-            if (btnAdd.Content == "Edit")
-            {
-                string StudentID = txtid.Text;
-                string RollNo = txtRollNo.Text;
-                string StudentName = txtStudentName.Text;
-                string DOB = dt.Text;
-                string Studentusername = txtUsername.Text;
-                string Studentpassword = pwdUsername.Password;
-                string GenderName = gender.Text;
-                string StudentEmail = txtEmail.Text;
-                string Studentpincode = txtPincode.Text;
-                string StudentAddress = txtAddress.Text;
-                string StudentMobile = txtStudentMobile.Text;
-                string StudentCity = txtCity.Text;
-                string DivisionName = div.Text;
-                string StandardName = standard.Text;
-                if (!string.IsNullOrEmpty(StudentID) && !string.IsNullOrEmpty(RollNo) && !string.IsNullOrEmpty(StudentName)
-                    && !string.IsNullOrEmpty(DOB) && !string.IsNullOrEmpty(Studentusername) && !string.IsNullOrEmpty(Studentpassword)
-                    && !string.IsNullOrEmpty(GenderName) && !string.IsNullOrEmpty(StudentEmail) && !string.IsNullOrEmpty(Studentpincode)
-                    && !string.IsNullOrEmpty(StudentAddress) && !string.IsNullOrEmpty(StudentMobile) && !string.IsNullOrEmpty(StudentCity)
-                    && !string.IsNullOrEmpty(DivisionName) && !string.IsNullOrEmpty(StandardName))
-                {
-                    if (!int.TryParse(RollNo, out _))
-                    {
-                        MessageBox.Show("RollNo should be a number");
-                    }
-                    else
-                    {
-                        if (!int.TryParse(Studentpincode, out _))
-                        {
-                            MessageBox.Show("Pincode should be a number");
-                        }
-                        else
-                        {
-                            if (!isValidPhoneNumber(StudentMobile))
-                            {
-                                MessageBox.Show("Invalid Mobile number");
-                            }
-                            if (dt.SelectedDate > DateTime.Now)
-                            {
-                                MessageBox.Show("Oops, you haven't been born yet!");
-                            }
-                            else
-                            {
-                                if (StudentMobile.Count() == 10)
-                                {
-                                    if (!isValidEmail(StudentEmail))
-                                    {
-                                        MessageBox.Show("Invalid Email ID");
-                                    }
-                                    else
-                                    {
-                                        StudentModel studentModel = new StudentModel();
-                                        studentModel.StudentID = Convert.ToInt32(txtid.Text);
-                                        studentModel.RollNo = Convert.ToInt32(txtRollNo.Text);
-                                        studentModel.StudentName = txtStudentName.Text;
-                                        studentModel.DOB = Convert.ToDateTime(dt.Text);
-                                        studentModel.Studentusername = txtUsername.Text;
-                                        studentModel.Studentpassword = pwdUsername.Password;
-                                        studentModel.GenderName = gender.Text;
-                                        studentModel.StudentEmail = txtEmail.Text;
-                                        studentModel.Studentpincode = Convert.ToInt32(txtPincode.Text);
-                                        studentModel.StudentAddress = txtAddress.Text;
-                                        studentModel.StudentMobile = txtStudentMobile.Text;
-                                        studentModel.StudentCity = txtCity.Text;
-                                        //studentModel.Gender = gender.Text;
-                                        studentModel.DivisionName = div.Text;
-                                        studentModel.StandardName = standard.Text;
-                                        StudentManager studentManager = new StudentManager();
-                                        studentManager.UpdateData(studentModel);
-                                        // MessageBox.Show("Student Details Edited");
-                                        Refresh();
-                                        txtid.Text = String.Empty;
-
-                                        ClearTextBox();
-
-                                    }
-                                }
-                                else
-                                {
-                                    MessageBox.Show("Mobile Number should be 10 digits");
-                                }
-                            }
-
-                        }             
-                    }
-                }
-                else
-                {
-                    MessageBox.Show(" Enter all Fields ");
-                }
-               
-            }
-            else
-            {
-                //string StudentID = txtid.Text;
-                string RollNo = txtRollNo.Text;
-                string StudentName = txtStudentName.Text;
-                string DOB = dt.Text;
-                string Studentusername = txtUsername.Text;
-                string Studentpassword = pwdUsername.Password;
-                string GenderName = gender.Text;
-                string StudentEmail = txtEmail.Text;
-                string Studentpincode = txtPincode.Text;
-                string StudentAddress = txtAddress.Text;
-                string StudentMobile = txtStudentMobile.Text;
-                string StudentCity = txtCity.Text;
-                string DivisionName = div.Text;
-                string StandardName = standard.Text;
-                if (  !string.IsNullOrEmpty(RollNo) && !string.IsNullOrEmpty(StudentName)
-                    && !string.IsNullOrEmpty(DOB) && !string.IsNullOrEmpty(Studentusername) && !string.IsNullOrEmpty(Studentpassword)
-                    && !string.IsNullOrEmpty(GenderName) && !string.IsNullOrEmpty(StudentEmail) && !string.IsNullOrEmpty(Studentpincode)
-                    && !string.IsNullOrEmpty(StudentAddress) && !string.IsNullOrEmpty(StudentMobile) && !string.IsNullOrEmpty(StudentCity)
-                    && !string.IsNullOrEmpty(DivisionName) && !string.IsNullOrEmpty(StandardName))
-                {
-                    if (!int.TryParse(RollNo, out _))
-                    {
-                        MessageBox.Show("RollNo should be a number");
-                    }
-                    else
-                    {
-                        if (!int.TryParse(Studentpincode, out _))
-                        {
-                            MessageBox.Show("Pincode should be a number");
-                        }
-                        else
-                        {
-                            if (!isValidPhoneNumber(StudentMobile))
-                            {
-                                MessageBox.Show(" Invalid Mobile number");
-                            }
-
-                            if (dt.SelectedDate > DateTime.Now)
-                            {
-                                MessageBox.Show("Oops, you haven't been born yet!");
-                            }
-                            else
-                            {
-                                if (StudentMobile.Count() == 10)
-                                {
-                                    if (!isValidEmail(StudentEmail))
-                                    {
-                                        MessageBox.Show("Invalid Email ID");
-                                    }
-                                    else
-                                    {
-                                        StudentModel studentModels = new StudentModel();
-                                        studentModels.RollNo = Convert.ToInt32(txtRollNo.Text);
-                                        studentModels.StudentName = txtStudentName.Text;
-                                        studentModels.DOB = Convert.ToDateTime(dt.Text);
-                                        studentModels.Studentusername = txtUsername.Text;
-                                        studentModels.Studentpassword = pwdUsername.Password;
-                                        studentModels.GenderName = gender.Text;
-                                        studentModels.StudentEmail = txtEmail.Text;
-                                        studentModels.Studentpincode = Convert.ToInt32(txtPincode.Text);
-                                        studentModels.StudentAddress = txtAddress.Text;
-                                        studentModels.StudentMobile = txtStudentMobile.Text;
-                                        studentModels.StudentCity = txtCity.Text;
-                                        //studentModel.Gender = gender.Text;
-                                        studentModels.DivisionName = div.Text;
-                                        studentModels.StandardName = standard.Text;
-                                        StudentManager studentManagers = new StudentManager();
-                                        studentManagers.SaveStudentDetails(studentModels);
-                                        // MessageBox.Show("Student Details Edited");
-                                        Refresh();
-                                        txtid.Text = String.Empty;
-                                        ClearTextBox();
-
-                                    }
-                                }
-                                else
-                                {
-                                    MessageBox.Show("Mobile Number should be 10 digits");
-                                }
-                            }
-
-                        }
-
-                    }
-
-                }
-            
-                else
-                {
-                    MessageBox.Show(" Enter all Fields ");
-                }
-               
-            }
-
-        }
- public static bool isValidEmail(string inputEmail)
-{
-    string strRegex = @"^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}" +
- @"\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\" +
- @".)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$";
-    Regex re = new Regex(strRegex);
-    if (re.IsMatch(inputEmail))
-        return (true);
-    else
-        return (false);
-}
-        public static bool isValidPhoneNumber(string StudentMobile)
-        {
-            string strRegex = @"\(?\d{3}\)?-? *\d{3}-? *-?\d{4}";
-            Regex re = new Regex(strRegex);
-            if (re.IsMatch(StudentMobile))
-                return (true);
-            else
-                return (false);
-        }
+        
+ 
         void Refresh()
         {
             StudentManager studentManager = new StudentManager();
             grdProductData.ItemsSource = studentManager.DisplayResult();
         }
-        void ClearTextBox() 
-        {
-            txtRollNo.Text = String.Empty;
-            txtStudentName.Text = String.Empty;
-            txtAddress.Text = String.Empty;
-            txtStudentMobile.Text = String.Empty;
-            txtEmail.Text = String.Empty;
-            txtCity.Text = String.Empty;
-            txtPincode.Text = String.Empty;
-            txtUsername.Text = String.Empty;
-            pwdUsername.Password = String.Empty;
-            div.Text = String.Empty;
-            gender.Text = String.Empty;
-            standard.Text = String.Empty;
-            dt.Text = String.Empty;
-        }
+       
       
         private void Button_Click(object sender, RoutedEventArgs e)
         {
