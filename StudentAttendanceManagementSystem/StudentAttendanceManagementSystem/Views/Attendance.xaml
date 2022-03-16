@@ -58,10 +58,12 @@
         <Grid Grid.Row="1">
             <DataGrid x:Name="grdattendance" Opacity="0.6" Height="130" Width="550" AutoGenerateColumns="False" RenderTransformOrigin="1.04,0.521" Grid.ColumnSpan="9" >
                 <DataGrid.Columns >
-                    <DataGridTextColumn Header="RollNo" Binding="{Binding RollNo}" Width="150" />
+                    <DataGridTextColumn Header="RollNo" Binding="{Binding Rollno}" Width="150" />
                     <DataGridTextColumn Header="Student Name"  Binding="{Binding StudentName}" Width="150"/>
                     <DataGridTextColumn Header="Attendance Date" Binding="{Binding AttendanceDate}" Width="150"/>
                     <DataGridTextColumn Header="Status" Binding="{Binding Status}" Width="145"/>
+                    <DataGridTextColumn Header="Standard Name" Binding="{Binding StandardName}" Width="145"/>
+                    <DataGridTextColumn Header="Division Name" Binding="{Binding DivisionName}" Width="145"/>
                 </DataGrid.Columns>
 
             </DataGrid>

@@ -29,7 +29,7 @@ namespace StudentAttendanceManagementSystem.Command
             AttendanceModel attendance = new AttendanceModel();
             attendance.StandardName = attendanceViewModel.StandardName;
             attendance.DivisionName = attendanceViewModel.DivisionName;
-            attendance.Rollno = attendanceViewModel.RollNo;
+           // attendance.Rollno = attendanceViewModel.RollNo;
             attendance.StudentName = attendanceViewModel.StudentName;
             attendance.AttendanceDate = attendanceViewModel.AttendanceDate;
             attendance.Status = attendanceViewModel.Status;

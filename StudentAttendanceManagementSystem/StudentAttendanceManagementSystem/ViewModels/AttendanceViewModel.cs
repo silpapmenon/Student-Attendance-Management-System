@@ -70,14 +70,14 @@ namespace StudentAttendanceManagementSystem.ViewModels
                 OnPropertyChanged("Status");
             }
         }
-        public int RollNo
+       public int RollNo
         {
             get { return _rollno; }
-            set
+    set
             {
                 _rollno = value;
                 OnPropertyChanged("RollNo");
-            }
+}
         }
         public string StandardName
         {
