@@ -42,6 +42,7 @@ namespace StudentAttendanceManagementSystem.ViewModels
 
         public int StaffID
         {
+
             get { return _staffID; }
             set
             {
