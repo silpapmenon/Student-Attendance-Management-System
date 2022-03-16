@@ -13,11 +13,11 @@ namespace StudentAttendanceManagementSystem.ViewModels
     {
         public ICommand submit { get; set; }
 
-        private LeaveModel _leaveReport;
+
         public List<LeaveModel> LeaveReport { get; set; }
 
         public LeaveReportManager leaveReport = new LeaveReportManager();
-        public LeaveReportViewModel(LeaveModel leave)
+        public LeaveReportViewModel()
         {
         }
     }
