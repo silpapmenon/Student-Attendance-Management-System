@@ -103,7 +103,7 @@ namespace StudentAttendanceManagementSystem.Command
             else if (parameter.ToString() == "LEAVE REPORT")
             {
                 LeaveModel leaveModel = new LeaveModel();
-                model.SelectedView = new LeaveReportViewModel(leaveModel);
+                model.SelectedView = new LeaveReportViewModel();
             }
         }
 
