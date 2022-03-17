@@ -12,7 +12,6 @@ namespace StudentAttendanceManagementSystem.ViewModels
 {
     public class AddStaffViewModel :BaseViewModel
     {
-        private StaffModel _staffModel;
         private List<StaffModel> _staffViewList;
         public List<StaffModel> StaffViewList { get => _staffViewList; set => _staffViewList = value; }
 
