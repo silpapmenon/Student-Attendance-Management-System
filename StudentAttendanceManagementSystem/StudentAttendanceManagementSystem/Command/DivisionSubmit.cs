@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Input;
 
 namespace StudentAttendanceManagementSystem.Command
@@ -36,7 +37,8 @@ namespace StudentAttendanceManagementSystem.Command
                 division.Seat = addDivisionViewModel.Seat;
                 DivisionManager divisionManager = new DivisionManager();
                 divisionManager.SaveDivisionDetails(division);
-               
+                MessageBox.Show("Added Succesfully");
+
             }
             else if (parameter.ToString() == "Edit")
             {
@@ -47,6 +49,7 @@ namespace StudentAttendanceManagementSystem.Command
                 division.Seat = addDivisionViewModel.Seat;
                 DivisionManager divisionManager = new DivisionManager();
                 divisionManager.UpdateData(division);
+                MessageBox.Show("Updated Succesfully");
             }
             
 

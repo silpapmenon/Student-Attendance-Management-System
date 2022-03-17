@@ -92,6 +92,7 @@ namespace StudentAttendanceManagementSystem.Command
                                     staff.RoleID = 2;
                                     StaffManager staffManager = new StaffManager();
                                     staffManager.SaveStaffDetails(staff);
+                                    MessageBox.Show("Added Succesfully");
                                 }
                             }
                             else

@@ -15,7 +15,6 @@ namespace DataAccessLayer
         public void SaveStudentData(StudentModel studentModel)
         {
 
-
             SqlConnection connection = null;
             using (connection = new SqlConnection("data source =.; database = StudentManagementSystem; integrated security = SSPI"))
             {
@@ -174,7 +173,6 @@ namespace DataAccessLayer
         public void UpdateStudentData(StudentModel studentModel)
         {
 
-
             SqlConnection connection = null;
             using (connection = new SqlConnection("data source =.; database = StudentManagementSystem; integrated security = SSPI"))
             {
@@ -228,7 +226,6 @@ namespace DataAccessLayer
 
             }
         }
-
         public void DeleteStudentData(StudentModel studentModel)
         {
             try

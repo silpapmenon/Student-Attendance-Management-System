@@ -39,6 +39,8 @@ namespace StudentAttendanceManagementSystem.Command
             {
                 if (addStudentViewModel.StudentID == 0)
                 {
+                    PasswordBox boxpass = (PasswordBox)parameter;
+                    Passwords = boxpass.Password;
                     string RollNo = addStudentViewModel.RollNo.ToString();
                     string StudentName = addStudentViewModel.StudentName;
                     string StudentAddress = addStudentViewModel.StudentAddress;
@@ -90,8 +92,7 @@ namespace StudentAttendanceManagementSystem.Command
                                         }
                                         else
                                         {
-                                            PasswordBox boxpass = (PasswordBox)parameter;
-                                            Passwords = boxpass.Password;
+                                           
                                             StudentModel student = new StudentModel();
                                             student.RollNo = addStudentViewModel.RollNo;
                                             student.StudentName = addStudentViewModel.StudentName;
