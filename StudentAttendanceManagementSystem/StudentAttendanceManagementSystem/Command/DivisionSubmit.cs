@@ -37,7 +37,7 @@ namespace StudentAttendanceManagementSystem.Command
                 division.Seat = addDivisionViewModel.Seat;
                 DivisionManager divisionManager = new DivisionManager();
                 divisionManager.SaveDivisionDetails(division);
-                MessageBox.Show("Added Succesfully");
+                //MessageBox.Show("Added Succesfully");
 
             }
             else if (parameter.ToString() == "Edit")

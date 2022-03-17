@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Input;
 
 namespace StudentAttendanceManagementSystem.Command
@@ -29,12 +30,17 @@ namespace StudentAttendanceManagementSystem.Command
             AttendanceModel attendance = new AttendanceModel();
             attendance.StandardName = attendanceViewModel.StandardName;
             attendance.DivisionName = attendanceViewModel.DivisionName;
-           // attendance.Rollno = attendanceViewModel.RollNo;
+            // attendance.Rollno = attendanceViewModel.RollNo;
             attendance.StudentName = attendanceViewModel.StudentName;
             attendance.AttendanceDate = attendanceViewModel.AttendanceDate;
             attendance.Status = attendanceViewModel.Status;
             AttendanceBusinessModel attendanceBusiness = new AttendanceBusinessModel();
             attendanceBusiness.SaveAttendanceData(attendance);
+            MessageBox.Show("Value Inserted SuccessFully");
         }
+
     }
+   
+    
+
 }

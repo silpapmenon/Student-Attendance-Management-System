@@ -69,57 +69,5 @@
             </DataGrid>
         </Grid>
     </Grid>
-    <!--<Grid Height="568" VerticalAlignment="Center">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="358*"/>
-            <ColumnDefinition Width="13*"/>
-            <ColumnDefinition Width="9*"/>
-            <ColumnDefinition Width="12*"/>
-            <ColumnDefinition/>
-            <ColumnDefinition Width="0*"/>
-            <ColumnDefinition Width="6*"/>
-            <ColumnDefinition Width="0*"/>
-            <ColumnDefinition Width="601*"/>
-        </Grid.ColumnDefinitions>
-        <Grid.Background>
-            <ImageBrush ImageSource="/Images/Attendance.jpeg" />
-        </Grid.Background>
-
-        <DataGrid x:Name="grdattendance" Opacity="0.6"  AutoGenerateColumns="False" Margin="344,376,318,23" RenderTransformOrigin="1.04,0.521" Grid.ColumnSpan="9" >
-            <DataGrid.Columns>
-                <DataGridTextColumn Header="RollNo" Binding="{Binding RollNo}"/>
-                <DataGridTextColumn Header="Student Name"  Binding="{Binding StudentName}"/>
-                <DataGridTextColumn Header="Attendance Date" Binding="{Binding AttendanceDate}"/>
-                <DataGridTextColumn Header="Status" Binding="{Binding Status}"/>
-            </DataGrid.Columns>
-
-        </DataGrid>
-        <Label x:Name="lblselectstandard" Content="Select Standard" HorizontalAlignment="Left" Margin="119,28,0,0" VerticalAlignment="Top" Width="105" Height="35" Background="White"/>
-        <Label x:Name="lblselectdivision" Content="Select Division" HorizontalAlignment="Left" Margin="119,110,0,0" VerticalAlignment="Top" Width="105" Background="White"/>
-        <ComboBox x:Name="cmbSelectdivision" HorizontalAlignment="Left" Margin="284,107,0,0" VerticalAlignment="Top" Width="120" Height="26" Background="White" Foreground="Black" ItemsSource="{Binding DivisionName}" Grid.ColumnSpan="9">
-            <TextBlock Text="A"></TextBlock>
-            <TextBlock Text="B"></TextBlock>
-        </ComboBox>
-
-        <Button x:Name="btnadd" Content="ADD" HorizontalAlignment="Left" Margin="68,146,0,0" VerticalAlignment="Top" Height="26" Width="121" Background="RED" Click="btndivision_Click" Grid.Column="7" Grid.ColumnSpan="2" />
-        <ComboBox x:Name="cmbstandard" HorizontalAlignment="Left" Margin="284,28,0,0" VerticalAlignment="Top" Width="120" Background="White" Foreground="Black" ItemsSource="{Binding StandardName}"  Grid.ColumnSpan="9">
-            <TextBlock Text="LKG"></TextBlock>
-            <TextBlock Text="UKG"></TextBlock>
-            <TextBlock Text="FIRST"></TextBlock>
-            <TextBlock Text="SECOND"></TextBlock>
-            <TextBlock Text="THIRD"></TextBlock>
-            <TextBlock Text="FOURTH"></TextBlock>
-        </ComboBox>
-        <DatePicker x:Name="dt" HorizontalAlignment="Left" Margin="304,28,0,0" VerticalAlignment="Top" Grid.Column="7" Grid.ColumnSpan="2"/>
-        <Label x:Name="lblrollno" Content="Roll No" HorizontalAlignment="Left" Margin="119,199,0,0" VerticalAlignment="Top" Width="105" Background="White"/>
-        <TextBox x:Name="txtrollno" HorizontalAlignment="Left" Margin="284,199,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="26" Grid.ColumnSpan="9"/>
-        <Label x:Name="lblstudentname" Content="Student Name" HorizontalAlignment="Left" Margin="119,0,0,0" VerticalAlignment="Center" Width="105" Background="White"/>
-        <TextBox x:Name="txtstudentname" HorizontalAlignment="Left" Margin="284,0,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Width="120" Height="26" Grid.ColumnSpan="9"/>
-        <Label x:Name="lblstatus" Content="Status" HorizontalAlignment="Left" Margin="119,330,0,0" VerticalAlignment="Top" Width="105" Background="White"/>
-        <ComboBox x:Name="cmbstatus" Grid.ColumnSpan="9" HorizontalAlignment="Left" Margin="284,330,0,0" VerticalAlignment="Top" Width="120" Background="White" Foreground="Black" ItemsSource="{Binding Status}">
-            <TextBlock Text="PRESENT"></TextBlock>
-            <TextBlock Text="ABSENT"></TextBlock>
-        </ComboBox>
-
-    </Grid>-->
+   
 </UserControl>
