@@ -38,7 +38,7 @@ namespace DataAccessLayer
                     string division = studentModel.DivisionName;
                     string standardname = studentModel.StandardName;
                     connection.Open();
-                    SqlCommand command = new SqlCommand("AddStudent", connection);
+                    SqlCommand command = new SqlCommand("AddStudent", connection);  //sp 
                     command.CommandType = CommandType.StoredProcedure;
                     command.Parameters.AddWithValue("@rollNo", roll);
                     command.Parameters.AddWithValue("@studName", studname);

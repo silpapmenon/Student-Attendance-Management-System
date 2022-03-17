@@ -13,16 +13,15 @@ namespace StudentAttendanceManagementSystem.ViewModels
     public class AddStudentViewModel : BaseViewModel
     {
 
-        private StudentModel _studentModel;
-        private List<StudentModel> _studentViewList;
-        public List<StudentModel> StudentViewList { get => _studentViewList; set => _studentViewList = value; }
+        private List<StudentModel> _studentViewList;//cannot be accessed outside
+        public List<StudentModel> StudentViewList { get => _studentViewList; set => _studentViewList = value; }//data grid binding using list
 
-        public StudentManager studentManager = new StudentManager();
-        public AddStudentViewModel()
+        public StudentManager studentManager = new StudentManager();//object creation of business layer
+        public AddStudentViewModel() //constructor
         {
             
-            StudentViewList = studentManager.DisplayResult();
-            Submit = new SubmitCommand(this);
+            StudentViewList = studentManager.DisplayResult();  //to show values inside the datagrid
+            Submit = new SubmitCommand(this); //submit command pointed to submit
         }
         private int _studentID;
         private int _rollNo;
@@ -205,7 +204,7 @@ namespace StudentAttendanceManagementSystem.ViewModels
                 OnPropertyChanged("RoleID");
             }
         }
-        public ICommand Submit { get; set; }
+        public ICommand Submit { get; set; } //declaration of ICommand
     }
 }
 

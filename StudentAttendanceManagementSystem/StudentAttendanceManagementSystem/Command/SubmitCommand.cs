@@ -17,31 +17,26 @@ namespace StudentAttendanceManagementSystem.Command
 {
     public class SubmitCommand : ICommand
     {
-        public event EventHandler CanExecuteChanged;
-        public string Passwords { get; set; }
-        public AddStudentViewModel addStudentViewModel { get; set; }
-        public SubmitCommand(AddStudentViewModel addStudentView)
+        public event EventHandler CanExecuteChanged;  //to know whether the command gets executed or not
+        public string Passwords { get; set; }   //global declaration of password
+        public AddStudentViewModel addStudentViewModel { get; set; }  //object creation of view model to access the values
+        public SubmitCommand(AddStudentViewModel addStudentView)  //parameter aayit apurath ninnu value set cheyyan
         {
-            addStudentViewModel = addStudentView;
+            addStudentViewModel = addStudentView;    //assigning the properties to addstudentviewmodel
         }
-        public bool CanExecute(object parameter)
+        public bool CanExecute(object parameter)      //asking whether to execute or not
         {
             return true;
         }
         public void Execute(object parameter)
         {
 
-            if (parameter.ToString() == "Update")
-            {
-
-            }
-            else
-            {
-                if (addStudentViewModel.StudentID == 0)
+          
+                if (addStudentViewModel.StudentID == 0) //checking whether student id is there or not(add)
                 {
                     PasswordBox boxpass = (PasswordBox)parameter;
                     Passwords = boxpass.Password;
-                    string RollNo = addStudentViewModel.RollNo.ToString();
+                    string RollNo = addStudentViewModel.RollNo.ToString(); //assigning values from viewmodel to check whether its null or not
                     string StudentName = addStudentViewModel.StudentName;
                     string StudentAddress = addStudentViewModel.StudentAddress;
                     string DivisionName = addStudentViewModel.DivisionName;
@@ -55,6 +50,8 @@ namespace StudentAttendanceManagementSystem.Command
                     string Studentpassword = Passwords;
                     string GenderName = addStudentViewModel.GenderName;
                     string StandardName = addStudentViewModel.StandardName;
+
+                //validation
 
                     if (!string.IsNullOrEmpty(RollNo) && !string.IsNullOrEmpty(StudentName)
                         && !string.IsNullOrEmpty(DOB) && !string.IsNullOrEmpty(Studentusername) && !string.IsNullOrEmpty(Studentpassword)
@@ -94,7 +91,7 @@ namespace StudentAttendanceManagementSystem.Command
                                         {
                                            
                                             StudentModel student = new StudentModel();
-                                            student.RollNo = addStudentViewModel.RollNo;
+                                            student.RollNo = addStudentViewModel.RollNo;  //assigning values to student model
                                             student.StudentName = addStudentViewModel.StudentName;
                                             student.StudentAddress = addStudentViewModel.StudentAddress;
                                             student.DivisionName = addStudentViewModel.DivisionName;
@@ -225,15 +222,15 @@ namespace StudentAttendanceManagementSystem.Command
 
             }
 
-        }
-        public static string Protect(string str)
+        
+        public static string Protect(string str)  //encryption...cheitila(max field not in db)
         {
             byte[] entropy = Encoding.ASCII.GetBytes(Assembly.GetExecutingAssembly().FullName);
             byte[] data = Encoding.ASCII.GetBytes(str);
             string protectedData = Convert.ToBase64String(ProtectedData.Protect(data, entropy, DataProtectionScope.CurrentUser));
             return protectedData;
         }
-        public static bool isValidEmail(string inputEmail)
+        public static bool isValidEmail(string inputEmail)  //validation for email
         {
             string strRegex = @"^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}" +
          @"\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\" +
@@ -244,7 +241,7 @@ namespace StudentAttendanceManagementSystem.Command
             else
                 return (false);
         }
-        public static bool isValidPhoneNumber(string StudentMobile)
+        public static bool isValidPhoneNumber(string StudentMobile)  //validation for mobile
         {
             string strRegex = @"\(?\d{3}\)?-? *\d{3}-? *-?\d{4}";
             Regex re = new Regex(strRegex);
